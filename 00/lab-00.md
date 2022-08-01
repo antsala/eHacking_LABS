@@ -70,8 +70,9 @@ Pa55w.rd
 Es el momento de comprobar si la máquina tiene conexión con Internet. (Nota: CTRL+C cuando responda el ping)
 ```
 ping www.google.es
-````
+```
 
 Con esto hemos terminado la importación y configuración del router.
 
+## Ejercicio 4: Importación y configuracion de la VM ***KaliLinux2022_2***.
 

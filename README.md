@@ -12,8 +12,10 @@ cd eHacking_LABS
 
 1. Laboratorio 00: ***Preparación del entorno de laboratorio en Windows***. Los ejercicios a realizar son:
    - Instalación de ***VirtualBox***.
-   - Creación de la ***red de laboratorios***.
    - Descarga de las OVAs de la VMs.
+   - Importación de la OVA ***Router-ubu***
+   - Importación de la OVA ***KaliLinux2022_2***
+   - ...
    - Instalación de las VMs de ***metasploitable*** por medio de ***Vagrant***
-   
+
 
