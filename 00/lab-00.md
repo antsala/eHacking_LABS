@@ -57,12 +57,17 @@ Guardamos la configuración haciendo clic en ***Aceptar***.
 
 Iniciamos la VM ***Router-ubu***.
 
-Iniciamos sesión con el usuario.
-```antonio```
+Iniciamos sesión con el usuario:
+```
+antonio
+````
 
-y el password
+y el password:
 ```
 Pa55w.rd
 ```
+
+
+
 
 
