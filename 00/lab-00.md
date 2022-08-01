@@ -11,5 +11,10 @@ Se recomienda crear una carpeta para ubicar los archivos de las máquinas virtua
 mkdir C:\VMs
 ````
 
-También es conveniente indicar a VirtualBox esta carpeta como repositorio de las nuevas VMs que se crearán. Para ello, en la herramienta de administración de VirtualBox, elegimos ***Archivo/Preferencias***. En el cuadro de texto ***Carpeta predeterminada de máquinas***, escribimos ***C:\VMs*** y hacemos clic en ***Aceptar***
+También es conveniente indicar a VirtualBox esta carpeta como repositorio de las nuevas VMs que se crearán. Para ello, en la herramienta de administración de VirtualBox, elegimos ***Archivo/Preferencias***. En el cuadro de texto ***Carpeta predeterminada de máquinas***, escribimos:
+```
+C:\VMs
+```
+
+Hacemos clic en ***Aceptar***
 
