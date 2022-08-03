@@ -36,7 +36,7 @@ En la lista de máquinas virtuales, seleccionamos ***Router-ubu*** y comprobamos
 * *Sistema*: Tiene asignada ***1 GB RAM*** y ***1 core*** que es más que suficiente para realizar su cometido.
 * *Red*: IMPORTANTE!!! Tenemos dos adaptadores. El primero de ellos está conectado a una ***Red interna*** de VirtualBox, que hemos llamado ***Laboratorio***. El segundo adaptador, deberá mover el tráfico hacia la red física en la que está conectado tu equipo, por eso es del tipo ***Adaptador de puente***
 
-Es el momento de repasar la configuración correcta para los adaptadores de red de ***Router-ubu***. En VirtualBox, con la máquina virtual seleccionada, hacemos clic en el botón ***configuración***, y en el panel izquierdo del cuadro de diálogo, seleccionamos ***Red***. Aparecerán cuatro pestañas donde podemos configurar los adaptadores de red (esta VM usa dos tarjetas, por lo qu solo debemos fijarnos en las dos primeras pesteñas)
+Es el momento de repasar la configuración correcta para los adaptadores de red de ***Router-ubu***. En VirtualBox, con la máquina virtual seleccionada, hacemos clic en el botón ***configuración***, y en el panel izquierdo del cuadro de diálogo, seleccionamos ***Red***. Aparecerán cuatro pestañas donde podemos configurar los adaptadores de red (esta VM usa dos tarjetas, por lo qu solo debemos fijarnos en las dos primeras pestañas)
 
 La primera pestaña, llamada ***Adaptador 1*** es la que está asociada con la interfaz de red que conecta este router con la red ***laboratorio***. Debemos asegurar que en ***Conectado a*** aparece ***Red Interna*** y, en el ***nombre*** de la red interna, aparece ***Laboratorio***. Si no fuera así, corregirlo convenientemente.
 
@@ -60,7 +60,7 @@ Iniciamos la VM ***Router-ubu***.
 Iniciamos sesión con el usuario:
 ```
 antonio
-````
+```
 
 y el password:
 ```
@@ -74,5 +74,49 @@ ping www.google.es
 
 Con esto hemos terminado la importación y configuración del router.
 
-## Ejercicio 4: Importación y configuracion de la VM ***KaliLinux2022_2***
+## Ejercicio 4: Importación y configuracion de la VM KaliLinux2022_2
 
+En VirtualBox, elegimos la opción de menú ***Archivo/Importar servicio virtualizado***. Elegimos el archivo ***KaliLinux2022_2.ova***, que hemos descargado previamente, y hacemos clic en ***Siguiente***. Repasamos la configuración y hacemos clic en ***Importar***.
+
+En la lista de máquinas virtuales, seleccionamos ***KaliLinux2022_2*** y comprobamos la  configuración. Los valores más importantes son los siguientes:
+
+* *General*: Es una VM con sistema operativo ***Ubuntu*** que tiene instalada la suite ***Kali***
+
+* *Sistema*: Tiene asignada ***4 GB RAM*** y ***3 cores*** 
+* *Red*: Su tarjeta de red está conectada a la ***Red interna*** llamada ***Laboratorio***. 
+
+En VirtualBox, con la máquina virtual seleccionada, hacemos clic en el botón ***configuración***, y en el panel izquierdo del cuadro de diálogo, seleccionamos ***Red***. Aparecerán cuatro pestañas donde podemos configurar los adaptadores de red (esta VM usa una sola tarjeta, por lo que solo debemos fijarnos en primera pestaña).
+
+La pestaña llamada ***Adaptador 1*** es la que está asociada con la interfaz de red que conecta a red ***laboratorio***. Debemos asegurar que en ***Conectado a*** aparece ***Red Interna*** y, en el ***nombre*** de la red interna, aparece ***Laboratorio***. Si no fuera así, corregirlo convenientemente.
+
+La tarjeta  tendrá configurada en el sistema operativo la dirección IP ***192.168.20.9*** (de la red de laboratorio).
+
+Desplegamos el control ***Avanzadas***. En él podemos ver la ***dirección MAC*** que VirtualBox está asignando a esta intefaz. Aunque en principio podría darnos igual, para realizar de forma cómoda algunas de las prácticas del curso (ataques MitM y Spoofing), vamos a cambiarla a una predecible.
+
+Modificamos los ***6 últimos*** digitos para que veamos claramente con qué IP estará asociada, así que editamos la dirección MAC de forma que sus 6 últimos dígitos queden así. (Nota: Los 6 primeros dígitos los dejamos tal cual)
+```
+090909
+```
+
+De esta forma, cuando veamos la MAC, por ejemplo, ***080027090909*** sabremos que estará asociada con la IP ***192.168.20.9***, porque el último byte es 1.
+
+Guardamos la configuración haciendo clic en ***Aceptar***. 
+
+Iniciamos la VM ***KaliLinux2022_2***.
+
+Iniciamos sesión con el usuario:
+```
+antonio
+```
+
+y el password:
+```
+Pa55w.rd
+```
+
+Es el momento de comprobar si la máquina tiene conexión con Internet. (Nota: CTRL+C cuando responda el ping)
+```
+ping www.google.es
+```
+
+Con esto hemos terminado la importación y configuración de la máquina Kali.
