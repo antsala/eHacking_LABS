@@ -11,11 +11,12 @@ cd eHacking_LABS
 ## Carpeta 00
 
 1. Laboratorio 00: ***Preparación del entorno de laboratorio en Windows***. Los ejercicios a realizar son:
-   - Instalación de ***VirtualBox***.
+   - Instalación de VirtualBox para Windows.
    - Descarga de las OVAs de la VMs.
-   - Importación de la OVA ***Router-ubu***
-   - Importación de la OVA ***KaliLinux2022_2***
-   - ...
-   - Instalación de las VMs de ***metasploitable*** por medio de ***Vagrant***
+   - Importación y configuracion de la VM ***Router-ubu***.
+   - Importación y configuracion de la VM ***KaliLinux2022_2***.
+   - Importación y configuracion de la VM ***Metasploitable3-ubu1404***.
+   - Importación de la OVA ***Metasploitable3-ubu1404***.
+
 
 
