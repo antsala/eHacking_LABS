@@ -211,7 +211,7 @@ Nota: ***Metasploitable3*** es un proyecto de Open Source de Rapid7. La document
 
 En VirtualBox, elegimos la opción de menú ***Archivo/Importar servicio virtualizado***. Elegimos el archivo ***Windows 7.ova***, que hemos descargado previamente, y hacemos clic en ***Siguiente***.  En ***Política de dirección MAC*** elegimos ***Incluir todas las direcciones de adaptador de red***. Repasamos el resto de la configuración y hacemos clic en ***Importar***.
 
-En la lista de máquinas virtuales, seleccionamos ***Windows 7*** y comprobamos la  configuración. Los valores más importantes son los siguientes:
+En la lista de máquinas virtuales, seleccionamos ***Windows 7 Ethical Hacking*** y comprobamos la  configuración. Los valores más importantes son los siguientes:
 
 * *General*: Es una VM con sistema operativo ***Windows 7*** que tiene instalada una serie de aplicaciones y servicios con vulnerabilidades.
 
@@ -233,7 +233,7 @@ De esta forma, cuando veamos la MAC, por ejemplo, ***080027121212*** sabremos qu
 
 Guardamos la configuración haciendo clic en ***Aceptar***. 
 
-Iniciamos la VM ***Windows 7***.
+Iniciamos la VM ***Windows 7 Ethical Hacking***.
 
 Iniciamos sesión con el usuario:
 ```
