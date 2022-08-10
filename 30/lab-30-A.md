@@ -129,6 +129,11 @@ Además de ***bajar*** o ***subir*** archivos, podemos invocar una ***shell*** m
 shell
 ```
 
+Esto será posible si en la víctima se encuentra instalado ***Python***. Pulsamos la tecla ***Enter*** para activar la shell.
+
+![Shell basada en Python](../img/180820221311.png)
+
+
 
 
 
