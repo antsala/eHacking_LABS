@@ -48,9 +48,11 @@ La salida será la siguiente.
 Las configuraciones que debemos proporcionar son:
 
 * *RHOSTS*: Obligatoria. Debemos poner la IP de la victima, que en nuestro escenario será ***192.168.20.13***.
-* *RPORT*: Obligatoria. Una vez subido el payload PHP, el ataque se produce por medio de una Request HTTP en esa URI. De esta forma, para que el ataque funcione, se necesita un servidor web en la víctima. Este hecho ha sido comprobado en el ejercicio anterior. Como puedes comprobar, no es necesario cambiar este valor (80), porque es el puerto correcto donde el servidor HTTP está sirviendo peticiones.
+* *RPORT*: Obligatoria. Una vez subido el payload PHP, el ataque se produce por medio de una Request HTTP. De esta forma, para que el ataque funcione, se necesita un servidor web en la víctima. Este hecho ha sido comprobado en el ejercicio anterior. Como puedes comprobar, no es necesario cambiar este valor (***80***), porque es el puerto correcto donde el servidor ***Apache*** está sirviendo peticiones.
 * *RPORT_FTP*: Obligatoria. Este ataque necesita la presencia del servidor ***ProFTPD 1.3.5***, que como hemos comprobado anteriormente, está presente y escuchando en el puerto ***21***, por lo que no es necesario cambiar este ajuste.
-* *SITE PATH*: Obligatoria. Es la ruta del directorio raíz del servidor web. En ***Apache*** es ***/var/www/html***. La configuración por defecto que puedes ver es ***/var/www***, que no coincide, por lo que debemos cambiarla a ***/var/www/html***. ***/proc/self/cmdline*** copiará en este directorio el payload php.
+* *SITEPATH*: Obligatoria. Es la ruta del directorio raíz del servidor web. En ***Apache*** es ***/var/www/html***. La configuración por defecto que puedes ver es ***/var/www***, que no coincide, por lo que debemos cambiarla a ***/var/www/html***. 
+
+***/proc/self/cmdline*** copiará en este directorio el payload php.
 * *TARGETURI*: Obligatoria. Es la URI a la que se conectará el exploit. En ella se espera encontrar el payload php que será llamado por la Request HTTP.
 * *TMPPATH*: El exploit no funciona copiando directamente el payload php a la carpeta ***/var/www/html***, si no que lo copia primero a una carpeta tempora y luego, desde esta al directorio ***html***. Por lo tanto, esta configuración debe tener una carpeta en la que no existan problemas de permisos. La candidata ideal es ***/tmp***, así que no modificamos esta configuración.
 
