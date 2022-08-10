@@ -23,7 +23,8 @@ cd eHacking_LABS
 ## Carpeta 30
 
 1. Laboratorio 30-A: ***Atacar la máquina Metasploitable3***. Los ejercicios a realizar son:
-   - Descubrir servicios presentes en la víctima.
+   - Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5.
+   
    
 
 

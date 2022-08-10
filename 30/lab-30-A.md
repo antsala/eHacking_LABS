@@ -1,7 +1,6 @@
 # Atacar la máquina Metasploitable3.
 
-## Ejercicio 1: Descubrir servicios presentes en la víctima.
-
+## Ejercicio 1: Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5.
 
 Como ya hemos visto, ***nmap*** es la herramienta estrella para descubrir los servicios presente en una víctima que resida en la misma red local que el atacante. Almacenamos la IP de Metasploitable en una variable de entorno por comodidad.
 ```
@@ -25,7 +24,6 @@ Una búsqueda un poco más detenida demuestra que Metasploit sí que puede explo
 
 Como puede leerse en la documentación, el módulo ***proftpd_modcopy_exec*** de Metasploit, se aprovecha de la vulnerabilidad presente en la implementación del comando ***SITE CPFR/CPTO*** de ***ProFTPD***. Cualquier cliente (de FTP) no autenticado (No hace falta conocer credenciales) puede aprovecharse para copiar archivos en ***cualquier carpeta*** del sistema de archivos de la víctima. Los comandos de copia se ejecutan con los derechos (identidad) del servicio ProFTP, que por defecto corre bajo los privilegios del usuario ***nobody***. Mediante el uso de ***/proc/self/cmdline*** es posible subir a la víctima un archivo php que implemente una shell inversa, mediante el cual podemos tomar el control de la víctima.
 
-## Ejercicio 2: Explotar vulnerabilidad.
 
 Cargamos la consola de ***Metasploit*** si no estuviera iniciada.
 ```
@@ -59,11 +57,27 @@ Mostramos los ***targets***, que en ***Metasploit*** son los servicios vulnerabl
 show targets
 ```
 
-La salida muestra que el único objetivo posible es ***ProFTP*** en su versión ***1.3.5***
+La salida muestra que el único objetivo posible es ***ProFTP*** en su versión ***1.3.5***.
 
 ![ProFTPD 1.3.5](../img/180820221222.png)
 
 Ninguna otra versión de esta aplicación presenta la vulnerabilidad, por lo que una simple actualización de la misma cerraría la vulnerabilidad.
+
+Configuramos el módulo para el ataque.
+```
+set RHOST 192.168.20.13
+```
+```
+set SITEPATH /var/www/html
+```
+
+Comprobamos que todas las opciones requeridas tiene valor
+```
+show options
+```
+
+
+
 
 
 
