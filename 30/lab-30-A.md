@@ -108,6 +108,16 @@ Iniciamos el ataque.
 run
 ```
 
+Como se puede comprobar tenemos una sesion remota. 
+
+![Sesión remota](../img/180820221305.png)
+
+Podemos escribir comandos y ver el resultado.
+```
+whoami
+```
+
+
 
 
 
