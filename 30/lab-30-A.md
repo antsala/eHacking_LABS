@@ -59,7 +59,7 @@ show targets
 
 La salida muestra que el único objetivo posible es ***ProFTP*** en su versión ***1.3.5***.
 
-![ProFTPD 1.3.5](../img/180820221222.png)
+![show targets](../img/180820221222.png)
 
 Ninguna otra versión de esta aplicación presenta la vulnerabilidad, por lo que una simple actualización de la misma cerraría la vulnerabilidad.
 
@@ -76,6 +76,21 @@ Comprobamos que todas las opciones requeridas (***RHOSTS***, ***RPORT***, ***RPO
 show options
 ```
 
+Mostramos los ***Payloads*** compatibles con este ataque:
+```
+show payloads
+```
+
+La salida mostrará lo siguiente.
+
+![show payloads](../img/180820221239.png)
+
+Debemos elegir un tipo de payload que pueda ejecutarse en la víctima. En la mayoría de los sistemas Linux se encuentra instalado ***Python*** y ***Perl***. Sería cuestión de ir probando si no se está seguro. En ***Metasplitable3*** están instalados todos.
+
+Seleccionamos el payload
+```
+set payload payload/cmd/unix/reverse_perl
+```
 
 
 
