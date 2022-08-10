@@ -13,3 +13,6 @@ Procedemos a realizar un nmap de todos los puertos en la víctima. El parámetro
 nmap -sV $IP_VICTIMA -p 0-65535
 ```
 
+El resultado debe ser similar al siguiente:
+![My Image](../img/180820221102.png)
+
