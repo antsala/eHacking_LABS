@@ -60,6 +60,7 @@ show targets
 ```
 
 La salida muestra que el único objetivo posible es ***ProFTP*** en su versión ***1.3.5***
+
 ![ProFTPD 1.3.5](../img/180820221222.png)
 
 Ninguna otra versión de esta aplicación presenta la vulnerabilidad, por lo que una simple actualización de la misma cerraría la vulnerabilidad.
