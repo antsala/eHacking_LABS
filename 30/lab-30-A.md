@@ -117,6 +117,18 @@ Podemos escribir comandos y ver el resultado.
 whoami
 ```
 
+También podemos mostrar la ayuda para ver las posibilidades que este payload ofrece.
+```
+help
+```
+
+![Comandos disponibles](../img/180820221308.png)
+
+Además de ***bajar*** o ***subir*** archivos, podemos invocar una ***shell*** más potente, basada en ***python***
+```
+shell
+```
+
 
 
 
