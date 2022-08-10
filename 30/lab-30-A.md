@@ -133,6 +133,22 @@ Esto será posible si en la víctima se encuentra instalado ***Python***. Pulsam
 
 ![Shell basada en Python](../img/180820221311.png)
 
+Podemos movernos por el sistema con la identidad ***www-data***, y rápidamente vemos que tenemos permiso de escritura en el directorio ***drupal***, lo que permitiría iniciar otro tipo de ataque, por ejemplo para capturar credenciales.
+
+![Permiso escritura en Drupal](../img/180820221317.png)
+
+Salimos de la shell de Python.
+```
+exit
+```
+
+Pulsamos ***CTRL+C*** para abortar la sessión y volver al prompt de ***Metasploit***.
+
+
+
+
+
+
 
 
 
