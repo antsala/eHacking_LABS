@@ -85,12 +85,23 @@ La salida mostrará lo siguiente.
 
 ![show payloads](../img/180820221239.png)
 
-Debemos elegir un tipo de payload que pueda ejecutarse en la víctima. En la mayoría de los sistemas Linux se encuentra instalado ***Python*** y ***Perl***. Sería cuestión de ir probando si no se está seguro. En ***Metasplitable3*** están instalados todos.
+Debemos elegir un tipo de payload que pueda ejecutarse en la víctima. En la mayoría de los sistemas Linux se encuentran instalado ***Python*** y ***Perl***. Sería cuestión de ir probando si no se está seguro. En ***Metasplitable3*** están instalados todos.
 
 Seleccionamos el payload
 ```
 set payload payload/cmd/unix/reverse_perl
 ```
+
+Cuando seleccionamos un payload, aparecen opciones adicionales a las del módulo, que debemos configurar.
+```
+show options
+```
+
+![opciones del payload](../img/180820221245.png)
+
+* *LHOST*: Obligatoria. Siempre es la máquina que ataca, y a la que se conectará la shell inversa cuando el payload se active. En nuestro caso es la máquina ***Kali***, así que debemos poner en ella su IP (***192.168.20.9***)
+* *LPORT*: Obligatoria. Es el puerto de escucha que abrirá la máquina ***Kali***, y al que se conectará la shell inversa del payload. Para que los perimetrales no presenten impedimentos, se podría poner en valor ***80*** o, mejor ***443***.
+
 
 
 
