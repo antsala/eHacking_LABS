@@ -71,7 +71,7 @@ set RHOST 192.168.20.13
 set SITEPATH /var/www/html
 ```
 
-Comprobamos que todas las opciones requeridas tiene valor
+Comprobamos que todas las opciones requeridas (***RHOSTS***, ***RPORT***, ***RPORT_FTP***, ***SITEPATH***, ***TARGETURI*** y ***TMPPATH***) tienen valor.
 ```
 show options
 ```
