@@ -20,5 +20,11 @@ cd eHacking_LABS
    - Importación y configuracion de la VM ***Windows 7***.
 
 
+## Carpeta 30
+
+1. Laboratorio 30-A: ***Atacar la máquina Metasploitable3***. Los ejercicios a realizar son:
+   - Descubrir servicios presentes en la víctima.
+   
+
 
 
