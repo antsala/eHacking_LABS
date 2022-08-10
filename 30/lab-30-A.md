@@ -23,7 +23,7 @@ En la parte inferior de la página puede observar que se dice que ***No hay ning
 
 Una búsqueda un poco más detenida demuestra que Metasploit sí que puede explotar la vunerabilidad presente en ***ProFTP 1.3.5***: https://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec/
 
-Como puede leerse en la documentación, el módulo ***proftpd_modcopy_exec*** de Metasploit, se aprovecha de la vulnerabilidad presente en la implementación del comando ***SITE CPFR/CPTO*** de ***ProFTPD***. Cualquier cliente (de FTP) no autenticado (No hace falta conocer credenciales) puede aprovecharse para copiar archivos en ***cualquier carpeta*** del sistema de archivos de la víctima. Los comandos de copia se ejecutan con los derechos (identidad) del servicio ProFTP, que por defecto corre bajo los privilegios del usuario ***nobody***. Mediante el uso de ***/proc/self/cmdline*** es posible subir a la víctima cualquier archivo, por ejemplo un payload de ***meterpreter*** escrito en ***PHP***, mediante el cual podemos tomar el control de la víctima.
+Como puede leerse en la documentación, el módulo ***proftpd_modcopy_exec*** de Metasploit, se aprovecha de la vulnerabilidad presente en la implementación del comando ***SITE CPFR/CPTO*** de ***ProFTPD***. Cualquier cliente (de FTP) no autenticado (No hace falta conocer credenciales) puede aprovecharse para copiar archivos en ***cualquier carpeta*** del sistema de archivos de la víctima. Los comandos de copia se ejecutan con los derechos (identidad) del servicio ProFTP, que por defecto corre bajo los privilegios del usuario ***nobody***. Mediante el uso de ***/proc/self/cmdline*** es posible subir a la víctima un archivo php que implemente una shell inversa, mediante el cual podemos tomar el control de la víctima.
 
 ## Ejercicio 2: Explotar vulnerabilidad.
 
@@ -48,7 +48,17 @@ La salida será la siguiente.
 Las configuraciones que debemos proporcionar son:
 
 * *RHOSTS*: Obligatoria. Debemos poner la IP de la victima, que en nuestro escenario será ***192.168.20.13***.
-* *RPORT*: Obligatoria. Una vez subido el payload PHP, el ataque se produce por medio de una Request HTTP en esa URI. De esta forma, para que el ataque funcione, se necesita un servidor web en la víctima. Este hecho ha sido comprobado en el ejercicio anterior.
+* *RPORT*: Obligatoria. Una vez subido el payload PHP, el ataque se produce por medio de una Request HTTP en esa URI. De esta forma, para que el ataque funcione, se necesita un servidor web en la víctima. Este hecho ha sido comprobado en el ejercicio anterior. Como puedes comprobar, no es necesario cambiar este valor (80), porque es el puerto correcto donde el servidor HTTP está sirviendo peticiones.
+* *RPORT_FTP*: Obligatoria. Este ataque necesita la presencia del servidor ***ProFTPD 1.3.5***, que como hemos comprobado anteriormente, está presente y escuchando en el puerto ***21***, por lo que no es necesario cambiar este ajuste.
+* *SITE PATH*: Obligatoria. Es la ruta del directorio raíz del servidor web. En ***Apache*** es ***/var/www/html***. La configuración por defecto que puedes ver es ***/var/www***, que no coincide, por lo que debemos cambiarla a ***/var/www/html***. ***/proc/self/cmdline*** copiará en este directorio el payload php.
+* *TARGETURI*: Obligatoria. Es la URI a la que se conectará el exploit. En ella se espera encontrar el payload php que será llamado por la Request HTTP.
+* *TMPPATH*: El exploit no funciona copiando directamente el payload php a la carpeta ***/var/www/html***, si no que lo copia primero a una carpeta tempora y luego, desde esta al directorio ***html***. Por lo tanto, esta configuración debe tener una carpeta en la que no existan problemas de permisos. La candidata ideal es ***/tmp***, así que no modificamos esta configuración.
+
+Mostramos los ***targets***, que en ***Metasploit*** son los servicios vulnerables.
+```
+show targets
+```
+
 
 
 
