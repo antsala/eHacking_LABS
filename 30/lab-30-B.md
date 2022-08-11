@@ -92,7 +92,7 @@ Mostramos los ***targets***.
 show targets
 ```
 
-Hay dos candidatos, pero cuidado, el payload de meterpreter que hemos elegido es ***x86***, por lo que no funcionará en sistemas de ***64*** bits. Mejor elegimos el ***target 0***.
+Hay dos candidatos, pero cuidado, el payload de meterpreter que hemos elegido es ***x86***, por lo que no funcionará en sistemas de ***64*** bits. Mejor elegimos el ***target 0*** (un sistema de 64 también lo es de 32).
 ```
 set target 0
 ````
@@ -115,3 +115,13 @@ Ya tenemos una shell inversa de Meterpreter en la víctima.
 
 ![Shell de Meterpreter](../img/lab-30-B/202208111157.png)
 
+Ejecutamos algunos comandos
+```
+sysinfo
+```
+```
+help
+````
+```
+exit
+```
