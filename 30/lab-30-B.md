@@ -97,5 +97,16 @@ Hay dos candidatos, pero cuidado, el payload de meterpreter que hemos elegido es
 set target 0
 ````
 
+El comando ***Check*** nos indica si se cumplen todas las condiciones para que el ataque pueda prosperar. Si nos dijera ***el objetivo NO es vulnerable*** seguro que el ataque no funcionará. Por el contrario, si la respuesta es ***el objetivo ES vulnerable***, solo nos informa que se cumplen las condiciones, pero no es garantía de que funcione. La víctima puede tener contramedidas (antivirus, IPS, etc) o incluso estar parcheada.
+```
+check
+```
 
+En principio podemos seguir con el ataque.
 
+![Target is vulnerable](../img/lab-30-B/202208111143.png)
+
+Solo resta lanzar el ataque y esperar obtener una shell inversa.
+```
+run
+```
