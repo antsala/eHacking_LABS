@@ -92,5 +92,10 @@ Mostramos los ***targets***.
 show targets
 ```
 
-Solo hay un candidato: ***Linux***, por lo que no es necesario especificarlo.
+Hay dos candidatos, pero cuidado, el payload de meterpreter que hemos elegido es ***x86***, por lo que no funcionará en sistemas de ***64*** bits. Mejor elegimos el ***target 0***.
+```
+set target 0
+````
+
+
 
