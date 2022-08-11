@@ -66,7 +66,7 @@ show payloads
 
 Tenemos mucha diversidad.
 
-![Opciones del módulo](../img/lab-30-B/202208111124.png)
+![Lista de payloads](../img/lab-30-B/202208111124.png)
 
 Vamos a usar un ***Meterpreter***.
 ```
@@ -77,4 +77,6 @@ show options
 ```
 
 Debemos configurar las opciones del payload.
+
+![Opciones del payload](../img/lab-30-B/202208111129.png)
 
