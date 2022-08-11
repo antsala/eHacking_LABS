@@ -43,7 +43,7 @@ Las configuraciones que debemos proporcionar son:
 * *RPATH*: Obligatoria. Ruta para los binarios usados por el ***Command Stager***. Cuando un payload es largo, el ataque podría no funcionar porque no es posible inyectar la totalidad de dicho payload. El ***Command Stager*** es un pequeño programa que puede ser inyectado, siendo su misión la de descargar el payload verdadero por trozos o partes (etapas). Dejamos la ruta por defecto.
 * *RPORT*: Puerto que está sirviendo Apache. Como hemos visto con ***nmap*** es el ***80***. Lo dejamos tal cual.
 * *SRVHOST*: Obligatoria. IP del servidor en la máquina ***Kali*** que recibirá la conexión del payload. Si solo disponemos de una IP, es indiferente. No cambiamos este ajuste.
-* *SRVPORT*: Obligatoria. Puerto del servidor en la máquina ***Kali*** que recibirá la conexión del payload. Dejamos este valor.
+* *SRVPORT*: Obligatoria. Puerto del servidor en la máquina ***Kali*** desde el que el ***CmdStager*** se descargará el payload. Dejamos este valor.
 * *SSL*: Opcional. Podemos ocultar el tráfico del payload por medio de SSL. Su finalidad es evadir la detección de los ***IPS***. No lo usamos.
 * *SSLCert*: Opcional. Certificado necesario para usar SSL. No lo usamos.
 * *TARGETURI*: Ruta al script CGI que será inyectado y que deseamos ejecutar. Lo cambiamos a ***/cgi-bin/hello_world.sh***.
@@ -79,4 +79,18 @@ show options
 Debemos configurar las opciones del payload.
 
 ![Opciones del payload](../img/lab-30-B/202208111129.png)
+
+Establecemos como atacante la máquina de ***Kali***.
+```
+set LHOST 192.168.20.9
+```
+
+Respecto a ***LPORT*** dejamos el valor propuesto (***4444***). A este puerto se conectará el payload de meterpreter para ofrecernos la shell inversa.
+
+Mostramos los ***targets***.
+```
+show targets
+```
+
+Solo hay un candidato: ***Linux***, por lo que no es necesario especificarlo.
 
