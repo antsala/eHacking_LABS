@@ -43,11 +43,24 @@ Las configuraciones que debemos proporcionar son:
 * *RPATH*: Obligatoria. Ruta para los binarios usados por el ***Command Stager***. Cuando un payload es largo, el ataque podría no funcionar porque no es posible inyectar la totalidad de dicho payload. El ***Command Stager*** es un pequeño programa que puede ser inyectado, siendo su misión la de descargar el payload verdadero por trozos o partes (etapas). Dejamos la ruta por defecto.
 * *RPORT*: Puerto que está sirviendo Apache. Como hemos visto con ***nmap*** es el ***80***. Lo dejamos tal cual.
 * *SRVHOST*: Obligatoria. IP del servidor en la máquina ***Kali*** que recibirá la conexión del payload. Si solo disponemos de una IP, es indiferente. No cambiamos este ajuste.
-* *SRVHOST*: Obligatoria. Puerto del servidor en la máquina ***Kali*** que recibirá la conexión del payload. Dejamos este valor.
-* *SSL*: Opcional. Podemos ocultar el tráfico del payload por medio de SSL. Su finalidad es evadir la detección de los IPS. No lo usamos.
+* *SRVPORT*: Obligatoria. Puerto del servidor en la máquina ***Kali*** que recibirá la conexión del payload. Dejamos este valor.
+* *SSL*: Opcional. Podemos ocultar el tráfico del payload por medio de SSL. Su finalidad es evadir la detección de los ***IPS***. No lo usamos.
 * *SSLCert*: Opcional. Certificado necesario para usar SSL. No lo usamos.
 * *TARGETURI*: Ruta al script CGI que será inyectado y que deseamos ejecutar. Lo cambiamos a ***/cgi-bin/hello_world.sh***.
 * *TIMEOUT*: Obligatorio. Tiempo de espera para recibir la response. Lo dejamos como está.
 * *URIPATH*: Opcional. Este exploit no usa URI. Lo dejamos en blanco.
 * *VHOST*: Opcional. Un ***Virtual host*** es una forma de alojamiento web que permite que varias paginas web puedan funcionar en un mismo host. Nuestro objetivo no es un virtual host, así que lo dejamos en blanco.
+
+```
+set RHOSTS 192.168.20.13
+```
+
+```
+set TARGETURI /cgi-bin/hello_world.sh
+```
+
+Es el momento de mostrar los payloads compatibles con este ataque.
+```
+show payloads
+```
 
