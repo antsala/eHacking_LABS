@@ -64,3 +64,7 @@ Es el momento de mostrar los payloads compatibles con este ataque.
 show payloads
 ```
 
+Tenemos mucha diversidad.
+
+![Opciones del módulo](../img/lab-30-B/202208111124.png)
+
