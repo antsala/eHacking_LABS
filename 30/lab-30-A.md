@@ -145,19 +145,3 @@ exit
 Pulsamos ***CTRL+C*** para abortar la sessión y volver al prompt de ***Metasploit***.
 
 
-
-
-
-
-
-
-
-
-
-https://stuffwithaurum.com/2020/04/17/metasploitable-3-linux-an-exploitation-guide/
-
-
-
-
-
-
