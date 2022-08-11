@@ -1,6 +1,4 @@
-# Atacar la máquina Metasploitable3.
-
-## Ejercicio 1: Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5.
+# Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5.
 
 Como ya hemos visto, ***nmap*** es la herramienta estrella para descubrir los servicios presente en una víctima que resida en la misma red local que el atacante. 
 
@@ -143,5 +141,3 @@ exit
 ```
 
 Pulsamos ***CTRL+C*** para abortar la sessión y volver al prompt de ***Metasploit***.
-
-
