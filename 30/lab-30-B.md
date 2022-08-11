@@ -11,7 +11,7 @@ nmap -sV 192.168.20.13 -p 80, 443
 
 Como puede observarse en la imagen, está presente el servidor ***Apache 2.4.7*** en el puerto ***80***.
 
-![Servidor Apache presente](../img/202208111032.png)
+![Servidor Apache presente](../img/lab-30-B/202208111032.png)
 
 Cargamos la consola de ***Metasploit*** sino estuviera ya iniciada.
 ```
@@ -23,3 +23,11 @@ Procedemos a cargar el módulo para realizar el ataque.
 use exploit/multi/http/apache_mod_cgi_bash_env_exec
 ```
 
+Mostramos las ***opciones*** de este exploit.
+```
+show options
+```
+
+Las opciones son las siguientes.
+
+![Opciones del módulo](../img/lab-30-B/202208111038.png)

@@ -10,7 +10,7 @@ nmap -sV 192.168.20.13 -p 0-65535
 
 El resultado debe ser similar al siguiente. Observar como el rectángulo rojo marca que se ha detectado la aplicación ***ProFTPD 1.3.5***. También comprobar cómo el rectángulo azul indica que hay un servidor web presente en el puerto ***80***.
 
-![ProFTPD 1.3.5](../img/180820221102.png)
+![ProFTPD 1.3.5](../img/lab-30-A/180820221102.png)
 
 Localizamos información sobre vulnerabilidades en ***CVE Details*** y encontramos que existe una de ***nivel 10***: https://www.cvedetails.com/cve/CVE-2015-3306/. Abrir el link y estudiarlo detenidamente.
 
@@ -37,7 +37,7 @@ show options
 ```
 
 La salida será la siguiente.
-![Opciones del módulo](../img/180820221143.png)
+![Opciones del módulo](../img/lab-30-A/180820221143.png)
 
 Las configuraciones que debemos proporcionar son:
 
@@ -55,7 +55,7 @@ show targets
 
 La salida muestra que el único objetivo posible es ***ProFTP*** en su versión ***1.3.5***.
 
-![show targets](../img/180820221222.png)
+![show targets](../img/lab-30-A/180820221222.png)
 
 Ninguna otra versión de esta aplicación presenta la vulnerabilidad, por lo que una simple actualización de la misma cerraría la vulnerabilidad.
 
@@ -79,7 +79,7 @@ show payloads
 
 La salida mostrará lo siguiente.
 
-![show payloads](../img/180820221239.png)
+![show payloads](../img/lab-30-A/180820221239.png)
 
 Debemos elegir un tipo de payload que pueda ejecutarse en la víctima. En la mayoría de los sistemas Linux se encuentran instalado ***Python*** y ***Perl***. Sería cuestión de ir probando si no se está seguro. En ***Metasplitable3*** están instalados todos.
 
@@ -93,7 +93,7 @@ Cuando seleccionamos un payload, aparecen opciones adicionales a las del módulo
 show options
 ```
 
-![opciones del payload](../img/180820221245.png)
+![opciones del payload](../img/lab-30-A/180820221245.png)
 
 * *LHOST*: Obligatoria. Siempre es la máquina que ataca, y a la que se conectará la shell inversa cuando el payload se active. En nuestro caso es la máquina ***Kali***, así que debemos poner en ella su IP (***192.168.20.9***)
 * *LPORT*: Obligatoria. Es el puerto de escucha que abrirá la máquina ***Kali***, y al que se conectará la shell inversa del payload. Para que los perimetrales no presenten impedimentos, se podría poner en valor ***80*** o, mejor ***443***. Como en el laboratorio no hay este tipo de impedimentos, dejamos el valor propuesto.
@@ -108,7 +108,7 @@ run
 
 Como se puede comprobar tenemos una sesion remota. 
 
-![Sesión remota](../img/180820221305.png)
+![Sesión remota](../img/lab-30-A/180820221305.png)
 
 Podemos escribir comandos y ver el resultado.
 ```
@@ -120,7 +120,7 @@ También podemos mostrar la ayuda para ver las posibilidades que este payload of
 help
 ```
 
-![Comandos disponibles](../img/180820221308.png)
+![Comandos disponibles](../img/lab-30-A/180820221308.png)
 
 Además de ***bajar*** o ***subir*** archivos, podemos invocar una ***shell*** más potente, basada en ***python***
 ```
@@ -129,11 +129,11 @@ shell
 
 Esto será posible si en la víctima se encuentra instalado ***Python***. Pulsamos la tecla ***Enter*** para activar la shell.
 
-![Shell basada en Python](../img/180820221311.png)
+![Shell basada en Python](../img/lab-30-A/180820221311.png)
 
 Podemos movernos por el sistema con la identidad ***www-data***, y rápidamente vemos que tenemos permiso de escritura en el directorio ***drupal***, lo que permitiría iniciar otro tipo de ataque, por ejemplo para capturar credenciales.
 
-![Permiso escritura en Drupal](../img/180820221317.png)
+![Permiso escritura en Drupal](../img/lab-30-A/180820221317.png)
 
 Salimos de la shell de Python.
 ```
