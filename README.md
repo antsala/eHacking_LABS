@@ -24,6 +24,8 @@ cd eHacking_LABS
 
 1. Laboratorio 30-A: ***Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5***.
 2. Laboratorio 30-B: ***Explotar vulnerabilidad CVE-2014-6271 (Shellshock) presente en Apache***.
+3. Laboratorio 30-C: ***Aprovechar vulnerabilidad WebDAV***.
+
 
    
 
