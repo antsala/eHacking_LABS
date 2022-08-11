@@ -31,3 +31,23 @@ show options
 Las opciones son las siguientes.
 
 ![Opciones del módulo](../img/lab-30-B/202208111038.png)
+
+Las configuraciones que debemos proporcionar son:
+
+* *CMD_MAX_LENGTH*: Obligatoria. Es el número de caracteres que vamos a inyectar en la víctima. El valor 2048 suele ser suficiente para albergar las diferentes ***payloads*** disponibles. No lo cambiamos.
+* *CVE*: Obligatoria. Contiene la vulnerabilidad a explotar, pudiendo elegir entre CVE-2014-6271 (https://www.cvedetails.com/cve/CVE-2014-6271/) y CVE-2014-6278 (https://www.cvedetails.com/cve/CVE-2014-6278/). Esta última es una variante de la anterior. Dejaremos el valor por defecto.
+* *HEADER*: Obligatoria. Especifica la cabecera HTTP que será usada para inyectar el código malicioso. Debe ser ***User-Agent***, así que no la cambiamos.
+* *METHOD*: Obligatoria. Especifica el verbo HTTP a utilizar. Debe ser ***GET***. No lo cambiamos.
+* *Proxies*: Opcional. Permite relizar el ataque a través de un proxy. No lo usaremos.
+* *RHOSTS: Obligatoria. IP(s) de la víctima(s). Ponemos la de ***Metasploitable-ubu1404***, que es ***192.168.20.13***.
+* *RPATH*: Obligatoria. Ruta para los binarios usados por el ***Command Stager***. Cuando un payload es largo, el ataque podría no funcionar porque no es posible inyectar la totalidad de dicho payload. El ***Command Stager*** es un pequeño programa que puede ser inyectado, siendo su misión la de descargar el payload verdadero por trozos o partes (etapas). Dejamos la ruta por defecto.
+* *RPORT*: Puerto que está sirviendo Apache. Como hemos visto con ***nmap*** es el ***80***. Lo dejamos tal cual.
+* *SRVHOST*: Obligatoria. IP del servidor en la máquina ***Kali*** que recibirá la conexión del payload. Si solo disponemos de una IP, es indiferente. No cambiamos este ajuste.
+* *SRVHOST*: Obligatoria. Puerto del servidor en la máquina ***Kali*** que recibirá la conexión del payload. Dejamos este valor.
+* *SSL*: Opcional. Podemos ocultar el tráfico del payload por medio de SSL. Su finalidad es evadir la detección de los IPS. No lo usamos.
+* *SSLCert*: Opcional. Certificado necesario para usar SSL. No lo usamos.
+* *TARGETURI*: Ruta al script CGI que será inyectado y que deseamos ejecutar. Lo cambiamos a ***/cgi-bin/hello_world.sh***.
+* *TIMEOUT*: Obligatorio. Tiempo de espera para recibir la response. Lo dejamos como está.
+* *URIPATH*: Opcional. Este exploit no usa URI. Lo dejamos en blanco.
+* *VHOST*: Opcional. Un ***Virtual host*** es una forma de alojamiento web que permite que varias paginas web puedan funcionar en un mismo host. Nuestro objetivo no es un virtual host, así que lo dejamos en blanco.
+
