@@ -110,3 +110,8 @@ Solo resta lanzar el ataque y esperar obtener una shell inversa.
 ```
 run
 ```
+
+Ya tenemos una shell inversa de Meterpreter en la víctima.
+
+![Shell de Meterpreter](../img/lab-30-B/202208111157.png)
+
