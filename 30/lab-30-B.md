@@ -104,7 +104,7 @@ check
 
 En principio podemos seguir con el ataque.
 
-![Target is vulnerable](../img/lab-30-B/202208111130.png)
+![Target is vulnerable](../img/lab-30-B/202208111129.png)
 
 Solo resta lanzar el ataque y esperar obtener una shell inversa.
 ```
