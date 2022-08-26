@@ -46,10 +46,18 @@ Pegamos el siguiente texto en el cuadro de búsqueda
 cadiz club de futbol filetype:pdf
 ```
 
-En este casp usamos el buscador de la forma habitual pero reducimos los tipos de contenido a archivos pdf.
+En este caso usamos el buscador de la forma habitual pero reducimos los tipos de contenido a archivos pdf.
 
 ![ProFTPD 1.3.5](../img/lab-02-A/202208261226.png)
 
-NOTA: Prueba a usar ***filetype*** junto con ***inline***, o busca otros tipos de archivos más comprometidos como ***dbf***, ***csv***, ***xml***, ***docx***, etc.
+NOTA: Prueba a usar ***filetype*** junto con ***inline***, y busca otros tipos de archivos más comprometedores como ***dbf***, ***csv***, ***xml***, ***docx***, etc.
+
+Los modificadores de búsqueda son muy variopintos. En la siguiente tabla resumimos los más importantes.
+
+NOTA: Practicas con ello y obtén información de tu interés.
 
 
+* *cache* Permite ver una versión antigua de la web. Quizas en el pasado se cometieron errores y se exfiltró alguna información, que podríamos ver en la actualidad.
+* *allinurl* Es la expresión lógica ***AND***. El motor devolverá links que contengan a la vez todos los tokens. Por ejemplo, ***allinurl: oferta trabajo seguridad informatica***
+* *allintitle* Restringe los resultados a las páginas que tengan todos los tokens en su título. Por ejemplo ***allintitle: detect Ryuk***.
+* *inanchor* Restringe resultado a páginas que contienen el token de búsqueda como enlace. Por ejemplo, ***c2 server inanchor:Ryuk***, solo muestra los resultados encontrados relativos a los servidores de comando y control que tienen un enlace hacia ***Ryuk***.
