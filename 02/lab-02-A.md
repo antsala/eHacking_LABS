@@ -3,7 +3,7 @@
 Requisitos:
 1. Máquina ***Kali Linux***.
 
-# Google Hacking
+## Google Hacking
 
 El primer paso en la etapa de búsqueda de información o reconocimiento es obtener toda la cantidad de esta que se pueda. En este laboratorio aprenderemos a utilizar técnicas avanzadas de búsqueda, usar imagenes para obtener inteligencia, usar videos, etc.
 

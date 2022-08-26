@@ -21,7 +21,7 @@ cd eHacking_LABS
 
 ## Carpeta 02
 
-1. Laboratorio 02-A: ***Realizar Footprinting usando motores de búsqueda***
+1. Laboratorio 02-A: ***Realizar Footprinting usando motores de búsqueda***. Los ejercicios a realizar son:
    - Google Hacking.
 
 
