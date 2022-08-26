@@ -5,7 +5,7 @@ Requisitos:
 
 ## Google Hacking
 
-El primer paso en la etapa de búsqueda de información o reconocimiento es obtener toda la cantidad de esta que se pueda. En este ejercicio aprenderemos a utilizar técnicas avanzadas de búsqueda por medio de Google, que recibe el nombre de ***Google Dorks***.
+El primer paso en la etapa de búsqueda de información o reconocimiento es obtener toda la cantidad de esta que se pueda. En este ejercicio aprenderemos a utilizar técnicas avanzadas de búsqueda por medio de Google, que se suele conocer por el nombre de ***Google Dorks***.
 
 Iniciamos sesión en la máquina Kali con el usuario
 ```
@@ -56,3 +56,9 @@ NOTA: Prueba a usar ***filetype*** junto con ***inline***, y busca otros tipos d
 Los modificadores de búsqueda son muy variopintos. En este link: https://antoniogonzalezm.es/google-hacking-46-ejemplos-hacker-contrasenas-usando-google-enemigo-peor/ tienes un montón de ejemplos para que conozca la potencia de la OSINT usando Google.
 
 Nota: Te recomiendo que practiques y modifiques algunos de los ejemplos propuestos en el link, para localizar información exfiltrada en los sitios de tu interés.
+
+## Extraer información de un video.
+
+En esta etapa de reconocimiento, es muy común usar videos corporativos para extraer información sobre el objetivo.
+
+CEH v11_lab pag 16
