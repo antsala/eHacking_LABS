@@ -5,7 +5,7 @@ Requisitos:
 
 ## Google Hacking
 
-El primer paso en la etapa de búsqueda de información o reconocimiento es obtener toda la cantidad de esta que se pueda. En este laboratorio aprenderemos a utilizar técnicas avanzadas de búsqueda, usar imagenes para obtener inteligencia, usar videos, etc.
+El primer paso en la etapa de búsqueda de información o reconocimiento es obtener toda la cantidad de esta que se pueda. En este ejercicio aprenderemos a utilizar técnicas avanzadas de búsqueda por medio de Google, que recibe el nombre de ***Google Dorks***.
 
 Iniciamos sesión en la máquina Kali con el usuario
 ```
