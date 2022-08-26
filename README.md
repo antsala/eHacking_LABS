@@ -19,6 +19,10 @@ cd eHacking_LABS
    - Importación y configuracion de la VM ***Metasploitable3-win2k8***.
    - Importación y configuracion de la VM ***Windows 7***.
 
+## Carpeta 02
+
+1. Laboratorio 02-A: ***Realizar Footprinting usando motores de búsqueda***
+
 
 ## Carpeta 30
 
