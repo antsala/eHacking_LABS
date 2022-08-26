@@ -32,4 +32,9 @@ intitle:password site:www.microsoft.com
 ```
 
 El resultado debe ser similar al siguiente. Se muestran todas las páginas que tienen ***password*** en su título y están indexadas por Google.
+
+Con suerte se puede encontrar lo que se busca.
+
+NOTA: Repite la práctica cambiando ***Microsoft*** por el sitio de tu interés (tu organización, un competidor, etc). No hay ninguna repercusión legal en ello por tratarse de OSINT.
+
 ![ProFTPD 1.3.5](../img/lab-02-A/202208261203.png)
