@@ -48,6 +48,8 @@ cadiz club de futbol filetype:pdf
 
 En este casp usamos el buscador de la forma habitual pero reducimos los tipos de contenido a archivos pdf.
 
+![ProFTPD 1.3.5](../img/lab-02-A/202208261226.png)
+
 NOTA: Prueba a usar ***filetype*** junto con ***inline***, o busca otros tipos de archivos más comprometidos como ***dbf***, ***csv***, ***xml***, ***docx***, etc.
 
-![ProFTPD 1.3.5](../img/lab-02-A/202208261226.png)
+
