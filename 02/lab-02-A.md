@@ -16,6 +16,11 @@ y el password
 Pa55w.rd
 ```
 
+Con el navegador, conectar a Google
+```
+https://www.google.es
+```
+
 
 El resultado debe ser similar al siguiente. Observar como el rectángulo rojo marca que se ha detectado la aplicación ***ProFTPD 1.3.5***. También comprobar cómo el rectángulo azul indica que hay un servidor web presente en el puerto ***80***.
 
