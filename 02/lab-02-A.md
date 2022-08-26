@@ -45,3 +45,5 @@ Pegamos el siguiente texto en el cuadro de búsqueda
 ```
 cadiz club de futbol filetype:pdf
 ```
+
+![ProFTPD 1.3.5](../img/lab-02-A/202208261226.png)
