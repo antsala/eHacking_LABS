@@ -3,6 +3,7 @@
 Requisitos:
 1. Máquina ***Kali Linux***.
 
+# Google Hacking
 
 El primer paso en la etapa de búsqueda de información o reconocimiento es obtener toda la cantidad de esta que se pueda. En este laboratorio aprenderemos a utilizar técnicas avanzadas de búsqueda, usar imagenes para obtener inteligencia, usar videos, etc.
 
@@ -54,4 +55,4 @@ NOTA: Prueba a usar ***filetype*** junto con ***inline***, y busca otros tipos d
 
 Los modificadores de búsqueda son muy variopintos. En este link: https://antoniogonzalezm.es/google-hacking-46-ejemplos-hacker-contrasenas-usando-google-enemigo-peor/ tienes un montón de ejemplos para que conozca la potencia de la OSINT usando Google.
 
-Nota: Te recomiendo que practiques y modifiques algunos de los ejemplos propuestos en el link.
+Nota: Te recomiendo que practiques y modifiques algunos de los ejemplos propuestos en el link, para localizar información exfiltrada en los sitios de tu interés.
