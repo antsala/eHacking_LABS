@@ -21,6 +21,18 @@ Con el navegador, conectar a Google
 https://www.google.es
 ```
 
+Vamos a hacer una serie de prácticas usando lo que viene a llamarse ***Google Hacking***. Para ello usaremos parámetros en en cuadro de texto de búsqueda.
+
+* *intitle:password* se utiliza para buscar páginas que tenga la palabra *password* en el título. 
+* *site:www.microsoft.com* se utiliza para limitar la búsqueda en un sitio concreto.
+
+Pegamos el siguiente texto en el cuadro de búsqueda
+```
+intitle:password site:www.microsoft.com
+```
+
+
+
 
 El resultado debe ser similar al siguiente. Observar como el rectángulo rojo marca que se ha detectado la aplicación ***ProFTPD 1.3.5***. También comprobar cómo el rectángulo azul indica que hay un servidor web presente en el puerto ***80***.
 
