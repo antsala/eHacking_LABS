@@ -77,6 +77,16 @@ En esta URL https://www.searchftps.net tenemos un indexador de servidores FTPs p
 
 En este link de Google: https://www.google.com/search?q=global+ftp+search+engine&oq=global+ftp+sea&aqs=edge.0.0i19j69i57.4741j0j4&sourceid=chrome&ie=UTF-8 podrás encontrar multitud de motores de búsqueda especializados en obtenet archivos FTP. Prueba con el dominio de tu interés a ver qué descubres.
 
+## Extraer información de dispositivos IoT.
+
+Internet of the Things (IoT) se está convirtiendo en uno de los vectores de ataque más populares, ya que es muy común que estos dispositivos presenten muchas vulnerabilidades debido a la falta de seguridad que presentan (no todos, pero sí la mayoría)
+
+Estos dispositivos suele exponer servicios en Internet para su control. De esta forma, localizar dispositivos IoT relacionados con la víctima es un gran logro en esta fase de reconocimiento.
+
+Shodan es un buscador especializado en encontrar estos tipos de dispositivos. Su URL es: https://www.shodan.io. Mira la documentación o visualiza un video en Youtube para aprender a usarlo. Posterioremente realiza una búsqueda con tu víctima preferida y comprueba si hay resultados relevantes.
+
+
+
 
 
 
