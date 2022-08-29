@@ -25,6 +25,13 @@ cd eHacking_LABS
    - Google Hacking.
    - Extraer información de un video.
    - Extraer información de servidores FTP.
+   - Extraer información de dispositivos IoT.
+
+2. Laboratorio 02-B: ***Realizar Footprinting usando servicios web***. Los ejercicios a realizar son:
+   - Localizar dominios de la víctima.
+   - Localizar información sobre personas usando buscadores.
+   - Localizar direcciones de correo electrónico.
+
 
 
 ## Carpeta 30
