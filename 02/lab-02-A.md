@@ -53,7 +53,7 @@ En este caso usamos el buscador de la forma habitual pero reducimos los tipos de
 
 NOTA: Prueba a usar ***filetype*** junto con ***inline***, y busca otros tipos de archivos más comprometedores como ***dbf***, ***csv***, ***xml***, ***docx***, etc.
 
-Los modificadores de búsqueda son muy variopintos. En este link: https://antoniogonzalezm.es/google-hacking-46-ejemplos-hacker-contrasenas-usando-google-enemigo-peor/ tienes un montón de ejemplos para que conozca la potencia de la OSINT usando Google.
+Los modificadores de búsqueda son muy variopintos. En este link: https://antoniogonzalezm.es/google-hacking-46-ejemplos-hacker-contrasenas-usando-google-enemigo-peor/ tienes un montón de ejemplos para que conozcas la potencia de la OSINT usando Google.
 
 Nota: Te recomiendo que practiques y modifiques algunos de los ejemplos propuestos en el link, para localizar información exfiltrada en los sitios de tu interés.
 
@@ -61,4 +61,22 @@ Nota: Te recomiendo que practiques y modifiques algunos de los ejemplos propuest
 
 En esta etapa de reconocimiento, es muy común usar videos corporativos para extraer información sobre el objetivo.
 
-CEH v11_lab pag 16
+En un navegador carga esta URL https://www.youtube.com/watch?v=ESz69Yo7yvI&t=1s y estudia el video. Se trata de un anuncio corporativo que usaremos como ejemplo para demostrar el uso de esta técnica. 
+
+Es obvio que las personas que aparecen en el video son conocidas, pero recordemos que para el hacker lo importante es extraer toda la información posible que pueda ayudarle en su cometido.
+
+Copiamos en el porta papeles la URL anterior y, nos conectamos a https://citizenevidence.amnestyusa.org/. Esta herramienta pide como entrada una URL de un video. Pegamos la que tenemos almacenada en el portapapeles y hacemos clic en ***Go***.
+
+La herramienta irá buscando imágenes de personas y usará Google para realizar una búsqueda a partir de la imagen o thumbnail extraída. Es una forma muy simple de empezar a ganar información sobre la víctima.
+
+## Extraer información de servidores FTP.
+
+FTP es un protocolo que está en desuso, pero no por ello debe descargarse como posible fuente de información para la etapa de reconocimiento.
+
+En esta URL https://www.searchftps.net tenemos un indexador de servidores FTPs públicos. Merece la pena comprobar si en el dominio de la víctima se ha indexado un servidor FTP.
+
+En este link de Google: https://www.google.com/search?q=global+ftp+search+engine&oq=global+ftp+sea&aqs=edge.0.0i19j69i57.4741j0j4&sourceid=chrome&ie=UTF-8 podrás encontrar multitud de motores de búsqueda especializados en obtenet archivos FTP. Prueba con el dominio de tu interés a ver qué descubres.
+
+
+
+
