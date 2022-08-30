@@ -134,6 +134,10 @@ Aquí puedes ver la web de ***Proton***. Servicios como este son usados por los 
 
 ![Proton Mail](../img/lab-02-B/202208301126.png)
 
+Debemos saber que la inmensa mayoría de los links a dominios ***.onion*** son de intercambio privado, es decir, NO lo vamos a encontrar indexados en un buscador. Este intercambio se produce en sitios y foros concretos dentro de la Dark Web. 
+
+Recuerda que la Dark Web es peligrosa, incluso curioseando una simple lista de dominios onion. Abundan el ***malware***, ***amenazas***, ***robo de identidad***, entre muchas otras actividades delictivas. Así que mucho cuidado.
+
 
 
 
