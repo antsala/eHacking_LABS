@@ -34,11 +34,14 @@ cd eHacking_LABS
    - Localizar recursos en la Dark Web.
    - Fingerprinting pasivo de sitios webs.
 
-3. Laboratorio 03-B: ***Realizar Footprinting por medio de redes sociales***. Los ejercicios a realizar son:
+3. Laboratorio 03-C: ***Realizar Footprinting por medio de redes sociales***. Los ejercicios a realizar son:
    - Extraer información desde LinkedIn.
    - Extraer información usando Sherlock.
+   - Extraer información desde Twitter.
 
 
+3. Laboratorio 03-D: ***Realizar Footprinting activo de sitios web***. Los ejercicios a realizar son:
+   - Uso avanzado de ping para footprinting.
 
 ## Carpeta 30
 
