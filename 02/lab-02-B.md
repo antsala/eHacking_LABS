@@ -24,4 +24,14 @@ Prueba a localizar información sobre tu "víctima". También es recomendable le
 
 ## - Localizar direcciones de correo electrónico.
 
-Pág 28.
+Sin duda alguna obtener un listado con las direcciones de correo corporativos de los miembros de la organización víctima, es algo que va buscando el hacker desde el primer momento.
+
+El phishing (spear) es el vector de ataque más importante en la actualidad, así que en esta fase de recolección, es un objetivo que se busca claramente.
+
+Existen muchas herramientas que permiten automatizar la recogida de este tipo de información, pero ***The Harvester (El recolector)*** es una de las más conocidas y utilizadas.
+
+Abrimos una terminal en la máquina ***Kali***, y ejecutamos el siguiente comando.
+```
+theHarvester
+```
+
