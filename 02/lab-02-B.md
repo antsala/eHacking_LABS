@@ -136,9 +136,36 @@ Aquí puedes ver la web de ***Proton***. Servicios como este son usados por los 
 
 Debemos saber que la inmensa mayoría de los links a dominios ***.onion*** son de intercambio privado, es decir, NO lo vamos a encontrar indexados en un buscador. Este intercambio se produce en sitios y foros concretos dentro de la Dark Web. 
 
-Recuerda que la Dark Web es peligrosa, incluso curioseando una simple lista de dominios onion. Abundan el ***malware***, ***amenazas***, ***robo de identidad***, entre muchas otras actividades delictivas. Así que mucho cuidado.
+Recuerda que la Dark Web es peligrosa, incluso curioseando una simple lista de dominios onion. Abundan el ***malware***, ***amenazas***, ***robo de identidad***, entre muchas otras actividades delictivas. ¡¡¡Así que mucho cuidado!!!.
 
 En este link: https://www.expressvpn.com/blog/best-onion-sites-on-dark-web/ tienes mucha más información sobre cómo se accede a la ***Dark Web***.
+
+
+## Fingerprinting pasivo de sitios webs.
+
+Por su propia naturaleza, los servicios están expuestos en Internet. Por consiguiente es posible obtener mucha información sobre ellos sin interactuar con herramientas de ataque.
+
+Conéctate con un nagevador a la siguiente URL.
+```
+https://search.censys.io
+```
+
+Esta página interactúa con el dominio que proporciones en el cuadro de búsqueda y es capaz de ofrecerte muchísima información. Puesto que es ***censys*** quien extrae la información, el actor nunca se verá expuesto en esta búsqueda de información (sobre todo si lo hace detrás de Tor)
+
+Para este ejercicio te pedimos que localices la siguiente información sobre un host de tu elección.
+
+* *IP del host*
+* *Ubicación geográfica*
+* *Puertos abiertos*
+* *Servicios*. Sistema operativo, versión PHP, etc.
+* *Huella JARM*. Lee el siguiente par de párrafos si no sabes qué es.
+
+Por otro lado, ¿Sabías que se puede identificar a un servidor mediante una huella digital TLS? Es lo que se conoce como  ***JARM*** (también ***JA3***). De esta forma se puede saber si el servicio está hospedado en un servidor corporativo o, por el contrario, en un proveedor cloud como Google, AWS, Azure, etc.
+
+Léete este artículo: https://ciberseguridad.com/herramientas/software/jarm-herramienta-huellas-digitales/. A continuación determina si el host que está evaluando se encuentra en un proveedor cloud (mayor seguridad) o en on-prem (menor seguridad)
+
+
+
 
 
 

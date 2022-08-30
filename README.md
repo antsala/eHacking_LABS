@@ -32,6 +32,7 @@ cd eHacking_LABS
    - Localizar información sobre personas usando buscadores.
    - Localizar direcciones de correo electrónico.
    - Localizar recursos en la Dark Web.
+   - Fingerprinting pasivo de sitios webs.
 
 
 
