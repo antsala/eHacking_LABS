@@ -38,7 +38,7 @@ Con suerte se puede encontrar lo que se busca.
 
 NOTA: Repite la práctica cambiando ***Microsoft*** por el sitio de tu interés (tu organización, un competidor, etc). No hay ninguna repercusión legal en ello por tratarse de OSINT.
 
-![ProFTPD 1.3.5](../img/lab-02-A/202208261203.png)
+![Búsqueda de contenidos de un dominio](../img/lab-02-A/202208261203.png)
 
 * *filetype:pdf* Permite localizar archivos con dicha extensión. 
 
@@ -49,7 +49,7 @@ cadiz club de futbol filetype:pdf
 
 En este caso usamos el buscador de la forma habitual pero reducimos los tipos de contenido a archivos pdf.
 
-![ProFTPD 1.3.5](../img/lab-02-A/202208261226.png)
+![Búsqueda de archivos pdf](../img/lab-02-A/202208261226.png)
 
 NOTA: Prueba a usar ***filetype*** junto con ***inline***, y busca otros tipos de archivos más comprometedores como ***dbf***, ***csv***, ***xml***, ***docx***, etc.
 
@@ -84,9 +84,3 @@ Internet of the Things (IoT) se está convirtiendo en uno de los vectores de ata
 Estos dispositivos suele exponer servicios en Internet para su control. De esta forma, localizar dispositivos IoT relacionados con la víctima es un gran logro en esta fase de reconocimiento.
 
 Shodan es un buscador especializado en encontrar estos tipos de dispositivos. Su URL es: https://www.shodan.io. Mira la documentación o visualiza un video en Youtube para aprender a usarlo. Posterioremente realiza una búsqueda con tu víctima preferida y comprueba si hay resultados relevantes.
-
-
-
-
-
-

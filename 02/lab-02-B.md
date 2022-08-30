@@ -61,6 +61,7 @@ sudo apt install -y tor torbrowser-launcher
 ```
 
 Para lanzar ***Tor*** ejecutamos el siguiente comando.
+Nota: La primera vez se descargará e instalará TOR.
 ```
 torbrowser-launcher
 ```
@@ -70,3 +71,27 @@ Tor (***The Onion Router***) establece conexiones punto a punto entre tres servi
 Originalmente Tor se ideo para evitar escuchas gubernamentales en aquellos países donde la Democracia brilla por su ausencia. Esto permitió a disidentes participar plenamente en sitios y foros internacionales.
 
 Esta ***anonimato*** también es usado por los ***actores de la amenaza*** (y otros delincuentes) para relacionarse.
+
+Una vez finalizada la instalación, hacemos clic en ***Configure Connection...***. Deberíamos leer la documentación que muestra en link ***Learn more*** donde se explica cómo funciona TOR y su finalidad. En esta caso simplemente nos conectamos haciendo clic en ***Connect***. La conexión tarda unos segundos en establecerse.
+Nota: Si observas que tarda más de la cuenta, cancela el intento de conexión y realízalo de nuevo.
+
+Como puede observarse en la siguiente imagen, el navegador Tor utiliza ***DuckDuckGo***.
+
+![DuckDuckGo](../img/lab-02-B/202208301036.png)
+
+En la barra de búsqueda de ***DuckDuckGo*** escribe los siguiente.
+```
+Creación de malware
+```
+
+El resultado será similar a este.
+
+![Resultado de la búsqueda](../img/lab-02-B/202208301046.png)
+
+Como puedes comprobar, no hay demasiada diferencia entre usar Tor y Google en tu equipo de trabajo. El resultado de la búsqueda está en ***Internet*** y no en la ***Dark Web***.
+
+No obstante se ha conseguido en anonimato. Tu conexión realiza tres saltos y esto dificulta notablemente su rastreo. Para poder verificarlo, haz clic en el icono con en candado que aparece en la barra de dirección.
+
+![Visualizar cirtuito](../img/lab-02-B/202208301053.png)
+
+
