@@ -22,7 +22,7 @@ En https://peekyou.com puedes localizar información sobre una persona. Este tip
 Prueba a localizar información sobre tu "víctima". También es recomendable leer este artículo https://www.genbeta.com/a-fondo/buscas-a-alguien-en-internet-estas-14-webs-te-ayudaran-a-encontrarlo donde aparecen sitios web similares.
 
 
-## - Localizar direcciones de correo electrónico.
+## Localizar direcciones de correo electrónico.
 
 Sin duda alguna obtener un listado con las direcciones de correo corporativos de los miembros de la organización víctima, es algo que va buscando el hacker desde el primer momento.
 
@@ -36,10 +36,27 @@ theHarvester
 ```
 
 La sintaxis es muy sencilla. 
-* *-d <dominio>* permite poner el dominio corporativo cuyas direcciones de correo electrónico se desea recolectar.
-* *-l <max>* se usa para limitar la salida. Es el número máximo de líneas que mostrará la salida.
-* *-b <buscador>* sirve para indicar a la herramienta qué buscador deseamos utilizar: Google, Bing, baidu, DuckDuckGo, etc.
+* *-d <dominio>* permite poner el ***dominio*** corporativo cuyas direcciones de correo electrónico se desea recolectar.
+* *-l <max>* se usa para ***limitar*** la salida. Es el número máximo de líneas que mostrará la salida.
+* *-b <buscador>* sirve para indicar a la herramienta qué ***motor de busqueda*** deseamos utilizar: Google, Bing, baidu, DuckDuckGo, etc.
 
 ```
-theHarvester -d avante.es -l 200 -b google
+theHarvester -d <pon_aquí_un_dominio> -l 200 -b google
 ```
+
+## Localizar recursos en la Dark Web.
+
+Sin duda habrás oído hablar del la Internet Oscura o ***Dark Web***. Una colección de sitios web en la que debemos ser muy precavidos. Todo lo que se considera ilegal tiene cabida aquí, incluído contenidos que pueden herir la sensibilidad de cualquiera de nosotros.
+
+Un sitio web de la Dark web sigue siendo un sitio web, es decir, no hay nada en especial que lo diferencie de los sitios web convencionales, a excepción de que no va a estar anunciado por un registro de recurso DNS de tipo A o CNAME.
+
+En consecuencia, para acceder a los sitios de la Internet Oscura debemos conocer su ***Dirección IP***. Como alternativa, se ha desarrollado una resolución de nombres muy característica, donde el dominio de primer nivel es ***onion***. Obviamente fuera del estándar DNS.
+
+Para poder acceder a estos dominios "especiales" se necesita usar un navegador también especial. Es el ***Navegador Tor***, así que lo que vamos a hacer es instalarlo en la máquina Kali.
+```
+sudo apt update
+```
+```
+sudo apt install -y tor torbrowser-launcher
+```
+
