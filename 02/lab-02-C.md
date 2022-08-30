@@ -26,3 +26,38 @@ Vamos a volver a utilizar ***theHarverter*** pero esta vez nos centramos en ***L
 ```
 theHarvester -d <Pon_aquí_el_nombre_de_una_empresa> -l 200 -b linkedin
 ```
+
+## Extraer información usando Sherlock.
+
+***Sherlock*** es una herramienta que automatiza la extracción de información desde todas las redes sociales que se suelen usar, a diferencia de ***theHarvester*** que se suele lanzar contra un solo motor de búsqueda.
+
+En primer lugar instalamos ***Sherlock*** pues no suele venir instalado en la suite ***Kali***. En una terminal escribimos el siguiente comando.
+```
+sudo apt install -y sherlock
+```
+
+La sintaxis es muy sencilla. Puedes buscar por nombre y apellidos (entre comillados) o, si conoces el nombre de usuario (porque tenemos la costumbre de usar el mismo en todos los servicios de Internet). Escribe el siguiente comando en la terminal.
+```
+sherlock "<Pon_aquí_el_nombre_y_apellidos_de_alguien_o_su_usuario>"
+```
+
+Como resultado obtendrás links a las redes donde aparece referenciada la persona que buscas.
+Nota: ***Sherlock*** puede tardar bastante tiempo. Ten paciencia y comprueba los resultados conforme van saliendo.
+
+
+## Extraer información desde Twitter.
+
+Conocer y estudiar a la víctima es una actividad muy productiva, pues se pueden encontrar intereses y usarlos como vectores de ataque en ingeniería social.
+
+***Twitter*** se caracteriza precisamente por esto. Seguimos a personas, empresas, instituciones, etc... Información muy interesante para el actor de la amenaza. 
+
+Para extraer este tipo de información, debemos conocer la identidad en Twitter de la víctima, generalmente en la forma ***@nombre_usuario***. 
+
+Si no la conocemos, pero sabemos su nombre y apellidos, una simple búsqueda en Twitter desvelará dicho identidad. A continuación, en un navegador escribimos la siguiente URL.
+```
+https://followerwonk.com/analyze
+```
+
+En el cuadro de búsqueda escribimos la identidad de la persona que estamos investigando y seleccionamos qué nos interesa saber. Juega con esta web para determinar qué información puede extraerse interactuando con los servicios web de Twitter.
+
+
