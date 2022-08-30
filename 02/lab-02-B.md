@@ -88,10 +88,42 @@ El resultado será similar a este.
 
 ![Resultado de la búsqueda](../img/lab-02-B/202208301046.png)
 
-Como puedes comprobar, no hay demasiada diferencia entre usar Tor y Google en tu equipo de trabajo. El resultado de la búsqueda está en ***Internet*** y no en la ***Dark Web***.
+Como puedes comprobar, no hay demasiada diferencia entre usar ***Tor*** y ***Google*** en tu equipo de trabajo. El resultado de la búsqueda está en ***Internet*** y no en la ***Dark Web***.
 
-No obstante se ha conseguido en anonimato. Tu conexión realiza tres saltos y esto dificulta notablemente su rastreo. Para poder verificarlo, haz clic en el icono con en candado que aparece en la barra de dirección.
+No obstante se ha conseguido el ***anonimato***. Tu conexión realiza tres saltos y esto dificulta notablemente su rastreo. Para poder verificarlo, haz clic en el icono con en candado que aparece en la barra de dirección.
 
 ![Visualizar cirtuito](../img/lab-02-B/202208301053.png)
+
+El circuito que se ha creado realiza tres conexiones se sitio a sitio.
+* *Finlandia*. El navegador se ha conectado a un servidor de Tor que reside en este país.
+* *Reino Unido*. Desde Finlandia se salta a Reino Unido.
+* *Alemania*. Por último, desde Reino Unido se salta a Alemania, que es el nodo de salida a la Internet convencional. 
+
+
+
+Puedes observar que existe el botón ***New Circuit for this Site***. Si lo pulsas, se genera un nuevo circuito.
+
+El objetivo en este curso de Ethical Hacking respecto a la red Tor es que seas consciente de la capacidad de ocultación (anonimato) que esta herramienta ofrece. Como miembro del ***Blue Team*** debes saber que cualquier IP registrada por tu perimetral o IDS, puede no servir absolutamente de nada si el actor está oculto detrás de Tor. Así que se precavido y no saques conclusiones apresuradas sobre el origen del ataque.
+
+A continuación explicamos cómo acceder a los dominios ***.onion***.
+Nota: Aviso Legal!!!!. ***Con este mensaje, el alumno queda advertido de que puede encontrar contenidos, que además de ser ilegales, puede herir su sensibilidad. Así que no realices búsquedas que puedan conducirte a ese tipo de contenidos.***
+
+Los dominios ***.onion*** están formados por un prefijo aleatorio muy grande, que hace imposible intuir su contenido, además de "adivinar" los dominios.
+
+Escribe la siguiente URL en la barra de direcciones del navegador Tor.
+```
+http://3g2upl4pq6kufc4m.onion
+````
+
+El resultado es el siguiente.
+
+![Onion inválido](../img/lab-02-B/202208301115.png)
+
+Un primer punto de entrada es ***TheHiddenWiki.org***. Puedes acceder a ella desde Internet o desde la propia DarkWeb. Escribe la siguiente URL en la barra de dirección del navegador Tor.
+```
+http://s4k4ceiapwwgcm3mkb6e4diqecpo7kvdnfr5gg7sph7jjppqkvwwqtyd.onion/
+```
+
+
 
 
