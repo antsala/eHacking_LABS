@@ -120,9 +120,23 @@ El resultado es el siguiente.
 ![Onion inválido](../img/lab-02-B/202208301115.png)
 
 Un primer punto de entrada es ***TheHiddenWiki.org***. Puedes acceder a ella desde Internet o desde la propia DarkWeb. Escribe la siguiente URL en la barra de dirección del navegador Tor.
+Nota: Sé paciente. El tráfico a través del circuito Tor es muy lento.
 ```
 http://s4k4ceiapwwgcm3mkb6e4diqecpo7kvdnfr5gg7sph7jjppqkvwwqtyd.onion/
 ```
+
+Como ejemplo puede acceder a la web de ***Proton Mail***. Un servicio de correo que solo puede consultar desde la DarkWeb. En una pestaña del navegador Tor, conecta a la siguiente URL.
+```
+https://3g2upl4pq6kufc4m.onion/
+```
+
+Aquí puedes ver la web de ***Proton***. Servicios como este son usados por los actores para ponerse en contacto contigo y realizar el chantaje.
+
+![Proton Mail](../img/lab-02-B/202208301126.png)
+
+
+
+
 
 
 
