@@ -60,3 +60,13 @@ sudo apt update
 sudo apt install -y tor torbrowser-launcher
 ```
 
+Para lanzar ***Tor*** ejecutamos el siguiente comando.
+```
+torbrowser-launcher
+```
+
+Tor (***The Onion Router***) establece conexiones punto a punto entre tres servidores de salto, pudiendo elegir el servidor de salida. Las conexiones entre cada extremo está protegida por SSL. De esta forma, el proveedor de Internet no es capaz de conocer el sitio que quieres visitar, ni inspeccionar el tráfico.
+
+Originalmente Tor se ideo para evitar escuchas gubernamentales en aquellos países donde la Democracia brilla por su ausencia. Esto permitió a disidentes participar plenamente en sitios y foros internacionales.
+
+Esta ***anonimato*** también es usado por los ***actores de la amenaza*** (y otros delincuentes) para relacionarse.

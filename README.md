@@ -31,6 +31,7 @@ cd eHacking_LABS
    - Localizar dominios de la víctima.
    - Localizar información sobre personas usando buscadores.
    - Localizar direcciones de correo electrónico.
+   - Localizar recursos en la Dark Web.
 
 
 
