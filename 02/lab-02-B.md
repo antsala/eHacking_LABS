@@ -35,3 +35,11 @@ Abrimos una terminal en la máquina ***Kali***, y ejecutamos el siguiente comand
 theHarvester
 ```
 
+La sintaxis es muy sencilla. 
+* *-d <dominio>* permite poner el dominio corporativo cuyas direcciones de correo electrónico se desea recolectar.
+* *-l <max>* se usa para limitar la salida. Es el número máximo de líneas que mostrará la salida.
+* *-b <buscador>* sirve para indicar a la herramienta qué buscador deseamos utilizar: Google, Bing, baidu, DuckDuckGo, etc.
+
+```
+theHarvester -d avante.es -l 200 -b google
+```
