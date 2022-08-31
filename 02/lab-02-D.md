@@ -101,6 +101,17 @@ Creamos un directorio para que la herramienta descargue los contenidos.
 mkdir -p ~/httrack/target01
 ```
 
+Ejecutamos la herramienta.
+```
+httrack https://www.avante.es --path ~/httrack/target01
+```
+
+Estudiamos los archivos descargados.
+```
+ls ~/httrack/target01
+```
+
+
 
 
 
