@@ -2,7 +2,7 @@
 
 Requisitos:
 1. Máquina ***Kali Linux***.
-2. Máquina ***Windows 7***.
+2. Máquina ***Win11***.
 
 El footprinting de sitios web es una de las técnicas más utilizadas por el actor de la amenaza a la hora de localizar posibles vulnerabilidades en los servidores.
 
@@ -15,6 +15,20 @@ Mediante técnicas OSINT es muy sencillo extraer la siguiente información:
 * *Correos electrónicos*.
 
 Por supuesto que existen herraimentas mucho más avanzadas, pero estas serán tratadas posteriormente en este curso.
+
+La máquina de ***Win11*** está unida a un dominio. Para esta práctica no es necesario iniciar el controlador de dominio, pero entonces debemos realizar algunos cambios para que funcione correctamente.
+
+Cuando se inicie ***Win11***, usar el siguiente usuario en el cuadro de inicio de sesión.
+```
+.\antonio
+```
+
+Como password pon
+```
+Pa55w.rd
+```
+
+El controlador de dominio ofrece el servicio DNS y esta máquina tiene configurado al DC como servidor DNS. Esta configuración hay que cambiarla. Configura el servidor DNS de la máquina ***Win11*** para que apunte a ***8.8.8.8***. Deja el resto de la configuración IP como está. A partir de ahora ya podrás navegar por Internet.
 
 
 ## Recolectar información sobre sitio web objetivo.
@@ -53,7 +67,7 @@ Otras, por el contrario, no existen el ***Kali*** y procederemos a instalarlas c
 
 La extracción (***Scraping***) de información de sitios web ha llegado a un grado de sofisticación total. Aunque el principal objetivo en este curso es el de conseguir información sobre la víctima, también se utiliza legalmente para obtener información de un competidor.
 
-Vamos a instalar una demo de una herramienta llamada ***Web Data Extractor***, que es para Windows. Así que, en la máquina ***Windows 7***, abre el navegador y escribe la siguiente URL en la barra de direcciones.
+Vamos a instalar una demo de una herramienta llamada ***Web Data Extractor***, que es para Windows. Así que, en la máquina ***Win11***, abre el navegador y escribe la siguiente URL en la barra de direcciones.
 ```
 http://www.webextractor.com/wde.exe
 ```
