@@ -103,7 +103,10 @@ mkdir -p ~/httrack/target01
 
 Ejecutamos la herramienta.
 ```
-httrack https://www.avante.es --path ~/httrack/target01
+httrack --mirror --ext-depth=0 --depth=1 --near \
+    --stay-on-same-address --keep-links=0       \
+    --path ~/httrack/target01 --quiet           \
+    https://www.avante.es/
 ```
 
 
