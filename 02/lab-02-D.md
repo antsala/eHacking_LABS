@@ -85,8 +85,21 @@ https://linuxhint.com/top_20_webscraping_tools/
 
 Lee el artículo y estudia las herramientas que creas apropiadas.
 
+## Clonar el sitio de la víctima con httrack.
 
+En ocasiones podemos usar la técnica de descargar el contenido estático del sitio web de la víctima, con la intención de descubrir vulnerabilidades o malas prácticas.
 
+***httrack*** descarga todo el contenido que pueda del sitio web investigado a un directorio local, para que podamos "estudiarlo" tranquilamente.
+
+Abrimos una terminal en la máquina ***Kali*** y ejecutamos el siguiente comando.
+```
+sudo apt install -y httrack
+```
+
+Creamos un directorio para que la herramienta descargue los contenidos.
+```
+mkdir -p ~/httrack/target01
+```
 
 
 
