@@ -18,6 +18,7 @@ cd eHacking_LABS
    - Importación y configuracion de la VM ***Metasploitable3-ubu1404***.
    - Importación y configuracion de la VM ***Metasploitable3-win2k8***.
    - Importación y configuracion de la VM ***Windows 7***.
+   - Importación y configuracion de la VM ***Win11***.
 
 ## Carpeta 02
 
