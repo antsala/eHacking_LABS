@@ -41,7 +41,7 @@ cd eHacking_LABS
 
 
 3. Laboratorio 03-D: ***Realizar Footprinting activo de sitios web***. Los ejercicios a realizar son:
-   - Uso avanzado de ping para footprinting.
+   - Recolectar información sobre sitio web objetivo.
 
 ## Carpeta 30
 
