@@ -45,6 +45,7 @@ cd eHacking_LABS
    - Herramientas de Scraping.
    - Clonar el sitio de la víctima con httrack.
    - Extraer información de calidad con CeWL.
+   - Consulta a la base de datos Whois.
 
 ## Carpeta 30
 
