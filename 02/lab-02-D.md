@@ -106,7 +106,7 @@ Ejecutamos la herramienta.
 httrack --mirror --ext-depth=0 --depth=1 --near \
     --stay-on-same-address --keep-links=0       \
     --path ~/httrack/target01 --quiet           \
-    https://www.avante.es/
+    certifiedhacker.com
 ```
 
 
