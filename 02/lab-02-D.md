@@ -31,7 +31,7 @@ Estudia la información que ofrece la página y realiza las siguientes actividad
 
 * *Teléfono del registrador*. Localiza el número de teléfono del registrador del dominio. Haz una consulta a Google buscando empresas que tengan este número de teléfono.
 * *Contacto técnico*. Localiza información sobre la persona que ha registrado el dominio. Obtén su nombre y apellidos y con ellos, usa herramientas como ***Sherlock*** para ver qué descubres.
-* *Geolicalización*. Si es el caso, geolocaliza las instalaciones de la organización asociada a este registro DNS.
+* *Geolocalización*. Si es el caso, geolocaliza las instalaciones de la organización asociada a este registro DNS.
 
 Como decíamos existen multitud de sitios que ofrecen este tipo de información. Para localizarlos podemos hacer uso del modificador ***related*** de Google. 
 
@@ -41,6 +41,14 @@ related: website.informer.com
 ```
 
 Obtendrás enlaces a sitios similares. Dedica algo de tiempo a estudiar los resultados. Mediante esta técnica podrás encontrar nuevas y mejores herramientas para obtener información de sitios web y otros datos sobre la víctima.
+
+La suite ***Kali*** se presenta con una infinidad de herramientas. Durante el desarrollo de este curso es conveniente que acudas con frecuencia al menú de aplicaciones para conocer las que hay. En esta etapa de reconocimiento OSINT, ya hemos descubierto algunas.
+
+![Menú Kali](../img/lab-02-D/202208311132.png)
+
+Otras, por el contrario, no existen el ***Kali*** y procederemos a instalarlas cuando sea necesario.
+
+
 
 
 
