@@ -138,7 +138,10 @@ Como podrás observar, la salida está formada por palabras. Esta salida se debe
 mkdir -p ~/cewl/target01
 
 cewl https://www.certifiedhacker.com -w ~/cewl/target01/diccionario.txt
+```
 
+Visualizamos el diccionario.
+```
 cat ~/cewk/target01/diccionario.txt
 ```
 
