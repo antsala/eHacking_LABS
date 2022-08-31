@@ -53,12 +53,22 @@ Otras, por el contrario, no existen el ***Kali*** y procederemos a instalarlas c
 
 La extracción (***Scraping***) de información de sitios web ha llegado a un grado de sofisticación total. Aunque el principal objetivo en este curso es el de conseguir información sobre la víctima, también se utiliza legalmente para obtener información de un competidor.
 
-Vamos a instalar una demo de una herramienta llamada ***Web Data Extractor***, que es para Windows. Así que, en la máquina ***Windows 7***, abre el navegador y descarga el siguiente link.
+Vamos a instalar una demo de una herramienta llamada ***Web Data Extractor***, que es para Windows. Así que, en la máquina ***Windows 7***, abre el navegador y escribe la siguiente URL en la barra de direcciones.
 ```
 http://www.webextractor.com/wde.exe
 ```
 
+A continuación instala la aplicación.
 
+Una vez instalada, iníciala y crea una nueva sesión, haciendo clic en el botón ***New***.
+
+En ***Starting URL*** escribe la dirección del sitio de Internet que quieres estudiar (puedes usar la anterior).
+
+Marca las casillas de verificación que se muestran en la imagen.
+
+![Web Data Extractor](../img/lab-02-D/202208311201.png)
+
+y luego haz clic en ***OK***.
 
 
 
