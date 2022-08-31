@@ -42,6 +42,7 @@ cd eHacking_LABS
 
 3. Laboratorio 03-D: ***Realizar Footprinting activo de sitios web***. Los ejercicios a realizar son:
    - Recolectar información sobre sitio web objetivo.
+   - Herramientas de Scraping.
 
 ## Carpeta 30
 

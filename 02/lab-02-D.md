@@ -62,13 +62,30 @@ A continuación instala la aplicación.
 
 Una vez instalada, iníciala y crea una nueva sesión, haciendo clic en el botón ***New***.
 
-En ***Starting URL*** escribe la dirección del sitio de Internet que quieres estudiar (puedes usar la anterior).
+En ***Starting URL*** escribe la dirección del sitio de Internet que quieres estudiar (puedes usar ***www.certifiedhacker.com***).
 
 Marca las casillas de verificación que se muestran en la imagen.
 
 ![Web Data Extractor](../img/lab-02-D/202208311201.png)
 
 y luego haz clic en ***OK***.
+
+Ahora solo necesias hacer clic en el botón ***Start*** para empezar a extraer información.
+
+Cuando termine, solo tienes que ir visualizando las pestañas ***Meta tags***, ***Emails***, ***Phones***, ***Faxes***, ***Merged list*** y ***Urls***.
+
+Nota: Es posible que no obtengas resultados. En esos casos se debe a que existe una contramedida que detecta la enumeración del sitio y bloquea las respuestas de http.
+
+En la web tenemos herramientas online que hacen prácticamente lo mismo, pero además, ofrecen información de marketing. Estas web son de pago y se suelen utilizar para obtener información comercial de un competidor.
+
+Copia en tu navegador esta URL.
+```
+https://linuxhint.com/top_20_webscraping_tools/
+```
+
+Lee el artículo y estudia las herramientas que creas apropiadas.
+
+
 
 
 
