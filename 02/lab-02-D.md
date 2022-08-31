@@ -119,4 +119,18 @@ Podrás ver toda la estructura del sitio web, con el contenido estático HTML, C
 firefox ~/httrack/target01/index.html
 ```
 
+Ya solo solo es cuestión de usar las ***Herramientas del desarrollador*** para estudiar el código fuente en ***javascript*** del sitio.
+
+El clonado de un sitio web, es una acción que forma parte de ciertos ataques de ingeniería social, donde el actor de amenaza consigue redirigir a la víctima a un sitio web que, siendo visualmente idéntico al original, es otro completamente diferente. Es trivial modificar el sitio para inyectar ***payloads*** o capturar credenciales. A lo largo de este curso estudiaremos diferentes estrategias para conseguir que la víctima se conecte al sitio web falseado (phishing, spoofing, etc.)
+
+
+## Extraer información de calidad con CeWL.
+
+***CeWL*** es una aplicación escrita en en ***Ruby*** que rastrea una URL buscando palabrar que puedan ser valiosas para el actor de la amenaza, como contraseñas.
+
+Su funcionamiento es muy sencillo. Lanza ***CeWL*** contra el sitio de tu interés.
+```
+cewl https://www.certifiedhacker.com
+```
+
 
