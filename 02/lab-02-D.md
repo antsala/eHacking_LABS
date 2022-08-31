@@ -33,15 +33,16 @@ Estudia la información que ofrece la página y realiza las siguientes actividad
 * *Contacto técnico*. Localiza información sobre la persona que ha registrado el dominio. Obtén su nombre y apellidos y con ellos, usa herramientas como ***Sherlock*** para ver qué descubres.
 * *Geolicalización*. Si es el caso, geolocaliza las instalaciones de la organización asociada a este registro DNS.
 
-Como decíamos existen multitud de sitios que ofrecen este tipo de información. Para localizarlos escribe en la barra de dirección del navegador, la siguiente URL.
+Como decíamos existen multitud de sitios que ofrecen este tipo de información. Para localizarlos podemos hacer uso del modificador ***related*** de Google. 
+
+Abre la página de Google y escribe en el cuadro de búsqueda lo sigiuente.
 ```
-https://www.similarweb.com
+related: website.informer.com
 ```
 
-A continuación, en el cuadro de búsqueda, escribe
-```
-https://website.informer.com
-```
+Obtendrás enlaces a sitios similares. Dedica algo de tiempo a estudiar los resultados. Mediante esta técnica podrás encontrar nuevas y mejores herramientas para obtener información de sitios web y otros datos sobre la víctima.
+
+
 
 
 
