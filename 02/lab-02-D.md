@@ -142,7 +142,7 @@ cewl https://www.certifiedhacker.com -w ~/cewl/target01/diccionario.txt
 
 Visualizamos el diccionario.
 ```
-cat ~/cewk/target01/diccionario.txt
+cat ~/cewl/target01/diccionario.txt
 ```
 
 
