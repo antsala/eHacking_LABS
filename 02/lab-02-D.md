@@ -2,6 +2,7 @@
 
 Requisitos:
 1. Máquina ***Kali Linux***.
+2. Máquina ***Windows 7***.
 
 El footprinting de sitios web es una de las técnicas más utilizadas por el actor de la amenaza a la hora de localizar posibles vulnerabilidades en los servidores.
 
@@ -47,6 +48,15 @@ La suite ***Kali*** se presenta con una infinidad de herramientas. Durante el de
 ![Menú Kali](../img/lab-02-D/202208311132.png)
 
 Otras, por el contrario, no existen el ***Kali*** y procederemos a instalarlas cuando sea necesario.
+
+## Herramientas de Scraping.
+
+La extracción (***Scraping***) de información de sitios web ha llegado a un grado de sofisticación total. Aunque el principal objetivo en este curso es el de conseguir información sobre la víctima, también se utiliza legalmente para obtener información de un competidor.
+
+Vamos a instalar una demo de una herramienta llamada ***Web Data Extractor***, que es para Windows. Así que, en la máquina ***Windows 7***, abre el navegador y descarga el siguiente link.
+```
+http://www.webextractor.com/wde.exe
+```
 
 
 
