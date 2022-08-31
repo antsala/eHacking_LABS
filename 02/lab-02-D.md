@@ -109,9 +109,14 @@ httrack --mirror --ext-depth=0 --depth=1 --near \
     certifiedhacker.com
 ```
 
-
 Estudiamos los archivos descargados.
 ```
 ls ~/httrack/target01
 ```
+
+Podrás ver toda la estructura del sitio web, con el contenido estático HTML, CSS y javascript, descargado. Para visualizarlo localmente con tu navegador, escribe en la terminal el siguiente comando.
+```
+firefox ~/httrack/target01/index.html
+```
+
 
