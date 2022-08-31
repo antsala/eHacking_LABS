@@ -145,4 +145,7 @@ Visualizamos el diccionario.
 cat ~/cewl/target01/diccionario.txt
 ```
 
+Nota: Puede parecer una obviedad que el uso de esta técnica no proporcionaría información de calidad, pero en la experiencia de un Ethical Hacker, la fuga de información es una realidad, por mucho que se intente evitarla. El verdadero potencial de estas herramientas reside en el ***insider***, es decir, cuando el actor de la amenaza consigue estar dentro de la red local de la víctima y, por ejemplo, tiene acceso a los repositorios del código fuente.
+
+
 
