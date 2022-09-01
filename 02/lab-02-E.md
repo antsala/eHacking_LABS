@@ -64,6 +64,12 @@ Para interactuar directamente con uno de estos servidores, se lo indicamos a la 
 server ns1.bluehost.com
 ```
 
+Como podrás observar, se establece dicho servidor como destino de las consultas. Procedemos de nuevo a preguntar sobre el registro del servidor web.
+```
+set type=a
+www.certifiedhacker.com
+```
+
 
 
 
