@@ -49,3 +49,12 @@ set type=a
 www.certifiedhacker.com
 ```
 
+Como puedes observar, la respuesta es ***Non-Authoritative***, que quiere decir que el nombre ha sido resuelto por un servidor DNS que no es el que lleva la zona. En consecuencia, suele ser importante conocer cuales son los servidores que realmente llevan la zona. 
+
+Esto lo podemos conseguir diciéndole a la herramienta que estamos interesados en conocer los registros de tipo ***NS***.
+```
+set type=ns
+certifiedhacker.com
+```
+
+
