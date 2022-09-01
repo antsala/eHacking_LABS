@@ -38,38 +38,56 @@ Saber interactuar con DNS permitirá extraer información de calidad sobre la v�
 
 En una terminal de la máquina ***Kali***, escribimos.
 ```
-nslookup
+dig
 ```
 
-Aunque existen muchas herramientas para interactuar con los servidores DNS, hemos elegido ***nslookup*** por estar presente también en Windows.
+Aunque existen muchas herramientas para interactuar con los servidores DNS, hemos elegido ***dig*** por estar presente en los sistemas Linux.
 
-Elige un dominio de tu elección. Lo primero que vamos a buscar es la dirección IP del servidor web. En el prompt de ***nslookup*** escribimos.
+La salida del comando muestra los ***root servers*** o servidores raíces y el servidor configurado para la resolución, que es ***8.8.8.8*** o Google.
+
+Vamos a buscar la dirección IP del servidor web. 
 ```
-set type=a
-www.certifiedhacker.com
+dig www.certifiedhacker.com a
 ```
 
-Como puedes observar, la respuesta es ***Non-Authoritative***, que quiere decir que el nombre ha sido resuelto por un servidor DNS que no es el que lleva la zona. En consecuencia, suele ser importante conocer cuales son los servidores que realmente llevan la zona. 
+En la sección de salida se puede localizar la IP. Si prefieres, puedes optar por mostrar una salida recortada, que sería de la siguiente foma.
+```
+dig www.certifiedhacker.com a +short
+```
 
+***8.8.8.8*** no es el servidor que lleva la zona. Procedemos a descubrir quienes son.
 Esto lo podemos conseguir diciéndole a la herramienta que estamos interesados en conocer los registros de tipo ***NS***.
 ```
-set type=ns
-certifiedhacker.com
+dig certifiedhacker.com ns +short
 ```
 
-En este ejempo observará que la zons ***certifiedhacker.com*** es administrada por dos servidores: ***ns1.bluehost.com*** y ***ns2.bluehost.com***.
-
-Para interactuar directamente con uno de estos servidores, se lo indicamos a la herramienta. 
+Para interactuar directamente con uno de estos servidores, se lo indicamos a la herramienta. Como podrás comprobar en la salida del siguiente comando, es el servidor DNS que queremos el que devuelve los registros.
 ```
-server ns1.bluehost.com
+dig @ns1.bluehost.com www.certifiedhacker.com a
 ```
 
-Como podrás observar, se establece dicho servidor como destino de las consultas. Procedemos de nuevo a preguntar sobre el registro del servidor web.
+Se puede extraer mucha información en los registros los servidores públicos de la zona. Lee este artículo: https://www.hostinger.es/tutoriales/comando-dig-linux y practica con el dominio de tu interés.
+
+Si prefieres comodidad a la hora de consultar una zona, puedes apoyartes en sitios de Internet especializados. En una ventana del navegador, conéctate a la siguiente URL.
 ```
-set type=a
-www.certifiedhacker.com
+http://www.kloth.net/services/dig.php
 ```
 
+Rellena el formulario y consulta el mismo dominio de antes.
+Nota: Puedes intentar ***transferencias de zona***, que no deberían funcionar.
+
+En otra pestaña del navegador, conéctate a esta URL.
+Nota: Podrás ver un montón de servicios relacionados.
+```
+http://www.kloth.net/services/
+```
+
+Conéctate a la siguiente URL. Investiga las herramiientas dispoibles.
+```
+https://www.yougetsignal.com/
+```
+
+pág 97
 
 
 
