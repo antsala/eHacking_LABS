@@ -57,4 +57,14 @@ set type=ns
 certifiedhacker.com
 ```
 
+En este ejempo observará que la zons ***certifiedhacker.com*** es administrada por dos servidores: ***ns1.bluehost.com*** y ***ns2.bluehost.com***.
+
+Para interactuar directamente con uno de estos servidores, se lo indicamos a la herramienta. 
+```
+server ns1.bluehost.com
+```
+
+
+
+
 
