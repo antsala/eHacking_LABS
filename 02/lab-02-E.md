@@ -82,7 +82,7 @@ Nota: Podrás ver un montón de servicios relacionados.
 http://www.kloth.net/services/
 ```
 
-Conéctate a la siguiente URL. Investiga las herramiientas dispoibles.
+Conéctate a la siguiente URL. Investiga las herramiientas disponibles.
 ```
 https://www.yougetsignal.com/
 ```
