@@ -42,12 +42,15 @@ cd eHacking_LABS
    - Extraer información desde Twitter.
 
 
-3. Laboratorio 03-D: ***Realizar Footprinting activo de sitios web***. Los ejercicios a realizar son:
+4. Laboratorio 03-D: ***Realizar Footprinting de sitios web***. Los ejercicios a realizar son:
    - Recolectar información sobre sitio web objetivo.
    - Herramientas de Scraping.
    - Clonar el sitio de la víctima con httrack.
    - Extraer información de calidad con CeWL.
+
+5. Laboratorio 03-E: ***Realizar Footprinting usando Whois y DNS***. Los ejercicios a realizar son:
    - Consulta a la base de datos Whois.
+   - Reconocimiento por medio de registros DNS.
 
 ## Carpeta 30
 

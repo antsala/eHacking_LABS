@@ -1,4 +1,4 @@
-# Realizar Footprinting activo de sitios web.
+# Realizar Footprinting de sitios web.
 
 Requisitos:
 1. Máquina ***Kali Linux***.
@@ -161,6 +161,3 @@ cat ~/cewl/target01/diccionario.txt
 
 Nota: Puede parecer una obviedad que el uso de esta técnica no proporcionaría información de calidad, pero en la experiencia de un Ethical Hacker, la fuga de información es una realidad, por mucho que se intente evitar. El verdadero potencial de estas herramientas reside en el ***insider***, es decir, cuando el actor de la amenaza consigue estar dentro de la red local de la víctima y, por ejemplo, tiene acceso a los repositorios del código fuente.
 
-## Consulta a la base de datos Whois.
-
-pág 86.
