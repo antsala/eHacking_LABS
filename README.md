@@ -51,6 +51,12 @@ cd eHacking_LABS
 5. Laboratorio 03-E: ***Realizar Footprinting usando Whois y DNS***. Los ejercicios a realizar son:
    - Consulta a la base de datos Whois.
    - Reconocimiento por medio de registros DNS.
+   - Reconocimiento por medio del protocolo ICMP.
+
+6. Laboratorio 03-F: ***Otras herramientas de reconocimiento***. Los ejercicios a realizar son:
+   - Recon-ng.
+   - Maltego.
+   - OSRFramework.
 
 ## Carpeta 30
 
