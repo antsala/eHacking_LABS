@@ -2,7 +2,7 @@
 
 Requisitos:
 1. Máquina ***Kali Linux***.
-2. Máquina ***Win11***.
+2. Máquina ***Windows 7***.
 
 
 
@@ -113,7 +113,7 @@ Al hacer una búsqueda inversa, estamos resolviendo las IPs a nombres de dominio
 
 Por todos es conocido que el protocolo ***ICMP***, que usa la herramienta ***ping***, sirve para reconocer la existencia de un host concreto. Este protocolo envía tramas hacia el destino que, cuando es alcanzado, responde en consecuencia.
 
-En la máquina de ***Win11***, abrimos una ***Terminal de Windows***. En ella escribimos el siguiente comando y estudiamos la salida.
+En la máquina de ***Windows 7***, abrimos una ***Terminal de Windows***. En ella escribimos el siguiente comando y estudiamos la salida.
 ```
 ping www.certifiedhacker.com
 ```
@@ -123,11 +123,23 @@ La herramienta envía tramas de 32 bytes hacia el destino con la esperanza de qu
 El ***TTL*** o ***Time To Live*** es un valor numérico que se decrementa en una unidad cuando el datagrama atraviesa un router. De esta forma se consigue que los datagramas no viajen indefinidamente, pues cuando el valor de TTL llega a cero, el router que lo recibe ya no reenvía ese datagrama y, en consecuencia, desaparece.
 
 Pues bien, tenemos herramientas que hace un uso inteligente del campo ***TTL***. Su objetivo es mostrar la ruta completa que une al origen con el destino. Para ello se manda hacia el destino un datagrama con un valor de ***TTL=1***, que provocará que responda el primer router, quedándo registrada la IP del mismo. A continuación, la herramienta envia otros datagramas incrementando en una unidad el valor del TTL. En consecuencia podemos obtener las IPs de todos los routers que participan en la comunicación. Esta información es muy importante para el actor de la amenaza, pues obtiene información de los proveedores de Internet, y la arquitectura de red de la víctima.
-Nota: Algunos routers no responden al ICMP, y se obtendrá un error de tiempo de espera.
+Nota: Algunos routers no responden al ICMP, y se obtendrá un error de tiempo de espera, que será representado por un asterisco.
 
 La herramienta por excelencia es ***tracert***. En la terminal de windows escribimos.
 ```
 tracert www.certifiedhacker.com
+```
+
+Herramientas para realizar el trazado existen muchas. Abre tu navegador y copia la siguiente URL en la barra de direcciones. Vamos a instalar una versión de evaluación de ***Path Analyzer Pro***.
+```
+https://download.cnet.com/Path-Analyzer-Pro-Windows/3000-2085_4-10620979.html
+```
+
+Instala la aplicación y ábrela. Disponemos de 10 dias para evaluarla, así que hacemos clic en el botón ***Evaluate***.
+
+En el cuadro de texto ***Target*** escribe el host de tu elección.
+```
+www.certifiedhacker.com
 ```
 
 
