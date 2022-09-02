@@ -58,13 +58,72 @@ Aquí: https://static.maltego.com/cdn/Handbooks/Maltego-Handbook-for-Cyber-Threa
 
 ## OSRFramework.
 
-OSRFramework es un framework open source escrito en Python que se encarga de examinar perfiles de usuario. El framework contiene diferentes modulos:
+***OSRFramework*** es un framework open source escrito en Python que se encarga de examinar perfiles de usuario. El framework contiene diferentes modulos:
 
 * *usufy.py* verifica si el nombre de usuario existe en 306 plataformas diferentes.
 * *mailfy.py* comprueba si el nombre de usuario ha sido registrado en hasta 22 proveedores de email diferentes.
 * *searchfy.py* comprueba perfiles mediante Nombres Completos en 7  plataformas.
 * *phonefy.py* comprueba si el número de teléfono se ha reportado/ enlazado con prácticas de spam.
 * *entify.py* herramienta para comprobar expresiones regulares mediante 13 patrones
+
+Instalación. En la máquina ***Kali*** ejecutamos el siguiente comando en la terminal.
+```
+sudo apt install -y osrframework
+```
+
+Procedemos a investigar si un nombre de usuario existe en la plataforma twitter. Escribe en la terminal lo sigiuente.
+```
+usufy.py -n <pon_aquí_el_username> -p twitter
+```
+
+Para buscar ese nombre de usuario en ***TODAS*** las plataformas, escribimos.
+Nota: Ten paciencia!!!
+```
+usufy.py -n <pon_aquí_el_username>
+```
+
+Procedemos a comprobar si un email ha sido registrado en las principales plataformas de Internet.
+```
+mailfy.py -m <pon_aquí_un_email>
+```
+
+Ahora procedemos a buscar perfiles aportanto el nombre completo de una persona.
+```
+searchfy.py -q "<Escribe_aquí_nombre_y_apellidos>"
+```
+
+***Phonefy.py*** se utiliza para determinar si un número de teléfono ha sido marcado como spammer.
+```
+phonefy.py -n <Pon_aquí_un_número_de_teléfono>
+```
+
+En este link: https://github.com/i3visio/osrframework tienes el proyecto en GitHub.
+
+##♫FOCA.
+
+Reconocidísima herramienta de extracción de metadatos de documentos de Office, Open Office y PDFs, de ***ElevenPath***.
+
+La herramienta necesita una instancia en ejecución de SQL Server, así que primero debemos instalarla.
+
+En la máquina ***Win11*** pega la siguiente URL en el navegador.
+``` 
+https://www.microsoft.com/en-us/Download/confirmation.aspx?id=101064
+```
+
+Instala ***SQL Server Express***. Usa el tipo de instalación ***Básica***. El procedimiento es muy sencillo, pero si necesitas algo de ayuda mira aquí: https://github.com/ElevenPaths/FOCA/wiki/How-to-set-up-a-SQL-database-connection
+
+Cuando termine la instalación de SQL, descarga el ZIP de la última versión de FOCA desde aqui: https://github.com/ElevenPaths/FOCA/releases
+
+Descomprime la carpeta y localiza el ejecutable. FOCA se conectará a la instancia de SQL y ya podrás usarla.
+
+
+En este link: https://empresas.blogthinkbig.com/como-analizar-documentos-con-foca/ tienes el tutorial de uso de la herramienta. Realízalo aportando documentos de tu organización y personales.
+
+Aquí: https://github.com/ElevenPaths/FOCA tienes el repo del proyecto, por si quieres estudiarlo más a fondo.
+
+pag. 168
+
+
 
 
 
