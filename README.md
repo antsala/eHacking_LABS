@@ -57,6 +57,7 @@ cd eHacking_LABS
    - Recon-ng.
    - Maltego.
    - OSRFramework.
+   - FOCA.
 
 ## Carpeta 30
 
