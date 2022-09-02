@@ -82,12 +82,29 @@ Nota: Podrás ver un montón de servicios relacionados.
 http://www.kloth.net/services/
 ```
 
-Conéctate a la siguiente URL. Investiga las herramiientas disponibles.
+Conéctate a la siguiente URL. Investiga las herramientas disponibles.
 ```
 https://www.yougetsignal.com/
 ```
 
-pág 97
+De las herramientas anteriores, elige ***Revers IP Domain Check*** e introduce el siguiente dominio:
+```
+certifiedhacker.com
+```
+
+Como resultados podrás comprobar los dominios hospedados en la IP ***162.241.216.11***
+Nota: Esta IP Podría ser diferente a la que mostramos.
+
+Ahora vamos a utilizar una herramienta muy conocida en el mundillo, se trata de ***dnsrecon***.
+
+Generalmente las organizaciones piden bloques de direcciones IPs para sus servicios públicos. Una técnica muy habitual consiste en reconocer el conjunto de IPs adyacentes a la que ya hemos descubierto. Su finalidad es la de descubrir servicios en Internet que pudieran no ser de uso público, como servidores VPN.
+
+En una terminal de la máquina ***Kali*** escribimos el siguiente comando.
+Nota: Estamos reconociendo una red de clase C en la que se encuentra la IP del servidor web.
+```
+dnsrecon -r 162.241.216.0-162.241.216.255
+```
+
 
 
 
