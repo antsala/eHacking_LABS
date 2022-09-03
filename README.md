@@ -58,6 +58,7 @@ cd eHacking_LABS
    - Maltego.
    - OSRFramework.
    - FOCA.
+   - osintFramework.
 
 ## Carpeta 30
 
