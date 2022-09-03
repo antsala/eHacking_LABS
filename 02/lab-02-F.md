@@ -121,10 +121,16 @@ En este link: https://empresas.blogthinkbig.com/como-analizar-documentos-con-foc
 
 Aquí: https://github.com/ElevenPaths/FOCA tienes el repo del proyecto, por si quieres estudiarlo más a fondo.
 
-pag. 168
+## osintFramework
 
+Este framework recopila la mayoría de las herramientas OSINT gratuitas existentes en Internet.
 
+El framework te ayuda a localizar el tipo de herramienta que necesitas y te lleva a ella. Algunas son directamente utilizables por medio de una página web, otras son proyectos en GitHub que deberás instalar en tu máquina ***Kali***
 
+El framework se encuentra en la siguiente URL.
+```
+https://osintframework.com
+```
 
-
+Invierte el tiempo que te indique el instructor e investiga las herramientas disponibles.
 
