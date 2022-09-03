@@ -47,6 +47,17 @@ La salida será similar a esta.
 
 ![Salida NMAP](../img/lab-03-A/030620221215.png)
 
+Podemos obtener un resultado similar usando el frontend gráfico. En otra terminal escribimos el siguiente comando para iniciar ***zenmap***
+```
+zenmap-kbx
+```
+
+Posteriormente escribimos el mismo comando y hacemos clic en el botón ***Scan***. El resultado obtenido será idéntico.
+
+![Salida ZENMAP](../img/lab-03-A/030620221221.png)
+
+
+
 
 
 
