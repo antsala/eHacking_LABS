@@ -36,29 +36,37 @@ cd eHacking_LABS
    - Localizar recursos en la Dark Web.
    - Fingerprinting pasivo de sitios webs.
 
-3. Laboratorio 03-C: ***Realizar Footprinting por medio de redes sociales***. Los ejercicios a realizar son:
+3. Laboratorio 02-C: ***Realizar Footprinting por medio de redes sociales***. Los ejercicios a realizar son:
    - Extraer información desde LinkedIn.
    - Extraer información usando Sherlock.
    - Extraer información desde Twitter.
 
 
-4. Laboratorio 03-D: ***Realizar Footprinting de sitios web***. Los ejercicios a realizar son:
+4. Laboratorio 02-D: ***Realizar Footprinting de sitios web***. Los ejercicios a realizar son:
    - Recolectar información sobre sitio web objetivo.
    - Herramientas de Scraping.
    - Clonar el sitio de la víctima con httrack.
    - Extraer información de calidad con CeWL.
 
-5. Laboratorio 03-E: ***Realizar Footprinting usando Whois y DNS***. Los ejercicios a realizar son:
+5. Laboratorio 02-E: ***Realizar Footprinting usando Whois y DNS***. Los ejercicios a realizar son:
    - Consulta a la base de datos Whois.
    - Reconocimiento por medio de registros DNS.
    - Reconocimiento por medio del protocolo ICMP.
 
-6. Laboratorio 03-F: ***Otras herramientas de reconocimiento***. Los ejercicios a realizar son:
+6. Laboratorio 02-F: ***Otras herramientas de reconocimiento***. Los ejercicios a realizar son:
    - Recon-ng.
    - Maltego.
    - OSRFramework.
    - FOCA.
    - osintFramework.
+
+## Carpeta 03
+
+1. Laboratorio 03-A: ***Descubrimiento de hosts en la red local***. Los ejercicios a realizar son:
+   - Reconocimiento de hosts usando nmap.
+   
+
+
 
 ## Carpeta 30
 
