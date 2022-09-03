@@ -165,4 +165,7 @@ sudo nmap --badsum $METASPLOITABLE3_UB1404_IP
 
 En resumen, ***nmap*** es la herramienta de referencia para el fingerprintig en la red local. Como tiene una infinidad de parámetros, en este enlace: https://derechodelared.com/wp-content/uploads/2021/02/Nmap-Cheat-Sheet.pdf tienes una "chuleta" para recordarlos.
 
+## Reconocimento usando otras herramientas.
+
+pag 201 (saltarse nmap, que ya se ha tratado en el ejercicio anterior)
 
