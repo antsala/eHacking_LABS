@@ -1,8 +1,9 @@
 # Realizar Footprinting usando Whois y DNS.
 
 Requisitos:
-1. Máquina ***Kali Linux***.
-2. Máquina ***Win11***.
+1. Máquina ***Router-Ubu***.
+2. Máquina ***Kali Linux***.
+3. Máquina ***Win11***.
 
 
 

@@ -1,7 +1,8 @@
 # Realizar Footprinting usando motores de búsqueda.
 
 Requisitos:
-1. Máquina ***Kali Linux***.
+1. Máquina ***Router-Ubu***.
+2. Máquina ***Kali Linux***.
 
 La mejor fuente de información sobre la víctima la encontraremos interactuando con los servicios existentes en Internet que todos conocemos: Redes socales, servicios de búsquedas de personas, webs de empleo, foros, etc...
 

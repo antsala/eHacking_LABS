@@ -1,8 +1,9 @@
 # Aprovechar vulnerabilidad WebDAV.
 
 Requisitos:
-1. Máquina ***Kali Linux***.
-2. Máquina ***Metasploitable3_ubu1404***.
+1. Máquina ***Router-Ubu***.
+2. Máquina ***Kali Linux***.
+3. Máquina ***Metasploitable3_ubu1404***.
 
 
 

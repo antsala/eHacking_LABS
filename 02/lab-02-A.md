@@ -1,7 +1,8 @@
 # Realizar Footprinting usando motores de búsqueda
 
 Requisitos:
-1. Máquina ***Kali Linux***.
+1. Máquina ***Router-Ubu***.
+2. Máquina ***Kali Linux***.
 
 ## Google Hacking
 

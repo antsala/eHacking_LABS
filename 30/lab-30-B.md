@@ -1,8 +1,9 @@
 # Explotar vulnerabilidad CVE-2014-6271 (Shellshock) presente en Apache.
 
 Requisitos:
-1. Máquina ***Kali Linux***.
-2. Máquina ***Metasploitable3_ubu1404***.
+1. Máquina ***Router-Ubu***.
+2. Máquina ***Kali Linux***.
+3. Máquina ***Metasploitable3_ubu1404***.
 
 Este laboratorio muestra como usar la vulnerabilidad ***Shellshock*** que consigue ejecutar código mediante su inyección en una variable de entorno de Bash. Para ello usa el módulo ***mod_cgi*** del servidor Apache. Aquí tienes información sobre la vulnerabilidad: https://www.cvedetails.com/cve/CVE-2014-6271/.
 

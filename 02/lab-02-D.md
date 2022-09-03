@@ -1,8 +1,9 @@
 # Realizar Footprinting de sitios web.
 
 Requisitos:
-1. Máquina ***Kali Linux***.
-2. Máquina ***Win11***.
+1. Máquina ***Router-Ubu***.
+2. Máquina ***Kali Linux***.
+3. Máquina ***Win11***.
 
 El footprinting de sitios web es una de las técnicas más utilizadas por el actor de la amenaza a la hora de localizar posibles vulnerabilidades en los servidores.
 

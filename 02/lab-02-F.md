@@ -1,8 +1,9 @@
 # Otras herramientas de reconocimiento.
 
 Requisitos:
-1. Máquina ***Kali Linux***.
-2. Máquina ***Win11***.
+1. Máquina ***Router-Ubu***.
+2. Máquina ***Kali Linux***.
+3. Máquina ***Win11***.
 
 Herramientas de reconocimiento tenemos por doquier: Buenas, malas, gratuitas, de pago... El objetivo de este laboratorio es aprender a usar algunas de las más conocidas y útiles.
 

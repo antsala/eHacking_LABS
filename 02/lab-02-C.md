@@ -1,7 +1,8 @@
 # Realizar Footprinting por medio de redes sociales.
 
 Requisitos:
-1. Máquina ***Kali Linux***.
+1. Máquina ***Router-Ubu***.
+2. Máquina ***Kali Linux***.
 
 En este curso de Ethical Hacking aprenderemos que la estrategia de ataque más propicia para el actor de la amenaza es, sin duda, la ingeniería social.
 
