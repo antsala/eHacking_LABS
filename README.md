@@ -69,6 +69,8 @@ cd eHacking_LABS
 2. Laboratorio 03-B: ***Evadir el IDS/Firewall***. Los ejercicios a realizar son:
    - Instalación de WireShark.
    - Reconocimiento atravesando el firewall.
+   - Creación paquetes modificados por ***Hping3*** para evadir el Firewall.
+   - Anonimización por medio de proxy/VPN.
 
 
 

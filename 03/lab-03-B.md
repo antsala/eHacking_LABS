@@ -110,8 +110,41 @@ Detenemos la captura de ***WireShark***. Como podrás comprobar, la ***IP de Ori
 
 ![Source IP Spoofing](../img/lab-03-B/202209061213.png)
 
+***ACTIVIDAD***
+
+¿Serías capaz de sondear a la victima usando a la vez una combinación de las técnicas explicadas?. ¿Crees que tus IDSs son suficientemente buenos para detectar este reconocimiento?
+
+## Creación paquetes modificados por Hping3 para evadir el Firewall.
+
+Como venimos diciendo, existen inumerables herramientas que hacen lo que desamos tener. Además de ***nmap***, podemos usar, por ejemplo ***hping3*** para craftear los paquetes de sondeo.
+
+Iniciamos de nuevo la captura con ***WireShark***.
+
+En la terminal de ***Kali*** escribimos.
+Nota: ***--data 500*** indica que la longitud deseada del paquete. El resto de parámetros debes entenderlo perfectamente.
+Nota: hping3 es considerada una herramienta de ataque, así que su finalidad principal no es el reconocimiento, sino realizar ataques DoS para demostrar la fortaleza del IDS/Firewall.
+Nota: Pasado 30 segundos, para ***hping3*** con ***CTRl-C***
+```
+sudo hping3 192.168.20.11 --udp --rand-source --data 500
+```
+
+Detén la captura de ***WireShark***
+
+Como podemos ver en la captura, se puede verificar que se está ***falseando la IP de origen***, se usa ***UDP*** y la longitud es de ***500 bytes***. Difícil para el IDS/Firewall determinar el origen del ataque.
+
+![hping3](../img/lab-03-B/202209061229.png)
 
 
+El siguiente ejemplo realiza un ataque de ***inundación (flood)***, estreando las capacidades defensivas del IDS/Firewall.
+Nota: Se envían ***15000*** paquetes de ***120*** bytes, habilitando la bandera ***SYN*** y ***tamaño de ventana de 64 bytes***. Falseamos ***puerto de origen*** e ***IP de origen***.
+```
+ sudo hping3 -c 15000 -d 120 -S -w 64 -p 80 --flood --rand-source 192.168.20.11
+ ```
 
+*** ACTIVIDAD ***
 
+¿Podrías visualizar con ***WireShark*** el ataque DoS anterior? Para ello estudia el siguiente artículo: https://www.firewall.cx/general-topics-reviews/network-protocol-analyzers/1224-performing-tcp-syn-flood-attack-and-detecting-it-with-wireshark.html, que explica detalladamente como funciona. Esta información te podría ayudad en la Forense a determinar si un sistema ha sido atacado.
 
+## Anonimización por medio de proxy/VPN.
+
+pag 272 proxy Switcher.
