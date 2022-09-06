@@ -66,6 +66,9 @@ cd eHacking_LABS
    - Reconocimiento de hosts usando nmap.
    - Reconocimento usando otras herramientas.
 
+2. Laboratorio 03-B: ***Evadir el IDS/Firewall***. Los ejercicios a realizar son:
+   - Reconocimiento atravesando el firewall.
+
 
 
 ## Carpeta 30

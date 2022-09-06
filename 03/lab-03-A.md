@@ -186,7 +186,36 @@ Una vez descargado, instalamos la aplicación.
 
 ***ACTIVIDAD***
 
-Utiliza las herramientas disponibles para extraer información de la red local del laboratorio ***192.168.20.0/24***. Evalua si ***nmap*** ofrece más y mejos información y, en consecuencia, determina qué herramienta es mejor.
+Utiliza la herramienta ***MegaPing*** para extraer información de la red local del laboratorio ***192.168.20.0/24***. Evalua si ***nmap*** ofrece más y mejos información y, en consecuencia, determina qué herramienta es mejor.
+
+Otra herramienta similar es ***NetScanTools Pro***, que podemos evaluar durante 30 días.
+
+En la máquina ***Win 11*** usamos en navegador para conectar con la siguiente URL.
+```
+https://www.netscantools.com/download.html
+```
+
+Hacemos clic en el botón ***Download*** para descargar la demo. Una vez descargada, descomprimimos el ***zip*** y procedemos a su instalación. Finalmente iniciamos la demo.
+
+***ACTIVIDAD***
+
+Utiliza la herramienta ***NetScanTools Pro*** para extraer información del objetivo de tu interés. Evalua la utilidad de esta herramienta en función de lo que llevas aprendido hasta el momento.
+Nota: Algunas herramientas interactúan de forma agresiva contra la víctima. Se presentará un disclaimer, léelo y no realices esa prueba en concreto.
+Nota: Puede aparecer un aviso del Firewall de Windows pidiendo permiso para abrir puertos de entrada. Puesto que la herramienta corre en una VM de laboratorio no debes preocuparte demasiado por ello.
+
+***hping3*** es una herramienta de línea de comandos similar a ***ping***, que puede usar protocolos diferentes al ***ICMP*** para sondear los hosts y, de esta forma, determinar si el host está arriba o no, independientemente de que su firewall no responda a los pings ICMP. Soporta ***TCP***, ***UDP***, ***ICMP*** y ***RAW-IP***. Como curiosidad debes saber que esta herramienta también puede realizar ataques DoS contra el target. De esta forma, puedes evaluar el buen comportamiento y respuesta de tus contramedidas (***Firewall*** e ***IDS***)
+
+Nota Legal: Como ***hping3*** es considerada una herramienta de ataque, solo debes usarla en el entorno de máquinas virtuales de laboratorio y nunca contra hosts o redes reales.
+
+***ACTIVIDAD***
+
+Lee este artículo: https://www.redeszone.net/tutoriales/seguridad/hping3-manipular-paquetes-tcp-ip-ataques/ y realiza pruebas contra las máquinas de laboratorio. Si decides probar algún ataque DoS, ten encuenta que podría ser necesario reiniciar la VM objetivo porque podría dejar de funcionar correctamente.
+
+En una terminal de la máquina ***Kali*** escribimos:
+```
+hping3 --help
+```
+
 
 
 
