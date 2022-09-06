@@ -167,5 +167,23 @@ En resumen, ***nmap*** es la herramienta de referencia para el fingerprintig en 
 
 ## Reconocimento usando otras herramientas.
 
-pag 201 (saltarse nmap, que ya se ha tratado en el ejercicio anterior)
+Herramientas de reconocimiento hay una infinidad, solo tenemos que hacer una búsqueda en Google. Además, las distribuciones de Ethical Hacking, como ***Kali Linux***, o ***Parrot*** las ofrecen.
+
+En este caso vamos a descargar y evaluar ***MegaPing***. 
+
+En la máquina ***Win11***, abrimos un navegador y descargamos la herramienta desde la siguiente URL.
+```
+https://magnetosoft.com/downloads/win32/megaping_setup.exe
+```
+
+Una vez descargado, instalamos la aplicación.
+
+***ACTIVIDAD***
+
+Utiliza las herramientas disponibles para extraer información de la red local del laboratorio ***192.168.20.0/24***.
+
+Evalua si ***nmap*** ofrece más y mejos información y, en consecuencia, determina qué herramienta es mejor.
+
+
+
 
