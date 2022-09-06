@@ -67,6 +67,7 @@ cd eHacking_LABS
    - Reconocimento usando otras herramientas.
 
 2. Laboratorio 03-B: ***Evadir el IDS/Firewall***. Los ejercicios a realizar son:
+   - Instalación de WireShark.
    - Reconocimiento atravesando el firewall.
 
 
