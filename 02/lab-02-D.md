@@ -85,7 +85,7 @@ Marca las casillas de verificación que se muestran en la imagen.
 
 y luego haz clic en ***OK***.
 
-Ahora solo necesias hacer clic en el botón ***Start*** para empezar a extraer información.
+Ahora solo necesitas hacer clic en el botón ***Start*** para empezar a extraer información.
 
 Cuando termine, solo tienes que ir visualizando las pestañas ***Meta tags***, ***Emails***, ***Phones***, ***Faxes***, ***Merged list*** y ***Urls***.
 
@@ -97,6 +97,8 @@ Copia en tu navegador esta URL.
 ```
 https://linuxhint.com/top_20_webscraping_tools/
 ```
+
+***ACTIVIDAD***
 
 Lee el artículo y estudia las herramientas que creas apropiadas.
 
@@ -137,6 +139,10 @@ firefox ~/httrack/target01/index.html
 Ya solo solo es cuestión de usar las ***Herramientas del desarrollador*** para estudiar el código fuente en ***javascript*** del sitio.
 
 El clonado de un sitio web, es una acción que forma parte de ciertos ataques de ingeniería social, donde el actor de amenaza consigue redirigir a la víctima a un sitio web que, siendo visualmente idéntico al original, es otro completamente diferente. Es trivial modificar el sitio para inyectar ***payloads*** o capturar credenciales. A lo largo de este curso estudiaremos diferentes estrategias para conseguir que la víctima se conecte al sitio web falseado (phishing, spoofing, etc.)
+
+***ACTIVIDAD***
+
+¿Podrías crear un sitio web idéntico al de inicio de sesión en ***FaceBook***? Si tienes conocimientos en programación web, crea una función en javascript que responda al evento clic y envíe un una request de http al servidor web de tu elección.
 
 
 ## Extraer información de calidad con CeWL.

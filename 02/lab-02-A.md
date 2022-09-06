@@ -56,7 +56,9 @@ NOTA: Prueba a usar ***filetype*** junto con ***inline***, y busca otros tipos d
 
 Los modificadores de búsqueda son muy variopintos. En este link: https://antoniogonzalezm.es/google-hacking-46-ejemplos-hacker-contrasenas-usando-google-enemigo-peor/ tienes un montón de ejemplos para que conozcas la potencia de la OSINT usando Google.
 
-Nota: Te recomiendo que practiques y modifiques algunos de los ejemplos propuestos en el link, para localizar información exfiltrada en los sitios de tu interés.
+***ACTIVIDAD***
+
+Practica y adapta algunos de los ejemplos propuestos en el link, para localizar información exfiltrada en los sitios de tu interés.
 
 ## Extraer información de un video.
 
@@ -85,3 +87,7 @@ Internet of the Things (IoT) se está convirtiendo en uno de los vectores de ata
 Estos dispositivos suele exponer servicios en Internet para su control. De esta forma, localizar dispositivos IoT relacionados con la víctima es un gran logro en esta fase de reconocimiento.
 
 Shodan es un buscador especializado en encontrar estos tipos de dispositivos. Su URL es: https://www.shodan.io. Mira la documentación o visualiza un video en Youtube para aprender a usarlo. Posterioremente realiza una búsqueda con tu víctima preferida y comprueba si hay resultados relevantes.
+
+***ACTIVIDAD***
+
+¿Tienes algún dispositivo domótico? ¿Termostatos, luces, etc...? Intenta localizar información sobre ellos desde el punto de vista del reconocimiento.

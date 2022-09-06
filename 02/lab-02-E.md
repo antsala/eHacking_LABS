@@ -109,6 +109,10 @@ dnsrecon -r 162.241.216.0-162.241.216.255
 
 Al hacer una búsqueda inversa, estamos resolviendo las IPs a nombres de dominio, que facilita la localización de IPs relacionadas con la organización objetivo, por ejemplo todas las que muestran el nombre ***bluehost.com*** en el dominio.
 
+***ACTIVIDAD***
+
+Usando las técnicas y herramientas descritas en este ejercicio, extrae toda la información DNS, IP y personal de la organización que estimes oportuna.
+
 
 ## Reconocimiento por medio del protocolo ICMP
 
@@ -141,6 +145,8 @@ una vez instalado Java, vamos a descargar ***Open Visual Trace***, así que en e
 ```
 https://sourceforge.net/projects/openvisualtrace/
 ```
+
+***ACTIVIDAD***
 
 Espera a que se descargue la app e instálala. Cuando la abras, traza la ruta al host de tu elección.
 

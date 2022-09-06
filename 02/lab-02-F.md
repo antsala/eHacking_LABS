@@ -33,7 +33,9 @@ Nota: El actor de la amenaza seguro que invierte en la compra de estas herramien
 
 No obstante, para que aprendas a utilizar ***recon-ng*** realizaremos una pequeña prueba. Vamos a usar el módulo ***reverse_resolve***, que no requiere clave.
 
-En este link: https://safetag.org/activities/automated_recon tienes un tutorial avanzado sobre la herramienta que te recomendamos hacer. Puedes usar el dominio de tu interés.
+***ACTIVIDAD***
+
+En este link: https://safetag.org/activities/automated_recon tienes un tutorial avanzado sobre la herramienta que te recomendamos hacer. Usa el dominio de tu interés.
 Nota: Algunas claves son necesarias para interactuar con servicios online que requieren autenticación y no es necesario pagar por ellas. En la parte final del tutorial anterior, se explica como obterner (y configurar) las claves para una serie de servicios muy interesantes, así que haz el tutorial hasta el final.
 
 ## Maltego.
@@ -72,7 +74,7 @@ Instalación. En la máquina ***Kali*** ejecutamos el siguiente comando en la te
 sudo apt install -y osrframework
 ```
 
-Procedemos a investigar si un nombre de usuario existe en la plataforma twitter. Escribe en la terminal lo sigiuente.
+Procedemos a investigar si un nombre de usuario existe en la plataforma twitter. Escribe en la terminal lo siguiente.
 ```
 usufy.py -n <pon_aquí_el_username> -p twitter
 ```
@@ -100,6 +102,10 @@ phonefy.py -n <Pon_aquí_un_número_de_teléfono>
 
 En este link: https://github.com/i3visio/osrframework tienes el proyecto en GitHub.
 
+***ACTIVIDAD***
+
+Usando las herramientas presentes en ***OSRFramework***, extrae toda la información que puedas del contacto técnico (registrado en ICAAN) del dominio de tu elección.
+
 ##♫FOCA.
 
 Reconocidísima herramienta de extracción de metadatos de documentos de Office, Open Office y PDFs, de ***ElevenPath***.
@@ -117,6 +123,7 @@ Cuando termine la instalación de SQL, descarga el ZIP de la última versión de
 
 Descomprime la carpeta y localiza el ejecutable. FOCA se conectará a la instancia de SQL y ya podrás usarla.
 
+***ACTIVIDAD***
 
 En este link: https://empresas.blogthinkbig.com/como-analizar-documentos-con-foca/ tienes el tutorial de uso de la herramienta. Realízalo aportando documentos de tu organización y personales.
 
@@ -132,6 +139,8 @@ El framework se encuentra en la siguiente URL.
 ```
 https://osintframework.com
 ```
+
+***ACTIVIDAD*** 
 
 Invierte el tiempo que te indique el instructor e investiga las herramientas disponibles.
 

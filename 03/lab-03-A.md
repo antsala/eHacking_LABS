@@ -109,6 +109,8 @@ Nota: Como es necesario acceso a bajo nivel a la pila TCP/IP, la herramienta obl
 sudo nmap -O -Pn -v $METASPLOITABLE3_UB1404_IP
 ```
 
+***ACTIVIDAD***
+
 Lee este artículo: https://nmap.org/man/es/man-os-detection.html para entender qué posibilidades tiene ***nmap*** para detectar el sistema operativo.
 
 Escaneamos un segmento de la red local.
@@ -165,6 +167,10 @@ sudo nmap --badsum $METASPLOITABLE3_UB1404_IP
 
 En resumen, ***nmap*** es la herramienta de referencia para el fingerprintig en la red local. Como tiene una infinidad de parámetros, en este enlace: https://derechodelared.com/wp-content/uploads/2021/02/Nmap-Cheat-Sheet.pdf tienes una "chuleta" para recordarlos.
 
+***ACTIVIDAD***
+
+Realiza footprinting con ***nmap*** y extrae toda la información posible de la máquina ***Metasploitable3-win2k8***.
+
 ## Reconocimento usando otras herramientas.
 
 Herramientas de reconocimiento hay una infinidad, solo tenemos que hacer una búsqueda en Google. Además, las distribuciones de Ethical Hacking, como ***Kali Linux***, o ***Parrot*** las ofrecen.
@@ -180,9 +186,7 @@ Una vez descargado, instalamos la aplicación.
 
 ***ACTIVIDAD***
 
-Utiliza las herramientas disponibles para extraer información de la red local del laboratorio ***192.168.20.0/24***.
-
-Evalua si ***nmap*** ofrece más y mejos información y, en consecuencia, determina qué herramienta es mejor.
+Utiliza las herramientas disponibles para extraer información de la red local del laboratorio ***192.168.20.0/24***. Evalua si ***nmap*** ofrece más y mejos información y, en consecuencia, determina qué herramienta es mejor.
 
 
 

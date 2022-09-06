@@ -100,8 +100,6 @@ El circuito que se ha creado realiza tres conexiones se sitio a sitio.
 * *Reino Unido*. Desde Finlandia se salta a Reino Unido.
 * *Alemania*. Por último, desde Reino Unido se salta a Alemania, que es el nodo de salida a la Internet convencional. 
 
-
-
 Puedes observar que existe el botón ***New Circuit for this Site***. Si lo pulsas, se genera un nuevo circuito.
 
 El objetivo en este curso de Ethical Hacking respecto a la red Tor es que seas consciente de la capacidad de ocultación (anonimato) que esta herramienta ofrece. Como miembro del ***Blue Team*** debes saber que cualquier IP registrada por tu perimetral o IDS, puede no servir absolutamente de nada si el actor está oculto detrás de Tor. Así que se precavido y no saques conclusiones apresuradas sobre el origen del ataque.
@@ -141,6 +139,9 @@ Recuerda que la Dark Web es peligrosa, incluso curioseando una simple lista de d
 
 En este link: https://www.expressvpn.com/blog/best-onion-sites-on-dark-web/ tienes mucha más información sobre cómo se accede a la ***Dark Web***.
 
+***ACTIVIDAD***
+
+Créate una cuenta en ***Proton Mail*** y envía un correo a alguno de tus buzones.
 
 ## Fingerprinting pasivo de sitios webs.
 
