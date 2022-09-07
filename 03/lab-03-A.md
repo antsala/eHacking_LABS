@@ -262,7 +262,7 @@ sudo msfdb init
 
 Una vez finalizada la inicialización, iniciamos la consola de ***Metasploit*** con este comando.
 Nota: Se abrirá la consola de ***Metasploit***.
-Nota: Usamos ***sudo*** para que el framework se ejecute con todos los permisos.
+Nota: Usamos ***sudo*** para que el framework se ejecute con todos los permisos (algunos módulos necesitan ejecutarse en el contexto de ***root***)
 ```
 sudo msfconsole
 ```
@@ -293,7 +293,7 @@ hosts
 La salida debe ser similar a esta, donde se muestran las VMs del entorno de laboratorio.
 Nota: Observa como no es muy preciso determinando el nombre del sistema operativo. Más adelante, con los ***módulos auxiliares*** de ***Metasploit*** veremos como detectarlos correctamente.
 
-![Zenmap Topology](../img/lab-03-A/202209071103.png)
+![Hosts descubiertos](../img/lab-03-A/202209071103.png)
 
 ***Metasploit*** es un framework, es decir, un ecosistema de herramientas integradas que comparten información. 
 
@@ -366,6 +366,57 @@ La salida muestra que se ha detectado el puerto ***80*** abierto en 2 hosts.
 
 ![resultado del escaneo](../img/lab-03-A/202209071142.png)
 
+Procedemos a comprobar si el puerto está realmente abierto, por ejemplo en ***192.168.20.13***. Para ello vamos a hacer uso de otro módulo auxiliar.
+```
+info auxiliary/scanner/portscan/tcp
+```
 
+Observemos el comentario que aparece al final.
+
+![resultado del escaneo](../img/lab-03-A/202209071159.png)
+
+Hemos ejecutado ***msfconsole*** con ***sudo***, lo que fue útil para realizar el escaneo ***TCP SYN*** (que requiere permisos de root), sin embargo, para este módulo se nos advierte que no es necesario usar el contexto del ***root*** (This does not need administrative privileges), y que puede ser útil al pivotar, es decir, si el actor de la amenaza consigue acceso a un host, y usa ***Metasploit***, para escanear otros objetivos (Pivotaje), no será problema el no disponer de las credenciales de root.
+
+En nuestro laboratorio estamos ejecutando ***Metasplit*** sobre la máquina ***Kali***, para la que sí tenemos las credenciales del administrador.
+
+Aclarado esto, cargamos el módulo.
+```
+use auxiliary/scanner/portscan/tcp
+```
+
+y mostramos sus opciones.
+```
+show options
+```
+
+Lo configuramos.
+```
+set RHOSTS 192.168.20.13
+```
+
+Volvemos a comprobar las opciones.
+```
+show options
+```
+
+Lo ejecutamos.
+```
+run
+```
+
+Efectivamente, el puerto ***80*** está abierto en el host.
+
+Ya puestos, escaneamos todos los puertos de ese host. Subimos la concurrencia para que vaya más rápido.
+```
+set PORTS 1-65535
+```
+
+```
+set CONCURRENCY 400
+```
+
+```
+run
+```
 
 
