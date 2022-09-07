@@ -290,9 +290,20 @@ hosts
 ```
 
 La salida debe ser similar a esta, donde se muestran las VMs del entorno de laboratorio.
+Nota: Observa como no es muy preciso determinando el nombre del sistema operativo. Más adelante, con los ***módulos auxiliares*** de ***Metasploit*** veremos como detectarlos correctamente.
 
 ![Zenmap Topology](../img/lab-03-A/202209071103.png)
 
+***Metasploit*** es un framework, es decir, un ecosistema de herramientas integradas que comparten información. 
+
+Vamos a hacer uso de uno de los módulos ***auxiliares*** (aportan más información) que realiza la misma función que ***nmap***, en este caso detectando los puertos. El módulo auxiliar es: ***auxiliary/scanner/portscan/syn***.
+
+En primer lugar listamos los módulos de la familia ***portscan***.
+```
+search portscan
+```
+
+![módulos portscan](../img/lab-03-A/202209071113.png)
 
 
 
