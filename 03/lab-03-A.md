@@ -423,6 +423,45 @@ Después de un rato, el resultado es el siguiente.
 
 ![resultado del escaneo](../img/lab-03-A/202209071219.png)
 
+El proceso de reconocimiento continúa. Si observamos la imagen anterior, aparece abierto el puerto ***445***, que se corresponde con ***SMB***.
+
+Metasploit tiene módulos auxiliares para determinar la versión del SMB y, más adelante en el curso, si descubrimos versiones vulnerables, las atacaremos.
+```
+search auxiliary/scanner/smb
+```
+
+Vamos a utilizar el ***12*** (***smb_version***)
+![scanner/smb](../img/lab-03-A/202209071228.png)
+
+```
+info 12
+```
+
+Leamos la ***Description*** del módulo, pues es lo que vamos buscando. Usémoslo.
+```
+use 12
+```
+
+```
+set RHOSTS 192.168.20.13
+```
+
+```
+show options
+```
+
+```
+run
+```
+
+Si estudiamos la salida, localizaremos información muy importante. Se trata de una implementación ***SAMBA*** del protocolo ***SMB*** de ***Microsoft***. Concretamente ***Samba 4.3.11-Ubuntu***, lo que es correcto, pues sabemos que esa máquina es Ubuntu.
+
+***ACTIVIDAD***
+
+Como habrás comprobado, ***192.168.20.13*** tiene otros puertos abiertos. Te propongo que localices los módulos auxiliares que interactuen con esos servicios. A ver que información adicional obtienes de cada uno de ellos.
+
+
+
 
 
 
