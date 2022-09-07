@@ -65,6 +65,7 @@ cd eHacking_LABS
 1. Laboratorio 03-A: ***Descubrimiento de hosts en la red local***. Los ejercicios a realizar son:
    - Reconocimiento de hosts usando nmap.
    - Reconocimento usando otras herramientas.
+   - Visualizar la topología de la red.
 
 2. Laboratorio 03-B: ***Evadir el IDS/Firewall***. Los ejercicios a realizar son:
    - Instalación de WireShark.

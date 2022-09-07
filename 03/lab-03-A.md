@@ -216,6 +216,88 @@ En una terminal de la máquina ***Kali*** escribimos:
 hping3 --help
 ```
 
+## Visualizar la topología de la red.
+
+Sin duda alguna, las herramientas gráficas ayudan mucho a tener un conocimiento claro de la topología de red de la víctima. 
+
+En esta práctica usaremos una (de tantas) herramientas que nos ayudan a visualizar esa información. Para ello usaremos ***nmap*** y su frontend gráfico ***Zenmap***.
+
+En la máquina ***Kali***, abrimos una terminal y ejecutamos ***zenmap*** para escanear la red.
+```
+sudo zenmap-kbx
+```
+
+Cuando se abra ***Zenmap***, en el cuadro de texto ***Command*** escribimos lo siguiente y hacemos clic en el botón ***Scan***.
+```
+sudo nmap -O -T4 -A 192.168.20.0/24 --stats-every 10s
+```
+
+Cuando haya terminado el escaneo hacemos clic en el botón ***Topology***.
+
+![Zenmap Topology](../img/lab-03-A/202209071035.png)
+
+***ACTIVIDAD***
+
+Práctica con la topología de ***Zenmap*** y comprobarás lo fácil que resulta entender la arquitectura de la red. La herramienta ofrece la posibilidad de exportar (guardar) los gráficos que generemos.
+
+
+## Reconocimiento usando Metasploit.
+
+***Metasploit*** es, sin duda alguna, la herramienta por excelencia en (Ethical) Hacking. En esta ocasión vamos a ver como se puede usar para el reconocimiento.
+Nota: En laboratorios posteriores retomaremos su uso en la fase de ***Ganar acceso***.
+
+En la máquina de ***Kali*** abrimos una terminal.
+
+En primer lugar, debemos saber que ***Metasploit*** puede almacenar en su base de datos todo lo que vayamos descubriendo, por lo tanto, debemos iniciar el motor de base de datos con el siguiente comando.
+```
+sudo service postgresql start
+```
+
+Inicializamos la base de datos de ***Metasploit*** en ***Postgresql***.
+Nota: Esto solo hay que hacerlo la primera vez.
+```
+sudo msfdb init
+```
+
+Una vez finalizada la inicialización, iniciamos la consola de ***Metasploit*** con este comando.
+Nota: Se abrirá la consola de ***Metasploit***.
+Nota: Usamos ***sudo*** para que el framework se ejecute con todos los permisos.
+```
+sudo msfconsole
+```
+
+Procedemos a comprobar si ***Metasploit*** se ha conectado con ***Postgresql***.
+Nota: Debe aparecer el mensaje ***Connected to msf. Connection type: postgresql***.
+```
+db_status
+```
+
+Una gran ventaja del ***framework Metasploit*** es que podemos ejecutar comandos de la ***Shell*** directamente, así que vamos a hacer un reconocimiento de la red del laboratorio con ***nmap***.
+Nota: ***-Pn***: Solo puertos (no se descubre host), ***-sS***: Escanea puertos usando TCP SYN. ***-A***: Habilita la detección del Sistema Operativo. ***-oX <archivo>***: Salida en formato XML.
+
+```
+nmap -Pn -sS -A -oX Escaneo_red_20.xml 192.168.20.0/24 --stats-every 10s
+```
+
+La salida de ***nmap*** se ha almacenado en el archivo ***Escaneo_red_20.xml***. Procedemos a importar toda esa información a la base de datos de ***Metasploit***.
+```
+db_import Escaneo_red_20.xml
+```
+
+Ahora podemos preguntar a ***Metasploit*** por los hosts descubiertos.
+```
+hosts
+```
+
+La salida debe ser similar a esta, donde se muestran las VMs del entorno de laboratorio.
+
+![Zenmap Topology](../img/lab-03-A/202209071103.png)
+
+
+
+
+
+
 
 
 

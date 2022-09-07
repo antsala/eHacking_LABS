@@ -192,6 +192,8 @@ Como podrás observar, la IP detectada, así como la Geoubicación coinciden con
 
 ![Proxy switcher conectado 2](../img/lab-03-B/202209071000.png)
 
+Una vez finalizada la práctica debemos desinstalar ***Proxy Switcher*** y restablecer la configuración del proxy para que ***Win11*** navegue normalmente.
+
 
 
 
