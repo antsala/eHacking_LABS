@@ -3,9 +3,10 @@
 Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
-3. Máquina ***Metasploitable3-ub1404***.
-4. Máquina ***Metasploitable3-win2k8***.
-5. Máquina ***Windows 7 Ethical Hacking***.
+3. Máquina ***Win 11***
+4. Máquina ***Metasploitable3-ub1404***.
+5. Máquina ***Metasploitable3-win2k8***.
+6. Máquina ***Windows 7 Ethical Hacking***.
 
 
 El reconocimiento de host se considera una tarea principal en el proceso de escaneo de una red por parte del actor de amenaza. Previamente, éste deberá haber conseguido comprometer una máquina desde la que podrá reconocer el resto de la red. En este contexto, al actor de la amenaza, se le conoce como ***Insider***.
@@ -314,9 +315,56 @@ Como puedes observar, este módulo realiza el descubrimiento por medio de ***TCP
 
 ![info portscan syn](../img/lab-03-A/202209071119.png)
 
+Vamos a proceder a realizar un escaneo de puertos usando este módulo. Se lo indicamos a ***Metasploit***
+Nota: El prompt mostrará el nombre del módulo en color rojo.
+```
+use auxiliary/scanner/portscan/syn
+```
 
+***Metasploit*** puede interactuar con la red local a través de cualquier interfaz de red configurada en la máquina. En consecuencia es conveniente verificar cuántas tenemos.
+```
+ifconfig
+```
 
+Como podrás observar hay tres: 
 
+* *docker0*: Es una interfaz virtual que aparece cuando * ***Docker*** está instalado. ***Metasploit*** tiene herramientas para explotar servicios de contenedores.
+* *eth0: Es la interfaz de red principal, asociada a la IP ***192.168.20.9***, que es la que deseamos usar.
+* *lo*: Es el LoopBack.
+
+En esta práctica deseamos saber si el puerto ***80*** está abierto en los hosts ***192.168.20.10-14***
+```
+set INTERFACE eth0
+```
+```
+set PORTS 80
+```
+```
+set RHOSTS 192.168.20.10-14
+```
+
+Para que vaya más rápido, habilitamos el paralelismo.
+```
+set THREADS 10
+```
+
+Es importante comprobar el valor de los parámetros de configuración del módulo.
+```
+show options
+```
+
+Los parámetros obligatorios deben tener configurados un valor, de lo contrario el módulo fallará su ejecución.
+
+![show options](../img/lab-03-A/202209071138.png)
+
+Para poner a funcionar el modulo usamos el comando ***run***
+```
+run
+```
+
+La salida muestra que se ha detectado el puerto ***80*** abierto en 2 hosts.
+
+![resultado del escaneo](../img/lab-03-A/202209071142.png)
 
 
 
