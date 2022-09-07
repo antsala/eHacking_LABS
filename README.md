@@ -66,6 +66,7 @@ cd eHacking_LABS
    - Reconocimiento de hosts usando nmap.
    - Reconocimento usando otras herramientas.
    - Visualizar la topología de la red.
+   - Reconocimiento usando Metasploit.
 
 2. Laboratorio 03-B: ***Evadir el IDS/Firewall***. Los ejercicios a realizar son:
    - Instalación de WireShark.
