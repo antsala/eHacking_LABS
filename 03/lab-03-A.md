@@ -419,4 +419,10 @@ set CONCURRENCY 400
 run
 ```
 
+Después de un rato, el resultado es el siguiente.
+
+![resultado del escaneo](../img/lab-03-A/202209071219.png)
+
+
+
 
