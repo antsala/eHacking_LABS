@@ -21,7 +21,7 @@ cd eHacking_LABS
    - Importación y configuracion de la VM ***Win11***.
    - Importación y configuracion de la VM ***Windows Server 2022 core***.
 
-## Carpeta 02
+## Carpeta 02 Footprinting y reconocimiento.
 
 1. Laboratorio 02-A: ***Realizar Footprinting usando motores de búsqueda***. Los ejercicios a realizar son:
    - Google Hacking.
@@ -60,7 +60,7 @@ cd eHacking_LABS
    - FOCA.
    - osintFramework.
 
-## Carpeta 03
+## Carpeta 03 Escaneo de la red local
 
 1. Laboratorio 03-A: ***Descubrimiento de hosts en la red local***. Los ejercicios a realizar son:
    - Reconocimiento de hosts usando nmap.
