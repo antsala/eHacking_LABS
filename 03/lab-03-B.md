@@ -147,4 +147,41 @@ Nota: Se envían ***15000*** paquetes de ***120*** bytes, habilitando la bandera
 
 ## Anonimización por medio de proxy/VPN.
 
-pag 272 proxy Switcher.
+Uno de los objetivos que pretende el actor de la amenaza es el de pasar desapercibido. Si bien esto no es siempre posible, se tiene la posibilidad de ocultar su identidad digital. 
+
+Aunque ya hemos conocido a ***TOR***, y sabemos cuál el su misión, la anonimización también pasa por usar un ***proxy/VPN***, donde la IP de salida del actor de la amenaza a Internet no es la real sino la proporcionada por el servidor Proxy/VPN. Existen muchas soluciones en el mercado, algunas gratuitas (que no son muy recomendables). Por último comentar que se pueden usar de forma conjunta, es decir, crear una VPN y a continuación conectar con la red Tor.
+
+***ACTIVIDAD***
+
+Lee este artículo: https://www.expressvpn.com/es/vpn-service/tor-vpn y determina cual es la mejor opción. Conectar con la VPN y luego con Tor o, viceversa.
+
+En este laboratorio vamos a instalar ***Proxy Switcher*** en la máquina ***Win11***. Esta herramienta es un cliente de VPN que permitirá navegar por Internet de forma anónima.
+Nota: La versión de evaluación tiene una duración de 15 días.
+
+En la máquina ***Win11*** descargamos el siguiente enlace.
+```
+https://www.proxyswitcher.com/pub/ProxySwitcherStandard.zip
+```
+
+Una vez descargado, procedemos a su instalación. Elegimos la prueba de 15 días y finalizamos la configuración. 
+
+Ahora debemos hacer que el navegador envíe tráfico hacia el servidor de VPN. Para ello configuramos el proxy. En Edge debemos elegir la siguiente opción: ***Settings/Network & Internet/Proxy***. Hacemos clic en el botón ***Edit***.
+
+![Configuración de Proxy](../img/lab-03-B/202209070946.png)
+
+En el cuadro de diálogo habilitamos ***Use a proxy server***, ponemos ***127.0.0.1*** en ***Proxy IP Address*** y ***3128*** en ***Port***. También marcamos ***Don´t use the proxy server for local (intranet) addresses***.
+
+![Configuración de Proxy 2](../img/lab-03-B/202209070949.png)
+
+Hacemos clic en el botón ***Save***.
+
+***Proxy Switcher*** habrá localizado una serie de servidores proxy. Hacemos clic en ***Basic Anonymity*** en el panel izquierdo. Aparecerán una serie de servidores en el panel derecho. 
+
+Para conectar hacemos ***doble clic*** en uno de ellos, preferiblemente con un tiempo de respuesta bajo, y que obviamente esté ***Alive***. 
+
+***Proxy Switcher*** probará el servidor (***testing***) y si todo ha ido bien, mostrará el icono de conexión, tal y como se puede observar en la siguiente imagen.
+
+![Proxy switcher conectado](../img/lab-03-B/202209070955.png)
+
+
+
