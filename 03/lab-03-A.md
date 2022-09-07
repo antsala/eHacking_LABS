@@ -305,6 +305,14 @@ search portscan
 
 ![módulos portscan](../img/lab-03-A/202209071113.png)
 
+Para obtener información sobre un módulo usamos el comando ***info***.
+```
+info auxiliary/scanner/portscan/syn
+```
+
+Como puedes observar, este módulo realiza el descubrimiento por medio de ***TCP SYN***, como hacía ***nmap***. También puedes ver que hay unas propiedades que deben configurarse. Algunas son obligatorias (***Required***) y/o presentan valores por defecto (***Current Settings***)
+
+![info portscan syn](../img/lab-03-A/202209071119.png)
 
 
 
