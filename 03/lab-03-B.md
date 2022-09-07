@@ -183,5 +183,16 @@ Para conectar hacemos ***doble clic*** en uno de ellos, preferiblemente con un t
 
 ![Proxy switcher conectado](../img/lab-03-B/202209070955.png)
 
+Ahora solo queda abrir el navegador y conectar con la siguiente URL.
+```
+https://www.myip.com/
+```
+
+Como podrás observar, la IP detectada, así como la Geoubicación coinciden con la del servidor VPN al que hemos conectado.
+
+![Proxy switcher conectado 2](../img/lab-03-B/202209071000.png)
+
+
+
 
 
