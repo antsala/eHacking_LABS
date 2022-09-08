@@ -41,8 +41,8 @@ nbtscan -v -h 192.168.20.14
 
 En la máquina ***Win 11*** vamos a hacer lo siguiente:
 
-* *1:* Crea una carpeta llamada ***Datos*** y compártela.
-* *2:* Crea en el Escritorio un archivo de texto llamado ***contrato.txt***, edítalo y escribe cualquier cosa. Luego guárdalo.
+* Crea una carpeta llamada ***Datos*** y compártela.
+* Crea en el Escritorio un archivo de texto llamado ***contrato.txt***, edítalo y escribe cualquier cosa. Luego guárdalo.
 
 De vuelta a la máquina ***Kali***, si tenemos credenciales en el objetivo, podemos enumerar los shares con la herramienta ***smbmap***.
 ```
