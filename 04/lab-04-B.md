@@ -24,4 +24,22 @@ El resultado nos dice claramente que este protocolo no está instalado en el sis
 
 ![SNMP no instalado](../img/lab-04-B/202209081224.png)
 
+Procedemos a instalar el servicio.
+```
+Add-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"
+```
+
+Comprobamos que se ha instalado.
+```
+Get-WindowsCapability -Online -name "SNMP*"
+```
+
+![SNMP instalado](../img/lab-04-B/202209081238.png)
+
+Es conveniente comprobar que el servicio está iniciado.
+
+![Servicio SNMP](../img/lab-04-B/202209081242.png)
+
+
+
 

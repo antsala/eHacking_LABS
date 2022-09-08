@@ -1,11 +1,6 @@
 # eHacking_LABS
 
-Laboratorios para las formaciones de Ethical Hacking. Ahora clonamos el repositorio con los laboratorios del curso.
-
-```
-git clone https://github.com/antsala/eHacking_LABS.git
-cd eHacking_LABS
-```
+Laboratorios para las formaciones de Ethical Hacking está en la URL https://github.com/antsala/eHacking_LABS.git
 
 
 ## Carpeta 00. Despliegue del laboratorio.
@@ -82,7 +77,7 @@ cd eHacking_LABS
 
 2. Laboratorio 04-B: ***Enumeración SNMP***. Los ejercicios a realizar son:
    - Habilitar SNMP en ***Win 11***.
-   
+
 
 
 ## Carpeta 30
