@@ -76,9 +76,13 @@ cd eHacking_LABS
 
 ## Carpeta 04. Enumeración.
 
-1. Laboratorio 03-A: ***Enumeración NetBIOS***. Los ejercicios a realizar son:
+1. Laboratorio 04-A: ***Enumeración NetBIOS***. Los ejercicios a realizar son:
    - Enumeración NetBIOS por medio de nbtscan y smbmap.
    - Enumerar NetBIOS con ***nmap scripting engine***.
+
+2. Laboratorio 04-B: ***Enumeración SNMP***. Los ejercicios a realizar son:
+   - Habilitar SNMP en ***Win 11***.
+   
 
 
 ## Carpeta 30

@@ -1,4 +1,4 @@
-# Enumeración 
+# Enumeración NetBIOS.
 
 Requisitos:
 1. Máquina ***Router-Ubu***.
@@ -93,5 +93,13 @@ Nota: Para salir del editor pulsa ***CTRL+X***.
 ```
 nano /usr/share/nmap/scripts/nbstat.nse
 ```
+
+Procedemos a realizar la misma práctica que en el ejercicio anterior, pero esta vez desde ***nmap***
+Nota: ***-v*** muestra información adicional. ***-sU*** usa scaneo UDP (evasión FW). ***-p 137*** es el puerto a ser escaneado.
+```
+sudo nmap -v -sU -p 137 --script nbstat.nse 192.168.20.11
+```
+
+Como podras observar, el uso de la herramienta ***nmap*** es de más bajo nivel y eso requiere conocimientos más profundos en el protocolo netBIOS.
 
 
