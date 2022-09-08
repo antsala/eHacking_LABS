@@ -78,6 +78,8 @@ cd eHacking_LABS
 
 1. Laboratorio 03-A: ***Enumeración NetBIOS***. Los ejercicios a realizar son:
    - Enumeración NetBIOS por medio de nbtscan y smbmap.
+   - Enumerar NetBIOS con ***nmap scripting engine***.
+
 
 ## Carpeta 30
 

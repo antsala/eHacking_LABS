@@ -42,7 +42,7 @@ nbtscan -v -h 192.168.20.14
 En la máquina ***Win 11*** vamos a hacer lo siguiente:
 
 * Crea una carpeta llamada ***Datos*** y compártela.
-* Crea en el Escritorio un archivo de texto llamado ***contrato.txt***, edítalo y escribe cualquier cosa. Luego guárdalo.
+* Crea en el ***Escritorio**** un archivo de texto llamado ***contrato.txt***, edítalo y escribe cualquier cosa. Luego guárdalo.
 
 De vuelta a la máquina ***Kali***, si tenemos credenciales en el objetivo, podemos enumerar los shares con la herramienta ***smbmap***.
 ```
@@ -51,11 +51,47 @@ smbmap -H 192.168.20.11 -u antonio -p Pa55w.rd
 
 La salida debe ser similar a la de esta imagen.
 
-![Salida smbmap](../img/lab-04-A/202209081125.png)`
+![Salida smbmap](../img/lab-04-A/202209081125.png)
 
 Podemos interactuar con la share deseada con el siguiente comando.
 ```
 smbmap -H 192.168.20.11 -u antonio -p Pa55w.rd -r 'Users\antonio\Desktop'
+```
+
+Podrás comprobar que hay un documento interesante en el Escritorio.
+
+![Contrato.txt](../img/lab-04-A/202209081125.png)
+
+Lo descargamos.
+```
+mbmap -H 192.168.20.11 -u antonio -p Pa55w.rd --download 'Users\antonio\Desktop\contrato.txt'
+```
+
+Comprobamos la descargas.
+```
+ls -l *contrato.txt
+```
+
+Ya lo tenemos en nuestro poder. Esto demuestra que con herramientas de línea de comandos sin interfaces gráficas, que inyectaremos posteriormente en el curso por medio de payloads, podemos acceder a la información sin levantar sospechas.
+
+![Contrato.txt descargado](../img/lab-04-A/202209081138.png)
+
+## Enumerar NetBIOS con nmap scripting engine.
+
+Hemo visto que ***nmap*** es una herramienta muy poderosa, pero ¿sabías que se puede extender su funcionalidad?
+
+Efectivamente. ***NSE*** (Nmap Scripting Engine) es la herramienta más poderosa de ***nmap***. Hackers con grandes conocimientos técnicos usan el luenguaje de programación ***Lua*** para extender/ampliar/mejorar las capacidades de ***nmap***.
+
+Estos scripts se almacenan en la carpeta ***/usr/share/nmap/scripts*** y son de diversa índole. En la máquina ***Kali*** ejecutamos el siguiente comando para ver los scripts que están disponibles.
+Nota: Recorre lentamente el listado para que puedas comprobar las enormes posibilidades que ofrece ***nmap***.
+```
+ls -l /usr/share/nmap/scripts | more
+```
+
+En este ejemplo nos centramos en un script llamado ***nbstat.nse***, que está especializado en enumerar NetBIOS. Veamos su código fuente.
+Nota: Para salir del editor pulsa ***CTRL+X***.
+```
+nano /usr/share/nmap/scripts/nbstat.nse
 ```
 
 
