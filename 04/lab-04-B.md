@@ -4,8 +4,6 @@ Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
 3. Máquina ***Win 11***
-4. Máquina ***Metasploitable3-win2k8***.
-5. Máquina ***Windows 7 Ethical Hacking***.
 
 Como ya sabes, SNMP es un protocolo que permite tomar (y modificar) información de configuración de un dispositivo de forma remota. Muchas herramientas de monitorización dependen de SNMP para conocer el estado de los dispositivos de la red.
 

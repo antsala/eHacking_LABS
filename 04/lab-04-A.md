@@ -5,7 +5,6 @@ Requisitos:
 2. Máquina ***Kali Linux***.
 3. Máquina ***Win 11***
 4. Máquina ***Metasploitable3-win2k8***.
-5. Máquina ***Windows 7 Ethical Hacking***.
 
 NetBIOS (Network Basic Input Output System) es el protocolo que utiliza el sistema operativo Windows para compartir archivos e impresora. Aunque existen versiones muy antiguas (SMB 1.0) que presentan vulnerabilidades tremendas, en este laboratorio nos quedaremos en la parte de enumeración para aprender a extraer información de estos sistemas desde la red local.
 
