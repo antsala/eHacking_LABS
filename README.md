@@ -74,7 +74,10 @@ cd eHacking_LABS
    - Creación paquetes modificados por ***Hping3*** para evadir el Firewall.
    - Anonimización por medio de proxy/VPN.
 
+## Carpeta 04. Enumeración.
 
+1. Laboratorio 03-A: ***Enumeración NetBIOS***. Los ejercicios a realizar son:
+   - Enumeración NetBIOS por medio de nbtscan y smbmap.
 
 ## Carpeta 30
 
