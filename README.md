@@ -77,6 +77,10 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 2. Laboratorio 04-B: ***Enumeración SNMP***. Los ejercicios a realizar son:
    - Habilitar SNMP en ***Win 11***.
+   - Usar ***snmp-check*** para la enumeración.
+
+3. Laboratorio 04-C: ***Enumeración LDAP***. Los ejercicios a realizar son:
+   -
 
 
 
