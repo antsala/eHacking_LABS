@@ -7,8 +7,6 @@ Requisitos:
 4. Máquina ***WS2002_DC_Server_Core***
 
 
-Escribir Intro.
-
 En la mayoría de las organizaciones se dispone de un origen de identidades organizado que facilita la gestión de los usuarios. Este tipo de infraestructura recibe el nombre de ***Directorio***.
 
 El estándar de directorio más ampliamente utilizado es ***X-500***, y su implementación más conocida es ***Open-LDAP***.
@@ -31,19 +29,53 @@ Debemos cambiarla a la siguiente, que es la IP del controlador de dominio.
 
 ![DNS 192.168.20.10](../img/lab-04-C/202209091039.png)
 
+Una vez realizada esta acción la máquina ***Win 11*** podrá resolver la IP del controlador de dominio y, en consecuencia, contactar con ***Active Directory*** para iniciar sesión con Kerberos.
 
-
-
-
-
-
-cerramos la sesión del usuario. A continuación haremos login con el siguiente nombre de usuario.
+Cerramos la sesión del usuario actual (que es un usuario local), e iniciamos una nueva sesión con el usuario.
+Nota: ***Luke Skywalker*** es un usuario sin privilegios en el dominio ***XYZ***.
 ```
-XYZ\
+XYZ\lskywalker
+``` 
 
+y password
+```
+Pa55w.rd
+```
 
+## Enumerar el dominio con ADExplorer
 
+En la máquina ***Win 11***. abrimos el navegador y descargamos el siguiente link.
+```
+https://download.sysinternals.com/files/AdExplorer.zip
+```
 
+Descomprimimos la carpeta y, la movemos a una ubicación más cómoda, por ejemplo el ***Escritorio***.
 
+Ejecutamos la aplicación ***ADExplorer64***. Aceptamos los términos, haciendo clic en el botón ***Agree***.
+
+Aparecerá un cuadro de diálogo que nos pide las credenciales. Lo conformamos de la siguiente forma.
+
+* *Connect to*: XYZ
+* *User*: lkywalker
+* *Password*: Pa55w.rd
+
+Debe quedar como se muestra en la siguiente imagen. Hacemos clic en el botón ***OK***. 
+
+![ADExplorer Login](../img/lab-04-C/202209091200.png)
+
+***ADExplorer64*** se conectará a ***Active Directory*** usando las credenciales proporcionadas.
+Nota: Muy importante. Recuerda que ***Luke Skywalker*** no tiene privilegios especiales en el dominio.
+
+En la herramienta desplegamos el dominio ***DC=xyz,DC=com***, luego hacemos clic en el contenedor ***CN=Users***. Disfruta con la lista de usuarios de ***TODA LA ORGANIZACIÓN***.
+
+Esta es la realidad. Cualquier usuario del dominio puede consultar el directorio.
+
+***ACTIVIDAD***
+
+Enumera la siguiente información.
+
+* Equipos presentes en el dominio.
+* Controladores de dominio.
+* Zonas DNS que replica el bosque.
 
 

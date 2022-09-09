@@ -81,6 +81,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 3. Laboratorio 04-C: ***Enumeración LDAP***. Los ejercicios a realizar son:
    - Iniciar sesión en el Dominio ***XYZ***.
+   - Enumerar el dominio con ***ADExplorer***.
 
 
 
