@@ -77,6 +77,7 @@ Esta es la realidad. Cualquier usuario del dominio puede consultar el directorio
 Enumera la siguiente información.
 
 * Equipos presentes en el dominio.
+* Usuarios del departamento de dirección.
 * Controladores de dominio.
 * Zonas DNS que replica el bosque.
 
