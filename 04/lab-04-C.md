@@ -81,4 +81,18 @@ Enumera la siguiente información.
 * Controladores de dominio.
 * Zonas DNS que replica el bosque.
 
+## Enumerar el dominio con ldapsearch.
+
+Por descontado que podemos hacer lo mismo con herramientas de línea de comandos. ***Kali Linux*** ofrece la herramienta ***ldapsearch***, que es un cliente de ***LDAP***.
+
+Para poder usar la herramienta solo necesitamos una cuenta de dominio sin privilegio alguno. En el siguiente ejemplo listamos los usuarios del dominio.
+* *-H ldap://192.168.20.10* es la IP de uno de los controladores de dominio.
+* *-x* hace que se use la autenticación simple.
+* *-D "lskywalker@xyz.com"* es el usuario que va a hacer la consulta a ***ADDS***.
+* *-W* nos pide el password del usuario anterior.
+* *-b "dc=xyz,dc=com"* es el contenedor origen de la consulta, que en este caso es el dominio completo.
+```
+ldapsearch  -H ldap://192.168.20.10 -x -D "lskywalker@xyz.com" -W -b "dc=xyz,dc=com"
+```
+
 
