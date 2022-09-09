@@ -80,7 +80,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Usar ***snmp-check*** para la enumeración.
 
 3. Laboratorio 04-C: ***Enumeración LDAP***. Los ejercicios a realizar son:
-   -
+   - Iniciar sesión en el Dominio ***XYZ***.
 
 
 
