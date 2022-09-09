@@ -91,8 +91,28 @@ Para poder usar la herramienta solo necesitamos una cuenta de dominio sin privil
 * *-D "lskywalker@xyz.com"* es el usuario que va a hacer la consulta a ***ADDS***.
 * *-W* nos pide el password del usuario anterior.
 * *-b "dc=xyz,dc=com"* es el contenedor origen de la consulta, que en este caso es el dominio completo.
+Nota: Usar el password ***Pa55w.rd***.
 ```
 ldapsearch  -H ldap://192.168.20.10 -x -D "lskywalker@xyz.com" -W -b "dc=xyz,dc=com"
 ```
 
+La herramienta permite usar filtros indicándolo por medio del ***nombre canónico*** del objeto. Por ejemplo, si queremos listar los ***Controladores de dominio*** podríamos.
+```
+ldapsearch  -H ldap://192.168.20.10 -x -D "lskywalker@xyz.com" -W -b "ou=Domain Controllers,dc=xyz,dc=com"  "(objectClass=computer)" | grep distinguishedName
+```
+
+Para extraer el nombre de inicio de sesión de los usuarios, escribimos.
+```
+ldapsearch  -H ldap://192.168.20.10 -x -D "lskywalker@xyz.com" -W -b "dc=xyz,dc=com"  "(objectClass=user)" | grep sAMAccountName
+```
+
+Para localizar los equipos miembros del dominio, hacemos.
+```
+ldapsearch  -H ldap://192.168.20.10 -x -D "lskywalker@xyz.com" -W -b "dc=xyz,dc=com"  "(objectClass=Computer)" | grep sAMAccountName
+```
+
+En el siguiente enlace pueds ver un ejemplo que como el IDS detecta este tipo de tráfico en la red. Esto nos servirá para valorar la importancia de este tipo de contramedidas.
+```
+https://docs.paloaltonetworks.com/cortex/cortex-xdr/cortex-xdr-analytics-alert-reference/cortex-xdr-analytics-alert-reference/suspicious-ldap-search-query-executed
+```
 
