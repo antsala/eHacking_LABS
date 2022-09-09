@@ -68,7 +68,7 @@ Nota: Muy importante. Recuerda que ***Luke Skywalker*** no tiene privilegios esp
 
 como podrás ver en la siguiente imagen, en la herramienta desplegamos el dominio ***DC=xyz,DC=com***, luego hacemos clic en el contenedor ***CN=Users***, y elegimos un usuario determinado. Observa como se exlfiltra la información. El usuario elegido es el ***CEO*** y tenemos su ***teléfono***. Sin dudda información de calidad para el actor de la amenaz. Disfruta con la lista de usuarios de ***TODA LA ORGANIZACIÓN***.
 
-![Darth Vader](../img/lab-04-C/202209091351.png)
+![Darth Vader](../img/lab-04-C/202209091352.png)
 
 Esta es la realidad. Cualquier usuario del dominio puede consultar el directorio.
 
