@@ -66,7 +66,9 @@ Debe quedar como se muestra en la siguiente imagen. Hacemos clic en el botón **
 ***ADExplorer64*** se conectará a ***Active Directory*** usando las credenciales proporcionadas.
 Nota: Muy importante. Recuerda que ***Luke Skywalker*** no tiene privilegios especiales en el dominio.
 
-En la herramienta desplegamos el dominio ***DC=xyz,DC=com***, luego hacemos clic en el contenedor ***CN=Users***. Disfruta con la lista de usuarios de ***TODA LA ORGANIZACIÓN***.
+como podrás ver en la siguiente imagen, en la herramienta desplegamos el dominio ***DC=xyz,DC=com***, luego hacemos clic en el contenedor ***CN=Users***, y elegimos un usuario determinado. Observa como se exlfiltra la información. El usuario elegido es el ***CEO*** y tenemos su ***teléfono***. Sin dudda información de calidad para el actor de la amenaz. Disfruta con la lista de usuarios de ***TODA LA ORGANIZACIÓN***.
+
+![Darth Vader](../img/lab-04-C/202209091351.png)
 
 Esta es la realidad. Cualquier usuario del dominio puede consultar el directorio.
 
