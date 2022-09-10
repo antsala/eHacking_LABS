@@ -128,3 +128,8 @@ La imagen muestra como aparece listado el share que hemos creado anteriormente.
 
 ![NFS Share](../img/lab-04-D/202209101500.png)
 
+
+
+NOTA. Compartir el directorio Home porque ahí están las claves. Corregir el lab y hacer otro que hackee las claves
+
+https://resources.infosecinstitute.com/topic/exploiting-nfs-share/
