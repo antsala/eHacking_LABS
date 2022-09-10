@@ -98,17 +98,20 @@ Reiniciamos el servicion ***NFS***.
 sudo /etc/init.d/nfs-kernel-server restart
 ```
 
-Ahora debemos abrir el firewall de la máquina para que pueda funcionar el protocolo NFS.
+Ahora debemos abrir el firewall de la máquina para que pueda funcionar el protocolo NFS. Lo primero que vamos a hacer es volcar la configuración de las reglas para trabajar más cómodos.
 ```
-sudo ufw enable
+sudo iptables-save > /tmp/iptables.txt
 ```
-```
-sudo ufw allow nfs
 
-sudo ufw reload
-
-sudo ufw status
+Lo editamos con ***nano***.
 ```
+sudo nano /tmp/iptables.txt
+```
+
+Lo editamos de forma que quede tal y como aparece en la imagen. Hemos agregado dos reglas para el puerto ***2049***, en la parte final del arhivo, justo delante de ***-A INPUT -j DROP***.
+
+![Reglas NFS iptables](../img/lab-04-D/202209101357.png)
+
 
 
 
@@ -125,6 +128,7 @@ nmap -sV -p 2049 192.168.20.10-20
 Como puede observarse en la siguiente imagen, en la IP ***192.168.20.13*** existe un servidor ***NFS***. Recordemos que ***filtered*** indica que ***nmap*** no puede determinar si el puerto está abierto o cerrado porque hay un ***firewall*** por delante del servicio, como es el caso.
 
 Lo primero que va a hacer el actor de la amenaza es ***enumerar*** las shares de ese servidor nfs. Si es afortunado encontrará alguna que no requiera autenticación.
+Nota: Los ***exports*** se exponen en el puerto ***111***.
 ```
-nmap -sV --script=nfs-showmount 192.168.20.13
+nmap -sV -p 111 --script=nfs-showmount 192.168.20.13
 ```
