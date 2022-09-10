@@ -118,8 +118,6 @@ La imagen muestra como aparece listado el share que hemos creado anteriormente.
 
 ![NFS Share](../img/lab-04-D/202209101501.png)
 
+Con esto concluye la práctica de enumeración ***NFS***. Es muy importante recordar que una mala práctica por parte del administrador puede conducir al robo de información, e incluso a tomar el control del sistema.
 
-
-NOTA. Compartir el directorio Home porque ahí están las claves. Corregir el lab y hacer otro que hackee las claves
-
-https://resources.infosecinstitute.com/topic/exploiting-nfs-share/
+Como adelanto a la parte del curso centrada en los ataques, te recomiendo que hagas el siguiente laboratorio: ***4. Laboratorio 30-D: Escalado de privilegio en una NFS mal configurada***.
