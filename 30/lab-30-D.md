@@ -16,7 +16,7 @@ En la máquina ***Kali*** ejecutamos el siguiente comando.
 nmap -sV -p 111 --script=nfs-showmount 192.168.20.60
 ```
 
-Cuya salida demuestra que se está compartiendo el directorio ***/home/antonio*** en dicha máquina. 
+Cuya salida demuestra que se está compartiendo el directorio ***/datos*** en dicha máquina. 
 
 Esta tecnica se emplea cuando se necesita escalar privilegios, es decir, el actor de la amenaza ya posee una credencial de usuario en la máquina víctima. La credencial puede haber sido capturada en un ataque previo o, se trata de un ***insider***. En cualquier caso se desea ser ***root*** en la máquina NFS.
 
@@ -40,10 +40,21 @@ E iniciamos sesión con ***luke***/***UsaLaFuerza***. Compromamos quien somos.
 whoami
 ```
 
+La salida mostrará que es un usuario convencional (***luke***) que no es ***root*** en esa máquina.
+
+Ahora, el usuario ***luke*** va a hacer algo que parece inocuo. Copia el archivo de la shell a la carpeta ***/datos***, para la cual tiene permisos de escritura.
+```
+cp /bin/bash /datos
+```
+
+Si listamos la carpeta veremos que el propietario es ***luke***
+````
+ls -l /datos
+```
+
+![propietaio de bash](../img/lab-04-D/202209101503.png)
 
 
-
-La salida mostrará que es un usuario convencional (***antonio***) que no es ***root*** en esa máquina.
 
 
 El siguiente paso es intentar montar ese share.
