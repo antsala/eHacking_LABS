@@ -68,17 +68,7 @@ En bastantes ocasiones, los administradores crean ***shares*** que no requieren 
 * Las aplicaciones que acceden al share no pueden usar autenticación.
 * Etc.
 
-Vamos a crear un ***Share***. En primer lugar creamos una carpeta y entramos en ella.
-```
-mkdir -p ~/datos
-
-cd ~/datos
-```
-
-Creamos unos cuantos archivos (vacíos) para simular.
-```
-touch file1 file2 file3
-```
+Vamos a crear un ***Share*** en el que cometeremos un error muy grave de seguridad. ***NFS*** se puede usar también para hacer las migraciones, y por consiguiente, suele ser muy cómodo compartir el directorio ***home*** del usuario en cuestión.
 
 Procedemos a crear el share. Para ello editamos el archivo ***/etc/exports***.
 ```
@@ -98,7 +88,7 @@ Reiniciamos el servicion ***NFS***.
 sudo /etc/init.d/nfs-kernel-server restart
 ```
 
-Las versiones de NFS anteriores a la ***4*** usan varios puertos dinámicos, que deben ser configurados a estáticos para crear las correspondientes reglas en el firewall. Como el objetivo de este curso no es aprender a configurar puestos estáticos en el kernel, lo que vamos a hacer es abrir el firewall por nuestra comodidad.
+Las versiones de NFS anteriores a la ***4*** usan varios puertos dinámicos, que deben ser configurados como estáticos para crear las correspondientes reglas en el firewall. Como el objetivo de este curso no es aprender a configurar puestos estáticos en el kernel, lo que vamos a hacer es abrir el firewall por nuestra comodidad.
 ```
 sudo iptables -F
 ```
@@ -119,7 +109,7 @@ Como puede observarse en la siguiente imagen, en la IP ***192.168.20.13*** exist
 
 
 Lo primero que va a hacer el actor de la amenaza es ***enumerar*** las shares de ese servidor nfs. Si es afortunado encontrará alguna que no requiera autenticación.
-Nota: Los ***exports*** se exponen en el puerto ***111*** (***rpcbind***).
+Nota: Los ***exports*** se exponen en el puerto ***111***.
 ```
 nmap -sV -p 111 --script=nfs-showmount 192.168.20.13
 ```
