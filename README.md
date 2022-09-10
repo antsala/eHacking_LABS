@@ -85,7 +85,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Enumerar el dominio con ***ldapsearch***.
 
 4. Laboratorio 04-D: ***Enumeración NFS***. Los ejercicios a realizar son:
-   - Instalar un servidor NFS en ***Metasploitable3-ubu1404***.
+   - Configuración de un share de NFS.
    - Enumerar los ***shares*** con ***nmap***.
 
 
@@ -96,7 +96,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 1. Laboratorio 30-A: ***Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5***.
 2. Laboratorio 30-B: ***Explotar vulnerabilidad CVE-2014-6271 (Shellshock) presente en Apache***.
 3. Laboratorio 30-C: ***Aprovechar vulnerabilidad WebDAV***.
-4. Laboratorio 30-D: ***Escalado de privilegio en una NFS mal configurada***.
+4. Laboratorio 30-D: ***Escalado de privilegio explotando no_root_squash***.
 
 
    
