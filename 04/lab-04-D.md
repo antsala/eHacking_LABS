@@ -43,3 +43,35 @@ nameserver 8.8.8.8
 
 Guardamos y salimos con ***CTRL+X***, ***Y*** y ***ENTER***.
 
+Ahora procedemos a instalar el servicio NFS.
+```
+sudo apt-get update
+```
+```
+sudo apt-get install -y nfs-kernel-server
+```
+
+El archivo ***/etc/exports*** mantiene un registro por cada directorio que se va a compartir en la red. Existen diferentes opciones que definirán el tipo de privilegio que tendrán los clientes sobre cada ***share***.
+
+* *rw*: Permiso de lectura y escritura.
+* *ro*: Permiso de solo lectura.
+* *root_squash*: Previene peticiones de archivo hechas por el usuario ***root*** en la máquina cliente.
+* *no_root_squash*: Permite al usuario ***root*** de la máquina cliente acceder al share.
+* *async*: Mejora la velocidad de transferencia pero puede conducir a corrupción de los datos.
+* *sync*: Garantiza la integridad de los datos a expensas de la velocidad de transferencia.
+
+En bastantes ocasiones, los administradores crean ***shares*** que no requieren autenticación, por diversas razones:
+
+* No poseen los conocimientos para habilitar la autenticación.
+* La información que se comparte no es sensible.
+* Es una necesidad temporal y el share se retirará en breve.
+* Las aplicaciones que acceden al share no pueden usar autenticación.
+* Etc.
+
+Vamos a crear un ***Share***. En primer lugar creamos una carpeta y entramos en ella.
+```
+mkdir -p ~/datos
+
+cd ~/datos
+```
+
