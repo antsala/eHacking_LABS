@@ -1,4 +1,4 @@
-# Escalado de privilegio en una NFS mal configurada.
+# Escalado de privilegio explotando ***no_root_squash***.
 
 Requisitos:
 1. Máquina ***Router-Ubu***.
