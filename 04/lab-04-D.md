@@ -111,7 +111,7 @@ sudo nano /tmp/iptables.txt
 Lo editamos de forma que quede tal y como aparece en la imagen. Hemos agregado ***tres reglas***, ***dos*** para el puerto ***2049***, y ***una*** para ***rpcbind*** (Puerto ***111***) en la parte final del arhivo, justo delante de ***-A INPUT -j DROP***.
 Nota: Guardar con ***CTRL+X***, ***Y*** + ***ENTER***.
 
-![Reglas NFS iptables](../img/lab-04-D/202209101357.png)
+![Reglas NFS iptables](../img/lab-04-D/202209101358.png)
 
 Para que estas reglas sean persistentes vamos a guardarla en una ruta especial. Cuando la máquina vuelva a iniciarse, se recargarán las reglas.
 Nota: Invovamos una shell como ***root*** porque se necesita a la vez permisos de root en el comando ***iptables-save*** y en el archivo ***/etc/iptables/rules.v4***.
