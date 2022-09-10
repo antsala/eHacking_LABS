@@ -89,3 +89,6 @@ y añadimos una nueva línea, tal y como muestra la imagen.
 
 ![Crear share](../img/lab-04-D/202209101204.png)
 
+Guardamos con ***CTRL+X***, ***Y*** y ***ENTER***.
+
+Lo que hemos hecho es compartir el directorio ***/home/vagrant/datos***, permitiendo acceder al usuario ***root*** de los clientes, en forma de ***lectura*** y ***escritura***. El ******* indica que la conexión se puede hacer desde cualquier ***IP***.
