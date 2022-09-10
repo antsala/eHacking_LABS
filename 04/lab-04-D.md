@@ -61,14 +61,8 @@ Lo que hemos hecho es compartir el directorio ***/home/antonio***, permitiendo a
 
 Reiniciamos el servicion ***NFS***.
 ```
-sudo /etc/init.d/nfs-kernel-server restart
+sudo service nfs-kernel-server restart
 ```
-
-Las versiones de NFS anteriores a la ***4*** usan varios puertos dinámicos, que deben ser configurados como estáticos para crear las correspondientes reglas en el firewall. Como el objetivo de este curso no es aprender a configurar puestos estáticos en el kernel, lo que vamos a hacer es abrir el firewall por nuestra comodidad.
-```
-sudo iptables -F
-```
-
 
 ## Enumerar los shares con nmap.
 
@@ -76,7 +70,7 @@ Lo primero que debemos hacer es localizar los servidores ***NFS*** de la red. Pa
 
 En la máquina ***Kali***, ejecutamos el siguiente comando.
 ```
-nmap -sV -p 2049 192.168.20.10-20
+nmap -sV -p 2049 192.168.20.60
 ```
 
 Como puede observarse en la siguiente imagen, en la IP ***192.168.20.13*** existe un servidor ***NFS*** porque el puerto está ***open***.
