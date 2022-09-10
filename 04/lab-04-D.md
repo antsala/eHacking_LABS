@@ -91,4 +91,40 @@ y añadimos una nueva línea, tal y como muestra la imagen.
 
 Guardamos con ***CTRL+X***, ***Y*** y ***ENTER***.
 
-Lo que hemos hecho es compartir el directorio ***/home/vagrant/datos***, permitiendo acceder al usuario ***root*** de los clientes, en forma de ***lectura*** y ***escritura***. El ******* indica que la conexión se puede hacer desde cualquier ***IP***.
+Lo que hemos hecho es compartir el directorio ***/home/vagrant/datos***, permitiendo acceder al usuario ***root*** de los clientes, en forma de ***lectura*** y ***escritura***. El '*' indica que la conexión se puede hacer desde cualquier ***IP***.
+
+Reiniciamos el servicion ***NFS***.
+```
+sudo /etc/init.d/nfs-kernel-server restart
+```
+
+Ahora debemos abrir el firewall de la máquina para que pueda funcionar el protocolo NFS.
+```
+sudo ufw enable
+```
+```
+sudo ufw allow nfs
+
+sudo ufw reload
+
+sudo ufw status
+```
+
+
+
+
+## Enumerar los shares con nmap.
+
+Lo primero que debemos hacer es localizar los servidores ***NFS*** de la red. Para ello debemos saber que el puerto de servicio de ***NFS*** es el ***2049***.
+
+En la máquina ***Kali***, ejecutamos el siguiente comando.
+```
+nmap -sV -p 2049 192.168.20.10-20
+```
+
+Como puede observarse en la siguiente imagen, en la IP ***192.168.20.13*** existe un servidor ***NFS***. Recordemos que ***filtered*** indica que ***nmap*** no puede determinar si el puerto está abierto o cerrado porque hay un ***firewall*** por delante del servicio, como es el caso.
+
+Lo primero que va a hacer el actor de la amenaza es ***enumerar*** las shares de ese servidor nfs. Si es afortunado encontrará alguna que no requiera autenticación.
+```
+nmap -sV --script=nfs-showmount 192.168.20.13
+```

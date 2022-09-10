@@ -86,6 +86,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 4. Laboratorio 04-D: ***Enumeración NFS***. Los ejercicios a realizar son:
    - Instalar un servidor NFS en ***Metasploitable3-ubu1404***.
+   - Enumerar los ***shares*** con ***nmap***.
 
 
 
