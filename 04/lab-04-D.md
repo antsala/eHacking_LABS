@@ -108,7 +108,7 @@ Lo editamos con ***nano***.
 sudo nano /tmp/iptables.txt
 ```
 
-Lo editamos de forma que quede tal y como aparece en la imagen. Hemos agregado dos reglas para el puerto ***2049***, en la parte final del arhivo, justo delante de ***-A INPUT -j DROP***.
+Lo editamos de forma que quede tal y como aparece en la imagen. Hemos agregado ***dos reglas*** para el puerto ***2049***, en la parte final del arhivo, justo delante de ***-A INPUT -j DROP***.
 
 ![Reglas NFS iptables](../img/lab-04-D/202209101357.png)
 
