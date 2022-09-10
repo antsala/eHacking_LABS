@@ -116,7 +116,7 @@ nmap -sV -p 111 --script=nfs-showmount 192.168.20.13
 
 La imagen muestra como aparece listado el share que hemos creado anteriormente.
 
-![NFS Share](../img/lab-04-D/202209101500.png)
+![NFS Share](../img/lab-04-D/202209101501.png)
 
 
 
