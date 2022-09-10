@@ -55,16 +55,18 @@ ls -l /datos
 ![propietaio de bash](../img/lab-04-D/202209101503.png)
 
 
+Ahora en la maquina ***Kali***.
+
 El siguiente paso es intentar montar ese share.
 
 Creamos una carpeta de trabajo temporal.
 ```
-mkdir /tmp/directorio-home-de-la-victima
+mkdir -p /tmp/share
 ```
 
 Montamos el share.
 ```
-sudo mount -t nfs 192.168.20.13:/home/vagrant /tmp/directorio-home-de-la-victima
+sudo mount -t nfs 192.168.20.60:/datos /tmp/share
 ```
 
 Comprobamos que se ha montado el share.
@@ -74,7 +76,7 @@ df -k
 
 El resultado debe ser similar al mostrado en la siguiente imagen.
 
-![NFS Share mounted](../img/lab-30-D/202209101822.png)
+![NFS Share mounted](../img/lab-30-D/202209101823.png)
 
 El punto de montaje se corresponde con el directorio raíz del usuario. Vamos a listarlo porque pretendemos encontrar un directorio muy "interesante" como muestra la imagen.
 Nota: Mostramos archivos y carpetas ocultos.
