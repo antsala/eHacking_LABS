@@ -98,26 +98,9 @@ Reiniciamos el servicion ***NFS***.
 sudo /etc/init.d/nfs-kernel-server restart
 ```
 
-Ahora debemos abrir el firewall de la máquina para que pueda funcionar el protocolo NFS. Lo primero que vamos a hacer es volcar la configuración de las reglas para trabajar más cómodos.
+Las versiones de NFS anteriores a la ***4*** usan varios puertos dinámicos, que deben ser configurados a estáticos para crear las correspondientes reglas en el firewall. Como el objetivo de este curso no es aprender a configurar puestos estáticos en el kernel, lo que vamos a hacer es abrir el firewall por nuestra comodidad.
 ```
-sudo iptables-save > /tmp/iptables.txt
-```
-
-Lo editamos con ***nano***.
-```
-sudo nano /tmp/iptables.txt
-```
-
-Lo editamos de forma que quede tal y como aparece en la imagen. Hemos agregado ***tres reglas***, ***dos*** para el puerto ***2049***, y ***una*** para ***rpcbind*** (Puerto ***111***) en la parte final del arhivo, justo delante de ***-A INPUT -j DROP***.
-Nota: Guardar con ***CTRL+X***, ***Y*** + ***ENTER***.
-
-![Reglas NFS iptables](../img/lab-04-D/202209101358.png)
-
-Para que estas reglas sean persistentes vamos a guardarla en una ruta especial. Cuando la máquina vuelva a iniciarse, se recargarán las reglas.
-Nota: Invovamos una shell como ***root*** porque se necesita a la vez permisos de root en el comando ***iptables-save*** y en el archivo ***/etc/iptables/rules.v4***.
-
-```
-sudo sh -c "iptables-save > /etc/iptables/rules.v4"
+sudo iptables -F
 ```
 
 
@@ -132,10 +115,16 @@ nmap -sV -p 2049 192.168.20.10-20
 
 Como puede observarse en la siguiente imagen, en la IP ***192.168.20.13*** existe un servidor ***NFS*** porque el puerto está ***open***.
 
+![NFS open](../img/lab-04-D/202209101359.png)
+
+
 Lo primero que va a hacer el actor de la amenaza es ***enumerar*** las shares de ese servidor nfs. Si es afortunado encontrará alguna que no requiera autenticación.
-Nota: Los ***exports*** se exponen en el puerto ***111***.
+Nota: Los ***exports*** se exponen en el puerto ***111*** (***rpcbind***).
 ```
 nmap -sV -p 111 --script=nfs-showmount 192.168.20.13
 ```
 
-La imagen muestra como aparece listado 
+La imagen muestra como aparece listado el share que hemos creado anteriormente.
+
+![NFS Share](../img/lab-04-D/202209101500.png)
+
