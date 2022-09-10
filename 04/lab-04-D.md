@@ -64,7 +64,7 @@ y añadimos una nueva línea, tal y como muestra la imagen.
 
 Guardamos con ***CTRL+X***, ***Y*** y ***ENTER***.
 
-Lo que hemos hecho es compartir el directorio ***/home/antonio***, permitiendo acceder al usuario ***root*** de los clientes, en forma de ***lectura*** y ***escritura***. El '*' indica que la conexión se puede hacer desde cualquier ***IP***.
+Lo que hemos hecho es compartir el directorio ***/datos***, permitiendo acceder al usuario ***root*** de los clientes, en forma de ***lectura*** y ***escritura***. El '*' indica que la conexión se puede hacer desde cualquier ***IP***.
 
 Reiniciamos el servicion ***NFS***.
 ```
@@ -80,10 +80,9 @@ En la máquina ***Kali***, ejecutamos el siguiente comando.
 nmap -sV -p 2049 192.168.20.60
 ```
 
-Como puede observarse en la siguiente imagen, en la IP ***192.168.20.13*** existe un servidor ***NFS*** porque el puerto está ***open***.
+Como puede observarse en la siguiente imagen, en la IP ***192.168.20.60*** existe un servidor ***NFS*** porque el puerto está ***open***.
 
 ![NFS open](../img/lab-04-D/202209101359.png)
-
 
 Lo primero que va a hacer el actor de la amenaza es ***enumerar*** las shares de ese servidor nfs. Si es afortunado encontrará alguna que no requiera autenticación.
 Nota: Los ***exports*** se exponen en el puerto ***111***nm.
@@ -93,7 +92,7 @@ nmap -sV -p 111 --script=nfs-showmount 192.168.20.60
 
 La imagen muestra como aparece listado el share que hemos creado anteriormente.
 
-![NFS Share](../img/lab-04-D/202209101502.png)
+![NFS Share](../img/lab-04-D/202209101503.png)
 
 Con esto concluye la práctica de enumeración ***NFS***. Es muy importante recordar que una mala práctica por parte del administrador puede conducir al robo de información, e incluso a tomar el control del sistema.
 
