@@ -86,7 +86,7 @@ nmap -sV -p 111 --script=nfs-showmount 192.168.20.60
 
 La imagen muestra como aparece listado el share que hemos creado anteriormente.
 
-![NFS Share](../img/lab-04-D/202209101501.png)
+![NFS Share](../img/lab-04-D/202209101502.png)
 
 Con esto concluye la práctica de enumeración ***NFS***. Es muy importante recordar que una mala práctica por parte del administrador puede conducir al robo de información, e incluso a tomar el control del sistema.
 
