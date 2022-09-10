@@ -3,21 +3,50 @@
 Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
-3. Máquina ***Metasploitable3-ubu1404***
+3. Máquina ***ubu_srv_01***
 
-***REQUIERE HABER REALIZADO 4. Laboratorio 04-D: ***Enumeración NFS***. Ejercicio - Instalar un servidor NFS en ***Metasploitable3-ubu1404***.
+***REQUIERE HABER REALIZADO 4. Laboratorio 04-D: ***Enumeración NFS***. Ejercicio - Configuración de un share de NFS.
 
 
-## Inyección de claves SSH a través del share.
-
-Como debemos tener claro, un uso de NFS no seguro puede conducir a situaciones no deseadas. Después de aprender a enumerar las shares NFS (tal y como se vió en el ***lab-04-D***) se determina que un usuario ha compartido su directorio ***home***, con el riesgo que eso conlleva.
+## Convertirse en root por una NFS mal configurada.
+Como debemos tener claro, un uso de NFS no seguro puede conducir a situaciones no deseadas. Después de aprender a enumerar las shares NFS (tal y como se vió en el ***lab-04-D***) se determina que existe una share que tiene habilitada la configuración ***no_root_squash***. Este parámetro permite al usuario ***root*** de la máquina cliente acceder al share. Como ya sabemos, trabajar con un usuario ***root*** es una mala idea.
 
 En la máquina ***Kali*** ejecutamos el siguiente comando.
 ```
-nmap -sV -p 111 --script=nfs-showmount 192.168.20.13
+nmap -sV -p 111 --script=nfs-showmount 192.168.20.60
 ```
 
-Cuya salida demuestra que se está compartiendo el directorio home del usuario ***vagrant*** en dicha máquina. El siguiente paso es intentar montar ese share.
+Cuya salida demuestra que se está compartiendo el directorio ***/home/antonio*** en dicha máquina. 
+
+Esta tecnica se emplea cuando se necesita escalar privilegios, es decir, el actor de la amenaza ya posee una credencial de usuario en la máquina víctima. La credencial puede haber sido capturada en un ataque previo o, se trata de un ***insider***. En cualquier caso se desea ser ***root*** en la máquina NFS.
+
+Para hacer una simulación real, vamos a crear un usuario nuevo, sin permisos de ***root***, en la máquina ***ubu_srv_01***, por medio del siguiente comando.
+```
+sudo useradd luke
+``` 
+
+Y por contraseña ponemos ***UsaLaLFuerza***, por medio de este comando.
+```
+sudo passwd luke
+```
+
+Iniciamos sesión con el nuevo usuario. Primero cerramos la sesión del usuario ***antonio***.
+```
+logout
+```
+
+E iniciamos sesión con ***luke***/***UsaLaFuerza***. Compromamos quien somos.
+```
+whoami
+```
+
+
+
+
+La salida mostrará que es un usuario convencional (***antonio***) que no es ***root*** en esa máquina.
+
+
+El siguiente paso es intentar montar ese share.
 
 Creamos una carpeta de trabajo temporal.
 ```

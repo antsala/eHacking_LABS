@@ -46,6 +46,13 @@ En bastantes ocasiones, los administradores crean ***shares*** que no requieren 
 
 Vamos a crear un ***Share*** en el que cometeremos un error muy grave de seguridad. ***NFS*** se puede usar también para hacer las migraciones, y por consiguiente, suele ser muy cómodo compartir el directorio ***home*** del usuario en cuestión.
 
+Primero creamos una carpeta en la ruta ***/datos*** a la que daremos permisos de lectura y escritura a todos los usuarios de dicha máquina. Posteriormente compartiremos esa carpeta por NFS para que se pueda acceder desde la red.
+```
+sudo mkdir -p /datos
+
+sudo chmod 777 /datos
+```
+
 Procedemos a crear el share. Para ello editamos el archivo ***/etc/exports***.
 ```
 sudo nano /etc/exports
@@ -53,7 +60,7 @@ sudo nano /etc/exports
 
 y añadimos una nueva línea, tal y como muestra la imagen.
 
-![Crear share](../img/lab-04-D/202209101204.png)
+![Crear share](../img/lab-04-D/202209101205.png)
 
 Guardamos con ***CTRL+X***, ***Y*** y ***ENTER***.
 
@@ -90,4 +97,4 @@ La imagen muestra como aparece listado el share que hemos creado anteriormente.
 
 Con esto concluye la práctica de enumeración ***NFS***. Es muy importante recordar que una mala práctica por parte del administrador puede conducir al robo de información, e incluso a tomar el control del sistema.
 
-Como adelanto a la parte del curso centrada en los ataques, te recomiendo que hagas el siguiente laboratorio: ***4. Laboratorio 30-D: Escalado de privilegio en una NFS mal configurada***.
+Como adelanto a la parte del curso centrada en los ataques, te recomiendo que hagas el siguiente laboratorio: ***4. Laboratorio 30-D:  Escalado de privilegio explotando no_root_squash***.
