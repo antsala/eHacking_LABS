@@ -5,7 +5,7 @@ Requisitos:
 2. Máquina ***Kali Linux***.
 3. Máquina ***ubu_srv_01***
 
-***REQUIERE HABER REALIZADO 4. Laboratorio 04-D: ***Enumeración NFS***. Ejercicio - Configuración de un share de NFS.
+***REQUIERE HABER REALIZADO 4. Laboratorio 04-D: Enumeración NFS. Ejercicio - Configuración de un share de NFS***.
 
 
 ## Convertirse en root por una NFS mal configurada.
@@ -48,13 +48,11 @@ cp /bin/bash /datos
 ```
 
 Si listamos la carpeta veremos que el propietario es ***luke***
-````
+```
 ls -l /datos
 ```
 
 ![propietaio de bash](../img/lab-04-D/202209101503.png)
-
-
 
 
 El siguiente paso es intentar montar ese share.
