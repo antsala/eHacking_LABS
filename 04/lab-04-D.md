@@ -3,7 +3,7 @@
 Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
-3. Máquina ***Metasploitable3-ubu1404***.
+3. Máquina ***ubu_srv_01***.
 
 
 ***NFS*** (Network File System) es el servicio de compartición de archivos característico de entornos Linux (Windows Server también puede ofrecerlo).
@@ -12,44 +12,20 @@ Las versiones más recientes presentan menos vulnerabilidades que las más antig
 
 En este laboratorio vamos a instalar ***NFS*** y aprender a enumerarlo desde la máquina de ataque.
 
-## Instalación de NFS.
+## Configuración de un share de NFS.
 
-Iniciamos sesión la máquina ***Metasploitable-ubu1404*** con el usuario
+Iniciamos sesión la máquina ***ubu_srv_01*** con el usuario
 ```
-vagrant
+antonio
 ```
 
 y el password
 ```
-vagrant
+Pa55w.rd
 ```
 
-Observarás que no hay soporte de ratón porque es un servidor sin interfaz gráfica. Tampoco tenemos portapapeles porque no se han instalado los servicios de integración, por esta razón tendrás que copiar los comandos directamente.
+Observarás que es una versión sin interfaz gráfica. No hay soporte de portapapeles, por esta razón tendrás que copiar los comandos directamente.
 
-El teclado configurado en la VM tiene la distribución en inglés, así que vamos a configurarlo apropiadamente.
-```
-sudo loadkeys es
-```
-
-Debemos configurar el resolvedor a la VM.
-```
-sudo nano /etc/resolv.conf
-```
-
-Escribimos la siguiente línea.
-```
-nameserver 8.8.8.8
-```
-
-Guardamos y salimos con ***CTRL+X***, ***Y*** y ***ENTER***.
-
-Ahora procedemos a instalar el servicio NFS.
-```
-sudo apt-get update
-```
-```
-sudo apt-get install -y nfs-kernel-server
-```
 
 El archivo ***/etc/exports*** mantiene un registro por cada directorio que se va a compartir en la red. Existen diferentes opciones que definirán el tipo de privilegio que tendrán los clientes sobre cada ***share***.
 
@@ -81,7 +57,7 @@ y añadimos una nueva línea, tal y como muestra la imagen.
 
 Guardamos con ***CTRL+X***, ***Y*** y ***ENTER***.
 
-Lo que hemos hecho es compartir el directorio ***/home/vagrant/datos***, permitiendo acceder al usuario ***root*** de los clientes, en forma de ***lectura*** y ***escritura***. El '*' indica que la conexión se puede hacer desde cualquier ***IP***.
+Lo que hemos hecho es compartir el directorio ***/home/antonio***, permitiendo acceder al usuario ***root*** de los clientes, en forma de ***lectura*** y ***escritura***. El '*' indica que la conexión se puede hacer desde cualquier ***IP***.
 
 Reiniciamos el servicion ***NFS***.
 ```
