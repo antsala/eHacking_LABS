@@ -81,7 +81,7 @@ Como puede observarse en la siguiente imagen, en la IP ***192.168.20.13*** exist
 Lo primero que va a hacer el actor de la amenaza es ***enumerar*** las shares de ese servidor nfs. Si es afortunado encontrará alguna que no requiera autenticación.
 Nota: Los ***exports*** se exponen en el puerto ***111***nm.
 ```
-nmap -sV -p 111 --script=nfs-showmount 192.168.20.13
+nmap -sV -p 111 --script=nfs-showmount 192.168.20.60
 ```
 
 La imagen muestra como aparece listado el share que hemos creado anteriormente.
