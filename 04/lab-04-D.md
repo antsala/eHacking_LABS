@@ -75,3 +75,17 @@ mkdir -p ~/datos
 cd ~/datos
 ```
 
+Creamos unos cuantos archivos (vacíos) para simular.
+```
+touch file1 file2 file3
+```
+
+Procedemos a crear el share. Para ello editamos el archivo ***/etc/exports***.
+```
+sudo nano /etc/exports
+```
+
+y añadimos una nueva línea, tal y como muestra la imagen.
+
+![Crear share](../img/lab-04-D/202209101204.png)
+
