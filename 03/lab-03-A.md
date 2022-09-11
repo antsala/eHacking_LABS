@@ -13,7 +13,7 @@ El reconocimiento de host se considera una tarea principal en el proceso de esca
 
 En este laboratorio aprenderemos a usar algunas herramientas entre la miríada de ellas existentes. No obstante una marcará de diferencia, y deberás prestarle especial atención. Se llama ***nmap***.
 
-## Reconocimiento de hosts usando nmap/zenmap.
+## Ejercicio 1: Reconocimiento de hosts usando nmap/zenmap.
 
 ***nmap*** es la herramienta estrella para el reconocimiento. Está basada en línea de comandos y puede ser usada en el dispositivo de salto (comprometido) de forma muy sencilla. Esta herramienta puede descargarse desde este sitio: https://nmap.org/
 
@@ -172,7 +172,7 @@ En resumen, ***nmap*** es la herramienta de referencia para el fingerprintig en 
 
 Realiza footprinting con ***nmap*** y extrae toda la información posible de la máquina ***Metasploitable3-win2k8***.
 
-## Reconocimento usando otras herramientas.
+## Ejercicio 2: Reconocimento usando otras herramientas.
 
 Herramientas de reconocimiento hay una infinidad, solo tenemos que hacer una búsqueda en Google. Además, las distribuciones de Ethical Hacking, como ***Kali Linux***, o ***Parrot*** las ofrecen.
 
@@ -217,7 +217,7 @@ En una terminal de la máquina ***Kali*** escribimos:
 hping3 --help
 ```
 
-## Visualizar la topología de la red.
+## Ejercicio 3: Visualizar la topología de la red.
 
 Sin duda alguna, las herramientas gráficas ayudan mucho a tener un conocimiento claro de la topología de red de la víctima. 
 
@@ -242,7 +242,7 @@ Cuando haya terminado el escaneo hacemos clic en el botón ***Topology***.
 Práctica con la topología de ***Zenmap*** y comprobarás lo fácil que resulta entender la arquitectura de la red. La herramienta ofrece la posibilidad de exportar (guardar) los gráficos que generemos.
 
 
-## Reconocimiento usando Metasploit.
+## Ejercicio 4: Reconocimiento usando Metasploit.
 
 ***Metasploit*** es, sin duda alguna, la herramienta por excelencia en (Ethical) Hacking. En esta ocasión vamos a ver como se puede usar para el reconocimiento.
 Nota: En laboratorios posteriores retomaremos su uso en la fase de ***Ganar acceso***.

@@ -12,7 +12,7 @@ Requisitos:
 
 Las versiones más recientes presentan menos vulnerabilidades que las más antiguas, no obstante, en este ejercicio solo nos interesa enumerarlas. Ya habrá tiempo de buscar vulnerabilidades y atacar.
 
-## Enumerar carpetas compartidas.
+## Ejercicio 1: Enumerar carpetas compartidas.
 
 En primer lugar vamos a localizar los servidores que se comportan como servidores de archivos. Para ello nos apoyamos en ***nmap***.
 

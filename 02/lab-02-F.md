@@ -7,7 +7,7 @@ Requisitos:
 
 Herramientas de reconocimiento tenemos por doquier: Buenas, malas, gratuitas, de pago... El objetivo de este laboratorio es aprender a usar algunas de las más conocidas y útiles.
 
-## Recon-ng
+## Ejercicio 1: Recon-ng
 
 En una terminal de comandos de la máquina ***Kali*** escribimos.
 Nota: Aparecerá la inferfaz de la herramienta y un prompt que nos invita a interactuar con ella. 
@@ -38,7 +38,7 @@ No obstante, para que aprendas a utilizar ***recon-ng*** realizaremos una peque�
 En este link: https://safetag.org/activities/automated_recon tienes un tutorial avanzado sobre la herramienta que te recomendamos hacer. Usa el dominio de tu interés.
 Nota: Algunas claves son necesarias para interactuar con servicios online que requieren autenticación y no es necesario pagar por ellas. En la parte final del tutorial anterior, se explica como obterner (y configurar) las claves para una serie de servicios muy interesantes, así que haz el tutorial hasta el final.
 
-## Maltego.
+## Ejercicio 2: Maltego.
 
 ***Maltego*** es una de las mejores herramientas de reconocimiento. Utiliza una interfaz gráfica que permite relacionar la ***entidades*** o piezas de información que el actor de la amenaza está descubriendo sobre su víctima. 
 
@@ -59,7 +59,7 @@ En este link: https://static.maltego.com/cdn/Handbooks/Maltego-Handbook-for-Cybe
 
 Aquí: https://static.maltego.com/cdn/Handbooks/Maltego-Handbook-for-Cyber-Threat-Intelligence.pdf tienes un documento para que veas como se puede usar Maltego de forma profesional para realizar labores de Ethical Hacking. Te recomendamos su lectura.
 
-## OSRFramework.
+## Ejercicio 3: OSRFramework.
 
 ***OSRFramework*** es un framework open source escrito en Python que se encarga de examinar perfiles de usuario. El framework contiene diferentes modulos:
 
@@ -129,7 +129,7 @@ En este link: https://empresas.blogthinkbig.com/como-analizar-documentos-con-foc
 
 Aquí: https://github.com/ElevenPaths/FOCA tienes el repo del proyecto, por si quieres estudiarlo más a fondo.
 
-## osintFramework
+## Ejercicio 4: osintFramework
 
 Este framework recopila la mayoría de las herramientas OSINT gratuitas existentes en Internet.
 

@@ -11,7 +11,7 @@ La enumeración SNMP se utiliza principalmente contra los ***Switches*** y ***Ro
 
 En nuestro entono de laboratorio no tenemos este tipo de hardware, así que lo que vamos a hacer el habilitar el protocolo ***SNMP*** en una máquina virtual para poder interactuar contra él.
 
-## Habilitar SNMP en Win 11.
+## Ejercicio 1: Habilitar SNMP en Win 11.
 
 En la máquina ***Win 11*** abrimos una ***Terminal de PowerShell*** en modo ***Administrador***. En ella escribimos el siguiente comando.
 ```
@@ -67,7 +67,7 @@ Es alarmante como la mayoría de los dispositivos de electrónica de red no son 
 
 
 
-## Usar snmp-check para la enumeración.
+## Ejercicio 2: Usar snmp-check para la enumeración.
 
 La herramienta ***snmp-check*** es un cliente de ***SNMP*** que se conecta a la víctima y le solicita toda la información disponible.
 

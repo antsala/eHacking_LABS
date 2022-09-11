@@ -15,7 +15,7 @@ En el caso de Microsoft, se ha extendido este estándar aportando más funcional
 
 En este laboratorio aprenderemos a realizar la enumeración y extraer información muy interesante.
 
-## Iniciar sesión en el Dominio XYZ.
+## Ejercicio 1: Iniciar sesión en el Dominio XYZ.
 
 En la máquina ***Win 11***, debemos hacer una reconfiguración del DNS para que se pueda contactar con el controlador de dominio.
 
@@ -42,7 +42,7 @@ y password
 Pa55w.rd
 ```
 
-## Enumerar el dominio con ADExplorer
+## Ejercicio 2: Enumerar el dominio con ADExplorer
 
 En la máquina ***Win 11***. abrimos el navegador y descargamos el siguiente link.
 ```

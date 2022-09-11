@@ -32,14 +32,14 @@ Pa55w.rd
 El controlador de dominio ofrece el servicio DNS y esta máquina tiene configurado al DC como servidor DNS. Esta configuración hay que cambiarla. Configura el servidor DNS de la máquina ***Win11*** para que apunte a ***8.8.8.8***. Deja el resto de la configuración IP como está. A partir de ahora ya podrás navegar por Internet.
 
 
-## Recolectar información sobre sitio web objetivo.
+## Ejercicio 1: Recolectar información sobre sitio web objetivo.
 
 Existen innumerables págias webs especializadas en mostrar información del sitio web objetivo. 
 
 En la máquina ***Kali***, abrimos en navegador y conectamos con la siguiente URL.
 ```
 https://website.informer.com
-````
+```
 
 Cuando cargue la web, en el cuadro de texto de búsqueda, escribe el dominio del sitio web de tu interés y haz clic en el botón ***Search***.
 
@@ -64,7 +64,7 @@ La suite ***Kali*** se presenta con una infinidad de herramientas. Durante el de
 
 Otras, por el contrario, no existen el ***Kali*** y procederemos a instalarlas cuando sea necesario.
 
-## Herramientas de Scraping.
+## Ejercicio 2: Herramientas de Scraping.
 
 La extracción (***Scraping***) de información de sitios web ha llegado a un grado de sofisticación total. Aunque el principal objetivo en este curso es el de conseguir información sobre la víctima, también se utiliza legalmente para obtener información de un competidor.
 
@@ -102,7 +102,7 @@ https://linuxhint.com/top_20_webscraping_tools/
 
 Lee el artículo y estudia las herramientas que creas apropiadas.
 
-## Clonar el sitio de la víctima con httrack.
+## Ejercicio 3: Clonar el sitio de la víctima con httrack.
 
 En ocasiones podemos usar la técnica de descargar el contenido estático del sitio web de la víctima, con la intención de descubrir vulnerabilidades o malas prácticas.
 
@@ -145,7 +145,7 @@ El clonado de un sitio web, es una acción que forma parte de ciertos ataques de
 ¿Podrías crear un sitio web idéntico al de inicio de sesión en ***FaceBook***? Si tienes conocimientos en programación web, crea una función en javascript que responda al evento clic y envíe un una request de http al servidor web de tu elección.
 
 
-## Extraer información de calidad con CeWL.
+## Ejercicio 4: Extraer información de calidad con CeWL.
 
 ***CeWL*** es una aplicación escrita en en ***Ruby*** que rastrea una URL buscando palabrar que puedan ser valiosas para el actor de la amenaza, como contraseñas.
 

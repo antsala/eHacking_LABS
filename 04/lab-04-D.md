@@ -12,7 +12,7 @@ Las versiones más recientes presentan menos vulnerabilidades que las más antig
 
 En este laboratorio vamos a instalar ***NFS*** y aprender a enumerarlo desde la máquina de ataque.
 
-## Configuración de un share de NFS.
+## Ejercicio 1: Configuración de un share de NFS.
 
 Iniciamos sesión la máquina ***ubu_srv_01*** con el usuario
 ```
@@ -71,7 +71,7 @@ Reiniciamos el servicion ***NFS***.
 sudo service nfs-kernel-server restart
 ```
 
-## Enumerar los shares con nmap.
+## Ejercicio 2: Enumerar los shares con nmap.
 
 Lo primero que debemos hacer es localizar los servidores ***NFS*** de la red. Para ello debemos saber que el puerto de servicio de ***NFS*** es el ***2049***.
 

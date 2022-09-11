@@ -13,7 +13,7 @@ El uso (y abuso) de exposición de datos y actividades personales en estas redes
 En este ejercicio aprenderemos a usar herramientas que interactúan con redes sociales y extraen información de calidad para el actor de la amenaza.
 
 
-## Extraer información desde LinkedIn
+## Ejercicio 1: Extraer información desde LinkedIn
 
 LinkedIn se utiliza habitualmente para realizar ofertas de trabajo que son atendidas por aquellas personas que lo demandan.
 
@@ -28,7 +28,7 @@ Vamos a volver a utilizar ***theHarverter*** pero esta vez nos centramos en ***L
 theHarvester -d <Pon_aquí_el_nombre_de_una_empresa> -l 200 -b linkedin
 ```
 
-## Extraer información usando Sherlock.
+## Ejercicio 2: Extraer información usando Sherlock.
 
 ***Sherlock*** es una herramienta que automatiza la extracción de información desde todas las redes sociales que se suelen usar, a diferencia de ***theHarvester*** que se suele lanzar contra un solo motor de búsqueda.
 
@@ -46,7 +46,7 @@ Como resultado obtendrás links a las redes donde aparece referenciada la person
 Nota: ***Sherlock*** puede tardar bastante tiempo. Ten paciencia y comprueba los resultados conforme van saliendo.
 
 
-## Extraer información desde Twitter.
+## Ejercicio 3: Extraer información desde Twitter.
 
 Conocer y estudiar a la víctima es una actividad muy productiva, pues se pueden encontrar intereses y usarlos como vectores de ataque en ingeniería social.
 

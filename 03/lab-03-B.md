@@ -12,7 +12,7 @@ Como Ethical Hacker, el siguiente paso después de haber reconocido la red es de
 
 Este laboratorio profundizará en dichas técnicas y los conocimientos que adquieras puedes emplearlos en evaluar tus medidas defensivas.
 
-## Instalación de WireShark.
+## Ejercicio 1: Instalación de WireShark.
 
 Para poder observar a bajo nivel cómo funcionan estas técnicas.
 
@@ -24,7 +24,7 @@ https://www.wireshark.org/#download
 
 
 
-## Reconocimiento atravesando el firewall.
+## Ejercicio 2: Reconocimiento atravesando el firewall.
 
 Los ***IDS*** y los ***Firewall*** son los mecanismos de seguridad que deben detectar (pasivos) y evitar (activos) el reconocimiento de la red local por parte de un agente de la amenaza. 
 
@@ -114,7 +114,7 @@ Detenemos la captura de ***WireShark***. Como podrás comprobar, la ***IP de Ori
 
 ¿Serías capaz de sondear a la victima usando a la vez una combinación de las técnicas explicadas?. ¿Crees que tus IDSs son suficientemente buenos para detectar este reconocimiento?
 
-## Creación paquetes modificados por Hping3 para evadir el Firewall.
+## Ejercicio 3: Creación paquetes modificados por Hping3 para evadir el Firewall.
 
 Como venimos diciendo, existen inumerables herramientas que hacen lo que desamos tener. Además de ***nmap***, podemos usar, por ejemplo ***hping3*** para craftear los paquetes de sondeo.
 
@@ -145,7 +145,7 @@ Nota: Se envían ***15000*** paquetes de ***120*** bytes, habilitando la bandera
 
 ¿Podrías visualizar con ***WireShark*** el ataque DoS anterior? Para ello estudia el siguiente artículo: https://www.firewall.cx/general-topics-reviews/network-protocol-analyzers/1224-performing-tcp-syn-flood-attack-and-detecting-it-with-wireshark.html, que explica detalladamente como funciona. Esta información te podría ayudad en la Forense a determinar si un sistema ha sido atacado.
 
-## Anonimización por medio de proxy/VPN.
+## Ejercicio 4: Anonimización por medio de proxy/VPN.
 
 Uno de los objetivos que pretende el actor de la amenaza es el de pasar desapercibido. Si bien esto no es siempre posible, se tiene la posibilidad de ocultar su identidad digital. 
 

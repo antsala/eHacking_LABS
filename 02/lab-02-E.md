@@ -7,7 +7,7 @@ Requisitos:
 
 
 
-## Consulta a la base de datos Whois.
+## Ejercicio 1: Consulta a la base de datos Whois.
 
 En el inicio de la fase de reconocimiento, el actor de amenaza esta completamente a ciegas en relación al conocimiento de la infraestructura del objetivo, así que suele acudir a la base de datos ***Whois*** para comenzar a investigar la infraestrutura pública de la víctima.
 
@@ -28,7 +28,7 @@ Como segundo ejercicio te proponemos que extraigas información sobre una IP pú
 
 Si no conoces qué es RIR, te recomendamos leer este artículo: https://es.wikipedia.org/wiki/Registro_Regional_de_Internet.
 
-## Reconocimiento por medio de registros DNS.
+## Ejercicio 2: Reconocimiento por medio de registros DNS.
 
 La misión principal del ***Servicio de Nombres de Dominio (DNS)*** es traducir un nombre de dominio a una dirección IP. 
 
@@ -114,7 +114,7 @@ Al hacer una búsqueda inversa, estamos resolviendo las IPs a nombres de dominio
 Usando las técnicas y herramientas descritas en este ejercicio, extrae toda la información DNS, IP y personal de la organización que estimes oportuna.
 
 
-## Reconocimiento por medio del protocolo ICMP
+## Ejercicio 3: Reconocimiento por medio del protocolo ICMP
 
 Por todos es conocido que el protocolo ***ICMP***, que usa la herramienta ***ping***, sirve para reconocer la existencia de un host concreto. Este protocolo envía tramas hacia el destino que, cuando es alcanzado, responde en consecuencia.
 

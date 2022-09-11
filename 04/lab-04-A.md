@@ -8,7 +8,7 @@ Requisitos:
 
 NetBIOS (Network Basic Input Output System) es el protocolo que utiliza el sistema operativo Windows para compartir archivos e impresora. Aunque existen versiones muy antiguas (SMB 1.0) que presentan vulnerabilidades tremendas, en este laboratorio nos quedaremos en la parte de enumeración para aprender a extraer información de estos sistemas desde la red local.
 
-## Enumeración NetBIOS por medio de nbtscan y smbmap
+## Ejercicio 1: Enumeración NetBIOS por medio de nbtscan y smbmap
 
 El sistema operativo Windows ofrece herramientas como ***nbtstat*** y ***net use*** que permiten enumerar NetBIOS. No obstante, usaremos una máquina Linux para realizar la enumeración. La razón es obvia: Los actores de la amenaza suelen usar mayoritariamente herramientas basadas en Linux, ya que son efectivas y requieren menos recursos.
 
@@ -75,7 +75,7 @@ Ya lo tenemos en nuestro poder. Esto demuestra que con herramientas de línea de
 
 ![Contrato.txt descargado](../img/lab-04-A/202209081138.png)
 
-## Enumerar NetBIOS con nmap scripting engine.
+## Ejercicio 2: Enumerar NetBIOS con nmap scripting engine.
 
 Hemo visto que ***nmap*** es una herramienta muy poderosa, pero ¿sabías que se puede extender su funcionalidad?
 
