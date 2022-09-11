@@ -1,19 +1,18 @@
 $VICTIM_IP="192.168.20.13" # Es Metasploitable3-ubu1404
 
 
-1..1024 | ForEach-Object{Write-Output((new-object Net.Sockets.TcpClient).Connect($VICTIM_IP,$_)) "Puerto $_ abierto"}
-
-
+# Abre una conexión TCP contra la IP:Puerto.
+# Permite establecer el Timeout, de forma que si el puerto está cerrado no hay que esperar 30 segundos.
 function Test-Port {
     [CmdletBinding()]
     param (
-        [Parameter(ValueFromPipeline = $true, HelpMessage = 'Could be suffixed by :Port')]
+        [Parameter(ValueFromPipeline = $true, HelpMessage = 'Se le puede poner :Port')]
         [String[]]$ComputerName,
 
-        [Parameter(HelpMessage = 'Will be ignored if the port is given in the param ComputerName')]
+        [Parameter(HelpMessage = 'Será ignorado si el puerto ya se proporciona en el parámetro ComputerName')]
         [Int]$Port = 5985,
 
-        [Parameter(HelpMessage = 'Timeout in millisecond. Increase the value if you want to test Internet resources.')]
+        [Parameter(HelpMessage = 'Timeout en milisegundos.')]
         [Int]$Timeout = 1000
     )
 
@@ -25,18 +24,17 @@ function Test-Port {
         foreach ($originalComputerName in $ComputerName) {
             $remoteInfo = $originalComputerName.Split(":")
             if ($remoteInfo.count -eq 1) {
-                # In case $ComputerName in the form of 'host'
+                # Si $ComputerName está en la forma de 'host'
                 $remoteHostname = $originalComputerName
                 $remotePort = $Port
             } elseif ($remoteInfo.count -eq 2) {
-                # In case $ComputerName in the form of 'host:port',
-                # we often get host and port to check in this form.
+                # Si $ComputerName está en la  forma de 'host:port',
                 $remoteHostname = $remoteInfo[0]
                 $remotePort = $remoteInfo[1]
             } else {
-                $msg = "Got unknown format for the parameter ComputerName: " `
+                $msg = "Formato incorrecto para el parámetro ComputerName: " `
                     + "[$originalComputerName]. " `
-                    + "The allowed formats is [hostname] or [hostname:port]."
+                    + "Los formatos permitidos son [hostname] o [hostname:port]."
                 Write-Error $msg
                 return
             }
@@ -59,3 +57,15 @@ function Test-Port {
         return $result
     }
 }
+
+$VICTIM_IP="192.168.20.13" # Es Metasploitable3-ubu1404
+
+1..1024 | ForEach-Object{
+    # Cunsultamos valor del puerto. 500 ms timeout.
+    $result = Test-Port $VICTIM_IP $_ 500
+   
+    if ($result.PortOpened -eq $true) {
+        Write-Output("Puerto $_ abierto")
+    }
+}
+
