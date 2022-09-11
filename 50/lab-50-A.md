@@ -2,8 +2,9 @@
 
 Requisitos:
 1. Máquina ***Router-Ubu***.
-2. Máquina ***Win 11***.
-3. Máquina ***Metasploitable3_ubu1404***.
+2. Máquina ***Kali Linux***.
+3. Máquina ***Win 11***.
+4. Máquina ***Metasploitable3_ubu1404***.
 
 La ejecución de scripts maliciosos de PowerShell viene siendo bien detectada por las herramientas de seguridad, como el ***antivirus*** o el ***IDS***.
 
