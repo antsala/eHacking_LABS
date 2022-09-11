@@ -17,5 +17,15 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 Cierra la terminal ***Administrator: Windows PowerShell***. Abre ***PowerShell ISE*** y carga el script ***testports.ps1*** que se encuentra en la carpeta ***50***.
 
-Ejecuta el script con ***F5***.
+Ejecuta el script con ***F5***. Este script sondea los 1000 primeros puertos. Si lees el código fuente lo entenderás, de la misma forma que un ***antivirus*** haría.
+
+El objetivo es ***ofuscar*** (esconder) el código fuente, de forma que no se pueda "entender" por el software que lo está analizando. 
+
+En este laboratorio hacemos un simple sondeo de puertos, pero la realidad es que existe mucho malware malicioso basado en PowerShell, te también usa técnicas similares de ofuscación para que no sea detectado.
+
+Vamos a proceder a la ofuscación. Para ello aprovecharemos un proyecto publicado en https://github.com/danielbohannon/Invoke-Obfuscation
+
+![Invoke-Obfuscation](../img/lab-50-A/202209111409.png)
+
+
 
