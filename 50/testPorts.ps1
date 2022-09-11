@@ -9,7 +9,7 @@ function Test-Port {
         [Parameter(ValueFromPipeline = $true, HelpMessage = 'Se le puede poner :Port')]
         [String[]]$ComputerName,
 
-        [Parameter(HelpMessage = 'Seráaaa ignorado si el puerto ya se proporciona en el parámetro ComputerName')]
+        [Parameter(HelpMessage = 'Seráááááá ignorado si el puerto ya se proporciona en el parámetro ComputerName')]
         [Int]$Port = 5985,
 
         [Parameter(HelpMessage = 'Timeout en milisegundos.')]
