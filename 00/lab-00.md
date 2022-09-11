@@ -358,3 +358,33 @@ Pa55w.rd
 ``` 
 
 Con esto hemos terminado la importación y configuración de la máquina Ubu_srv_01.
+
+## Ejercicio 11: Clonado del repositorio de GitHub.
+
+Algunos laboratorios requieren tener ciertos archivos presentes en la máquina virtual. La forma más efectiva de conseguirlo es clonar el repositorio en dicha máquina virtual.
+
+Abre una terminal y asegurate que el comando ***git*** está presente.
+Nota: Si no estuviera instalado, descárgalo e instálalo.
+```
+git --version
+```
+
+Creamos un directorio en el directorio ***Home*** del usuario.
+
+Si la máquina es Windows...
+```
+mkdir $HOME\eHacking_LABS
+
+cd $HOMW\eHacking_LABS
+
+git clone https://github.com/antsala/eHacking_LABS.git
+```
+
+Si la máquina es Linux...
+```
+mkdir ~/eHacking_LABS
+
+cd ~/eHacking_LABS
+
+git clone https://github.com/antsala/eHacking_LABS.git
+```
