@@ -1,4 +1,4 @@
-# Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5.
+# Exfiltrar información sensible evadiendo el sistema DLP.
 
 Requisitos:
 1. Máquina ***Router-Ubu***.
