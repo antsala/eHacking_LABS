@@ -11,6 +11,7 @@ La ejecución de scripts maliciosos de PowerShell viene siendo bien detectada po
 Asegúrate que en la máquina ***Win 11*** tienes clonado el repo de Github con los archivos del curso. Si no es así o no lo tienes claro, mira el ***Ejercicio 11: Clonado del repositorio de GitHub.*** del ***lab-00.md***.
 
 Abre una terminal de ***PowerShell*** como ***ADMINISTRADOR*** y habilita la ejecución de scripts en la máquina.
+
 Nota: Responde con ***Yes to All*** a la pregunta.
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
