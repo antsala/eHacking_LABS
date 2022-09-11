@@ -26,7 +26,6 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 Cerramos la terminal de administrador de ***PowerShell***.
 
-
 En este escenario, el equipo ***Víctima*** (***Win 11***) está bajo el control del actor de la amenaza. En este mismo equipo también se encuentra el documento secreto que se desea exfiltrar.
 
 Para conseguirlo vamos a enviar el archivo desde el equipo de la víctima al equipo de ataque (***Kali***) usando el protocolo ***ICMP***.
