@@ -37,7 +37,7 @@ Asegúrate que en la máquina ***Kali*** tienes clonado el repo de Github con lo
 
 En la máquina ***Kali*** vamos a levantar un ***servidor ICMP*** mediante un script de ***Python***. Estudiémoslo.
 ```
-code ~/eHacking_LABS/50/icmp_server.py
+nano ~/eHacking_LABS/50/icmp_server.py
 ```
 
 
