@@ -109,6 +109,10 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Ofuscar el malware.
    - Determinar qué antivirus detectan la ofuscación.
 
+2. Laboratorio 50-B: ***Exfiltrar información sensible evadiendo el sistema DLP***. Los ejercicios a realizar son:
+   - Comprobar si la víctima puede usar ICMP.
+   - Crear en servidor ICMP en la máquina de ataque.
+
 
    
 
