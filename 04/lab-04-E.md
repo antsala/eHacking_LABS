@@ -41,7 +41,36 @@ Esta herramienta interactúa con el servicio ***SMB/Samba*** intentando extraer 
 ![NFS Share](../img/lab-04-E/202209111120.png)
 * Se ha obtenido información de versión del sistema operativo.
 ![NFS Share](../img/lab-04-E/202209111121.png)
-*
+* Se ha obtenido el nombre de un usuario que conectó con el servicio.
+![NFS Share](../img/lab-04-E/202209111123.png)
+* Lista los recursos compartidos del servicio.
+Nota: En esta VM no se está compartiendo ninguna carpeta. Solo se visualizan los recursos administrativos compartidas.
+![NFS Share](../img/lab-04-E/202209111125.png)
+* Se ha descubierto los parámetros de la política de contraseñas.
+![NFS Share](../img/lab-04-E/202209111126.png)
+* Sabemos que la complejidad del password no se exige.
+![NFS Share](../img/lab-04-E/202209111128.png)
+* Se ha conseguino enumerar los grupos locales de la máquina.
+Nota: En el contexto del protocolo SMB (Grupos de Windows)
+![NFS Share](../img/lab-04-E/202209111130.png)
+* Se ha conseguido listar los usuarios que existen en el contexto de SMB.
+![NFS Share](../img/lab-04-E/202209111132.png)
+
+***ACTIVIDAD***
+
+Estudia e interpreta la información que ***enum4linux*** puede extraer de la máquina ***Metasploitable3-win2k8***. Una vez realizado, inicia sesión en ***Metasploitable3-win2k8***, comparte una carpeta y vuelve a usar ***enum4linux*** para observar los resultados.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
