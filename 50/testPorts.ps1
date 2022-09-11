@@ -1,15 +1,15 @@
 $VICTIM_IP="192.168.20.13" # Es Metasploitable3-ubu1404
 
 
-# Abre una conexiÛn TCP contra la IP:Puerto.
-# Permite establecer el Timeout, de forma que si el puerto est· cerrado no hay que esperar 30 segundos.
+# Abre una conexi√≥n TCP contra la IP:Puerto.
+# Permite establecer el Timeout, de forma que si el puerto est√° cerrado no hay que esperar 30 segundos.
 function Test-Port {
     [CmdletBinding()]
     param (
         [Parameter(ValueFromPipeline = $true, HelpMessage = 'Se le puede poner :Port')]
         [String[]]$ComputerName,
 
-        [Parameter(HelpMessage = 'Ser· ignorado si el puerto ya se proporciona en el par·metro ComputerName')]
+        [Parameter(HelpMessage = 'Ser√° ignorado si el puerto ya se proporciona en el par√°metro ComputerName')]
         [Int]$Port = 5985,
 
         [Parameter(HelpMessage = 'Timeout en milisegundos.')]
@@ -24,15 +24,15 @@ function Test-Port {
         foreach ($originalComputerName in $ComputerName) {
             $remoteInfo = $originalComputerName.Split(":")
             if ($remoteInfo.count -eq 1) {
-                # Si $ComputerName est· en la forma de 'host'
+                # Si $ComputerName est√° en la forma de 'host'
                 $remoteHostname = $originalComputerName
                 $remotePort = $Port
             } elseif ($remoteInfo.count -eq 2) {
-                # Si $ComputerName est· en la  forma de 'host:port',
+                # Si $ComputerName est√° en la  forma de 'host:port',
                 $remoteHostname = $remoteInfo[0]
                 $remotePort = $remoteInfo[1]
             } else {
-                $msg = "Formato incorrecto para el par·metro ComputerName: " `
+                $msg = "Formato incorrecto para el par√°metro ComputerName: " `
                     + "[$originalComputerName]. " `
                     + "Los formatos permitidos son [hostname] o [hostname:port]."
                 Write-Error $msg
