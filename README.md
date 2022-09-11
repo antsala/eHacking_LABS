@@ -104,7 +104,10 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 ## Carpeta 50
 
-1. Laboratorio 50-A: ***Ofuscación de Powershell***
+1. Laboratorio 50-A: ***Ofuscación de Powershell***. Los ejercicios a realizar son:
+   - Crear un script de PowerShell que sondee los puertos.
+   - Ofuscar el malware.
+   - Determinar qué antivirus detectan la ofuscación.
 
 
    
