@@ -8,7 +8,7 @@ La mejor fuente de información sobre la víctima la encontraremos interactuando
 
 En este ejercicio aprenderemos a usar herramientas que interactúan con estos servicios para obtener información de reconocimiento.
 
-## Localizar dominios de la víctima
+## Ejercicio 1: Localizar dominios de la víctima
 
 En https://www.netcraft.com/tools/ podemos "consultar" que es lo que la web sabe sobre el dominio de la victima. Este siempre es un buen punto de partida en la etapa inicial. 
 
@@ -16,14 +16,14 @@ En ***What's that site running*** ponemos una URL de nuestra elección. Al hacer
 
 Haciendo clic en ***Domain*** podemos ver los subdominios registrados.
 
-## Localizar información sobre personas usando buscadores.
+## Ejercicio 2: Localizar información sobre personas usando buscadores.
 
 En https://peekyou.com puedes localizar información sobre una persona. Este tipo de webs es muy común, aunque la mayoría requieres subscripción para obtener los resultados.
 
 Prueba a localizar información sobre tu "víctima". También es recomendable leer este artículo https://www.genbeta.com/a-fondo/buscas-a-alguien-en-internet-estas-14-webs-te-ayudaran-a-encontrarlo donde aparecen sitios web similares.
 
 
-## Localizar direcciones de correo electrónico.
+## Ejercicio 3: Localizar direcciones de correo electrónico.
 
 Sin duda alguna obtener un listado con las direcciones de correo corporativos de los miembros de la organización víctima, es algo que va buscando el hacker desde el primer momento.
 
@@ -45,7 +45,7 @@ La sintaxis es muy sencilla.
 theHarvester -d <pon_aquí_un_dominio> -l 200 -b google
 ```
 
-## Localizar recursos en la Dark Web.
+## Ejercicio 4: Localizar recursos en la Dark Web.
 
 Sin duda habrás oído hablar del la Internet Oscura o ***Dark Web***. Una colección de sitios web en la que debemos ser muy precavidos. Todo lo que se considera ilegal tiene cabida aquí, incluído contenidos que pueden herir la sensibilidad de cualquiera de nosotros.
 

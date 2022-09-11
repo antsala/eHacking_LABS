@@ -4,7 +4,7 @@ Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
 
-## Google Hacking
+## Ejercicio 1: Google Hacking
 
 El primer paso en la etapa de búsqueda de información o reconocimiento es obtener toda la cantidad de esta que se pueda. En este ejercicio aprenderemos a utilizar técnicas avanzadas de búsqueda por medio de Google, que se suele conocer por el nombre de ***Google Dorks***.
 
@@ -60,7 +60,7 @@ Los modificadores de búsqueda son muy variopintos. En este link: https://antoni
 
 Practica y adapta algunos de los ejemplos propuestos en el link, para localizar información exfiltrada en los sitios de tu interés.
 
-## Extraer información de un video.
+## Ejercicio 2: Extraer información de un video.
 
 En esta etapa de reconocimiento, es muy común usar videos corporativos para extraer información sobre el objetivo.
 
@@ -72,7 +72,7 @@ Copiamos en el porta papeles la URL anterior y, nos conectamos a https://citizen
 
 La herramienta irá buscando imágenes de personas y usará Google para realizar una búsqueda a partir de la imagen o thumbnail extraída. Es una forma muy simple de empezar a ganar información sobre la víctima.
 
-## Extraer información de servidores FTP.
+## Ejercicio 3: Extraer información de servidores FTP.
 
 FTP es un protocolo que está en desuso, pero no por ello debe descargarse como posible fuente de información para la etapa de reconocimiento.
 
@@ -80,7 +80,7 @@ En esta URL https://www.searchftps.net tenemos un indexador de servidores FTPs p
 
 En este link de Google: https://www.google.com/search?q=global+ftp+search+engine&oq=global+ftp+sea&aqs=edge.0.0i19j69i57.4741j0j4&sourceid=chrome&ie=UTF-8 podrás encontrar multitud de motores de búsqueda especializados en obtenet archivos FTP. Prueba con el dominio de tu interés a ver qué descubres.
 
-## Extraer información de dispositivos IoT.
+## Ejercicio 4: Extraer información de dispositivos IoT.
 
 Internet of the Things (IoT) se está convirtiendo en uno de los vectores de ataque más populares, ya que es muy común que estos dispositivos presenten muchas vulnerabilidades debido a la falta de seguridad que presentan (no todos, pero sí la mayoría)
 

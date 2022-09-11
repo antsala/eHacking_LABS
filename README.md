@@ -15,6 +15,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Importación y configuracion de la VM ***Windows 7***.
    - Importación y configuracion de la VM ***Win11***.
    - Importación y configuracion de la VM ***Windows Server 2022 core***.
+   - Importación y configuracion de la VM ***ubu_sr_01**.
 
 ## Carpeta 02. Footprinting y reconocimiento.
 
@@ -99,6 +100,10 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 2. Laboratorio 30-B: ***Explotar vulnerabilidad CVE-2014-6271 (Shellshock) presente en Apache***.
 3. Laboratorio 30-C: ***Aprovechar vulnerabilidad WebDAV***.
 4. Laboratorio 30-D: ***Escalado de privilegio explotando no_root_squash***.
+
+## Carpeta 50
+
+1. Laboratorio 50-A: ***Ofuscación de Powershell***
 
 
    
