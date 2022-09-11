@@ -112,7 +112,7 @@ Los dominios ***.onion*** están formados por un prefijo aleatorio muy grande, q
 Escribe la siguiente URL en la barra de direcciones del navegador Tor.
 ```
 http://3g2upl4pq6kufc4m.onion
-````
+```
 
 El resultado es el siguiente.
 
@@ -143,7 +143,7 @@ En este link: https://www.expressvpn.com/blog/best-onion-sites-on-dark-web/ tien
 
 Créate una cuenta en ***Proton Mail*** y envía un correo a alguno de tus buzones.
 
-## Fingerprinting pasivo de sitios webs.
+## Ejercicio 5: Fingerprinting pasivo de sitios webs.
 
 Por su propia naturaleza, los servicios están expuestos en Internet. Por consiguiente es posible obtener mucha información sobre ellos sin interactuar con herramientas de ataque.
 
