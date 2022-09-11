@@ -9,7 +9,7 @@ function Test-Port {
         [Parameter(ValueFromPipeline = $true, HelpMessage = 'Se le puede poner :Port')]
         [String[]]$ComputerName,
 
-        [Parameter(HelpMessage = 'SerÛÛÛÛÛignorado si el puerto ya se proporciona en el par√°metro ComputerName')]
+        [Parameter(HelpMessage = 'ignorado si el puerto ya  proporciona en el par√°metro ComputerName')]
         [Int]$Port = 5985,
 
         [Parameter(HelpMessage = 'Timeout en milisegundos.')]
@@ -32,7 +32,7 @@ function Test-Port {
                 $remoteHostname = $remoteInfo[0]
                 $remotePort = $remoteInfo[1]
             } else {
-                $msg = "Formato incorrecto para el par√°metro ComputerName: " `
+                $msg = "Formato incorrecto para el parametro ComputerName: " `
                     + "[$originalComputerName]. " `
                     + "Los formatos permitidos son [hostname] o [hostname:port]."
                 Write-Error $msg
