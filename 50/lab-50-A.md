@@ -54,9 +54,6 @@ mv ~/Downloads/Invoke-Obfuscation $HOME/.local/share/powershell/Modules
 cd ~
 ```
 
-
-
-
 Lanzamos la aplicación. En el prompt de ***PowerShell*** escribimos el comando.
 ```
 Import-Module Invoke-Obfuscation
@@ -64,3 +61,24 @@ Import-Module Invoke-Obfuscation
 Invoke-Obfuscation
 ```
 
+Lo primero que debemos proporcionar es el archivo con nuestro "malware". En el prompt de ***Invoke-Obfuscation*** escribimos.
+```
+set SCRIPTPATH ~/eHacking_LABS/50/testPorts.ps1
+```
+
+Como podremos apreciar se nos ofrece varias formas de ofuscar el script original. Elegimos ***Compress***.
+```
+COMPRESS
+```
+
+Solo hay una opción disponible ***COMPRESS\1***. La seleccionamos poniendo ***1***.
+```
+1
+```
+
+Podrás observar cómo aparece ofuscado el script. Necesitamos llevarlo a la víctima y para ello hacemos uso del portapapeles.
+Nota: En realidad, el actor de amenaza utilizará los vectores más habituales para hacer llegar el ***PowerShell*** a la víctima.
+
+Con mucho cuidado, seleccionamos con el ratón el payload, 
+
+En la máquina ***Win 11***
