@@ -40,6 +40,17 @@ En la máquina ***Kali*** vamos a levantar un ***servidor ICMP*** mediante un sc
 nano ~/eHacking_LABS/50/icmp_server.py
 ```
 
+Vamos a deshabilitar las repuestas de ping en ***Kali***, puesto que el truco consiste en mandar paquetes ICMP desde la víctima, la máquina de ***Kali*** respondería a cada uno de ellos, y no queremos llamar la atención del perimetral.
+```
+sudo sysctl -w net.ipv4.icmp_echo_ignore_all=1
+```
+
+
+
+En la máquina ***Kali*** volvemos a habilitar la respuesta de ***ICMP***.
+```
+sudo sysctl -w net.ipv4.icmp_echo_ignore_all=0
+```
 
 
 
