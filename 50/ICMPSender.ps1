@@ -50,4 +50,5 @@ while ($bytesRead = $stream.Read($barr, 0, $bufsize)) {
 # End the transfer
 $sendbytes = ([text.encoding]::ASCII).GetBytes("EOF")
 $ICMPClient.Send($IPAddress,10, $sendbytes, $PingOptions) | Out-Null
+$stream.Dispose()
 Write-Output "File Transfered"
