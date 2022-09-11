@@ -11,7 +11,6 @@ La ejecución de scripts maliciosos de PowerShell viene siendo bien detectada po
 Asegúrate que en la máquina ***Win 11*** tienes clonado el repo de Github con los archivos del curso. Si no es así o no lo tienes claro, mira el ***Ejercicio 11: Clonado del repositorio de GitHub.*** del ***lab-00.md***.
 
 Abre una terminal de ***PowerShell*** como ***ADMINISTRADOR*** y habilita la ejecución de scripts en la máquina.
-
 Nota: Responde con ***Yes to All*** a la pregunta.
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
@@ -26,6 +25,7 @@ El objetivo es ***ofuscar*** (esconder) el código fuente, de forma que no se pu
 En este laboratorio hacemos un simple sondeo de puertos, pero la realidad es que existe mucho malware malicioso basado en PowerShell, que también usa técnicas similares de ofuscación para que no sea detectado.
 
 Vamos a proceder a la ofuscación. Para ello aprovecharemos un proyecto publicado en https://github.com/danielbohannon/Invoke-Obfuscation
+Nota: Detén el sondeo de puertos con ***CTRL+C***.
 
 ![Invoke-Obfuscation](../img/lab-50-A/202209111409.png)
 
@@ -33,7 +33,7 @@ En la máquina ***Kali***, asegúrate que también tienes clonado el repo de Git
 
 Vamos a instalar el módulo de  ofuscación en ***Kali***. Entramos en el directorio ***Descargas***
 ```
-cd ~\Downloads
+cd ~/Downloads
 
 git clone https://github.com/danielbohannon/Invoke-Obfuscation.git
 ```
