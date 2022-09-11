@@ -16,7 +16,7 @@ def listen():
        print("FINAL")
        break
      catch.write(data[-1472:])
-     print("¡¡Archivo recibido!!")
+     print("Recibiendo archivo!!")
 
 
 listen()
