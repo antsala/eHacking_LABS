@@ -45,6 +45,11 @@ Vamos a deshabilitar las repuestas de ping en ***Kali***, puesto que el truco co
 sudo sysctl -w net.ipv4.icmp_echo_ignore_all=1
 ```
 
+Ejecutamos el servidor ***ICMP***. En la terminal escribimos.
+```
+sudo python ~/eHacking_LABS/50/icmp_server.py
+```
+
 
 
 En la máquina ***Kali*** volvemos a habilitar la respuesta de ***ICMP***.
