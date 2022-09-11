@@ -8,10 +8,10 @@ def listen():
    while True:
      data, addr = s.recvfrom(1508)
      print("Recibido paquete %r de %r" % (addr,data))
-     if '^BOF' in data:
+     if '^BOF' in data.decode():
        print("INICIO")
        continue
-     if '^EOF' in data:
+     if '^EOF' in data.decode():
        catch.write(data[-1472:-4])
        print("FINAL")
        break
