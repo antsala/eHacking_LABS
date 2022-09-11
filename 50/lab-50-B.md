@@ -113,7 +113,7 @@ Eliminamos el pie, tal y como señala la imagen.
 
 Guardamos con ***CTRL+X***, ***Y***. Antes de pulsar ***ENTER*** nos fijamos que el archivo está en formato ***DOS***. Tendrémos que convertirlo a ***Linux***.
 
-![DOS Format](../img/lab-50-B/202209102230.png)
+![DOS Format](../img/lab-50-B/202209102231.png)
 
 Pulsamos ***ENTER*** y en la terminal escribimos el siguiente comando.
 ```
