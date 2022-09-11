@@ -21,31 +21,42 @@ Ejecuta el script con ***F5***. Este script sondea los 1000 primeros puertos. Si
 
 El objetivo es ***ofuscar*** (esconder) el código fuente, de forma que no se pueda "entender" por el software que lo está analizando. 
 
-En este laboratorio hacemos un simple sondeo de puertos, pero la realidad es que existe mucho malware malicioso basado en PowerShell, te también usa técnicas similares de ofuscación para que no sea detectado.
+En este laboratorio hacemos un simple sondeo de puertos, pero la realidad es que existe mucho malware malicioso basado en PowerShell, que también usa técnicas similares de ofuscación para que no sea detectado.
 
 Vamos a proceder a la ofuscación. Para ello aprovecharemos un proyecto publicado en https://github.com/danielbohannon/Invoke-Obfuscation
 
 ![Invoke-Obfuscation](../img/lab-50-A/202209111409.png)
 
-Los algoritmos de ofuscación son detectados por los antivirus. Por esta razón, si intentas descargar los archivos de este proyecto, lo normal es que el AV no te deje. Así que vamos a desactivar el antivirus.
+En la máquina ***Kali***, asegúrate que también tienes clonado el repo de Github con los archivos del curso. Si no es así o no lo tienes claro, mira el ***Ejercicio 11: Clonado del repositorio de GitHub.*** del ***lab-00.md***.
 
-Para ello vamos a ***Windows Security*** / ***Virus & Threat Protection*** / ***Manage Settings*** / ***Real-time protection***, y lo desactivamos.
-
-En el navegador vamos a la siguiente URL
+Vamos a instalar el módulo de  ofuscación en ***Kali***. Entramos en el directorio ***Descargas***
 ```
-https://github.com/danielbohannon/Invoke-Obfuscation
+cd ~\Downloads
+
+git clone https://github.com/danielbohannon/Invoke-Obfuscation.git
 ```
 
-Hacemos clic en el botón ***Code*** y luego en ***Download ZIP***. Movemos el archivo descargado al ***Escritorio***. Hacemos ***doble clic*** en el zip y veremos una carpeta. La ***copiamos*** y, a continuación vamos a ***C:\Program Files\WindowsPowerShell\Modules*** donde pegamos.
+Movemos los archivos del proyecto en la carpeta de módulos de ***PowerShell***.
+```
+mv ~/Downloads/Invoke-Obfuscation $HOME/.local/share/powershell/Modules
+
+cd ~
+```
+
+Abrimos una sesión de ***PowerShell*** con el siguiente comando.
+```
+pwsh
+```
+
+Debe aparecer el prompt característico.
+
+![PowerShell Prompt](../img/lab-50-A/202209111725.png)
 
 
-Hay un problema con la importación del modulo que no lo encuentra. Mirar como se agregan psm1.
-file:///C:/Users/Antonio/OneDrive%20-%20AVANTE%20FORMACION/PenTest%20Magazine/PT01_21_Powershell_for_Pentesters-hh6qjq.pdf
+Lanzamos la aplicación. En el prompt de ***PowerShell*** escribimos el comando.
+```
+Import-Module Invoke-Obfuscation
 
-
-
-
-
-
-
+Invoke-Obfuscation
+```
 
