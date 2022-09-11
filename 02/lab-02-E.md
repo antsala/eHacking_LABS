@@ -89,7 +89,7 @@ Conéctate a la siguiente URL. Investiga las herramientas disponibles.
 https://www.yougetsignal.com/
 ```
 
-De las herramientas anteriores, elige ***Revers IP Domain Check*** e introduce el siguiente dominio:
+De las herramientas anteriores, elige ***Reverse IP Domain Check*** e introduce el siguiente dominio:
 ```
 certifiedhacker.com
 ```

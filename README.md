@@ -88,6 +88,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Configuración de un share de NFS.
    - Enumerar los ***shares*** con ***nmap***.
 
+5. Laboratorio 04-E: ***Enumeración SMB/Samba***. Los ejercicios a realizar son:
+   - Enumerar carpetas compartidas.
 
 
 
