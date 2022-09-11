@@ -16,6 +16,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Importación y configuracion de la VM ***Win11***.
    - Importación y configuracion de la VM ***Windows Server 2022 core***.
    - Importación y configuracion de la VM ***ubu_sr_01**.
+   - Clonado del repositorio de GitHub.
 
 ## Carpeta 02. Footprinting y reconocimiento.
 

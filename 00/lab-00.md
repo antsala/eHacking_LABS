@@ -368,23 +368,8 @@ Nota: Si no estuviera instalado, descárgalo e instálalo.
 ```
 git --version
 ```
-
-Creamos un directorio en el directorio ***Home*** del usuario.
-
-Si la máquina es Windows...
 ```
-mkdir $HOME\eHacking_LABS
-
-cd $HOMW\eHacking_LABS
-
-git clone https://github.com/antsala/eHacking_LABS.git
-```
-
-Si la máquina es Linux...
-```
-mkdir ~/eHacking_LABS
-
-cd ~/eHacking_LABS
+cd $HOME
 
 git clone https://github.com/antsala/eHacking_LABS.git
 ```
