@@ -29,3 +29,21 @@ En la siguiente imagen podemos observar cómo la ***IP 13*** ofrece el servicio 
 En esta otra, la máquina con ***IP 14*** ofrece ***SMB***.
 
 ![NFS Share](../img/lab-04-E/202209111046.png)
+
+Una vez detectado los hosts que comparten carpetas, procedemos a su enumeración usando la herramienta ***enum4linux***.
+```
+enum4linux -v 192.168.20.13
+```
+
+Esta herramienta interactúa con el servicio ***SMB/Samba*** intentando extraer información de calidad. Lee la salida del comando prestando atención a los siguientes elementos:
+
+* Se permiten sesiones anónimas.
+![NFS Share](../img/lab-04-E/202209111120.png)
+* Se ha obtenido información de versión del sistema operativo.
+![NFS Share](../img/lab-04-E/202209111121.png)
+*
+
+
+
+
+
