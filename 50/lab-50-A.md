@@ -38,13 +38,6 @@ cd ~/Downloads
 git clone https://github.com/danielbohannon/Invoke-Obfuscation.git
 ```
 
-Movemos los archivos del proyecto en la carpeta de módulos de ***PowerShell***.
-```
-mv ~/Downloads/Invoke-Obfuscation $HOME/.local/share/powershell/Modules
-
-cd ~
-```
-
 Abrimos una sesión de ***PowerShell*** con el siguiente comando.
 ```
 pwsh
@@ -53,6 +46,15 @@ pwsh
 Debe aparecer el prompt característico.
 
 ![PowerShell Prompt](../img/lab-50-A/202209111725.png)
+
+Movemos los archivos del proyecto en la carpeta de módulos de ***PowerShell***.
+```
+mv ~/Downloads/Invoke-Obfuscation $HOME/.local/share/powershell/Modules
+
+cd ~
+```
+
+
 
 
 Lanzamos la aplicación. En el prompt de ***PowerShell*** escribimos el comando.
