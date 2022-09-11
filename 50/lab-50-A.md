@@ -27,5 +27,25 @@ Vamos a proceder a la ofuscación. Para ello aprovecharemos un proyecto publicad
 
 ![Invoke-Obfuscation](../img/lab-50-A/202209111409.png)
 
+Los algoritmos de ofuscación son detectados por los antivirus. Por esta razón, si intentas descargar los archivos de este proyecto, lo normal es que el AV no te deje. Así que vamos a desactivar el antivirus.
+
+Para ello vamos a ***Windows Security*** / ***Virus & Threat Protection*** / ***Manage Settings*** / ***Real-time protection***, y lo desactivamos.
+
+En el navegador vamos a la siguiente URL
+```
+https://github.com/danielbohannon/Invoke-Obfuscation
+```
+
+Hacemos clic en el botón ***Code*** y luego en ***Download ZIP***. Movemos el archivo descargado al ***Escritorio***. Hacemos ***doble clic*** en el zip y veremos una carpeta. La ***copiamos*** y, a continuación vamos a ***C:\Program Files\WindowsPowerShell\Modules*** donde pegamos.
+
+
+Hay un problema con la importación del modulo que no lo encuentra. Mirar como se agregan psm1.
+file:///C:/Users/Antonio/OneDrive%20-%20AVANTE%20FORMACION/PenTest%20Magazine/PT01_21_Powershell_for_Pentesters-hh6qjq.pdf
+
+
+
+
+
+
 
 
