@@ -94,6 +94,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Enumerar carpetas compartidas.
 
 
+## Carpeta 05. Evaluación de vulnerabilidades.
+
 
 ## Carpeta 30
 
