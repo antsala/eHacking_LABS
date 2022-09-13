@@ -55,9 +55,17 @@ Seleccionamos ***Interfaces***
 
 ![Network](../img/lab-05-B/202209131105.png)
 
-Seleccioamos ***Static IP***.
+Seleccionamos ***Static IP***.
 
 ![Network](../img/lab-05-B/202209131106.png)
+
+Ponemos la IP ***192.168.20.100/24***.
+
+![Network](../img/lab-05-B/202209131112.png)
+
+
+
+
 
 
 
