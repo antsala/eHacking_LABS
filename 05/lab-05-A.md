@@ -34,5 +34,26 @@ La página web principal también nos ofrece enlaces a conjuntos de ***CWE*** se
 * *https://cwe.mitre.org/data/definitions/1343.html* es la lista de las debilidades de hardware más importantes.
 * *https://cwe.mitre.org/data/definitions/1344.html* Nos lleva a la lista ***Top Ten 2021*** de ***OWASP***, ***Open Web Application Security Project*** es la fundación que promueve el desarrollo seguro del sotfware.
 
+Las herramientas de búsqueda de vulnerabilidades a menudo referencian los ***IDs*** de ***CWE*** cuando detectan un problema. De esta forma puedes estudiar al detalle en qué consiste. Como Ethical Hacker, la información que aquí se presenta es muy útil cuando se presenta el informe indicándo dónde está el problema y qué aproximación debe utilizarse para corregirlo.
+
+
+***ACTIVIDAD***
+
+Dedica unos minutos a estudiar esta web. En función de tu perfil profesional estarás interesado en algún tema específico.
+
+## Ejercicio 2: Búsqueda en Common Vulnerabilities and Exposures (CVE).
+
+En el navegador, conectamos a la siguiente URL.
+```
+https://cve.mitre.org
+```
+
+![CVE](../img/lab-05-B/202209131005.png)
+
+
+En este caso, ***Common Vulnerabilities and Exposures*** gestiona las vulnerabilidades existentes en los sistemas operativos, servicios y aplicaciones.
+
+A diferencia de ***OWASP*** que está especializada en las debilidades que se cometen en el desarrollo de aplicaciones web, ***CVE*** reúne las vulnerabilidades descubiertas en las aplicaciones comerciales que solemos usar en nuestro negocio.
+
 
 

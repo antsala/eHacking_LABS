@@ -97,7 +97,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 ## Carpeta 05. Evaluación de vulnerabilidades.
 
 1. Laboratorio 05-A: ***Búsqueda de información sobre vulnerabilidades en Internet***
-   - Búsqueda en Common Weakness Enumeration (CWE)
+   - Búsqueda en Common Weakness Enumeration (CWE).
+   - Búsqueda en Common Vulnerabilities and Exposures (CVE).
 
 ## Carpeta 30
 
