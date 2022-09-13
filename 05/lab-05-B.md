@@ -128,7 +128,7 @@ Elegimos en el menú la opción ***Scans/tasks*** e invocamos al asistente de ta
 
 ![Asistente](../img/lab-05-B/202209131141.png)
 
-Hacemos clic en ***Task Wizard***. Ponemos la IP de la máquina a estudiar: ***192.168.20.13*** y hacemos clic en ***Start Scan***.
+Hacemos clic en ***Task Wizard***. Ponemos la IP de la máquina a ePa55wrdstudiar: ***192.168.20.13*** y hacemos clic en ***Start Scan***.
 
 ![Start Scan](../img/lab-05-B/202209131148.png)
 
@@ -145,8 +145,15 @@ Realiza un análisis de vulnerabilidad en las máquinas
 * ***Win 11***
 
 Debe quedar como ves en la imagen.
-Nota: Deja que terminen los escaneos y luego haz clic en el informe.
+Nota: Deja que terminen los escaneos.
+
 ![Otro Scan](../img/lab-05-B/202209131200.png)
+
+Cuando los informes se hayan generado, estudia el resultado de los mismos. 
+
+En la siguiente imagen puedes ver el resultado del escaneo de la máquina ***Metasploitable3-ubu1404***. 
+
+![Escaneo de Metasploitable3-ubu1404](../img/lab-05-B/202209131254.png)
 
 
 ## Descubrir vulnerabilidades con ***Nessus***
