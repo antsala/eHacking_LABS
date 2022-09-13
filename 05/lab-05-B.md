@@ -125,5 +125,5 @@ admin
 
 Elegimos en el menú la opción ***Scans/tasks*** e invocamos al asistente de tareas.
 
-![Asistente](../img/lab-05-B/202209131129.png)
+![Asistente](../img/lab-05-B/202209131141.png)
 
