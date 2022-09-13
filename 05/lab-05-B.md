@@ -51,6 +51,17 @@ Luego ***Network***.
 
 ![Network](../img/lab-05-B/202209131103.png)
 
+Seleccionamos ***Interfaces***
+
+![Network](../img/lab-05-B/202209131105.png)
+
+Seleccioamos ***Static IP***.
+
+![Network](../img/lab-05-B/202209131106.png)
+
+
+
+
 
 
 
