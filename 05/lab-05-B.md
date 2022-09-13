@@ -13,7 +13,7 @@ Como habrás comprobado no resulta demasiado práctico buscar manualmente las vu
 
 En el mercado existen diversas herramientas que realizan toda esta labor. Algunas gratuitas, otras comerciales. En este laboratorio vamos a estudiar algunas de las más conocidas y usadas en el sector.
 
-## Ejercicio 1: Open VAS.
+## Ejercicio 1: Instalar Open VAS.
 
 Se trata de un escáner de vulnerabilidad completo que inicialmente era un proyecto de ***Open Source***. Hoy en día es una poderosa herramienta ***Comercial***. 
 
@@ -45,7 +45,7 @@ El asistente nos pide la ***Clave de Subscripción*** para poder actualizar la b
 
 Ahora vamos a cofigurar la red. elegimos ***Setup***.
 
-![Network](../img/lab-05-B/202209131101.png)
+![Setup](../img/lab-05-B/202209131101.png)
 
 Luego ***Network***.
 
@@ -53,39 +53,82 @@ Luego ***Network***.
 
 Seleccionamos ***Interfaces***
 
-![Network](../img/lab-05-B/202209131105.png)
+![Interfaces](../img/lab-05-B/202209131105.png)
 
 Seleccionamos ***Static IP***.
 
-![Network](../img/lab-05-B/202209131106.png)
+![Static IP](../img/lab-05-B/202209131106.png)
 
 Ponemos la IP ***192.168.20.100/24***.
 
-![Network](../img/lab-05-B/202209131112.png)
+![IP](../img/lab-05-B/202209131112.png)
 
 Guardamos la configuración.
 
-![Network](../img/lab-05-B/202209131114.png)
+![Guardar](../img/lab-05-B/202209131114.png)
 
 Salimos de la configuración de ***eth0***.
 
-![Network](../img/lab-05-B/202209131116.png)
+![Volver](../img/lab-05-B/202209131116.png)
 
 Configuramos la resolución ***DNS***.
 
-![Network](../img/lab-05-B/202209131117.png)
+![DNS](../img/lab-05-B/202209131117.png)
 
 Seleccionamos el primer servidor.
 
-![Network](../img/lab-05-B/202209131120.png)
+![DNS 1](../img/lab-05-B/202209131120.png)
 
 Ponemos ***8.8.8.8***.
 
-![Network](../img/lab-05-B/202209131122.png)
+![8.8.8.8](../img/lab-05-B/202209131122.png)
 
-Guardamos la configuración.
+Guardamos y salimos de la configuración ***DNS***.
 
-![Network](../img/lab-05-B/202209131123.png)
+![Guardar](../img/lab-05-B/202209131123.png)
+
+Vamos a poner la ***Puerta de enlace***.
+
+![Gateway](../img/lab-05-B/202209131125.png)
+
+Escribimos ***192.168.20.1***.
+
+![192.168.20.1](../img/lab-05-B/202209131127.png)
+
+Guardamos la configuración y volvemos.
+
+![Guardar](../img/lab-05-B/202209131129.png)
+
+Salimos de todos los cuadros de diálogo hasta la pantalla de ***login***.
+
+Con esto termina la instalación del producto.
+
+## Ejercicio 2: Descubrir vulnerabilidades con Open VAS.
+
+En la máquina ***Kali***, abre una sesión del navegador y conecta a la siguiente URL.
+```
+https://192.168.20.100/
+```
+
+El navegador mostrará una advertencia de seguridad, debida a que el certificado digital que usa el servidor web está autofirmado. Ignoramos esta advertencia haciendo clic en ***Advanced*** y luego en ***Accept the Risk and Continue***.
+Nota: En la documentación de Open VAS se especifica cómo cambiar el certificado de seguridad.
+
+En la pantalla de inicio de sesión usamos el usuario.
+```
+admin
+```
+
+y el password.
+```
+admin
+```
+
+Elegimos en el menú la opción ***Scans/tasks*** e invocamos al asistente de tareas.
+
+![Asistente](../img/lab-05-B/202209131129.png)
+
+
+
 
 
 
