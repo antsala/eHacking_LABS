@@ -6,7 +6,8 @@ Requisitos:
 2. Máquina ***Kali Linux***.
 3. Máquina ***Metasploitable3-ub1404***.
 4. Máquina ***Metasploitable3-win2k8***.
-5. Maquina ***GSM-Trial Open VAS*** (A descargar de Internet)
+5. Máquina ***Win 11***.
+6. Maquina ***GSM-Trial Open VAS*** (A descargar de Internet)
 
 
 Como habrás comprobado no resulta demasiado práctico buscar manualmente las vulnerabilidades en las webs especializadas. Necesitamos automatizar este proceso.
@@ -126,4 +127,31 @@ admin
 Elegimos en el menú la opción ***Scans/tasks*** e invocamos al asistente de tareas.
 
 ![Asistente](../img/lab-05-B/202209131141.png)
+
+Hacemos clic en ***Task Wizard***. Ponemos la IP de la máquina a estudiar: ***192.168.20.13*** y hacemos clic en ***Start Scan***.
+
+![Start Scan](../img/lab-05-B/202209131148.png)
+
+Hay que esperar a que cambie de ***Requested*** a ***Done***. Tardará bastante, así que ve haciendo la actividad propuesta a continuación. 11:52
+Nota: Pasará antes por el estado ***Queued***.
+
+
+
+*** ACTIVIDAD ***
+
+Realiza un análisis de vulnerabilidad en las máquinas
+
+* ***Metasploitable3-win2k8*** 
+* ***Win 11***
+
+Debe quedar como ves en la imagen.
+Nota: Deja que terminen los escaneos y luego haz clic en el informe.
+![Otro Scan](../img/lab-05-B/202209131200.png)
+
+
+## Descubrir vulnerabilidades con ***Nessus***
+
+Para liberar recursos, apaga la máquina virtual ***GSM-Trial.
+
+
 
