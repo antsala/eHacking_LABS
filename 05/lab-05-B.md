@@ -63,6 +63,38 @@ Ponemos la IP ***192.168.20.100/24***.
 
 ![Network](../img/lab-05-B/202209131112.png)
 
+Guardamos la configuración.
+
+![Network](../img/lab-05-B/202209131114.png)
+
+Salimos de la configuración de ***eth0***.
+
+![Network](../img/lab-05-B/202209131116.png)
+
+Configuramos la resolución ***DNS***.
+
+![Network](../img/lab-05-B/202209131117.png)
+
+Seleccionamos el primer servidor.
+
+![Network](../img/lab-05-B/202209131120.png)
+
+Ponemos ***8.8.8.8***.
+
+![Network](../img/lab-05-B/202209131122.png)
+
+Guardamos la configuración.
+
+![Network](../img/lab-05-B/202209131123.png)
+
+
+
+
+
+
+
+
+
 
 
 
