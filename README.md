@@ -101,6 +101,10 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Búsqueda en ***Common Vulnerabilities and Exposures (CVE)***.
    - Búsqueda en ***National Vulnerability Database (NVD)***.
 
+2. Laboratorio 05-B: ***Herramientas de evaluación de vulnerabilidades***
+   - Instalar Open VAS.
+   - Descubrir vulnerabilidades con Open VAS.
+
 ## Carpeta 30
 
 1. Laboratorio 30-A: ***Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5***.
