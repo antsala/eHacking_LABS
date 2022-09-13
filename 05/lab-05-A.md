@@ -55,5 +55,32 @@ En este caso, ***Common Vulnerabilities and Exposures*** gestiona las vulnerabil
 
 A diferencia de ***OWASP*** que está especializada en las debilidades que se cometen en el desarrollo de aplicaciones web, ***CVE*** reúne las vulnerabilidades descubiertas en las aplicaciones comerciales que solemos usar en nuestro negocio.
 
+En este enlace https://cve.mitre.org/cve/search_cve_list.html podemos realizar búsquedas si conocemos el ***ID*** de la vulnerabilidad. Si no lo conociéramos, escribimos cualquier token que nos pueda servir para localizarla.
 
+Podemos acudir a otros portales que facilitan la búsqueda sobre la misma base de datos de vulnerabilidades, por ejemplo https://www.cvedetails.com/ 
+
+*** ACTIVIDAD ***
+
+Consulta en ***CVE Details*** las vulnerabilidades descubiertas para.
+* Un sistema operativo de tu elección.
+* La alpicación LOB principal que usas en tu organización.
+* MySQL.
+* Apache.
+* TomCat.
+* Drupal.
+* La última vulnerabilidad de nivel ***10*** descubierta para Windows.
+
+
+## Búsqueda en National Vulnerability Database (NVD).
+
+En el navegador conectamos a la siguiente URL.
+```
+https://nvd.nist.gov/
+```
+
+Este sitio también recopila información sobre ***CVE*** y ***CWE***, así como información sobre cómo realizar auditorías de seguridad.
+
+*** ACTIVIDAD***
+
+Estudia el contenido de esta web.
 
