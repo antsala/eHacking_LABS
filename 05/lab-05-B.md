@@ -127,30 +127,3 @@ Elegimos en el menú la opción ***Scans/tasks*** e invocamos al asistente de ta
 
 ![Asistente](../img/lab-05-B/202209131129.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
