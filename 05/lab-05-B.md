@@ -47,6 +47,12 @@ Ahora vamos a cofigurar la red. elegimos ***Setup***.
 
 ![Network](../img/lab-05-B/202209131101.png)
 
+Luego ***Network***.
+
+![Network](../img/lab-05-B/202209131103.png)
+
+
+
 
 
 
