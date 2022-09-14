@@ -312,6 +312,13 @@ Elegimos la opción ***Launch a Scan***.
 
 ![scan](../img/lab-05-B/202209141218.png)
 
+y lo configuramos para que analice la máquina ***Metasploitable3-win2k8***.
+
+![scan 192.168.20.14](../img/lab-05-B/202209141223.png)
+
+
+
+
 
 
 
