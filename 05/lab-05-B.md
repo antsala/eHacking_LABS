@@ -322,6 +322,7 @@ y lo configuramos para que analice la máquina ***Metasploitable3-win2k8***. Hac
 ![scan 192.168.20.14](../img/lab-05-B/202209141223.png)
 
 
+
 TODO. Poner resutado escaneo y tomar tiempo.
 
 
@@ -353,6 +354,8 @@ Nota: Tardarña un buen rato.
 ```
 nikto -h www.certifiedhacker.com -Tuning x
 ```
+
+TODO. Poner resultado y anotar tiempo.
 
 
 *** ACTIVIDAD ***
