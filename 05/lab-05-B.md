@@ -328,7 +328,7 @@ TODO. Poner resutado escaneo y tomar tiempo.
 
 
 
-*** ACTIVIDAD ***
+***ACTIVIDAD***
 
 Aquí: https://www.youtube.com/watch?v=K6zF8pszgoo tienes un video de demostración donde se explica detalladamente las opciones del producto.
 
@@ -358,7 +358,7 @@ nikto -h www.certifiedhacker.com -Tuning x
 TODO. Poner resultado y anotar tiempo.
 
 
-*** ACTIVIDAD ***
+***ACTIVIDAD***
 
 Aquí: https://www.youtube.com/watch?v=K78YOmbuT48 tienes un video tutorial de cómo usar ***nikto***.
 
