@@ -212,6 +212,26 @@ Nota: Pulsar ***Q*** para volver al prompt.
 
 ![Nessus Running](../img/lab-05-B/202209141059.png)
 
+Abrimos el navegador de Internet y conectamos con la siguiente URL.
+Nota: Aparece warning de seguridad porque el certificado está autofirmado. Continuar y conectar con el sitio.
+```
+https://kali:8834/
+```
+
+Elegimos la versión a usar. Como tenemos la demo de 7 días, elegimos la profesional y hacemos clic en ***Continue***.
+
+![Nessus Profesional](../img/lab-05-B/202209141103.png)
+
+Escribimos el código de activación que aparece en la página web despúes de hacer el login.
+
+![Nessus code](../img/lab-05-B/202209141108.png)
+
+
+
+
+
+
+
 
 
 
