@@ -197,6 +197,13 @@ Elegimos la instancia recién instalada como nombre del servidor SQL y hacemos c
 
 A continuación escribimos las credenciales de la demo y la clave de activación que hemos recibido por correo electrónico.
 
+![Credenciales](../img/lab-05-B/202209141018.png)
+
+Se instalará ***LanGuard***.
+
+
+
+
 
 
 
