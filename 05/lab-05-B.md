@@ -247,11 +247,21 @@ Cuando se inicie el servidor, aparece una pantalla donde podemos introducir las 
 
 ![Nessus scan](../img/lab-05-B/202209141152.png)
 
-Dejemos actuar a ***Nessus*** hasta que finalice su análisis.
+Dejemos actuar a ***Nessus*** hasta que finalice su análisis (Tardará 8-10 minutls.)
 
+En la siguiente imagen podemos ver, por medio de la escala de colores, las vulnerabilidades encontradas. En la parte izquierda apareceran en color rojo oscuro las críticas mientras que, en la parte derecha, en color azul suelen ser informaciones que no afectan a la seguridad.
 
+![Resultado scan](../img/lab-05-B/202209141202.png)
 
+Ahora solo queda que iteractuemos con la aplicación. Si hacemos clic en el host ***192.168.20.14*** (Windows server 2k8) Podemos ver las vulnerabilidades encontradas.
 
+![Resultado scan WS2k8](../img/lab-05-B/202209141204.png)
+
+Por último, si hacemos clic en la vulnerabilidad señalada en la imagen anterior, la aplicación muestra el detalle encontrado. De la misma forma, haciendo en clic en cualquiera de ellos, se nos muestra información técnica de la vulnerabilidad, así como la forma de cerrar dicha vulnerabilidad.
+
+![Vulnerabilidad Apache](../img/lab-05-B/202209141207.png)
+
+Con esto finalizamos la demo de ***Nessus***.
 
 
 ## Descubrir vulnerabilidades con ***LanGuard***
@@ -292,7 +302,43 @@ A continuación escribimos las credenciales de la demo y la clave de activación
 
 Continuar con la instalación de ***LanGuard***.
 Nota: Usar ***Pa55w.rd*** como contraseña para el usuario administrador local.
-Nota: el resto de la instalación dura 
+Nota: el resto de la instalación dura 15-20 minutos.
+
+La aplicación se inicia. Hacemos clic en el botón ***Continue evaluation***.
+
+![Continue evaluation](../img/lab-05-B/202209141217.png)
+
+Elegimos la opción ***Launch a Scan***.
+
+![scan](../img/lab-05-B/202209141218.png)
+
+
+
+
+
+
+
+
+
+
+## Descubrir vulnerabilidades web con Nikto.
+
+***Nikto*** está especializado en buscar vulnerabilidades en servidores web y sus aplicaciones. Viene instalado de serie en la suite ***Kali***.
+
+Vamos a realizar un análisis con esta herramienta. En la máquina ***Kali***,  escribimos en la terminal.
+```
+nikto -H
+```
+
+En la ayuda, el parámetro ***-Tunning*** permite elegir el tipo de análisis que se va a realizar.
+
+![Nikto tunning](../img/lab-05-B/202209141212.png)
+
+Vamos a lanzar ***nikto*** para que haga un análisis completo de la víctima.
+```
+nikto -h www.certifiedhacker.com -Tuning x
+```
+
 
 
 
