@@ -321,11 +321,11 @@ y lo configuramos para que analice la máquina ***Metasploitable3-win2k8***. Hac
 
 ![scan Win2k8](../img/lab-05-B/202209141223.png)
 
+El escaneo durará aproximadamente 25-30 minutos. Mientras se realiza puede hacer la actividad propuesta.
 
+Cuando haya terminado puedes interactuar con la herramienta para comprobar los resultados descubiertos.
 
-TODO. Poner resutado escaneo y tomar tiempo.
-
-
+![resultado scan Win2k8](../img/lab-05-B/202209141250.png)
 
 
 ***ACTIVIDAD***
@@ -355,16 +355,15 @@ Nota: Tardarña un buen rato.
 nikto -h www.certifiedhacker.com -Tuning x
 ```
 
-TODO. Poner resultado y anotar tiempo.
+El escaneo tardará 40-45 minutos. Mientras se realiza, puedes hacer la actividad propuesta un poco más adelante.
 
+Cuando termine, el resultado mostrará las vulnerabilidades descubiertas.
+
+![resultado Nikto](../img/lab-05-B/202209141252.png)
 
 ***ACTIVIDAD***
 
 Aquí: https://www.youtube.com/watch?v=K78YOmbuT48 tienes un video tutorial de cómo usar ***nikto***.
-
-
-
-
 
 
 
