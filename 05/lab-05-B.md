@@ -263,6 +263,11 @@ Por último, si hacemos clic en la vulnerabilidad señalada en la imagen anterio
 
 Con esto finalizamos la demo de ***Nessus***.
 
+*** ACTIVIDAD *** 
+
+Si te interesa conocer a fondo las posibilidades técnicas de esta herramienta te recomiendo visualizar esta lista de reproducción: https://www.youtube.com/watch?v=D8hv1XC2bp0&list=PLOMx6Layn69hduI4YjVkDw-tN6H_kBZ6l
+
+
 
 ## Descubrir vulnerabilidades con ***LanGuard***
 
@@ -312,17 +317,19 @@ Elegimos la opción ***Launch a Scan***.
 
 ![scan](../img/lab-05-B/202209141218.png)
 
-y lo configuramos para que analice la máquina ***Metasploitable3-win2k8***.
+y lo configuramos para que analice la máquina ***Metasploitable3-win2k8***. Hacemos clic en ***Scan***
 
 ![scan 192.168.20.14](../img/lab-05-B/202209141223.png)
 
 
+TODO. Poner resutado escaneo y tomar tiempo.
 
 
 
 
+*** ACTIVIDAD ***
 
-
+Aquí: https://www.youtube.com/watch?v=K6zF8pszgoo tienes un video de demostración donde se explica detalladamente las opciones del producto.
 
 
 
@@ -342,11 +349,15 @@ En la ayuda, el parámetro ***-Tunning*** permite elegir el tipo de análisis qu
 ![Nikto tunning](../img/lab-05-B/202209141212.png)
 
 Vamos a lanzar ***nikto*** para que haga un análisis completo de la víctima.
+Nota: Tardarña un buen rato.
 ```
 nikto -h www.certifiedhacker.com -Tuning x
 ```
 
 
+*** ACTIVIDAD ***
+
+Aquí: https://www.youtube.com/watch?v=K78YOmbuT48 tienes un video tutorial de cómo usar ***nikto***.
 
 
 
