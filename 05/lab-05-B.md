@@ -226,26 +226,32 @@ Escribimos el código de activación que aparece en la página web despúes de h
 
 ![Nessus code](../img/lab-05-B/202209141108.png)
 
+A continuación nos pide crear un usuario para administrar ***Nessus***. Podemos poner como usuario. 
+```
+admin
+```
 
+y password.
+```
+Pa55w.rd
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Con esto termina la instalación y configuración de ***Nessus***. El servidor tardará algo de tiempo en estar disponible.
 
 
 
 
 ## Descubrir vulnerabilidades con ***LanGuard***
+
+En primer lugar, en la máquina ***Win 11***, instalamos el servidor web. En el buscador de Windows escribimos.
+```
+Turn Windows features on or off
+```
+
+La configuración debe quedar de la siguiente manera.
+
+![Instalar IIS](../img/lab-05-B/202209141121.png)
+
 
 ***LanGuard*** es el escáner de vulnerabilidad de ***GFI Software***. Vamos a descargar la demo.
 
