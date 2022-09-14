@@ -128,6 +128,9 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Codificar el documento secreto y enviarlo.
    - Comprobar la exfiltración.
 
+3. Laboratorio 50-C: ***Ocultar IEX para evadir al antivirus***. Los ejercicios a realizar son:
+   - Hacer prueba de concepto con registro TXT.
+
    
 
 

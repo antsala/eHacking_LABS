@@ -11,8 +11,6 @@ Generalmente se envían por correo o se suben a repositorios en el Cloud (GSuite
 
 Pues bien, en este laboratorio aprenderemos a exfiltrar información a través del protocolo ***ICMP***, que generalmente no es inspeccionado, al menos desde el punto de vista del ***DLP***.
 
-## Ejercicio 1: 
-
 La ejecución de scripts maliciosos de PowerShell viene siendo bien detectada por las herramientas de seguridad, como el ***antivirus*** o el ***IDS***.
 
 ## Ejercicio 1: Comprobar si la víctima puede usar ICMP.
