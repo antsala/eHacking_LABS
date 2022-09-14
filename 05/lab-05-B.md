@@ -171,7 +171,37 @@ Estudia las características de las versiones disponibles.
 A continuación descargamos la versión ***Profesional***, haciendo clic en el botón ***Probar***. Sigue el asistente hasta final.
 Nota: Necesitarás introducir una dirección de email corporativa.
 
-TODO.
+Recibirás un correo electrónico con las instrucciones para realizar la instalación.
+
+![Email de activación](../img/lab-05-B/202209141035.png)
+
+Hacemos clic en el botón ***Activate Your Account***, mediante el cual se activa la cuenta después de poner una contraseña.
+
+![Password](../img/lab-05-B/202209141038.png)
+
+Una vez logados, se mostrará la página con los productos adquiridos, tal y como muestra la imagen. Hacemos clic en el enlace de descarga del producto.
+
+![Download Nessus](../img/lab-05-B/202209141038.png)
+
+Seleccionamos las descargas de ***Download Nessus and Nessus Manager***.
+
+![Descargas de Nessus](../img/lab-05-B/202209141048.png)
+
+Descargamos la versión de ***64 bits*** para ***Debian***.
+
+![deb 64 bits](../img/lab-05-B/202209141051.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Descubrir vulnerabilidades con ***LanGuard***
 
@@ -199,7 +229,11 @@ A continuación escribimos las credenciales de la demo y la clave de activación
 
 ![Credenciales](../img/lab-05-B/202209141018.png)
 
-Se instalará ***LanGuard***.
+Continuar con la instalación de ***LanGuard***.
+Nota: Usar ***Pa55w.rd*** como contraseña para el usuario administrador local.
+Nota: el resto de la instalación dura 
+
+
 
 
 
