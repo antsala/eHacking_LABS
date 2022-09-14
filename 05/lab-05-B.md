@@ -208,6 +208,7 @@ sudo systemctl status nessusd.service
 ```
 
 Debe aparecer que está ***running***.
+Nota: Pulsar ***Q*** para volver al prompt.
 
 ![Nessus Running](../img/lab-05-B/202209141059.png)
 
