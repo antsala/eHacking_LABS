@@ -105,6 +105,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Instalar Open VAS.
    - Descubrir vulnerabilidades con ***Open VAS***.
    - Descubrir vulnerabilidades con ***Nessus***.
+   - Descubrir vulnerabilidades con ***LanGuard***.
 
 ## Carpeta 30
 

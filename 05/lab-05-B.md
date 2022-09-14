@@ -155,10 +155,58 @@ En la siguiente imagen puedes ver el resultado del escaneo de la máquina ***Met
 
 ![Escaneo de Metasploitable3-ubu1404](../img/lab-05-B/202209131254.png)
 
+Para liberar recursos, apaga la máquina virtual ***GSM-Trial***.
 
 ## Descubrir vulnerabilidades con ***Nessus***
 
-Para liberar recursos, apaga la máquina virtual ***GSM-Trial.
+Nessus es el escáner de vulnerabilidad de ***Tenable***, una herramienta de primerísimo nivel.
+
+Vamos a proceder a su instalación. En la máquina ***Kali***, en una pestaña del navegador nos conectamos a la siguiente URL.
+```
+https://es-la.tenable.com/products/nessus
+```
+
+Estudia las características de las versiones disponibles.
+
+A continuación descargamos la versión ***Profesional***, haciendo clic en el botón ***Probar***. Sigue el asistente hasta final.
+Nota: Necesitarás introducir una dirección de email corporativa.
+
+TODO.
+
+## Descubrir vulnerabilidades con ***LanGuard***
+
+***LanGuard*** es el escáner de vulnerabilidad de ***GFI Software***. Vamos a descargar la demo.
+
+En la máquina ***Win 11*** conectamos con el navegador a la siguiente URL y rellenamos el formulario.
+```
+https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-languard/download
+```
+
+Una vez conformado el formulario, llegaremos a la pantalla de desgarga de la demo.
+
+![Download Trial](../img/lab-05-B/202209140948.png)
+
+Descargamos el ejecutable y lo instalamos. En el proceso pedirá elegir una instancia de ***SQL Server***. Si no estuviera instalado, hacemos clic en el link ***Install Microsoft SQL Server Express (free)***.
+Nota: Instala aceptando los valores por defecto. La instalación es larga, aproximadamente 10-15 minutos en función del rendimiento de tu equipo.
+
+![Install SQL Server](../img/lab-05-B/202209140955.png)
+
+Elegimos la instancia recién instalada como nombre del servidor SQL y hacemos clic en ***OK***.
+
+![SQLEXPRESS](../img/lab-05-B/202209141011.png)
+
+A continuación escribimos las credenciales de la demo y la clave de activación que hemos recibido por correo electrónico.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
