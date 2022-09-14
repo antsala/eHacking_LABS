@@ -188,8 +188,29 @@ Seleccionamos las descargas de ***Download Nessus and Nessus Manager***.
 ![Descargas de Nessus](../img/lab-05-B/202209141048.png)
 
 Descargamos la versión de ***64 bits*** para ***Debian***.
+Nota: Guardar el archivo para su posterior instalacion.
 
 ![deb 64 bits](../img/lab-05-B/202209141051.png)
+
+Abrimos una terminal de comandos. Ejecutamos el siguiente comando.
+```
+sudo dpkg -i ~/Downloads/Nessus-10.3.0-debian9_amd64.deb
+```
+
+Para iniciar el servicio ***Nessus***, ejecutamos.
+```
+sudo systemctl start nessusd.service
+```
+
+Comprobamos que se ha iniciado correctamente.
+```
+sudo systemctl status nessusd.service
+```
+
+Debe aparecer que está ***running***.
+
+![Nessus Running](../img/lab-05-B/202209141059.png)
+
 
 
 
