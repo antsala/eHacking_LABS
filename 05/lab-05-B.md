@@ -236,7 +236,20 @@ y password.
 Pa55w.rd
 ```
 
-Con esto termina la instalación y configuración de ***Nessus***. El servidor tardará algo de tiempo en estar disponible.
+Con esto termina la instalación y configuración de ***Nessus***. 
+Nota. El servidor tardará bastante tiempo (35 minutos!!!) en estar disponible mientra compila los plugins. Pasar al siguiente lab para instalar ***LanGuard***
+
+Cuando se inicie el servidor, aparece una pantalla donde podemos introducir las IPs de las máquinas a analizar. La configuramos de la siguiente manera y hacemos clic en ***Submit***.
+
+![Nessus scan](../img/lab-05-B/202209141148.png)
+
+***Nessus*** comprobará si los host está activos. Una vez que termine la comprobación, seleccionamos los tres hosts y hacemos clic en ***Run Scan***.
+
+![Nessus scan](../img/lab-05-B/202209141152.png)
+
+Dejemos actuar a ***Nessus*** hasta que finalice su análisis.
+
+
 
 
 
