@@ -73,7 +73,7 @@ sudo powershell-empire server
 
 El servidor se inicia, como podemos ver en la siguiente imagen.
 
-![Server iniciado](../img/lab-50-C/2022091520921.png)
+![Server iniciado](../img/lab-50-C/202209150921.png)
 
 Es es momento de iniciar el ***Cliente*** de ***PowerShell Empire***. En una nueva terminal, escribimos.
 ```
@@ -82,7 +82,7 @@ powershell-empire client
 
 Ya tenemos el cliente iniciado.
 
-![Cliente iniciado](../img/lab-50-C/2022091520921.png)
+![Cliente iniciado](../img/lab-50-C/202209150925.png)
 
 
 
