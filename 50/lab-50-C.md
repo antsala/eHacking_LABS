@@ -153,13 +153,50 @@ Como puedes ver, el antivirus ha hecho un buen trabajo detectando al ***Stager**
 ![Malware detectado](../img/lab-50-C/202209151016.png)
 
 
-Procecemos a desactivar el antivirus temporalmente para demostrar que el ***Stager*** puede contectarse correctamente al ***Listener.
+Procecemos a desactivar el antivirus temporalmente para demostrar que el ***Stager*** puede contectarse correctamente al ***Listener***.
 
 En la máquina ***Win 11*** vamos a ***Windows Security*** / ***Virus & threat protection settings*** y hacemos clic en ***Manage settings***.
 
 Desactivamos la protección en tiempo real, como se puede apreciar en la imagen.
 
 ![Real time protecction off](../img/lab-50-C/202209151021.png)
+
+Volvemos a pa ventana de ***PowerShell***, pulsamos la ***flecha de cursor arriba*** para recuperar el último comando y pulsamos ***Enter*** para volver a ejecutar el ***Stager***.
+
+En la máquina ***Kali*** podemos observar cómo se ha registrado un nuevo agente en el ***Listener***, y cómo se ha procedido a descargar en el agente el ***payload*** que permitirá controlarlo desde ***PowerShell Empire***.
+
+![Nuevo agente](../img/lab-50-C/202209151021.png)
+
+En la máquina de ***Kali***, escribimos el siguiente comando en la consola de ***PowerShell Empire*** (cliente).
+```
+agents
+```
+
+Podemos visualizar información sobre el ***agente*** que se ha conectado a ***PowerShell Empire***.
+
+![agente](../img/lab-50-C/202209151032.png)
+
+Para interactuar con un agente, escribimos lo siguiente.
+Nota: Cambia <Nombre_Agente> por el valor actual de ese agente.
+```
+interact <Nombre_Agente>
+```
+
+Las acciones que se pueden realizar contra la víctima son las que muestra la salida del comando.***help***.
+```
+help
+```
+
+y que podemos ver en esta captura.
+
+![help interact](../img/lab-50-C/202209151040.png)
+
+
+
+
+
+
+
 
 
 
