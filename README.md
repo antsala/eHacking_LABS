@@ -132,6 +132,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Hacer prueba de concepto con registro TXT.
    - Actualizar ***PowerShell Empire***.
    - Crear un ***Listener*** y un ***Stager***.
+   - Evadir al antivirus.
 
    
 

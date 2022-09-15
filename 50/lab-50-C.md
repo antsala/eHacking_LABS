@@ -320,6 +320,34 @@ Ahora levantamos un servidor web para servir el stager en el puerto ***9000***.
 python3 -m http.server 9000
 ```
 
+En una nueva terminal, ejecutamos el siguiente comando para determinar si se está sirviendo correctament el stager.
+```
+curl localhost:9000
+```
+
+Hasta el momento estamos trabajando en el entorno de laboratori donde víctima y atacante conviven. En el mundo real, esto no es así. De esta forma, vamos a mejorar el laboratorio simulando algo más real. 
+
+Ubicaremos el servidor que sirve el stager en Internet. Esto no es del todo cierto, el servidor seguirá siendo el que tenemos ***localhost:9000*** pero usaremos ***ngrok*** para publicar el servicio en Internet.
+```
+ngrok http 7000
+```
+
+Con esto hacemos visible en Internet nuestro servidor de staging.
+
+![ngrok forwarding](../img/lab-50-C/202209151255.png)
+
+Nota: La versión de comunidad de ngrok muestra un banner como el siguiente.
+
+![ngrok warning](../img/lab-50-C/202209151305.png)
+
+La idea es obligarte a subscribir el producto de pago, para que el forwarding funcione correctamente. Afortunadamente esto solo se produce en la primera conexión del navagedador. ***Ngrok*** registra la IP y para las siguientes peticiones hace ya el forwading directamente.
+
+Cuando vayamos a realizar el ataque, tendremos en cuenta esto y haremos una conexión inicial desde el navegador predeterminado de la victima para saltarnos esta restricción.
+
+
+
+
+
 
 
 
