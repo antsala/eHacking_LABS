@@ -84,6 +84,51 @@ Ya tenemos el cliente iniciado.
 
 ![Cliente iniciado](../img/lab-50-C/202209150925.png)
 
+Vamos a crear un ***listener*** que estará a la espera de las conexiones de la víctima, que en ***PowerShell Empire*** recibe el nombre de ***agente***.
+```
+uselistener http
+```
+
+Aparecerá la configuración del listener, Como podrás ver, hay campos obligatorios (***required***), otros que no lo son. También se presentas campos con valores por defecto.
+
+![Opciones del listener](../img/lab-50-C/202209150937.png)
+
+Si revisamos la configuración, no tenemos valor para el parámetro ***Port***, que es el puerto al que conectará el ***agente*** cuando éste se inicie en la víctima. Ponemos el valor 9876.
+```
+set Port 9876
+```
+
+![Puerto configurado](../img/lab-50-C/202209150942.png)
+
+Iniciamos el listener.
+```
+execute
+```
+
+El listener debe haberse iniciado.
+
+![Listener iniciado](../img/lab-50-C/202209150944.png)
+
+Vamos a usar un ***stager***, que como ya sabemos es el pequeño programa que realmente descargará en verdadero contenido malicioso en la víctima.
+
+Tenemos una gran cantidad de ***stagers*** a nuestra disposición.
+
+![stagers](../img/lab-50-C/202209150949.png)
+
+Elegimos ***multi/launcher***.
+```
+usestager multi/launcher
+```
+
+Al seleccionar un ***stager*** aparecen sus opciones.
+
+![Opciones del stager](../img/lab-50-C/202209150951.png)
+
+
+
+
+
+
 
 
 
