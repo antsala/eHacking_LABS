@@ -249,6 +249,90 @@ cat /var/lib/powershell-empire/server/downloads/6L8UBCX7/C:/Users/Antonio/Docume
 
 ![Listado de Tarjetas](../img/lab-50-C/202209151128.png)
 
+Volvemos a la terminal de ***PowerShell-Empire*** (Cliente)
+Nota: Si no estamos interactuando con el agente, usar el comando ***interact***
+
+***ACTIVIDAD***
+
+***PowerShell Empire*** está formado por una inmensa cantidad de módulos. Estudia esta URL: https://www.infosecmatter.com/empire-module-library/, curiosea y practica los módulos que sean de tu interés. 
+Nota: Puesto que el agente usa PowerShell, céntrate en esos módulos. Por ejemplo, podrías empezar por ***Shrelock*** para buscar vulnerabilidades que permitan escalar privilegios locales y observa el campo ***VulnStatus*** en la salida.
+
+## Evadir al antivirus.
+
+Procecemos a activar el antivirus para demostrar que esta técnica puede evadir la detección. 
+
+Activamos la protección en tiempo real, como se puede apreciar en la imagen.
+
+![Real time protecction on](../img/lab-50-C/202209151153.png)
+
+En la terminal de ***PowerShell*** deberías tener el stager iniciado. Lo paramos con ***CTRL+C***.
+
+En ***Kali*** debemos eliminar el agente que aún sigue registrado, aunque ya no funciona. Para ello usa los comandos ***back*** y ***agents***.
+
+![Agentes](../img/lab-50-C/202209151156.png)
+
+En ***PowerShell Empire*** (Cliente) ejecuta el siguiente comando para eliminar el agente y confirma la eliminación.
+```
+kill <Nombre_Agente>
+```
+
+![Eliminar Agente](../img/lab-50-C/202209151158.png)
+
+Para que la técnica de evasión funcione debemos dividir el ataque en dos partes.
+
+* *1*. Crear un registro TXT que use ***IEX*** y descargue el stager desde una ubicación accesible para la víctima, es decir, un servidor web. Nota: ***IEX*** es un alias del comando ***Invoke-Expression*** que permite que ***PowerShell*** ejecute un script.
+* *2*. Crear el servidor web que contendrá el código del ***Stager***.
+
+El ataque se producirá ejecutando en la víctima una shell de ***PowerShell*** de descargue el TXT y ejecute su contenido, como ya vimos al principio de este laboratorio.
+
+Procedemos a crear un servidor web que sirva una página web con el contenido del stager. Como es muy probable que lo hayamos perdido, vamos a regenerarlo.
+
+En la máquina ***Kali***, en la consola de ***PowerShell Empire*** (client), escribimos los  siguientes comandos.
+Nota: El puerto sigue configurado, por lo que no hay que ponerlo.
+```
+use Listener http
+```
+```
+usestager multi/launcher
+```
+```
+execute
+```
+
+Actualmente tenemos al ***Stager*** nuevamente copiado en el portapapeles.
+
+En una nueva terminal, creamos un un directorio de trabajo para montar el servidor web.
+```
+mkdir -p ~/webserver
+
+cd ~/webserver
+```
+
+Creamos con ***nano*** un archivo en ese directorio que contendrá el stager.
+```
+nano index.tml
+```
+
+En nano pegamos el stager, que debería seguir copiado en el portapapeles. A continuación guardamos y salimos (***CTRL+X***, ***Y*** y ***Enter***)
+
+Ahora levantamos un servidor web para servir el stager en el puerto ***9000***.
+```
+python3 -m http.server 9000
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
