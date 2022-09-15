@@ -134,6 +134,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Crear un ***Listener*** y un ***Stager***.
    - Evadir al antivirus.
 
+   TODO. La ultima parte (evadid al antivirus) no funciona. Dejar los tres primeros ejercicios.
+
    
 
 
