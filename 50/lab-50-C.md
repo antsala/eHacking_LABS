@@ -84,6 +84,9 @@ Ya tenemos el cliente iniciado.
 
 ![Cliente iniciado](../img/lab-50-C/202209150925.png)
 
+
+## Ejercicio 3: Crear un Listener y un Stager
+
 Vamos a crear un ***listener*** que estará a la espera de las conexiones de la víctima, que en ***PowerShell Empire*** recibe el nombre de ***agente***.
 ```
 uselistener http
@@ -120,26 +123,44 @@ Elegimos ***multi/launcher***.
 usestager multi/launcher
 ```
 
-Al seleccionar un ***stager*** aparecen sus opciones.
+Al seleccionar un ***stager*** aparecen sus opciones. Como puede observarse, el lenguaje en el que se generará es ***PowerShell***, sin embargo el campo ***Listener*** está vacío. Este campo se utiliza para indicar al ***Stager*** qué tipo de ***Listener*** se va a usar.
 
-![Opciones del stager](../img/lab-50-C/202209150951.png)
+![Opciones del stager](../img/lab-50-C/202209150952.png)
+
+Ponemos el tipo ***Listener***.
+```
+set Listener http
+```
+
+Ejecutamos para que se genere el ***Stager***.
+```
+execute
+```
+
+Como podemos observar en la siguiente imagen, se ha generado en ***PowerShell*** el código de nuestro ***Stager***.
+Nota: Observa en la última línea que aparece un mensaje indicando que se ha copiado al portapapeles. Esto es útil porque generalmente desearemos guardar el ***Stager*** en un archivo.
+
+![Código del Stager](../img/lab-50-C/202209151007.png)
+
+Procedemos a probar el ***Stager*** (que ahora mismo está copiado en el portapapeles). En la máquina ***Win 11***, en la terminal de ***PowerShell***, ***pegamos*** el portapapeles. En la imagen puedes ver el resultado.
+
+![Stager en la víctima](../img/lab-50-C/202209151014.png)
+
+Solo queda pulsar ***Enter*** para simular la ejecucion del ***Stager*** en la víctima.
+
+Como puedes ver, el antivirus ha hecho un buen trabajo detectando al ***Stager*** como malware.
+
+![Malware detectado](../img/lab-50-C/202209151016.png)
+
+
+Procecemos a desactivar el antivirus temporalmente para demostrar que el ***Stager*** puede contectarse correctamente al ***Listener.
+
+En la máquina ***Win 11*** vamos a ***Windows Security*** / ***Virus & threat protection settings*** y hacemos clic en ***Manage settings***.
+
+Desactivamos la protección en tiempo real, como se puede apreciar en la imagen.
+
+![Real time protecction off](../img/lab-50-C/202209151021.png)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Actualizar powershell empire en Kali.
