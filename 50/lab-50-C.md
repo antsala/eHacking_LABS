@@ -66,10 +66,29 @@ En la máquina ***Kali*** abrimos una terminal y ejecutamos el siguiente comando
 sudo apt install powershell-empire
 ```
 
-Cuando haya terminado la actualización 
+Cuando haya terminado la actualización iniciamos el servidor de ***PowerShell Empire***.
+```
+sudo powershell-empire server
+```
 
-TODO. 
-https://www.youtube.com/watch?v=Y3fi9pc81NY
+El servidor se inicia, como podemos ver en la siguiente imagen.
+
+![Server iniciado](../img/lab-50-C/2022091520921.png)
+
+Es es momento de iniciar el ***Cliente*** de ***PowerShell Empire***. En una nueva terminal, escribimos.
+```
+powershell-empire client
+```
+
+Ya tenemos el cliente iniciado.
+
+![Cliente iniciado](../img/lab-50-C/2022091520921.png)
+
+
+
+
+
+
 
 
 
