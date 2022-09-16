@@ -54,6 +54,33 @@ Debemos observar lo siguiente. En la máquina ***Win 11*** se abre un diálogo q
 
 ![Credenciales](../img/lab-06-A/202209162031.png)
 
-Deberías sospechar, porque ***\\\\ServidorNoExistente*** no existe en la red y en consecuencia, no te deberían preguntar por una autenticación.
+Deberías sospechar, porque ***\\\\ServidorNoExistente*** no existe en la red y en consecuencia, nunca te deberían preguntar por una autenticación. pero ¿por qué ocurre esto?
+
+La víctima intenta conectar con un recurso compartido, así que envía una resolución 
+DNS a su servidor. Éste responde que no encuentra el registro ***A***. 
+
+Como la resolución falla, la víctima intenta ahora resolver por ***LLMNR*** y aquí es donde entra ***Responder***, que contesta a la resolución de haciéndose pasar por el servidor ***SMB*** y solicitando la credencial.
+
+Nota: Si el recurso compartido existe y la víctima tiene configurado su servidor ***DNS***, entonces (la víctima) no tiene necesidad de hacer ***LLMNR***. En este escenario, se debe realizar un ataque previo de ***DNS Spoofing*** para que el servidor DNS falso indique que no conoce al host del recurso compartido.
+
+Seguimos en la máquina ***Win 11*** y procedemos a escribir la credencial. Supongamos que la víctima pone como usuario a.
+```
+felipe
+```
+ 
+y contraseña
+```
+Pa55w.rd
+```
+
+Observemos que es una contraseña ***débil*** que puede ser reventada por ***fuerza bruta***. Hacemos clic en el botón ***OK***.
+
+Obviamente dará un error, porque el servidor SMB no existe, pero el usuario escribe su credencial correctamente.
+
+En la máquina ***Kali*** podemos observar lo siguiente.
+
+
+
+
 
 
