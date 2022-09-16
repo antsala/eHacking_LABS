@@ -223,9 +223,9 @@ La sesión de ***meterpreter*** permanece activa muy poco tiempo, sobre todo si 
 
 Para que el ataque sea efectivo del todo, debemos migrar el proceso. Su finalidad es que cuando se haya abierto la sesión, automaticamente se migra el proceso del payload a otro proceso con el comando ***migrate***. De esta forma, si la víctima cierra o continúa con la instalación, ***Meterpreter*** estará corriendo en otro proceso diferente y no se verá afectado. A continuación, si se requiere, se continúa con la ***persistencia***, de manera que ***Meterpreter*** se conecte a su ***listener*** cada vez que la víctima enciende su equipo.
 
-Te preguntarás que tiene que decir ***Virus Total***, ¿no?.
+Te preguntarás qué tiene que decir ***Virus Total***, ¿no?.
 
-Si subes el archivo, el resultado es que solo lo detectaron ***5/63***.
+Si subes el archivo, el resultado es que solo lo detectaron ***5 de 63***.
 
 ![Virus Total 2](../img/lab-50-C/202209161446.png)
 
@@ -234,6 +234,7 @@ Y los afortunados fueron...
 ![Afortunados](../img/lab-50-C/202209161448.png)
 
 
+¿Sigues pensando que tu antivirus es perfecto? ;)
 
 
 
