@@ -70,10 +70,10 @@ felipe
  
 y contraseña
 ```
-Pa55w.rd
+12345
 ```
 
-Observemos que es una contraseña ***débil*** que puede ser reventada por ***fuerza bruta***. Hacemos clic en el botón ***OK***.
+Observemos que es una contraseña ***muy débil*** que puede ser reventada por ***fuerza bruta***. Hacemos clic en el botón ***OK***.
 
 Obviamente dará un error, porque el servidor SMB no existe, pero el usuario escribe su credencial correctamente.
 
@@ -83,6 +83,60 @@ En la máquina ***Kali*** podemos observar lo siguiente.
 
 El hash capturado, en color amarillo, y la versión del hash, en rojo.
 
+En la máquina ***Kali***, seleccionamos el hash capturado (señalado en amarillo) y lo copiamos al portapapeles.
+
+Abrimos otra terminal y en ella escribimos
+```
+nano hash.txt
+```
+
+Pegamos el hash y salimos de ***nano*** con ***CTRL+X***, ***Y*** y ***Enter***.
+
+Como el hash es irreversible, vamos a intentar reventarlo por medio de fuerza bruta. Para ello necesitamos un archivo con las contraseñas más utilizadas por los usuarios.
+Nota: Este hackeo solo funcionará si la contraseña es débil y existe en el diccionario.
+
+Como diccionario usaremos el que tráe ***Kali***. El la terminal escribimos.
+```
+cp /usr/share/wordlists/rockyou.txt.gz .
+```
+
+y lo descomprimimos.
+```
+gzip -d rockyou.txt.gz
+```
+
+Usamos la herramienta ***hashcat***, que sirve para reventar hashes por fuerza bruta. Para los hashes ***NTLM V2*** se debe usar el módulo ***5600***. Aquí https://hashcat.net/wiki/doku.php?id=example_hashes puede consultar la lista de los módulos.
+Nota: Es muy interesante que leas la salida de ***hashcat*** mientras trabaja.
+```
+hashcat -m 5600 hash.txt rockyou.txt
+```
+
+Con esta contraseña tan débil, a ***hashcat*** solo le lleva unos segundos reventarla.
+
+![Reventada](../img/lab-06-A/202209162112.png)
+
+
+Prueba a poner otras contraseñas, fallarán todas porque el servidor no existe, como bien sabes. ***Hashcat*** no vuelve a mostrar el hash, lo que hace el guardarlo en un archivo de log. En la terminal escribe.
+```
+ls -l /usr/share/responder/logs
+```
+
+Verás los logs. El que te interesa es el que almacena los hashes ***SMB-NTLMv2***.
+
+![logs](../img/lab-06-A/202209162116.png)
+
+Puedes ver las capturas con este comando.
+Nota: El nombre del archivo se toma usando la dirección de enlace local de IPv6 del servidor SMB cuyos hashes de ha capturado. Podría ser diferente en tu laboratorio.
+```
+cat /usr/share/responder/logs/SMB-NTLMv2-SSP-fe80::ddde:1f8c:ab07:306d.txt
+```
+
+Consideraciones sobre reventar el hash si la víctima usa contraseñas fuertes.
+
+* *1*. Usar diferentes diccionarios, con la esperanza de encontrarla en alguno de ellos. No es práctico en la realidad y no se suele hacer.
+* *2*. Usar modos avanzados en ***hashcat*** que permiten reducir es espacio de claves. Por ejemplo, indicando que la clave tiene solo caracteres, o caracteres y números y es de longitud corta (***8 caracteres máximo***). Esto requiere usar hardware de proceso avanzado como tarjetas gráficas de gama muy alta. Aquí https://hashcat.net/hashcat/ tienes el manual de la herramienta y aquí: https://www.youtube.com/watch?v=irQlWaH0LPQ un breve video de introducción al uso de la herramienta. Ten en cuenta que, si el password es complejo y la longitud de clave supera los 6 caracteres, no será posible reventarla en un ordenador convencional. Para ello debes usar las siguientes dos alternativas.
+* *3*. Usar ***Tablas arcoiris***. Aquí http://project-rainbowcrack.com/table.htm tienes las tablas del proyecto. Mira la sección ***NTLM*** hacia la mitad de la página web. 
+* *4*. Contratar un servicio "profesinal" en la ***Dark Web***, en el que proporcionas el hash y, previo pago, te devuelven el password o passwords asociados a dicho hash.
 
 
 
