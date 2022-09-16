@@ -79,6 +79,11 @@ Obviamente dará un error, porque el servidor SMB no existe, pero el usuario esc
 
 En la máquina ***Kali*** podemos observar lo siguiente.
 
+![Captura del hash](../img/lab-06-A/202209162051.png)
+
+El hash capturado, en color amarillo, y la versión del hash, en rojo.
+
+
 
 
 
