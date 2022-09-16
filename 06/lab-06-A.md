@@ -25,7 +25,7 @@ En la máquina ***Win 11*** abrimos el ***Explorador de Windows*** y en la barra
 
 En la imagen podemos comprobar el resultado.
 
-![Cannot Access](../img/lab-05-A/202209130933.png)
+![Cannot Access](../img/lab-06-A/202209162017.png)
 
 Vamos a ver como afecta el envenenamiento ***LLMMR*** que realiza ***Responder***.
 
