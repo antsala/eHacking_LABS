@@ -108,14 +108,18 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Descubrir vulnerabilidades con ***LanGuard***.
    - Descubrir vulnerabilidades web con ***Nikto***.
 
-## Carpeta 30
+## Carpeta 30. Ataques a máquinas Metasploitable
 
 1. Laboratorio 30-A: ***Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5***.
 2. Laboratorio 30-B: ***Explotar vulnerabilidad CVE-2014-6271 (Shellshock) presente en Apache***.
 3. Laboratorio 30-C: ***Aprovechar vulnerabilidad WebDAV***.
 4. Laboratorio 30-D: ***Escalado de privilegio explotando no_root_squash***.
 
-## Carpeta 50
+## Carpeta 40. Labs del cuaderno. 
+TODO. Por hacer.
+
+
+## Carpeta 50. Técnicas avanzadas.
 
 1. Laboratorio 50-A: ***Ofuscación de Powershell***. Los ejercicios a realizar son:
    - Crear un script de PowerShell que sondee los puertos.
@@ -128,14 +132,11 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Codificar el documento secreto y enviarlo.
    - Comprobar la exfiltración.
 
-3. Laboratorio 50-C: ***Ocultar IEX para evadir al antivirus***. Los ejercicios a realizar son:
-   - Hacer prueba de concepto con registro TXT.
-   - Actualizar ***PowerShell Empire***.
-   - Crear un ***Listener*** y un ***Stager***.
-   - Evadir al antivirus.
+3. Laboratorio 50-C: ***Evasión del antivirus usando Shelter***. Los ejercicios a realizar son:
+   - Instalación de ***Shelter*** en ***Kali Linux***.
+   - Inyectar malware evadiendo al antivirus.
 
-   TODO. La ultima parte (evadid al antivirus) no funciona. Dejar los tres primeros ejercicios.
-
+   
    
 
 
