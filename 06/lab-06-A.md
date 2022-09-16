@@ -54,6 +54,6 @@ Debemos observar lo siguiente. En la máquina ***Win 11*** se abre un diálogo q
 
 ![Credenciales](../img/lab-06-A/202209162031.png)
 
-Deberías sospechar, porque ***\\ServidorNoExistente*** no existe en la red y en consecuencia, no te deberían preguntar por una autenticación.
+Deberías sospechar, porque ***\\\\ServidorNoExistente*** no existe en la red y en consecuencia, no te deberían preguntar por una autenticación.
 
 
