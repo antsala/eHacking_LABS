@@ -10,7 +10,7 @@ Los antivirus de los sistemas operativos modernos, como ***Microsoft Defender***
 
 Por ello, acudimos a otros proyectos que suelen tener mejores resultados, al menos en este momento. Nos referimos a ***Shelter***, un generador de malware para Windows. Si necesitas más información puedes consultar el proyecto en GitHub: https://gitea.angry.im/PeterCxy/Shelter
 
-# Instalación de Shelter en Kali Linux.
+# Ejercicio 1: Instalación de Shelter en Kali Linux.
 
 Vamos a trabajar en la máquina ***Kali***.
 
@@ -43,7 +43,7 @@ Procedemos a instalar ***Shelter***. En la terminal escribimos.
 sudo apt install -y shellter
 ```
 
-# Inyectar malware evadiendo al antivirus.
+# Ejercicio 2: Inyectar malware evadiendo al antivirus.
 
 El objetivo es incrustar malware en archivos ejecutables que se suelan usar en la organización. Una vez generado este malware, lo colocaremos en el recurso compartido o repositorio de software, usando entonces la estrategia de ***Ataque de distribución***.
 

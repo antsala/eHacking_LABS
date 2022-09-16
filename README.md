@@ -93,7 +93,6 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 5. Laboratorio 04-E: ***Enumeración SMB/Samba***. Los ejercicios a realizar son:
    - Enumerar carpetas compartidas.
 
-
 ## Carpeta 05. Evaluación de vulnerabilidades.
 
 1. Laboratorio 05-A: ***Búsqueda de información sobre vulnerabilidades en Internet***
@@ -107,6 +106,13 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Descubrir vulnerabilidades con ***Nessus***.
    - Descubrir vulnerabilidades con ***LanGuard***.
    - Descubrir vulnerabilidades web con ***Nikto***.
+
+## Carpeta 06. Hacking
+
+1. Laboratorio 06-A: ***Usar Responder para robar hashes***
+   - Envenenamiento LLMNR/NBT por protocolo SMB.
+
+
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
 
