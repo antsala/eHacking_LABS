@@ -171,11 +171,11 @@ y como contraseña
 ```
 chewbacca
 ```
-![palpatine/chewbacca](../img/lab-06-A/202209162116.png)
+![palpatine/chewbacca](../img/lab-06-A/202209171136.png)
 
 En la máquina ***Kali*** podremos la captura del hash.
 
-![Hash captured](../img/lab-06-A/202209162116.png)
+![Hash captured](../img/lab-06-A/202209171141.png)
 
 Copiamos el hash. Creamos el archivo ***hash2.txt*** con el siguiente comando.
 ```
