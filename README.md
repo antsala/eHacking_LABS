@@ -121,6 +121,9 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Abrir una sesión de ***Meterpreter***.
    - Usar ***PowerShell Mafia*** para encontrar nuevas vulnerabilidades.
    - Levantar un servidor ***VNC*** en la víctima.
+   - Instalar  y usar ***Armitage***.
+
+
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
 
