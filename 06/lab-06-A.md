@@ -203,6 +203,53 @@ La mayoría de las configuraciones de fábrica de los navegadores usan la ***con
 
 Este ataque vendrá precedido de otro, generalmente de tipo ***phishing*** que provocará la conexión del navegador a una URL que no existe.
 
+## Forzar el modo de autenticación básica.
+
+Si la política de contraseñas de la organización es correcta, ***hashcat*** no podrá hacer demasiado y tendríamos que acudir a ***rainbow tables*** o a la ***Dark Web*** como ya hemos mencionado.
+
+No obstante las cosas se pueden poner muy feas para el ***Equipo Azul***. 
+
+En la máquina ***Kali*** detenemos a ***Responder*** con ***CTRL+C***.
+
+Volvemos a lanzarlo, pero esta vez, cuando se pida la credencial al usuario, vamos a obligar a que se transmita en ***Texto en claro***, es decir, usando la ***autenticación básica***. Para ello, en la terminal, escribimos.
+Nota: ***-b*** es autenticación básica, ***F*** la fuerza, ya que si existen las dos posibilidades (Básica e integrada) el navegador optará por la más segura y el hack no funcionará.
+```
+sudo responder -I eth0 -wdF -b
+```
+
+![Force basic auth](../img/lab-06-A/202209171207.png)
+
+En la máquina ***Win 11***, cerramos el navegador y lo volvemos a abrir. En la barra de dirección escribimos.
+```
+http://tampocoexiste.local
+```
+
+Aparecerá el diálogo de credencial. Observa como es el de autenticación básica.
+
+![basic auth](../img/lab-06-A/202209171211.png)
+
+Un escueto mensaje indica al usuario que la conexión no es segura. Podríamos discutir qué porcentaje de empleados de la organización saben interpretar correctamente lo que está ocurriendo, o cuántos ni siquieran advierte la presencia de dicho mensaje.
+
+Pon como usuario.
+```
+han
+```
+
+y por contraseña.
+Nota: Es "UsaLaFuerza", para los no iniciados.
+```
+Us4L4F53rz4
+```
+
+Verifica si puedes capturar la contraseña.
+
+![UsaLaFuerza](../img/lab-06-A/202209171217.png)
+
+
+
+
+
+
 ***ACTIVIDAD***
 
 Investiga en un escenario de ***Active Directory*** cómo se puede configurar los navegadores que se usen en la organización para que no configuren servidores proxy WPAD.

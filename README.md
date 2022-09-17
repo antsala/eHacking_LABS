@@ -110,7 +110,9 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 ## Carpeta 06. Hacking
 
 1. Laboratorio 06-A: ***Usar Responder para robar hashes***
-   - Envenenamiento LLMNR/NBT por protocolo SMB.
+   - Envenenamiento LLMNR/NBT por protocolo ***SMB***.
+   - Envenenamiento por medio de ***WAPD***.
+   - Forzar el modo de ***autenticación básica***.
 
 
 
