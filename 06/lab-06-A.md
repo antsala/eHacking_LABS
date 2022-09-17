@@ -135,11 +135,70 @@ Consideraciones sobre reventar el hash si la víctima usa contraseñas fuertes.
 
 * *1*. Usar diferentes diccionarios, con la esperanza de encontrarla en alguno de ellos. No es práctico en la realidad y no se suele hacer.
 * *2*. Usar modos avanzados en ***hashcat*** que permiten reducir es espacio de claves. Por ejemplo, indicando que la clave tiene solo caracteres, o caracteres y números y es de longitud corta (***8 caracteres máximo***). Esto requiere usar hardware de proceso avanzado como tarjetas gráficas de gama muy alta. Aquí https://hashcat.net/hashcat/ tienes el manual de la herramienta y aquí: https://www.youtube.com/watch?v=irQlWaH0LPQ un breve video de introducción al uso de la herramienta. Ten en cuenta que, si el password es complejo y la longitud de clave supera los 6 caracteres, no será posible reventarla en un ordenador convencional. Para ello debes usar las siguientes dos alternativas.
-* *3*. Usar ***Tablas arcoiris***. Aquí http://project-rainbowcrack.com/table.htm tienes las tablas del proyecto. Mira la sección ***NTLM*** hacia la mitad de la página web. 
-* *4*. Contratar un servicio "profesinal" en la ***Dark Web***, en el que proporcionas el hash y, previo pago, te devuelven el password o passwords asociados a dicho hash.
+* *3*. Usar ***Tablas arcoiris***. En http://project-rainbowcrack.com/table.htm tienes las tablas del proyecto. Mira la sección ***NTLM*** hacia la mitad de la página web. 
+* *4*. Contratar un servicio "profesional" en la ***Dark Web***, en el que proporcionas el hash y, previo pago, te devuelven el password o passwords asociados a dicho hash.
 
 
+## Envenenamiento por medio de WAPD.
+
+***Web Proxy Autodiscover Protocol*** es un método usado por el navegador para localizar y configurar automáticamente un proxy presente en la red.
+
+Normalmente las organizaciones no utilizan esta posibilidad y, en el caso de necesitar configurar un proxy en el navegador, suelen utilizar otras herramientas de configuración, como la ***GPO*** en entornos de dominio de ***Active Directory***.
+
+Pues bien, si existiera un servidor ***WPAD*** y la víctima escribe una URL errónea, su navegador fallará al cargar dicha página porque su servidor ***DNS*** no fue capaz de resolverla. Es entonces cuando Windows envía una petición ***LLMNR*** para localizar un servidor proxy, con la esperanza de que éste pueda servir correctamente la página. 
+
+***Responder*** usando envenenamiento ***LLMNR***, crea un servidor proxy ***WPAD*** falso, que envenena la petición y le dice al navegador que introduzca credenciales.
+
+El usuario verá un cuadro de diálogo de autenticación, escribirá un nombre de usuario y una contraseña que, al ser enviada, será interceptada por ***Responder*** capturando el hash.
+
+En la máquina ***Kali*** iniciamos ***Responder***
+como ***servidor proxy WPAD***, con el siguiente comando.
+```
+sudo responder -I eth0 -wd
+```
+
+En la máquina ***Win 11***, abrimos el navegador y conectamos con la URL siguiente.
+```
+http://noexiste.local/
+```
+
+El usuario ve el cuadro de diálogo de autenticación y escribe sus credenciales. Para este ejemplo podemos poner como usuario.
+```
+palpatine
+```
+
+y como contraseña
+```
+chewbacca
+```
+![palpatine/chewbacca](../img/lab-06-A/202209162116.png)
+
+En la máquina ***Kali*** podremos la captura del hash.
+
+![Hash captured](../img/lab-06-A/202209162116.png)
+
+Copiamos el hash. Creamos el archivo ***hash2.txt*** con el siguiente comando.
+```
+nano hash2.txt
+```
+
+Pegamos y guardamos ***CTRL+X***, ***Y*** y ***Enter***.
+
+Intentamos reventarlo con ***hashcat***.
+```
+hashcat -m 5600 hash2.txt rockyou.txt
+```
+
+Como podemos comprobar, si el diccionario contiene la contraseña, ***hashcat*** la encontrará.
+
+![Password Cracked](../img/lab-06-A/202209171151.png)
 
 
+La mayoría de las configuraciones de fábrica de los navegadores usan la ***configuración automática*** que provoca que se busque un servidor proxy ***WPAD*** si la URL no se encuentra.
 
+Este ataque vendrá precedido de otro, generalmente de tipo ***phishing*** que provocará la conexión del navegador a una URL que no existe.
 
+***ACTIVIDAD***
+
+Investiga en un escenario de ***Active Directory*** cómo se puede configurar los navegadores que se usen en la organización para que no configuren servidores proxy WPAD.
+Pista: Son configuraciones de GPO.
