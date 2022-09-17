@@ -157,6 +157,11 @@ como ***servidor proxy WPAD***, con el siguiente comando.
 sudo responder -I eth0 -wd
 ```
 
+En la imagen vemos como ***Responder*** levanta el servidor ***DHCP*** y el ***proxy WPAD***
+
+![servidores](../img/lab-06-A/202209162130.png)
+
+
 En la máquina ***Win 11***, abrimos el navegador y conectamos con la URL siguiente.
 ```
 http://noexiste.local/
