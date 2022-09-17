@@ -8,6 +8,7 @@ Requisitos:
 
 La herramienta localiza hashes e intenta reventarlas por fuerza bruta, por lo que es útil para detectar si en algún sistema hay una cuenta (normalmente local) con una contraseña débil.
 
+
 ## Ejercicio 1: Instalar y evaluar L0phtCrack.
 
 En la máquina ***Windows 7*** abrimos el navegador y escribimos la siguiente URL

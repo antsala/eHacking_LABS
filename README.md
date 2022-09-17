@@ -115,8 +115,12 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Forzar el modo de ***autenticación básica***.
 
 2. Laboratorio 06-B: ***Usar L0phtCrack para auditar la seguridad de credenciales.***
-   - Envenenamiento LLMNR/NBT por protocolo ***SMB***.
+   - Instalar y evaluar ***L0phtCrack***.
 
+3. Laboratorio 06-C: ***Usar ***Metasploit*** para levantar un servidor VNC en la víctima***
+   - Abrir una sesión de ***Meterpreter***.
+   - Usar ***PowerShell Mafia*** para encontrar nuevas vulnerabilidades.
+   - Levantar un servidor ***VNC*** en la víctima.
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
 
