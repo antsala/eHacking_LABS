@@ -169,7 +169,7 @@ Reinicia la máquina ***Win 11*** para eliminar el ataque y que quede operativa 
 Generalmente se usa ***Metasploit*** desde la línea de comandos. No obstante, a veces puede ser necesario levantar una interfaz gráfica que facilite la interacción con la víctima, sobre todo si son muchas.
 
 
-## Ejercicio 3: Instalar  y usar Armitage.
+## Ejercicio 3: Instalar y usar Armitage.
 
 En la máquina ***Kali*** abrimos una terminal y escribimos.
 ```
@@ -179,41 +179,35 @@ sudo apt-get update
 sudo apt-get install -y armitage
 ```
 
-***Armitage*** necesita una base de datos. La iniciamos.
+***Armitage*** usa ***Team Server*** que es un wrapper (intermediario) que pemite la comunicación con ***Metasploit***
 ```
-sudo service postgresql start
-```
-
-Iniciamos la base de datos de ***Metasploit***.
-Nota: Podría estar iniciada ya de un laboratorio previo, pero por si acaso.
-```
-sudo msfdb init
+sudo teamserver 192.168.20.9 Pa55w.rd
 ```
 
-Iniciamos ***Metasploit***.
-```
-sudo msfconsole
-```
+Cuando el servidor termina de iniciarse muestra la siguiente información que posteriormente debemos suministrar a ***Armitage*** para que se conecte.
 
-Iniciamos ***Armitage***.
+![connection data](../img/lab-06-C/202209171743.png)
+
+En una nueva terminal, iniciamos ***Armitage***.
 ```
 sudo armitage
 ```
 
-Aparecerá el cuadro de diálogo de conexión. Hacemos clic en ***Connect***.
+Aparecerá el cuadro de diálogo de conexión con el ***Team Server***. Escribimos los datos y hacemos clic en ***Connect***.
 
-![Connect](../img/lab-06-C/202209171611.png)
+![Connect](../img/lab-06-C/202209171612.png)
 
-***Armitage*** detecta que ***Metasploit*** no está iniciado, y pide permiso para iniciarlo. Respodemos ***Yes***.
+Al mensaje que muestra la huella del ***Team server***. Respodemos ***Yes***.
 
-![RPC](../img/lab-06-C/202209171614.png)
+Luego nos pregunta nuestro apodo. Escribimos el nuestro.
+
+![RPC](../img/lab-06-C/202209171615.png)
 
 ***Armitage*** también ofrece interfaz gráfica para ***Nmap***. Empecemos reconociendo la red.
 
 Ejecutar la opción ***Hosts/Nmap Scan/Intense Scan*** del menú.
 
 Como entrada poner el siguiente rango de red.
-Nota: Son las máquinas Metasploitables.
 ```
 192.168.20.0/24
 ```
@@ -225,6 +219,26 @@ Después del reconocimiento, se muestra un mensaje que nos invita a realizar los
 Puede tardar un rato hasta que ***Armitage*** detecta y muestra los hosts encontrados, tal y como se ve en la siguiente imagen.
 
 ![Hosts](../img/lab-06-C/202209171652.png)
+
+Ahora necesitamos recrear en la interfaz de ***Armitage*** el listener. Para ello desplegamos, en la estructura de carpetas que aparece a la izquierda, la siguente ruta: ***Payload/windows/meterpreter/reverse_tcp*** y hacemos doble clic en él. Se abrirá un formulario que debemos conformar como se muestra en la siguiente imagen.
+
+![Listener](../img/lab-06-C/202209171725.png)
+
+Hacemos clic en ***Launch***.
+Nota: A veces se producen ***timeouts***. Si fuera el caso repetir el procedimiento.
+
+Es el momento de regresar a la víctima. En la máquina ***Win 11***, en la carpeta ***Downloads*** debe estar nuestro "regalito". Lo ejecutamos.
+
+En ***Armitage*** podemos ver claramente que el equipo ha sido hackeado, como muestra la siguiente imagen.
+
+![Hacked](../img/lab-06-C/202209171758.png)
+
+Con botón derecho sobre el icono del equipo hackeado tenemos un menú mediante el cual podemos interactuar con la víctima.
+
+![Interact](../img/lab-06-C/202209171801.png)
+
+
+
 
 
 
