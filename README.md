@@ -95,12 +95,12 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 ## Carpeta 05. Evaluación de vulnerabilidades.
 
-1. Laboratorio 05-A: ***Búsqueda de información sobre vulnerabilidades en Internet***
+1. Laboratorio 05-A: ***Búsqueda de información sobre vulnerabilidades en Internet***. Los ejercicios a realizar son:
    - Búsqueda en ***Common Weakness Enumeration (CWE)***.
    - Búsqueda en ***Common Vulnerabilities and Exposures (CVE)***.
    - Búsqueda en ***National Vulnerability Database (NVD)***.
 
-2. Laboratorio 05-B: ***Herramientas de evaluación de vulnerabilidades***
+2. Laboratorio 05-B: ***Herramientas de evaluación de vulnerabilidades***. Los ejercicios a realizar son:
    - Instalar Open VAS.
    - Descubrir vulnerabilidades con ***Open VAS***.
    - Descubrir vulnerabilidades con ***Nessus***.
@@ -109,19 +109,24 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 ## Carpeta 06. Hacking
 
-1. Laboratorio 06-A: ***Usar Responder para robar hashes***
+1. Laboratorio 06-A: ***Usar Responder para robar hashes***. Los ejercicios a realizar son:
    - Envenenamiento LLMNR/NBT por protocolo ***SMB***.
    - Envenenamiento por medio de ***WAPD***.
    - Forzar el modo de ***autenticación básica***.
 
-2. Laboratorio 06-B: ***Usar L0phtCrack para auditar la seguridad de credenciales.***
+2. Laboratorio 06-B: ***Usar L0phtCrack para auditar la seguridad de credenciales.***. Los ejercicios a realizar son:
    - Instalar y evaluar ***L0phtCrack***.
 
-3. Laboratorio 06-C: ***Usar ***Metasploit*** para levantar un servidor VNC en la víctima***
+3. Laboratorio 06-C: ***Usar Metasploit para levantar un servidor VNC en la víctima***. Los ejercicios a realizar son:
    - Abrir una sesión de ***Meterpreter***.
    - Usar ***PowerShell Mafia*** para encontrar nuevas vulnerabilidades.
    - Levantar un servidor ***VNC*** en la víctima.
    - Instalar  y usar ***Armitage***.
+
+4. Laboratorio 06-D: ***Elevar privilegios en una sesión de meterpreter***. Los ejercicios a realizar son:
+   - Ganar una sesión de meterpreter.
+   - Escalar privilegios y robar los hashes.
+   - Crear un nuevo usuario local administrador.
 
 
 

@@ -237,12 +237,7 @@ Con botón derecho sobre el icono del equipo hackeado tenemos un menú mediante 
 
 ![Interact](../img/lab-06-C/202209171801.png)
 
-
-
-
-
-
-
+Con esto terminamos este laboratorio. Reinicia ***Win 11*** y cierra las terminales en ***Kali***.
 
 ***ACTIVIDADES***
 
