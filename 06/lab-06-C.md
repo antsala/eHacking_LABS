@@ -224,7 +224,7 @@ Después del reconocimiento, se muestra un mensaje que nos invita a realizar los
 
 Puede tardar un rato hasta que ***Armitage*** detecta y muestra los hosts encontrados, tal y como se ve en la siguiente imagen.
 
-![Hosts](../img/lab-06-C/202209171651.png)
+![Hosts](../img/lab-06-C/202209171652.png)
 
 
 
