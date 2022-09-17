@@ -203,6 +203,7 @@ La mayoría de las configuraciones de fábrica de los navegadores usan la ***con
 
 Este ataque vendrá precedido de otro, generalmente de tipo ***phishing*** que provocará la conexión del navegador a una URL que no existe.
 
+
 ## Forzar el modo de autenticación básica.
 
 Si la política de contraseñas de la organización es correcta, ***hashcat*** no podrá hacer demasiado y tendríamos que acudir a ***rainbow tables*** o a la ***Dark Web*** como ya hemos mencionado.
