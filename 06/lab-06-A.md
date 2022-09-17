@@ -139,7 +139,7 @@ Consideraciones sobre reventar el hash si la víctima usa contraseñas fuertes.
 * *4*. Contratar un servicio "profesional" en la ***Dark Web***, en el que proporcionas el hash y, previo pago, te devuelven el password o passwords asociados a dicho hash.
 
 
-## Envenenamiento por medio de WAPD.
+## Ejercicio 2: Envenenamiento por medio de WAPD.
 
 ***Web Proxy Autodiscover Protocol*** es un método usado por el navegador para localizar y configurar automáticamente un proxy presente en la red.
 
@@ -204,13 +204,13 @@ La mayoría de las configuraciones de fábrica de los navegadores usan la ***con
 Este ataque vendrá precedido de otro, generalmente de tipo ***phishing*** que provocará la conexión del navegador a una URL que no existe.
 
 
-## Forzar el modo de autenticación básica.
+## Ejercicio 3: Forzar el modo de autenticación básica.
 
 Si la política de contraseñas de la organización es correcta, ***hashcat*** no podrá hacer demasiado y tendríamos que acudir a ***rainbow tables*** o a la ***Dark Web*** como ya hemos mencionado.
 
 No obstante las cosas se pueden poner muy feas para el ***Equipo Azul***. 
 
-En la máquina ***Kali*** detenemos a ***Responder*** con ***CTRL+C***.
+En la máquina ***Kali*** detenemos ***Responder*** con ***CTRL+C***.
 
 Volvemos a lanzarlo, pero esta vez, cuando se pida la credencial al usuario, vamos a obligar a que se transmita en ***Texto en claro***, es decir, usando la ***autenticación básica***. Para ello, en la terminal, escribimos.
 Nota: ***-b*** es autenticación básica, ***F*** la fuerza, ya que si existen las dos posibilidades (Básica e integrada) el navegador optará por la más segura y el hack no funcionará.
@@ -245,10 +245,6 @@ Us4L4F53rz4
 Verifica si puedes capturar la contraseña.
 
 ![UsaLaFuerza](../img/lab-06-A/202209171217.png)
-
-
-
-
 
 
 ***ACTIVIDAD***

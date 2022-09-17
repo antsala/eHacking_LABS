@@ -114,6 +114,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Envenenamiento por medio de ***WAPD***.
    - Forzar el modo de ***autenticación básica***.
 
+2. Laboratorio 06-B: ***Usar L0phtCrack para auditar la seguridad de credenciales.***
+   - Envenenamiento LLMNR/NBT por protocolo ***SMB***.
 
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
