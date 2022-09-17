@@ -215,12 +215,19 @@ Ejecutar la opción ***Hosts/Nmap Scan/Intense Scan*** del menú.
 Como entrada poner el siguiente rango de red.
 Nota: Son las máquinas Metasploitables.
 ```
-192.168.20.12 192.168.20.14
+192.168.20.0/24
 ```
 
 Después del reconocimiento, se muestra un mensaje que nos invita a realizar los ataques.
 
 ![Attack](../img/lab-06-C/202209171622.png)
+
+Puede tardar un rato hasta que ***Armitage*** detecta y muestra los hosts encontrados, tal y como se ve en la siguiente imagen.
+
+![Hosts](../img/lab-06-C/202209171651.png)
+
+
+
 
 
 ***ACTIVIDADES***
