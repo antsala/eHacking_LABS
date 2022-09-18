@@ -58,6 +58,45 @@ Los últimos 6 dígitos de su dirección MAC ***090909*** lo hemos hecho coincid
 ![ipconfig Win 11](../img/lab-06-F/202209181328.png)
 
 
+Vamos a ver cómo funciona ARP en un contexto sin envenenamiento. Supongamos que la víctima ***Win 11*** quiere descargar algo de Internet. Eso implica dos cosas.
 
+* A nivel de ***IP***, el tráfico debe mandarse a su puerta de enlace, que es ***192.168.20.1***.
+* A nivel de trama, que es realmente lo que mueve los bits por la red, se necesita saber la dirección MAC de la ***puerta de enlace***.
+
+En la máquina ***Win 11*** en la terminal escribimos el siguiente comando, cuya finalidad es ***borrar*** la ***tabla ARP*** de la máquina.
+```
+arp -d
+```
+
+A continuación necesitamos enviar algún tipo de tráfico que pase por la puerta de enlace. El usuario se conectaría con el navegador a algun sitio. Es suficiente hacer un ping.
+```
+ping 8.8.8.8
+```
+
+Consultamos la tabla ARP.
+```
+arp -a
+```
+
+En la imagen podemos ver que para poder mandar tráfico a nivel de IP hacia la puerta de enlace, es necesario saber su dirección MAC. A partir de este instante, ***Win 11*** usará la MAC ***08-00-27-01-01-01*** cuando tenga que comunicarse con la puerta de enlace.
+
+![arp table Win 11](../img/lab-06-F/202209181337.png)
+
+Hacemos lo equivalente en el sentido contrario.
+
+En la máquina ***Router-ubu***, el la terminal escribimos para eliminar su ***tabla ARP***.
+```
+sudo arp -d localhost
+```
+
+Para simular el tráfico hacia ***Win 11*** y que se obtenga la dirección MAC de este, basta un simple ping.
+```
+ping 192.168.20.11 -c 4
+```
+
+Mostramos la ***tabla ARP*** de la puerta de enlace.
+```
+arp -a
+```
 
 
