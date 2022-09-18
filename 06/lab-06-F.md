@@ -363,4 +363,3 @@ Habilitar el reenvío IP con la excepción de que no se reenvíe al paquete si e
 
 Los ataques de ***DNS Spoofing*** son especialmente dañinos. ¿Sabes que existe una forma radical de eliminarlos?. Se trata de ***DNSEC***, que firma digitalmente la zona. Los clientes se configuran para verificar la firma digital de los registros de recursos consultados y, si no se verifica, por ejemplo por la presencia de un falso servidor DNS, el propio cliente rechaza la resolución y se produce un error. Mejor eso que poner las credenciales en una web falsa.
 
-
