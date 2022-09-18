@@ -350,7 +350,7 @@ En la máquina ***Kali*** podemos ver como ***dnsspoof*** captura la petición d
 
 ![dnsspoof intranet](../img/lab-06-F/202209182107.png)
 
-Esta es una prueba de concepto que puede (y debe ser mejorada), pero es más que suficiente para demostrar su finalidad. 
+Esta es una prueba de concepto puede (y debe ser mejorada), pero es más que suficiente para demostrar su finalidad. 
 
 Al haber deshabilitado el ***fordwading*** el hack funciona bien, pero si pruebas en ***Win 11***, la máquina no puede resolver otros registros DNS del dominio, ni enviar tráfico a ninguna dirección IP porque el reenvío está desabilitado. Para hacerlo "fino" deberíamos hacer lo siguiente.
 
