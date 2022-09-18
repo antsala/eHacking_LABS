@@ -99,4 +99,10 @@ Mostramos la ***tabla ARP*** de la puerta de enlace.
 arp -a
 ```
 
+En la imagen podemos ver que, desde el punto de vista de la puerta de enlace, cuando hay que mandar tráfico a ***192.168.20.11*** se usará la MAC ***08:00:27:11:11:11***.
+
+![arp table Router](../img/lab-06-F/202209181348.png)
+
+
+
 
