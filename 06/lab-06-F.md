@@ -44,9 +44,19 @@ En la máquina ***Win 11***, en una terminal de comandos, ejecutamos la instrucc
 ipconfig /all
 ```
 
-Podemos ver que también ocurre lo propio. Los últimos 6 dígitos de su dirección MAC ***111111*** lo hemos hecho coincidir con el último byte de su dirección IP ***192.18.20.***11***.
+Podemos ver que también ocurre lo propio. Los últimos 6 dígitos de su dirección MAC ***111111*** lo hemos hecho coincidir con el último byte de su dirección IP 192.18.20.***11***.
 
 ![ipconfig Win 11](../img/lab-06-F/202209181324.png)
+
+Por último, en la máquina ***Kali*** ejecutamos.
+```
+ifconfig
+```
+
+Los últimos 6 dígitos de su dirección MAC ***090909*** lo hemos hecho coincidir con el último byte de su dirección IP 192.18.20.***9***.
+
+![ipconfig Win 11](../img/lab-06-F/202209181328.png)
+
 
 
 
