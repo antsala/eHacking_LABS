@@ -354,12 +354,12 @@ Esta es una prueba de concepto puede (y debe ser mejorada), pero es más que suf
 
 Al haber deshabilitado el ***fordwading*** el hack funciona bien, pero si pruebas en ***Win 11***, la máquina no puede resolver otros registros DNS del dominio, ni enviar tráfico a ninguna dirección IP porque el reenvío está desabilitado. Para hacerlo "fino" deberíamos hacer lo siguiente.
 
-Habilitar el reenvío IP con la excepción de que no se reenvíe al paquete si el el destino es ***192.168.20.10*** y el puerto es el ***53***. No es dificil de hacer, pero require conocer a fondo ***IPTables***, y se sale del ámbito de esta prueba de concepto.
+Habilitar el reenvío IP con la excepción de que no se reenvíe al paquete si el destino es ***192.168.20.10*** y el puerto es el ***53***. No es dificil de hacer, pero require conocer a fondo ***IPTables***, y se sale del ámbito de esta prueba de concepto.
 
 ***ACTIVIDAD***
 
-¿Te animas a tocar IPTables en la máquina ***Kali*** para conseguir un DNS Spoofing correcto? 
+¿Te animas a tocar ***IPTables*** en la máquina ***Kali*** para conseguir un DNS Spoofing correcto? 
 
 
-Los ataques de ***DNS Spoofing*** son especialmente dañinos. ¿Sabes que existe una forma radical de eliminarlos?. Se trata de ***DNSEC***, que firma digitalmente la zona. Los clientes se configuran para verificar la firma digital de los registros de recursos consultados y, si no se verifica, por ejemplo por la presencia de un falso servidor DNS, el propio cliente rechaza la resolución y se produce un error. Mejor eso que poner las credenciales en una web falsa.
+Los ataques de ***DNS Spoofing*** son especialmente dañinos. ¿Sabes que existe una forma radical de eliminarlos? Se trata de ***DNSEC***, que firma digitalmente la zona. Los clientes se configuran para verificar la firma digital de los registros de recursos consultados y, si no se verifica, por ejemplo por la presencia de un falso servidor DNS, el propio cliente rechaza la resolución y se produce un error. Mejor eso que poner las credenciales en una web falsa.
 
