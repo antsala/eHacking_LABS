@@ -5,6 +5,7 @@ Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
 3. Máquina ***Windows 11***
+4. Máquina ***WS2022_DC_Server_Core***
 
 Cuando un Hacker se ha infiltrado en la organización y desea espiar el tráfico podemos pensar que no es posible por que los Switches de la red local no permiten que a un tercero le llegue tráfico dos dos entidades que se están comunicando a través de sendos puertos en sus respectivos switches.
 
@@ -172,11 +173,74 @@ De forma similar, en la imagen podemos ver que la  la máquina ***Win 11***, con
 
 ![arp 2](../img/lab-06-F/202209181804.png)
 
+En la máquina ***Win 11*** usa el navegador y conéctate a la página web de tu elección. Puedes comprobar que puedes navegar correctamente por Internet, pero el tráfico está pasando por ***Kali***.
 
+Para demostrarlo, vamos a quitar el ***fordwarding*** de la máquina ***Kali***. Eso debería provocar que ***Win 11*** no navegue.
 
+En ***Kali*** ejecuta los siguiente comandos en una nueva terminal.
+```
+sudo sysctl -w net.ipv4.ip_forward=0
+```
+```
+sudo sysctl -p
+```
 
+Vuelve a la máquina ***Win 11*** y verifica que no puedes navegar.
 
+Volvemos a habilitar el ***fordwarding***. 
 
+En ***Kali*** ejecuta los siguiente comandos en la terminal.
+```
+sudo sysctl -w net.ipv4.ip_forward=1
+```
+```
+sudo sysctl -p
+```
 
+Vuelve a la máquina ***Win 11*** y verifica que de nuevo puedes navegar.
+
+Nos podríamos preguntar por qué es necesario que ***arpspoof*** esté envenenando continuamente.
+Nota: Recordemos que tenemos dos terminales abiertas que continuan envenenando.
+
+Esto es así porque los registros almacenados en tabla ARP tienen una ***caducidad limitada***. Pasado un tiempo, que oscila entre 30 segundos y varios minutos, el sistema operativo del dispositivo en cuestión retira la entrada de la tabla. Si se necesita volver a mandar una trama a la misma dirección MAC, se produce una nueva resolución ARP.
+
+El problema que esto tendría para el ***MitM*** es que en ese caso, la estación de destino contestaría con su dirección MAC verdadera y, en consecuencia, el tráfico ya no pasará por Kali.
+
+Por esta razón, si envenenamos con la frecuencia apropiada, nunca se producirá la caducidad en la tabla ARP porque se está refrescando continuamente.
+
+La buena noticia para el ***equipo azul*** es que los ***IDS*** de red detectan muy facilmente el envenenamiento a comprobar que hay una cantidad muy inusual de tramas ARP que indican el cambio de MAC. 
+
+Paramos el envenenamiento pulsando ***CTRL+C*** en las dos terminales que ejecutan ***arpspoof***.
+
+Respecto al ***IP fordwarding*** lo dejamos habilitado para el siguiente ejercicio.
+
+## Ejercicio 2: Realizar un ataque de DNS spoofing.
+
+Un ataque de ***DNS spoofing*** viene precedido de un ataque MitM, de forma que el tráfico entre la víctima y su servidor DNS pasa por el atacante.
+
+En este ejercicio, necesitamos que la máquina ***Win 11*** inicie sesión en el dominio de Active Directory
+que proporciona ***WS2022_DC_Server_Core***.
+Nota: Puedes retomar una instantánea o volver a meter en el dominio a ***Win 11*** que actualmente debería estar en un grupo de trabajo.
+
+En ***Win 11*** iniciamos sesión con el usuario.
+```
+XYZ\lSkywalker
+```
+
+y password.
+```
+Pa55w.rd
+```
+
+Vamos a verificar que ***Win 11*** tiene configurado al ***Controlador de Dominio*** como ***servidor DNS**.
+
+Abrimos una terminal de comandos y escribimos.
+```
+ipconfig /all
+```
+
+En la imagen podemos comprobar como el servidor DNS configurado es el ***Controlador de Dominio***, con IP ***192.168.20.10***.
+
+![DNS Server](../img/lab-06-F/202209182015.png)
 
 
