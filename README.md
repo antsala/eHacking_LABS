@@ -134,6 +134,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Eliminar eventos de los logs de Windows.
    - Eliminar eventos de los logs de Linux.
 
+6. Laboratorio 06-F: ***Uso de la técnica de ARP Spoofing para ataques MitM*** . Los ejercicios a realizar son:
+   - MitM con ***arpspoof***.
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
 

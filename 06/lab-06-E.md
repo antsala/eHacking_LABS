@@ -94,6 +94,29 @@ Si el objetivo que pretende el actor de la amenaza termina siendo visible, por e
 
 ![eliminar todos los logs](../img/lab-06-E/202209181152.png)
 
+Podemos usar herramientas especializadas que facilitan la eliminación del rastro, como por ejemplo ***CCLeaner***, que elimina el rastro en archivos temporales, registro, etc.
+
+Abrimos el navegador y nos conectamos a la siguiente URL.
+```
+https://www.ccleaner.com/ccleaner/download/professional
+```
+
+Una vez descargada la demo, la instalamos y la ejecutamos. Seleccionamos la opción ***Health Check***.
+
+![CCleaner](../img/lab-06-E/202209181230.png)
+
+***CCleaner*** nos informa que ha encontrado multitud de artefactos que pueden ser eliminados sin afectar al Sistema Operativo.
+
+![Artifacts](../img/lab-06-E/202209181233.png)
+
+Es cuestión de aceptar las propuesta y que limpie el sistema.
+
+
+
+
+
+
+
 
 ## Ejercicio 3: Eliminar eventos de los logs de Linux.
 
@@ -103,6 +126,58 @@ En la máquina ***Kali*** abrimos una terminal de comandos y escribimos lo sigui
 ```
 history
 ```
+
+En la imagen aparecen los comandos ejecutados en el sistema.
+
+![history](../img/lab-06-E/202209181158.png)
+
+Para modificar el historial (e incluso borrarlo) editamos el archivo de historial y luego guardamos los cambios. Por ejemplo, elimina algunas líneas.
+Nota: ***mousepad*** es un editor de texto con soporte de ratón.
+```
+mousepad ~/.zsh_history
+```
+
+Si volvemos a mirar, ya no aparece en el historial.
+Nota: Tendrás que cerrar la terminal actual y abrir otra nueva, para observar el resultado
+```
+history
+```
+
+***Shred*** es una herramienta que borra la información de manera segura. Concretamente no borra el archivo, sino que sobreescribe los bloque en disco con información aleatoria. Aquí https://www.welivesecurity.com/la-es/2014/11/24/como-hacer-borrado-seguro-shred-linux/ tienes un link donde se explica su funcionamiento.
+
+En nuestro caso no nos interesa eliminar del todo el archivo, sino corromper la información que almacena. Ejecutamos el siguiente comando.
+```
+shred ~/.zsh_history
+```
+
+Cierra la terminal y abre otro nuevo. Escribe.
+```
+mousepad ~/.zsh_history
+```
+
+Cifrar el historial es una buena técnica para eliminar rastros, pero llama mucho la atención.
+
+Nota: El ejercicio que has realizado está basado en la shell ***zsh*** que es la que usa ***Kali***. Las acciones aquí realizadas pueden variar si la distribución de Linux es otra.
+
+***Linux*** se caracteriza por almacenar una cantidad de logs inmensa. El directorio ***/var/log*** suele ser el repositorio principal. En una terminal de comandos ejecutamos lo siguiente.
+Nota: Las aplicaciones que corren en el sistema también pueden almacenar sus eventos en archivos de log dentro de esta carpeta, como ***syslog***, o en los directorios de instalación y de usuario de la aplicación.
+```
+ls /var/log
+```
+
+Logs en la carpeta ***/var/log/***.
+
+![logs](../img/lab-06-E/202209181223.png)
+
+Los logs son archivos de texto y si tenemos los permisos apropiados podemos modificarlos (tamper), eliminarlos, etc.
+
+
+
+
+
+
+
+
 
 
 
