@@ -80,7 +80,7 @@ arp -a
 
 En la imagen podemos ver que para poder mandar tráfico a nivel de IP hacia la puerta de enlace, es necesario saber su dirección MAC. A partir de este instante, ***Win 11*** usará la MAC ***08-00-27-01-01-01*** cuando tenga que comunicarse con la puerta de enlace.
 
-![arp table Win 11](../img/lab-06-F/202209181337.png)
+![arp table Win 11](../img/lab-06-F/202209181338.png)
 
 Hacemos lo equivalente en el sentido contrario.
 
