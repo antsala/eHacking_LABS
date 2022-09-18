@@ -33,7 +33,21 @@ ifconfig
 
 En la imagen puedes ver sus interfaces de red.
 
-![ifconfig](../img/lab-06-F/202209181317.png)
+![ifconfig router](../img/lab-06-F/202209181317.png)
+
+***enp0s3*** es la interfaz interna que conecta con la red ***laboratorio***. ***enp0s8*** es la interfaz externa que nos permite salir a Internet. ***lo*** es el ***loopback***.
+
+Si nos fijamos en la interfaz interna, hemos hecho coincidir los últimos 6 dígitos de la dirección MAC ***010101***, con el último octedo de la IP que tiene asignada 192.168.0.***1***. Esto nos ayudará a detectar el envenenamiento como veremos en un momento.
+
+En la máquina ***Win 11***, en una terminal de comandos, ejecutamos la instrucción.
+```
+ipconfig /all
+```
+
+Podemos ver que también ocurre lo propio. Los últimos 6 dígitos de su dirección MAC ***111111*** lo hemos hecho coincidir con el último byte de su dirección IP ***192.18.20.***11***.
+
+![ipconfig Win 11](../img/lab-06-F/202209181324.png)
+
 
 
 
