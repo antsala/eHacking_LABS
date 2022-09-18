@@ -103,6 +103,10 @@ En la imagen podemos ver que, desde el punto de vista de la puerta de enlace, cu
 
 ![arp table Router](../img/lab-06-F/202209181348.png)
 
+Así funciona ***TCP/IP*** con ***ARP***.
+
+Vamos a proceder a realizar el ***envenenamiento ARP***.
+
 
 
 
