@@ -224,7 +224,7 @@ Nota: Puedes retomar una instantánea o volver a meter en el dominio a ***Win 11
 
 En ***Win 11*** iniciamos sesión con el usuario.
 ```
-XYZ\lSkywalker
+XYZ\administrator
 ```
 
 y password.
@@ -242,5 +242,117 @@ ipconfig /all
 En la imagen podemos comprobar como el servidor DNS configurado es el ***Controlador de Dominio***, con IP ***192.168.20.10***.
 
 ![DNS Server](../img/lab-06-F/202209182015.png)
+
+Vamos a usar la técnica de ***DNS Spoofing*** para conducir a la víctima a un servidor web que visualmente es idéntico al original, pero obviamente es otro. 
+
+La víctima pondrá en la URL de su navegador una dirección. Su sistema operativo intentará resolver la la IP. El ataque MitM capturará dicha petición y devolverá la IP que el actor de amenaza desea.
+
+Para simplificar la práctica, trabajaremos solo a nivel de IP. No será necesario desplegar los servidores Web.
+
+En ***Win 11*** abrimos la aplicación ***Server Manager***, mediante la cual vamos a dar de alta un registro DNS en el servidor.
+
+En la imagen puedes ver dónde está la consola del servidor DNS.
+Nota: El servidor DNS está en el controlador de Dominio. 
+
+![Server Manager](../img/lab-06-F/202209182023.png)
+
+Usamos ***Win 11*** para conectar de forma remota, Así que configuramos la conexión contra el DC.
+
+![Server 192.168.20.10](../img/lab-06-F/202209182028.png)
+
+Vamos a crear un registro de tipo ***A***. Abrimos la zona ***xyz.com*** y con botón derecho elegimos ***New Host (A or AAAA)...***.
+
+![Nuevo A](../img/lab-06-F/202209182031.png)
+
+Conformamos el formulario tal y como podemos ver en la siguiente imagen.
+
+![Intranet](../img/lab-06-F/202209182033.png)
+
+Hacemos clic en el botón ***Add Host***. Salimos haciendo clic en ***Done***. La siguiente imagen muestra que se ha creado un registro A llamado ***intranet*** que apunta a la IP ***192.168.20.101***.
+
+Cerramos la sesión del ***Administrator*** y abrimos una nueva con el usuario.
+```
+lSkywalker
+```
+
+y contraseña.
+```
+Pa55w.rd
+```
+
+En ***Win 11*** abrimos una terminal de comandos. En ella escribimos lo siguiente para vaciar el caché del resolvedor DNS.
+```
+ipconfig /flushdns
+```
+
+A continuación simulamos la conexión del usuario contra la página web ***intranet.xyz.com***. Una simple resolución DNS nos sirve para verificar que la IP a la que se conectará es la correcta.
+```
+nslookup intranet.xyz.com
+```
+
+![intranet](../img/lab-06-F/202209182040.png)
+
+Supongamos que el actor de la amenaza levanta un sitio web falso en una máquina hackeada de la organización, que tiene bajo su control. La dirección de esta es ***192.160.20.155***.
+
+El objetivo que pretendemos conseguir es que cuando la víctima desee resolver ***intranet.xyz.com***, la IP devuelta sea ***192.168.20.155*** en lugar de ***192.168.20.101***.
+
+El MitM debe producirse entre la víctima ***Win 11*** y ***WS2022_DC_Server_Core*** (que es el servidor DNS.)
+
+En la máquina de ***Kali***, abrimos una terminal y escribimos.
+```
+sudo arpspoof -i eth0 -t 192.168.20.11 192.168.20.10
+```
+
+y luego en el sentido inverso. En una nueva terminal ejecutamos.
+```
+sudo arpspoof -i eth0 -t 192.168.20.10 192.168.20.11
+```
+
+En ***Win 11*** puedes comprobar que la máquina navega perfectamente por Internet (o la red) local, porque el Mitm solo se aplica entre esta máquina y el Controlador de Dominio.
+
+Volviendo a ***Kali***, necesitamos una herramienta nueva que esté pendiente de verificar las consultas DNS, para interceptarlas y devolver la IP falsa.
+
+Primero debemos crear un fichero de texto que contenga los registros DNS a falsear. En una nueva terminal escribimos.
+```
+nano hosts.txt
+```
+
+Lo editamos hasta que quede como en la siguiente imagen y guardamos con ***CTRL+X***, ***Y*** y ***Enter***.
+
+![hosts.txt](../img/lab-06-F/202209182055.png)
+
+Hace falta una nueva herramienta que es la que lee el archivo ***hosts.txt*** y si detecta una petición de resolución DNS coincidente con alguna entrada, devuelve la IP que aparece en el archivo. En la terminal escribimos.
+```
+sudo dnsspoof -i eth0 -f hosts.txt
+```
+
+También debemos hacer lo siguiente, consistente en desactivar el ***forwarding IP***. De no hacerlo, el tráfico de resolución llegará al servidor DNS verdadero y eso no lo queremos. En una nueva terminal escribimos.
+```
+sudo sysctl -w net.ipv4.ip_forward=0
+```
+```
+sudo sysctl -p
+```
+
+En la máquina ***Win 11*** limpiamos el resolvedor y hacemos la resolución de nuevo. En la terminal escribimos.
+```
+ipconfig /flushdns
+```
+```
+nslookup intranet.xyz.com
+```
+
+En la imagen se puede observar que la IP resuelta es la falsa y el navegador conectará irremediablemente contra ***192.168.20.155***.
+
+![20.155](../img/lab-06-F/202209182105.png)
+
+En la máquina ***Kali*** podemos ver como ***dnsspoof*** captura la petición de resolución a ***intranet.xyz.com***.
+
+![dnsspoof intranet](../img/lab-06-F/202209182107.png)
+
+Esta es una prueba de concepto que puede (y debe ser mejorada), pero es más que suficiente para demostrar su finalidad. 
+
+Al haber deshabilitado el ***fordwading*** el hack funciona bien, pero si pruebas en ***Win 11***, la máquina no puede resolver
+
 
 
