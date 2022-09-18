@@ -129,6 +129,9 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Crear un nuevo usuario local administrador.
 
 
+5. Laboratorio 06-E: ***Ocultar el rastro y eliminación de pruebas*** . Los ejercicios a realizar son:
+   - ***Auditpol en Windows***.
+
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
 
