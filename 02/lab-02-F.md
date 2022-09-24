@@ -38,6 +38,8 @@ No obstante, para que aprendas a utilizar ***recon-ng*** realizaremos una peque�
 En este link: https://safetag.org/activities/automated_recon tienes un tutorial avanzado sobre la herramienta que te recomendamos hacer. Usa el dominio de tu interés.
 Nota: Algunas claves son necesarias para interactuar con servicios online que requieren autenticación y no es necesario pagar por ellas. En la parte final del tutorial anterior, se explica como obterner (y configurar) las claves para una serie de servicios muy interesantes, así que haz el tutorial hasta el final.
 
+***FIN ACTIVIDAD***
+
 ## Ejercicio 2: Maltego.
 
 ***Maltego*** es una de las mejores herramientas de reconocimiento. Utiliza una interfaz gráfica que permite relacionar la ***entidades*** o piezas de información que el actor de la amenaza está descubriendo sobre su víctima. 
@@ -106,7 +108,9 @@ En este link: https://github.com/i3visio/osrframework tienes el proyecto en GitH
 
 Usando las herramientas presentes en ***OSRFramework***, extrae toda la información que puedas del contacto técnico (registrado en ICAAN) del dominio de tu elección.
 
-##♫FOCA.
+***FIN ACTIVIDAD***
+
+## Ejercicio 4: FOCA.
 
 Reconocidísima herramienta de extracción de metadatos de documentos de Office, Open Office y PDFs, de ***ElevenPath***.
 
@@ -129,7 +133,9 @@ En este link: https://empresas.blogthinkbig.com/como-analizar-documentos-con-foc
 
 Aquí: https://github.com/ElevenPaths/FOCA tienes el repo del proyecto, por si quieres estudiarlo más a fondo.
 
-## Ejercicio 4: osintFramework
+***FIN ACTIVIDAD***
+
+## Ejercicio 5: osintFramework
 
 Este framework recopila la mayoría de las herramientas OSINT gratuitas existentes en Internet.
 
@@ -144,3 +150,4 @@ https://osintframework.com
 
 Invierte el tiempo que te indique el instructor e investiga las herramientas disponibles.
 
+***FIN ACTIVIDAD***

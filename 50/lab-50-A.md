@@ -158,9 +158,10 @@ En este ejemplo, solo ***6*** de ***59*** motores detectaron la amenaza. No cant
 
 Explora el resto de la herramienta ***Invoke-Obfuscation*** y determina el grado de acierto de los antivirus para los payloads que diseñes.
 
+***FIN ACTIVIDAD***
+
 ***ACTIVIDAD***
 
 Como administrador puedes tener la tentación de prohibir la ejecución de scripts de PowerShell en los equipos de los usuarios. Si bien es una medida muy drástica que cumple con la finalidad que buscamos, se pierde una gran parte de la administración moderna de los sistamas, que está basada en PowerShell. ¿Qué solución debería implementarse en la organización para minimizar el riesgo de la ejecución de scripts de PowerShell?
 
-
-
+***FIN ACTIVIDAD***

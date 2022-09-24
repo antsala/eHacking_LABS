@@ -332,9 +332,7 @@ Cuando haya terminado puedes interactuar con la herramienta para comprobar los r
 
 Aquí: https://www.youtube.com/watch?v=K6zF8pszgoo tienes un video de demostración donde se explica detalladamente las opciones del producto.
 
-
-
-
+***FIN ACTIVIDAD***
 
 ## Descubrir vulnerabilidades web con Nikto.
 
@@ -365,16 +363,4 @@ Cuando termine, el resultado mostrará las vulnerabilidades descubiertas.
 
 Aquí: https://www.youtube.com/watch?v=K78YOmbuT48 tienes un video tutorial de cómo usar ***nikto***.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+***FIN ACTIVIDAD***

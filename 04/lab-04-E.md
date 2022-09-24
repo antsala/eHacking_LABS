@@ -60,19 +60,4 @@ Nota: En el contexto del protocolo SMB (Grupos de Windows)
 
 Estudia e interpreta la información que ***enum4linux*** puede extraer de la máquina ***Metasploitable3-win2k8***. Una vez realizado, inicia sesión en ***Metasploitable3-win2k8***, comparte una carpeta y vuelve a usar ***enum4linux*** para observar los resultados.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+***FIN ACTIVIDAD***

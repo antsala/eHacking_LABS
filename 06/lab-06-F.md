@@ -350,7 +350,7 @@ En la máquina ***Kali*** podemos ver como ***dnsspoof*** captura la petición d
 
 ![dnsspoof intranet](../img/lab-06-F/202209182107.png)
 
-Esta es una prueba de concepto puede (y debe ser mejorada), pero es más que suficiente para demostrar su finalidad. 
+Esta es una prueba de concepto que puede (y debe ser mejorada), pero es más que suficiente para demostrar su finalidad. 
 
 Al haber deshabilitado el ***fordwading*** el hack funciona bien, pero si pruebas en ***Win 11***, la máquina no puede resolver otros registros DNS del dominio, ni enviar tráfico a ninguna dirección IP porque el reenvío está desabilitado. Para hacerlo "fino" deberíamos hacer lo siguiente.
 
@@ -362,6 +362,7 @@ En la máquina ***Kali*** hacemos ***CTRL+C*** en todas las terminales que ejecu
 
 ¿Te animas a tocar ***IPTables*** en la máquina ***Kali*** para conseguir un DNS Spoofing correcto? 
 
+***FIN ACTIVIDAD***
 
 Los ataques de ***DNS Spoofing*** son especialmente dañinos. ¿Sabes que existe una forma radical de eliminarlos? Se trata de ***DNSEC***, que firma digitalmente la zona. Los clientes se configuran para verificar la firma digital de los registros de recursos consultados y, si no se verifica, por ejemplo por la presencia de un falso servidor DNS, el propio cliente rechaza la resolución y se produce un error. Mejor eso que poner las credenciales en una web falsa.
 

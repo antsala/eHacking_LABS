@@ -114,6 +114,8 @@ Detenemos la captura de ***WireShark***. Como podrás comprobar, la ***IP de Ori
 
 ¿Serías capaz de sondear a la victima usando a la vez una combinación de las técnicas explicadas?. ¿Crees que tus IDSs son suficientemente buenos para detectar este reconocimiento?
 
+***FIN ACTIVIDAD***
+
 ## Ejercicio 3: Creación paquetes modificados por Hping3 para evadir el Firewall.
 
 Como venimos diciendo, existen inumerables herramientas que hacen lo que desamos tener. Además de ***nmap***, podemos usar, por ejemplo ***hping3*** para craftear los paquetes de sondeo.
@@ -154,6 +156,8 @@ Aunque ya hemos conocido a ***TOR***, y sabemos cuál el su misión, la anonimiz
 ***ACTIVIDAD***
 
 Lee este artículo: https://www.expressvpn.com/es/vpn-service/tor-vpn y determina cual es la mejor opción. Conectar con la VPN y luego con Tor o, viceversa.
+
+***FIN ACTIVIDAD***
 
 En este laboratorio vamos a instalar ***Proxy Switcher*** en la máquina ***Win11***. Esta herramienta es un cliente de VPN que permitirá navegar por Internet de forma anónima.
 Nota: La versión de evaluación tiene una duración de 15 días.

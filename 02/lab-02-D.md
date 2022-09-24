@@ -93,14 +93,16 @@ Nota: Es posible que no obtengas resultados. En esos casos se debe a que existe 
 
 En la web tenemos herramientas online que hacen prácticamente lo mismo, pero además, ofrecen información de marketing. Estas web son de pago y se suelen utilizar para obtener información comercial de un competidor.
 
+
+***ACTIVIDAD***
+
 Copia en tu navegador esta URL.
 ```
 https://linuxhint.com/top_20_webscraping_tools/
 ```
-
-***ACTIVIDAD***
-
 Lee el artículo y estudia las herramientas que creas apropiadas.
+
+***FIN ACTIVIDAD***
 
 ## Ejercicio 3: Clonar el sitio de la víctima con httrack.
 
@@ -144,6 +146,7 @@ El clonado de un sitio web, es una acción que forma parte de ciertos ataques de
 
 ¿Podrías crear un sitio web idéntico al de inicio de sesión en ***FaceBook***? Si tienes conocimientos en programación web, crea una función en javascript que responda al evento clic y envíe un una request de http al servidor web de tu elección.
 
+***FIN ACTIVIDAD***
 
 ## Ejercicio 4: Extraer información de calidad con CeWL.
 

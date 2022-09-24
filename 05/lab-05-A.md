@@ -41,6 +41,8 @@ Las herramientas de búsqueda de vulnerabilidades a menudo referencian los ***ID
 
 Dedica unos minutos a estudiar esta web. En función de tu perfil profesional estarás interesado en algún tema específico.
 
+***FIN ACTIVIDAD***
+
 ## Ejercicio 2: Búsqueda en Common Vulnerabilities and Exposures (CVE).
 
 En el navegador, conectamos a la siguiente URL.

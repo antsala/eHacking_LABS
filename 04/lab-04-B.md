@@ -88,7 +88,4 @@ De la salida anterior, localiza la siguiente información:
 * Aplicaciones instaladas.
 * Shares.
 
-
-
-
-
+***FIN ACTIVIDAD***

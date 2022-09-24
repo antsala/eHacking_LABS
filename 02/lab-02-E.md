@@ -113,6 +113,7 @@ Al hacer una búsqueda inversa, estamos resolviendo las IPs a nombres de dominio
 
 Usando las técnicas y herramientas descritas en este ejercicio, extrae toda la información DNS, IP y personal de la organización que estimes oportuna.
 
+***FIN ACTIVIDAD***
 
 ## Ejercicio 3: Reconocimiento por medio del protocolo ICMP
 
@@ -150,5 +151,5 @@ https://sourceforge.net/projects/openvisualtrace/
 
 Espera a que se descargue la app e instálala. Cuando la abras, traza la ruta al host de tu elección.
 
-
+***FIN ACTIVIDAD***
 

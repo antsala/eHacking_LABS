@@ -81,6 +81,8 @@ Enumera la siguiente información.
 * Controladores de dominio.
 * Zonas DNS que replica el bosque.
 
+***FIN ACTIVIDAD***
+
 ## Enumerar el dominio con ldapsearch.
 
 Por descontado que podemos hacer lo mismo con herramientas de línea de comandos. ***Kali Linux*** ofrece la herramienta ***ldapsearch***, que es un cliente de ***LDAP***.

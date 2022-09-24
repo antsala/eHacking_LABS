@@ -114,6 +114,8 @@ sudo nmap -O -Pn -v $METASPLOITABLE3_UB1404_IP
 
 Lee este artículo: https://nmap.org/man/es/man-os-detection.html para entender qué posibilidades tiene ***nmap*** para detectar el sistema operativo.
 
+***FIN ACTIVIDAD***
+
 Escaneamos un segmento de la red local.
 ```
 nmap -vv 192.168.20.10-15
@@ -172,6 +174,8 @@ En resumen, ***nmap*** es la herramienta de referencia para el fingerprintig en 
 
 Realiza footprinting con ***nmap*** y extrae toda la información posible de la máquina ***Metasploitable3-win2k8***.
 
+***FIN ACTIVIDAD***
+
 ## Ejercicio 2: Reconocimento usando otras herramientas.
 
 Herramientas de reconocimiento hay una infinidad, solo tenemos que hacer una búsqueda en Google. Además, las distribuciones de Ethical Hacking, como ***Kali Linux***, o ***Parrot*** las ofrecen.
@@ -187,7 +191,9 @@ Una vez descargado, instalamos la aplicación.
 
 ***ACTIVIDAD***
 
-Utiliza la herramienta ***MegaPing*** para extraer información de la red local del laboratorio ***192.168.20.0/24***. Evalua si ***nmap*** ofrece más y mejos información y, en consecuencia, determina qué herramienta es mejor.
+Utiliza la herramienta ***MegaPing*** para extraer información de la red local del laboratorio ***192.168.20.0/24***. Evalua si ***nmap*** ofrece más y mejor información y, en consecuencia, determina qué herramienta es mejor.
+
+***FIN ACTIVIDAD***
 
 Otra herramienta similar es ***NetScanTools Pro***, que podemos evaluar durante 30 días.
 
@@ -204,6 +210,8 @@ Utiliza la herramienta ***NetScanTools Pro*** para extraer información del obje
 Nota: Algunas herramientas interactúan de forma agresiva contra la víctima. Se presentará un disclaimer, léelo y no realices esa prueba en concreto.
 Nota: Puede aparecer un aviso del Firewall de Windows pidiendo permiso para abrir puertos de entrada. Puesto que la herramienta corre en una VM de laboratorio no debes preocuparte demasiado por ello.
 
+***FIN ACTIVIDAD***
+
 ***hping3*** es una herramienta de línea de comandos similar a ***ping***, que puede usar protocolos diferentes al ***ICMP*** para sondear los hosts y, de esta forma, determinar si el host está arriba o no, independientemente de que su firewall no responda a los pings ICMP. Soporta ***TCP***, ***UDP***, ***ICMP*** y ***RAW-IP***. Como curiosidad debes saber que esta herramienta también puede realizar ataques DoS contra el target. De esta forma, puedes evaluar el buen comportamiento y respuesta de tus contramedidas (***Firewall*** e ***IDS***)
 
 Nota Legal: Como ***hping3*** es considerada una herramienta de ataque, solo debes usarla en el entorno de máquinas virtuales de laboratorio y nunca contra hosts o redes reales.
@@ -216,6 +224,8 @@ En una terminal de la máquina ***Kali*** escribimos:
 ```
 hping3 --help
 ```
+
+***FIN ACTIVIDAD***
 
 ## Ejercicio 3: Visualizar la topología de la red.
 
@@ -241,6 +251,7 @@ Cuando haya terminado el escaneo hacemos clic en el botón ***Topology***.
 
 Práctica con la topología de ***Zenmap*** y comprobarás lo fácil que resulta entender la arquitectura de la red. La herramienta ofrece la posibilidad de exportar (guardar) los gráficos que generemos.
 
+***FIN ACTIVIDAD***
 
 ## Ejercicio 4: Reconocimiento usando Metasploit.
 
@@ -460,8 +471,4 @@ Si estudiamos la salida, localizaremos información muy importante. Se trata de 
 
 Como habrás comprobado, ***192.168.20.13*** tiene otros puertos abiertos. Te propongo que localices los módulos auxiliares que interactuen con esos servicios. A ver que información adicional obtienes de cada uno de ellos.
 
-
-
-
-
-
+***FIN ACTIVIDAD***

@@ -251,3 +251,5 @@ Verifica si puedes capturar la contraseña.
 
 Investiga en un escenario de ***Active Directory*** cómo se puede configurar los navegadores que se usen en la organización para que no configuren servidores proxy WPAD.
 Pista: Son configuraciones de GPO.
+
+***FIN ACTIVIDAD***

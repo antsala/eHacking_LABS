@@ -60,6 +60,8 @@ Los modificadores de búsqueda son muy variopintos. En este link: https://antoni
 
 Practica y adapta algunos de los ejemplos propuestos en el link, para localizar información exfiltrada en los sitios de tu interés.
 
+***FIN ACTIVIDAD***
+
 ## Ejercicio 2: Extraer información de un video.
 
 En esta etapa de reconocimiento, es muy común usar videos corporativos para extraer información sobre el objetivo.
@@ -91,3 +93,5 @@ Shodan es un buscador especializado en encontrar estos tipos de dispositivos. Su
 ***ACTIVIDAD***
 
 ¿Tienes algún dispositivo domótico? ¿Termostatos, luces, etc...? Intenta localizar información sobre ellos desde el punto de vista del reconocimiento.
+
+***FIN ACTIVIDAD***
