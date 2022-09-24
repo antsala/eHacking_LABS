@@ -356,10 +356,62 @@ Al haber deshabilitado el ***fordwading*** el hack funciona bien, pero si prueba
 
 Habilitar el reenvío IP con la excepción de que no se reenvíe al paquete si el destino es ***192.168.20.10*** y el puerto es el ***53***. No es dificil de hacer, pero require conocer a fondo ***IPTables***, y se sale del ámbito de esta prueba de concepto.
 
+En la máquina ***Kali*** hacemos ***CTRL+C*** en todas las terminales que ejecutan ***arpspoof***.
+
 ***ACTIVIDAD***
 
 ¿Te animas a tocar ***IPTables*** en la máquina ***Kali*** para conseguir un DNS Spoofing correcto? 
 
 
 Los ataques de ***DNS Spoofing*** son especialmente dañinos. ¿Sabes que existe una forma radical de eliminarlos? Se trata de ***DNSEC***, que firma digitalmente la zona. Los clientes se configuran para verificar la firma digital de los registros de recursos consultados y, si no se verifica, por ejemplo por la presencia de un falso servidor DNS, el propio cliente rechaza la resolución y se produce un error. Mejor eso que poner las credenciales en una web falsa.
+
+
+## Ejercicio 3: Ataque a comunicaciones HTTPS por medio de SSL Striping.
+
+Las comunicaciones entre un usuario y una aplicación web (de intranet o Internet) se realizan por medio del uso del Protocolo de HiperTexto Seguro o ***HTTPS*** que requiere la creación de un canal ***TLS*** (o SSL) previo.
+
+Aunque a lo largo de la historia, algunas implementaciones del protocolo ***SSL*** han presentado vulnerabilidades terribles surante años (véase ***OpenSSL*** y ***HeartBleed***: https://www.incibe-cert.es/alerta-temprana/bitacora-ciberseguridad/vulnerabilidad-heartbleed), seguimos considerando a ***TLS*** un protocolo muy seguro e indescifrable.
+
+Por lo tanto, si queremos espiar el tráfico entre la víctima y un sitio web, tenemos que conseguir que la víctima no use el protocolo ***HTTPS*** y por consiguiente use la versión no segura del mismo: ***HTTP***.
+
+En primer lugar vamos a configurar un ataque ***MitM*** entre la víctima (***Win 11***) y su puerta de enlace (***Router-ubu***), pero en lugar de hacerlo como se hizo el primer ejercicio de este laboratorio, usaremos una herramienta que lo automatiza, y además captura el tráfico en un archivo. Se llama ***ettercap***, que viene instalada en ***Kali***.
+
+Para que ***ettercap*** pueda enviar las tramas envenenadas a la red, debe tener permisos de ***root***. Debemos editar su archivo de configuración y realizar un par de cambios.
+
+En la máquina ***Kali***, en una terminal, escribimos.
+```
+sudo nano /etc/ettercap/etter.conf
+```
+
+La imagen señala el id de usuario grupo con el que se ejecutará ***etercap***, que como puedes ver es el ***65534***.
+
+![Ettercap id usuario nobody](../img/lab-06-F/202209241054.png)
+
+Debemos cambiar esos valores por ***0***, que representa a ***root***. El resultado debe ser el que indica la siguiente imagen.
+
+![Ettercap id usuario root](../img/lab-06-F/202209241058.png)
+
+
+
+
+
+Habilitamos el ***IP forwarding*** en ***Kali***, abrimos una terminal y escribimos.
+```
+sudo sysctl -w net.ipv4.ip_forward=1
+```
+```
+sudo sysctl -p
+```
+
+Envenenamos a la víctima. En la terminal escribimos.
+```
+sudo arpspoof -i eth0 -t 192.168.20.11 192.168.20.1
+```
+
+Envenenamos a la puerta de enlace. En una nueva terminal, escribimos.
+```
+sudo arpspoof -i eth0 -t 192.168.20.1 192.168.20.11
+```
+
+En este momento tenemos el ***MitM*** desplegado y todo el tráfico pasa por ***Kali***.
 
