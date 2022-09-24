@@ -367,55 +367,17 @@ En la máquina ***Kali*** hacemos ***CTRL+C*** en todas las terminales que ejecu
 Los ataques de ***DNS Spoofing*** son especialmente dañinos. ¿Sabes que existe una forma radical de eliminarlos? Se trata de ***DNSEC***, que firma digitalmente la zona. Los clientes se configuran para verificar la firma digital de los registros de recursos consultados y, si no se verifica, por ejemplo por la presencia de un falso servidor DNS, el propio cliente rechaza la resolución y se produce un error. Mejor eso que poner las credenciales en una web falsa.
 
 
-## Ejercicio 3: Ataque a comunicaciones HTTPS por medio de SSL Striping.
+## Ejercicio 3: Ataque a comunicaciones HTTPS por medio de MITMf Framework
 
 Las comunicaciones entre un usuario y una aplicación web (de intranet o Internet) se realizan por medio del uso del Protocolo de HiperTexto Seguro o ***HTTPS*** que requiere la creación de un canal ***TLS*** (o SSL) previo.
 
 Aunque a lo largo de la historia, algunas implementaciones del protocolo ***SSL*** han presentado vulnerabilidades terribles surante años (véase ***OpenSSL*** y ***HeartBleed***: https://www.incibe-cert.es/alerta-temprana/bitacora-ciberseguridad/vulnerabilidad-heartbleed), seguimos considerando a ***TLS*** un protocolo muy seguro e indescifrable.
 
-Por lo tanto, si queremos espiar el tráfico entre la víctima y un sitio web, tenemos que conseguir que la víctima no use el protocolo ***HTTPS*** y por consiguiente use la versión no segura del mismo: ***HTTP***.
+Hablar de sslstrip
 
-En primer lugar vamos a configurar un ataque ***MitM*** entre la víctima (***Win 11***) y su puerta de enlace (***Router-ubu***), pero en lugar de hacerlo como se hizo el primer ejercicio de este laboratorio, usaremos una herramienta que lo automatiza, y además captura el tráfico en un archivo. Se llama ***ettercap***, que viene instalada en ***Kali***.
+hablar de STS: https://www.magonlinelibrary.com/doi/full/10.12968/S1353-4858%2822%2970028-1
 
-Para que ***ettercap*** pueda enviar las tramas envenenadas a la red, debe tener permisos de ***root***. Debemos editar su archivo de configuración y realizar un par de cambios.
+https://hstspreload.org/?domain=www.facebook.com
 
-En la máquina ***Kali***, en una terminal, escribimos.
-```
-sudo nano /etc/ettercap/etter.conf
-```
-
-La imagen señala el id de usuario grupo con el que se ejecutará ***etercap***, que como puedes ver es el ***65534***.
-
-![Ettercap id usuario nobody](../img/lab-06-F/202209241054.png)
-
-Debemos cambiar esos valores por ***0***, que representa a ***root***. El resultado debe ser el que indica la siguiente imagen.
-
-![Ettercap id usuario root](../img/lab-06-F/202209241058.png)
-
-Aún tenemos que hacer otro cambio, que consiste en configurar el firewall de Linux por medio de ***IP Tables***. En ***nano*** pulsar ***CTRL+W***, que habilitará la búsqueda. Escribimos lo siguientey pulsamos ***Enter***.
-Nota: Debemos buscar en la sección ***Linux***.
-```
-#redir_command_on
-```
-
-Debemos ***retirar*** el carácter de comentario ***#*** para que la línea sea leída por ***ettercap*** y configure el firewall. 
-
-![Ettercap quitar #](../img/lab-06-F/202209241115.png)
-
-Salimos de ***nano*** con ***CTRL+X***, ***Y*** y ***Enter***.
-
-Seguimos en la máquina ***Kali***. También tenemos que habilitar el ***IP forwarding*** en ***Kali***, en la terminal escribimos.
-```
-sudo sysctl -w net.ipv4.ip_forward=1
-```
-```
-sudo sysctl -p
-```
-
-Hacemos el MitM con ***ettercap***. En la terminal escribimos.
-Nota: ***-T*** usamos interfaz de texto, no GUI. ***-i eth0*** tarjeta de red que enviará las tramas arp envenenadas. ***-M arp:remote*** queremos hacer un MitM. ***/192.168.20.1//  /192.168.20.11//*** se captura todo el tráfico entre Win11 y la puerta de enlace. ***> ssloutput.txt*** la captura se guarda en este archivo.
-```
-ettercap -T -i eth0 -M arp:remote /192.168.20.1// 192.168.20.11// > ssloutput.txt
-```
-
+https://www.youtube.com/watch?v=YTrBSw-m0T8
 
