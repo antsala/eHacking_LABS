@@ -51,13 +51,11 @@ sudo apt install maltego
 
 para ejecutar la herramienta, escribimos en la termina lo siguiente.
 ```
-maltego
+sudo apt install maltego
 ```
 
 Se iniciará la interfaz gráfica y como verás, solo podemos usar la parte gratuita de la aplicación, que es más que suficiente para evaluar su funcionalidad. Hacemos clic en ***Maltego CE (Free)***, que es la versión de comunidad.
 Nota: Tendrás que registrarte.
-
-En este link: https://static.maltego.com/cdn/Handbooks/Maltego-Handbook-for-Cyber-Threat-Intelligence.pdf tienes un tutorial para aprender a usar Maltego. Una vez que lo realices dependerá de ti seguir investigando la herramienta.
 
 Aquí: https://static.maltego.com/cdn/Handbooks/Maltego-Handbook-for-Cyber-Threat-Intelligence.pdf tienes un documento para que veas como se puede usar Maltego de forma profesional para realizar labores de Ethical Hacking. Te recomendamos su lectura.
 
@@ -65,7 +63,7 @@ Aquí: https://static.maltego.com/cdn/Handbooks/Maltego-Handbook-for-Cyber-Threa
 
 ***OSRFramework*** es un framework open source escrito en Python que se encarga de examinar perfiles de usuario. El framework contiene diferentes modulos:
 
-* *usufy.py* verifica si el nombre de usuario existe en 306 plataformas diferentes.
+* *usufy.py* verifica si el nombre de usuario existe en 216 plataformas diferentes.
 * *mailfy.py* comprueba si el nombre de usuario ha sido registrado en hasta 22 proveedores de email diferentes.
 * *searchfy.py* comprueba perfiles mediante Nombres Completos en 7  plataformas.
 * *phonefy.py* comprueba si el número de teléfono se ha reportado/ enlazado con prácticas de spam.

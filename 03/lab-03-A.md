@@ -19,7 +19,7 @@ En este laboratorio aprenderemos a usar algunas herramientas entre la miríada d
 
 ***zenmap*** es el frontend gráfico para ***nmap***. Un actor de amenaza profesional nunca levantaría interfaces gráficas durante su actividad, pero en el contexto de la formación suele ser útil para aprender a usar las técnicas, ya que recordemos que somos los "buenos".
 
-Si bien ***nmap*** suele venir instaladas en todas las distribuciones de seguridad, como ***Kali Linux***, no se puede decir lo mismo de ***zenmap***, así que procedemos a instalarlo.
+Si bien ***nmap*** suele venir instalada en todas las distribuciones de seguridad, como ***Kali Linux***, no se puede decir lo mismo de ***zenmap***, así que procedemos a instalarlo.
 
 En la maquina ***Kali*** ejecutamos el siguiente comando en la terminal.
 ```
@@ -91,7 +91,7 @@ Sondear los X puertos más comunes.
 nmap --top-ports 20 $METASPLOITABLE3_UB1404_IP
 ```
 
-Como verás, la salida de los puertos puede ser variada, aunque habitualmente la vverás como ***open*** o ***filtered***. Lee este link: https://nmap.org/man/es/man-port-scanning-basics.html para conocer la diferencia.Es muy importante que la conozcas.
+Como verás, la salida de los puertos puede ser variada, aunque habitualmente la verás como ***open*** o ***filtered***. Lee este link: https://nmap.org/man/es/man-port-scanning-basics.html para conocer la diferencia. Es muy importante que la conozcas.
 
 Procedamos a descubrir las versiones de los servicios remotos. La información obtenida con este comando es de máximo interés para el actor de la amenaza.
 ```
