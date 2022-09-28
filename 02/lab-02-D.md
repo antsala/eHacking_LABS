@@ -150,7 +150,7 @@ El clonado de un sitio web, es una acción que forma parte de ciertos ataques de
 
 ## Ejercicio 4: Extraer información de calidad con CeWL.
 
-***CeWL*** es una aplicación escrita en en ***Ruby*** que rastrea una URL buscando palabrar que puedan ser valiosas para el actor de la amenaza, como contraseñas.
+***CeWL*** es una aplicación escrita en en ***Ruby*** que rastrea una URL buscando palabras que puedan ser valiosas para el actor de la amenaza, como contraseñas.
 
 Esta herramienta se encuentra instalada en la distribución ***Kali***. Su funcionamiento es muy sencillo. En una terminal de ***Kali***, lanza ***CeWL*** contra el sitio de tu interés.
 ```
