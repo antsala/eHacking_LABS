@@ -96,7 +96,7 @@ Detenemos ***WireSharsk***. Es resultado es muy parecido a uso del parámetro **
 
 ![Fragmentación mtu](../img/lab-03-B/202209061208.png)
 
-La técnica de ***señuelo***, consiste en en generar una serie de IPs aleatorias (señuelos) en la cabecera de los diferentes paquetes TCP. Su finalidad es que las acciones preventivas que realizará el IDS, se aplique a un dispositivo de red que no es quien realmente está sondeando.
+La técnica de ***señuelo***, consiste en generar una serie de IPs aleatorias (señuelos) en la cabecera de los diferentes paquetes TCP. Su finalidad es que las acciones preventivas que realizará el IDS, se aplique a un dispositivo de red que no es quien realmente está sondeando.
 
 Iniciamos de nuevo la captura con ***WireShark***.
 
