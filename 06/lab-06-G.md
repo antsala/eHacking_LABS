@@ -46,47 +46,15 @@ Pa55w.rd
 
 Vamos a instalar e rol ***DHCP*** en el servidor ***WS2022_DC_Server_Core*** de usando ***PowerShell*** remoto desde ***Win 11***.
 
-En la máquina ***Win 11*** abrimos una terminal de ***PowerShell***, escribimos el siguiente comando.
+En la máquina ***Win 11*** abrimos una terminal de 
+PowerShell y procedemos a descargar un script desde ***GitHub***. Escribimos el siguiente comando.
+
+Nota: Este script instalará el rol ***DHCP*** en el Controlador de Dominio.
 ```
-$cred = Get-Credential
+Invoke-WebRequest -Uri https://github.com/antsala/eHacking_LABS/blob/main/06/DeployDHCP.ps1 -OutFile DeployDHCP.ps1
 ```
 
-Como usuario ponemos.
-```
-xyz\administrator
-```
-
-Y como password.
-```
-Pa55w.rd
-```
-
-Procedemos a crear una sesión remota de ***PowerShell*** contra el controlador de dominio. En la terminal, escribimos.
-```
-$session = New-PSSession -ComputerName xyz-dc1 -Credential $cred
-```
-
-Entramos en la sesión remota con el siguiente comando.
-```
-$session = New-PSSession -ComputerName xyz-dc1 -Credential $cred
-```
-
-Instalamos el rol ***DHCP***. Escribimos en la terminal el siguiente comando.
-```
-Install-WindowsFeature -Name DHCP
-
-
-```
-Install-WindowsFeature -Name DHCP -computerName xyz-dc1
-```
-
-Autorizamos al servido DCHP en Active Directory.
-```
-Add-DhcpServerInDC -
-
-
-
-
+Ejecutamos el script. Perirá credenciales.
 
 
 
