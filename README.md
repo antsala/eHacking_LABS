@@ -139,6 +139,11 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Realizar un ataque de ***DNS spoofing***.
    - Ataque a comunicaciones HTTPS por medio de ***MITMf Framework***.
 
+7. Laboratorio 06-G: ***Evaluar la fortaleza de la red frente a ataques en la capa 2***. Los ejercicios a realizar son:
+   - Instalar el rol ***DHCP*** en Windows Server 2022.
+   - Usar ***Yersinia*** para denegar servicios al servidor DHCP.
+
+
 ## Carpeta 30. Ataques a máquinas Metasploitable
 
 1. Laboratorio 30-A: ***Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5***.
