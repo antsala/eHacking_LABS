@@ -54,7 +54,7 @@ Nota: Este script instalará el rol ***DHCP*** en el Controlador de Dominio.
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/antsala/eHacking_LABS/main/06/DeployDHCP.ps1 -OutFile .\DeployDHCP.ps1
 ```
 
-Permitimos la ejecución de scripts en PowerShell
+Permitimos la ejecución de scripts en PowerShell.
 ```
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
