@@ -47,11 +47,11 @@ Pa55w.rd
 Vamos a instalar e rol ***DHCP*** en el servidor ***WS2022_DC_Server_Core*** de usando ***PowerShell*** remoto desde ***Win 11***.
 
 En la máquina ***Win 11*** abrimos una terminal de 
-PowerShell ***COMO ADMINISTRADOR*** y procedemos a descargar un script desde ***GitHub***. Escribimos el siguiente comando.
+PowerShell y procedemos a descargar un script desde ***GitHub***. Escribimos el siguiente comando.
 
 Nota: Este script instalará el rol ***DHCP*** en el Controlador de Dominio.
 ```
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/antsala/eHacking_LABS/main/06/DeployDHCP.ps1 -OutFile DeployDHCP.ps1
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/antsala/eHacking_LABS/main/06/DeployDHCP.ps1 -OutFile .\DeployDHCP.ps1
 ```
 
 Permitimos la ejecución de scripts en PowerShell
