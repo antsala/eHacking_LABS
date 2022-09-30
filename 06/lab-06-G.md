@@ -47,15 +47,34 @@ Pa55w.rd
 Vamos a instalar e rol ***DHCP*** en el servidor ***WS2022_DC_Server_Core*** de usando ***PowerShell*** remoto desde ***Win 11***.
 
 En la máquina ***Win 11*** abrimos una terminal de 
-PowerShell y procedemos a descargar un script desde ***GitHub***. Escribimos el siguiente comando.
+PowerShell ***COMO ADMINISTRADOR*** y procedemos a descargar un script desde ***GitHub***. Escribimos el siguiente comando.
 
 Nota: Este script instalará el rol ***DHCP*** en el Controlador de Dominio.
 ```
-Invoke-WebRequest -Uri https://github.com/antsala/eHacking_LABS/blob/main/06/DeployDHCP.ps1 -OutFile DeployDHCP.ps1
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/antsala/eHacking_LABS/main/06/DeployDHCP.ps1 -OutFile DeployDHCP.ps1
 ```
 
-Ejecutamos el script. Perirá credenciales.
+Permitimos la ejecución de scripts en PowerShell
+```
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+```
 
+Abrimos el script con ***ISE***.
+```
+ise .\DeployDHCP.ps1
+```
+
+Lo ejecutamos pulsando ***F5***. Cuando pida credenciales ponemos.
+```
+xyz\administrator
+```
+
+Y como password ponemos.
+```
+Pa55w.rd
+```
+
+En este momento, el Controlador de Dominio tiene el rol ***DHCP*** operativo y configurado.
 
 
 ## Ejercicio 2: Usar Yersinia para denegar servicios al servidor DHCP.

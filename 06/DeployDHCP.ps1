@@ -8,7 +8,7 @@ $session = New-PSSession -ComputerName xyz-dc1 -Credential $cred
 Enter-PSSession -Session $session
 
 # Instalamos el rol DHCP.
-Install-WindowsFeature -Name DHCP
+Install-WindowsFeature -Name DHCP -ComputerName xyz-dc1
 
 # Autorizamos el servidor DHCP en Active Directory.
 Add-DhcpServerInDC -DnsName xyz-dc1.xyz.com -IPAddress 192.168.20.10
