@@ -178,6 +178,14 @@ Aquí: https://cybersecurity.att.com/blogs/security-essentials/vlan-hopping-and-
 
 ***FIN ACTIVIDAD***
 
+***ACTIVIDAD***
+
+Otro tipo de ataque consiste en la creación de un servidor ***DHCP*** falso (***rogue***). Razona cómo podría afectar esto a tu infraestructura de red.
+
+***FIN ACTIVIDAD***
+
+
+
 
 
 
