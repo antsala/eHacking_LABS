@@ -4,7 +4,7 @@
 Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
-3. Máquina ***Win 11***
+3. Máquina ***Win 11***.
 
 
 ## Ejercicio 1: Conocer a SET.
