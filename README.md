@@ -155,6 +155,13 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 3. Laboratorio 30-C: ***Aprovechar vulnerabilidad WebDAV***.
 4. Laboratorio 30-D: ***Escalado de privilegio explotando no_root_squash***.
 
+
+## Carpeta 07. Ingeniería Social
+
+1. Laboratorio 07-A: ***Usar SET (Social Engineering Toolkit) para realizar ataque de phishing***. Los ejercicios a realizar son:
+   - Conocer a ***SET***.
+   - Usar ***SET*** para ataque de ***Phishing***.
+
 ## Carpeta 40. Labs del cuaderno. 
 TODO. Por hacer.
 
