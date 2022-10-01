@@ -143,6 +143,10 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Instalar el rol ***DHCP*** en Windows Server 2022.
    - Usar ***Yersinia*** para denegar servicios al servidor DHCP.
 
+8. Laboratorio 06-H: ***Detectar ataques MitM***. Los ejercicios a realizar son:
+   - Instalar ***Xarp*** en ***Win 11***.
+   - Lanzar un ataque de ***arp spoofing*** y detectarlo.
+
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
 
