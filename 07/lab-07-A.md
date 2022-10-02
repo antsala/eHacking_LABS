@@ -75,7 +75,7 @@ En la máquina ***Kali***, veremos cómo ***SET*** está capturando datos. Esper
 
 Salimos de ***SET*** pulsando varias veces ***99*** y ***Enter***.
 
-Editamos el archivo con un editor, como ***nano*** y con paciencia localizamos la información que estamos buscando.
+Editamos el archivo ***xml*** anterior con un editor, como ***nano*** y con paciencia localizamos la información que estamos buscando.
 
 ![Credenciales capturadas](../img/lab-07-A/202210021843.png)
 
