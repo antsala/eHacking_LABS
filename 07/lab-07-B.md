@@ -1,4 +1,4 @@
-#  Usar ShellPhish para realizar ataque de phishing
+#  Usar SocialFish para realizar ataque de phishing
    
   
 Requisitos:
@@ -12,8 +12,6 @@ Dentro de las herramientas automatizadas para realizar ataques de ***phishing***
 Esta herramienta proporciona de forma predeterminada diferentes tipos de phishing para redes sociales como Facebook, Twitter, Instagram, Snapchat, Yahoo, LinkedIn, Pinterest, así como servicios como Origin, Github, Protonmail, Spotify, Netflix, WordPress, Steam, Microsoft, InstaFollowers, y GitLab.
 
 Esta herramienta usas las webs generadas por ***SocialFish*** (https://github.com/UndeadSec/SocialFish), un proyecto de ***GitHub*** que suplanta las web mencionadas anteriormente.
-
-
 
 ## Ejercicio 1: Usar ShellPhish para ataque de Phishing.
 

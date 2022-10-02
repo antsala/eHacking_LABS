@@ -161,8 +161,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 1. Laboratorio 07-A: ***Usar SET (Social Engineering Toolkit) para realizar ataque de phishing***. Los ejercicios a realizar son:
    - Usar ***SET*** para ataque de ***Phishing***.
 
-2. Laboratorio 07-B: ***Usar ShellPhish para realizar ataque de phishing***. Los ejercicios a realizar son:
-   - Usar ***ShellPhish*** para ataque de ***Phishing***.
+2. Laboratorio 07-B: ***Usar SocialFishish para realizar ataque de phishing***. Los ejercicios a realizar son:
+   - Usar ***SocialFish*** para ataque de ***Phishing***.
 
 ## Carpeta 40. Labs del cuaderno. 
 TODO. Por hacer.
