@@ -49,7 +49,7 @@ El servidor se inicia, y como podemos ver en la imagen adjunta, nos indica que n
 
 Nota: ***0.0.0.0*** quiere decir cualquier IP que tenga la máquina. Por lo tanto es equivalente a ***http://192.168.20.9:5000/neptune***.
 
-![Servidor iniciado](../img/lab-07-B/202210021902.png)
+![Servidor iniciado](../img/lab-07-B/202210021936.png)
 
 Abrimos un navegador y nos conectamos a la URL siguiente.
 ```
