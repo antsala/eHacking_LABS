@@ -168,14 +168,20 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Instalación de ***OWASP ZAP***.
 
 2. Laboratorio 25-B: Aprender a usar ***Juice Shop***.
-   - Navegar por la aplicación.
+   
+3. Laboratorio 25-C: Ataques de Inyección (***Injection***).
+
+
    
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
 
 1. Laboratorio 30-A: ***Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5***.
+
 2. Laboratorio 30-B: ***Explotar vulnerabilidad CVE-2014-6271 (Shellshock) presente en Apache***.
+
 3. Laboratorio 30-C: ***Aprovechar vulnerabilidad WebDAV***.
+
 4. Laboratorio 30-D: ***Escalado de privilegio explotando no_root_squash***.
 
 

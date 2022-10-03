@@ -8,10 +8,6 @@ Requisitos:
 3. Máquina ***Ubu_srv_01***
 
 
-
-
-## Ejercicio 1: Navegar por la aplicación.
-
 En la máquina ***Kali***, si no estamos conectados a la app, abrimos el navegador y conectamos a la siguiente URL.
 
 Nota: Si fallara, revisar que el contenedor esté corriendo.
