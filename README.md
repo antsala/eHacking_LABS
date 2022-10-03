@@ -147,13 +147,9 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Instalar ***Xarp*** en ***Win 11***.
    - Lanzar un ataque de ***arp spoofing*** y detectarlo.
 
-
-## Carpeta 30. Ataques a máquinas Metasploitable
-
-1. Laboratorio 30-A: ***Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5***.
-2. Laboratorio 30-B: ***Explotar vulnerabilidad CVE-2014-6271 (Shellshock) presente en Apache***.
-3. Laboratorio 30-C: ***Aprovechar vulnerabilidad WebDAV***.
-4. Laboratorio 30-D: ***Escalado de privilegio explotando no_root_squash***.
+9. Laboratorio 06-I: ***Ataques DoS***. Los ejercicios a realizar son:
+   - Lanzar un ataque de DoS con ***Metasploit***.
+   - Lanzar un ataque de DoS con ***Hping3***.
 
 
 ## Carpeta 07. Ingeniería Social
@@ -163,6 +159,17 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 2. Laboratorio 07-B: ***Usar SocialFishish para realizar ataque de phishing***. Los ejercicios a realizar son:
    - Usar ***SocialFish*** para ataque de ***Phishing***.
+
+
+## Carpeta 30. Ataques a máquinas Metasploitable
+
+1. Laboratorio 30-A: ***Explotar vulnerabilidad CVE-2015-3306 presente en ProFTPD 1.3.5***.
+2. Laboratorio 30-B: ***Explotar vulnerabilidad CVE-2014-6271 (Shellshock) presente en Apache***.
+3. Laboratorio 30-C: ***Aprovechar vulnerabilidad WebDAV***.
+4. Laboratorio 30-D: ***Escalado de privilegio explotando no_root_squash***.
+
+
+
 
 ## Carpeta 40. Labs del cuaderno. 
 TODO. Por hacer.
