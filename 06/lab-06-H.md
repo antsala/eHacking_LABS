@@ -28,7 +28,7 @@ Procedemos a instalarlo con las opciones por defecto.
 
 Iniciamos la aplicación. Se mostrarán las máquinas que están operando sobre la red y visualiza un mensaje claro de que no hay ataques ***ARP***.
 
-![Xarp](../img/lab-06-G/202210011142.png)
+![Xarp](../img/lab-06-H/202210011142.png)
 
 Dejamos funcionando ***Xarp***.
 
@@ -64,11 +64,11 @@ Volvemos a la máquina ***Win 11***. Podrás comprobar que ***Xarp*** no está d
 
 Subamos el ***Security Level*** a ***High***. Tampoco detecta nada.
 
-![Xarp high](../img/lab-06-G/202210011152.png)
+![Xarp high](../img/lab-06-H/202210011152.png)
 
 Por último, subamos a ***agressive*** y esperemos un poco. En la imagen se puede comprobar que se ha detectado un ataque.
 
-![Xarp agressive](../img/lab-06-G/202210011152.png)
+![Xarp agressive](../img/lab-06-H/202210011157.png)
 
 No obstante, la herramienta no es perfecta, ya que como advierte el texto de ayuda, pueden presentarse ***falsos positivos***. De hecho, la ip ***192.168.20.11*** no está siendo atacada, ya que nuestro ***MitM*** se realiza entre ***192.168.20.12*** y ***192.168.20.1*** (esta última ha sido detectada correctamente)
 
