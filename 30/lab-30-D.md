@@ -9,6 +9,7 @@ Requisitos:
 
 
 ## Convertirse en root por una NFS mal configurada.
+
 Como debemos tener claro, un uso de NFS no seguro puede conducir a situaciones no deseadas. Después de aprender a enumerar las shares NFS (tal y como se vió en el ***lab-04-D***) se determina que existe una share que tiene habilitada la configuración ***no_root_squash***. Este parámetro permite al usuario ***root*** de la máquina cliente acceder al share. Como ya sabemos, trabajar con un usuario ***root*** es una mala idea.
 
 En la máquina ***Kali*** ejecutamos el siguiente comando.
@@ -102,7 +103,7 @@ En la imagen podemos ver el resultado.
 
 ![SUID](../img/lab-30-D/202209102213.png)
 
-Un archivo con el permiso ***SUID*** (bit s), puede ser ejecutado por cualquier usuario, per siempre se ejecuta con el permiso del propietario, que es ***root***.
+Un archivo con el permiso ***SUID*** (bit s), puede ser ejecutado por cualquier usuario, pero siempre se ejecuta con el permiso del propietario, que es ***root***.
 
 En la máquina ***ubu_srv_01***, donde hemos iniciado la sesión con el usuario ***luke***, ejecutamos el comando.
 Nota: ***-p*** ejecuta la shell en modo privilegiado, de no ponerlo, SUID no tendrá efecto.

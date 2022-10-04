@@ -3,7 +3,7 @@
 Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
-3. Máquina ***Metasploitable3-ubu1404***.
+3. Máquina ***Ubu_srv_01***.
 
 
 ***NFS*** (Network File System) es el servicio de compartición de archivos característico de entornos Linux (Windows Server también puede ofrecerlo).
@@ -24,8 +24,16 @@ y el password
 Pa55w.rd
 ```
 
-Observarás que es una versión sin interfaz gráfica. No hay soporte de portapapeles, por esta razón tendrás que copiar los comandos directamente.
+Observarás que es una versión sin interfaz gráfica. No hay soporte de portapapeles, por esta razón tendrás que copiar los comandos directamente. Como alternativa, puedes hacer un **SSH** desde **Kali*** para disponer de interfaz gráfica.
 
+Procedemos a instalar ***NFS***. En la terminal, escribimos.
+```
+sudo apt update
+```
+
+```
+sudo apt install -y nfs-kernel-server
+```
 
 El archivo ***/etc/exports*** mantiene un registro por cada directorio que se va a compartir en la red. Existen diferentes opciones que definirán el tipo de privilegio que tendrán los clientes sobre cada ***share***.
 
@@ -49,7 +57,8 @@ Vamos a crear un ***Share*** en el que cometeremos un error muy grave de segurid
 Primero creamos una carpeta en la ruta ***/datos*** a la que daremos permisos de lectura y escritura a todos los usuarios de dicha máquina. Posteriormente compartiremos esa carpeta por NFS para que se pueda acceder desde la red.
 ```
 sudo mkdir -p /datos
-
+```
+```
 sudo chmod 777 /datos
 ```
 
@@ -58,7 +67,10 @@ Procedemos a crear el share. Para ello editamos el archivo ***/etc/exports***.
 sudo nano /etc/exports
 ```
 
-y añadimos una nueva línea, tal y como muestra la imagen.
+y añadimos una nueva línea, al final del archivo con el contenido siguiente, tal y como muestra la imagen.
+```
+/datos *(rw,no_root_squash)
+``` 
 
 ![Crear share](../img/lab-04-D/202209101205.png)
 
@@ -85,7 +97,8 @@ Como puede observarse en la siguiente imagen, en la IP ***192.168.20.60*** exist
 ![NFS open](../img/lab-04-D/202209101359.png)
 
 Lo primero que va a hacer el actor de la amenaza es ***enumerar*** las shares de ese servidor nfs. Si es afortunado encontrará alguna que no requiera autenticación.
-Nota: Los ***exports*** se exponen en el puerto ***111***nm.
+
+Nota: Los ***exports*** se exponen en el puerto ***111***.
 ```
 nmap -sV -p 111 --script=nfs-showmount 192.168.20.60
 ```
