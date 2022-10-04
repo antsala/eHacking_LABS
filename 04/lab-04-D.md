@@ -3,7 +3,7 @@
 Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Kali Linux***.
-3. Máquina ***ubu_srv_01***.
+3. Máquina ***Metasploitable3-ubu1404***.
 
 
 ***NFS*** (Network File System) es el servicio de compartición de archivos característico de entornos Linux (Windows Server también puede ofrecerlo).
