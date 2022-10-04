@@ -42,7 +42,7 @@ y password
 Pa55w.rd
 ```
 
-## Ejercicio 2: Enumerar el dominio con ADExplorer
+## Ejercicio 1: Enumerar el dominio con ADExplorer
 
 En la máquina ***Win 11***. abrimos el navegador y descargamos el siguiente link.
 ```
@@ -55,8 +55,8 @@ Ejecutamos la aplicación ***ADExplorer64***. Aceptamos los términos, haciendo 
 
 Aparecerá un cuadro de diálogo que nos pide las credenciales. Lo conformamos de la siguiente forma.
 
-* *Connect to*: XYZ
-* *User*: lkywalker
+* *Connect to*: XYZ.COM
+* *User*: lskywalker
 * *Password*: Pa55w.rd
 
 Debe quedar como se muestra en la siguiente imagen. Hacemos clic en el botón ***OK***. 
@@ -66,7 +66,7 @@ Debe quedar como se muestra en la siguiente imagen. Hacemos clic en el botón **
 ***ADExplorer64*** se conectará a ***Active Directory*** usando las credenciales proporcionadas.
 Nota: Muy importante. Recuerda que ***Luke Skywalker*** no tiene privilegios especiales en el dominio.
 
-como podrás ver en la siguiente imagen, en la herramienta desplegamos el dominio ***DC=xyz,DC=com***, luego hacemos clic en el contenedor ***CN=Users***, y elegimos un usuario determinado. Observa como se exlfiltra la información. El usuario elegido es el ***CEO*** y tenemos su ***teléfono***. Sin dudda información de calidad para el actor de la amenaz. Disfruta con la lista de usuarios de ***TODA LA ORGANIZACIÓN***.
+Como podrás ver en la siguiente imagen, en la herramienta desplegamos el dominio ***DC=xyz,DC=com***, luego hacemos clic en el contenedor ***CN=Users***, y elegimos un usuario determinado. Observa como se exlfiltra la información. El usuario elegido es el ***CEO*** y tenemos su ***teléfono***. Sin duda información de calidad para el actor de la amenaz. Disfruta con la lista de usuarios de ***TODA LA ORGANIZACIÓN***.
 
 ![Darth Vader](../img/lab-04-C/202209091352.png)
 
@@ -83,7 +83,7 @@ Enumera la siguiente información.
 
 ***FIN ACTIVIDAD***
 
-## Enumerar el dominio con ldapsearch.
+## Ejercicio 2: Enumerar el dominio con ldapsearch.
 
 Por descontado que podemos hacer lo mismo con herramientas de línea de comandos. ***Kali Linux*** ofrece la herramienta ***ldapsearch***, que es un cliente de ***LDAP***.
 
@@ -113,7 +113,7 @@ Para localizar los equipos miembros del dominio, hacemos.
 ldapsearch  -H ldap://192.168.20.10 -x -D "lskywalker@xyz.com" -W -b "dc=xyz,dc=com"  "(objectClass=Computer)" | grep sAMAccountName
 ```
 
-En el siguiente enlace pueds ver un ejemplo que como el IDS detecta este tipo de tráfico en la red. Esto nos servirá para valorar la importancia de este tipo de contramedidas.
+En el siguiente enlace puedes ver un ejemplo de como el IDS detecta este tipo de tráfico en la red. Esto nos servirá para valorar la importancia de este tipo de contramedidas.
 ```
 https://docs.paloaltonetworks.com/cortex/cortex-xdr/cortex-xdr-analytics-alert-reference/cortex-xdr-analytics-alert-reference/suspicious-ldap-search-query-executed
 ```

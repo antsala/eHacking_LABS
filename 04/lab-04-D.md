@@ -1,4 +1,4 @@
-# Enumeración LDAP.
+# Enumeración NFS.
 
 Requisitos:
 1. Máquina ***Router-Ubu***.

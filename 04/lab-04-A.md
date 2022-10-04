@@ -63,7 +63,7 @@ Podrás comprobar que hay un documento interesante en el Escritorio.
 
 Lo descargamos.
 ```
-mbmap -H 192.168.20.11 -u antonio -p Pa55w.rd --download 'Users\antonio\Desktop\contrato.txt'
+smbmap -H 192.168.20.11 -u antonio -p Pa55w.rd --download 'Users\antonio\Desktop\contrato.txt'
 ```
 
 Comprobamos la descargas.
@@ -77,7 +77,7 @@ Ya lo tenemos en nuestro poder. Esto demuestra que con herramientas de línea de
 
 ## Ejercicio 2: Enumerar NetBIOS con nmap scripting engine.
 
-Hemo visto que ***nmap*** es una herramienta muy poderosa, pero ¿sabías que se puede extender su funcionalidad?
+Hemos visto que ***nmap*** es una herramienta muy poderosa, pero ¿sabías que se puede extender su funcionalidad?
 
 Efectivamente. ***NSE*** (Nmap Scripting Engine) es la herramienta más poderosa de ***nmap***. Hackers con grandes conocimientos técnicos usan el luenguaje de programación ***Lua*** para extender/ampliar/mejorar las capacidades de ***nmap***.
 
