@@ -8,7 +8,7 @@ Requisitos:
 ***REQUIERE HABER REALIZADO 4. Laboratorio 04-D: Enumeración NFS. Ejercicio - Configuración de un share de NFS***.
 
 
-## Convertirse en root por una NFS mal configurada.
+## Ejercicio 1: Convertirse en root por una NFS mal configurada.
 
 Como debemos tener claro, un uso de NFS no seguro puede conducir a situaciones no deseadas. Después de aprender a enumerar las shares NFS (tal y como se vió en el ***lab-04-D***) se determina que existe una share que tiene habilitada la configuración ***no_root_squash***. Este parámetro permite al usuario ***root*** de la máquina cliente acceder al share. Como ya sabemos, trabajar con un usuario ***root*** es una mala idea.
 

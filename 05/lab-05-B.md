@@ -128,7 +128,7 @@ Elegimos en el menú la opción ***Scans/tasks*** e invocamos al asistente de ta
 
 ![Asistente](../img/lab-05-B/202209131141.png)
 
-Hacemos clic en ***Task Wizard***. Ponemos la IP de la máquina a ePa55wrdstudiar: ***192.168.20.13*** y hacemos clic en ***Start Scan***.
+Hacemos clic en ***Task Wizard***. Ponemos la IP de la máquina a estudiar: ***192.168.20.13*** y hacemos clic en ***Start Scan***.
 
 ![Start Scan](../img/lab-05-B/202209131148.png)
 
@@ -137,7 +137,7 @@ Nota: Pasará antes por el estado ***Queued***.
 
 
 
-*** ACTIVIDAD ***
+***ACTIVIDAD***
 
 Realiza un análisis de vulnerabilidad en las máquinas
 
@@ -157,7 +157,7 @@ En la siguiente imagen puedes ver el resultado del escaneo de la máquina ***Met
 
 Para liberar recursos, apaga la máquina virtual ***GSM-Trial***.
 
-## Descubrir vulnerabilidades con ***Nessus***
+## Ejercicio 3: Descubrir vulnerabilidades con ***Nessus***
 
 Nessus es el escáner de vulnerabilidad de ***Tenable***, una herramienta de primerísimo nivel.
 
@@ -263,7 +263,7 @@ Por último, si hacemos clic en la vulnerabilidad señalada en la imagen anterio
 
 Con esto finalizamos la demo de ***Nessus***.
 
-*** ACTIVIDAD *** 
+***ACTIVIDAD*** 
 
 Si te interesa conocer a fondo las posibilidades técnicas de esta herramienta te recomiendo visualizar esta lista de reproducción: https://www.youtube.com/watch?v=D8hv1XC2bp0&list=PLOMx6Layn69hduI4YjVkDw-tN6H_kBZ6l
 

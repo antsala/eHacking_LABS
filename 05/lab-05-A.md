@@ -61,16 +61,18 @@ En este enlace https://cve.mitre.org/cve/search_cve_list.html podemos realizar b
 
 Podemos acudir a otros portales que facilitan la búsqueda sobre la misma base de datos de vulnerabilidades, por ejemplo https://www.cvedetails.com/ 
 
-*** ACTIVIDAD ***
+***ACTIVIDAD***
 
 Consulta en ***CVE Details*** las vulnerabilidades descubiertas para.
 * Un sistema operativo de tu elección.
-* La alpicación LOB principal que usas en tu organización.
+* La aplicación LOB principal que usas en tu organización.
 * MySQL.
 * Apache.
 * TomCat.
 * Drupal.
 * La última vulnerabilidad de nivel ***10*** descubierta para Windows.
+
+***FIN ACTIVIDAD***
 
 
 ## Búsqueda en National Vulnerability Database (NVD).
