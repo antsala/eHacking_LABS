@@ -27,7 +27,7 @@ En la imagen podemos comprobar el resultado.
 
 ![Cannot Access](../img/lab-06-A/202209162017.png)
 
-Vamos a ver como afecta el envenenamiento ***LLMMR*** que realiza ***Responder***.
+Vamos a ver como afecta el envenenamiento ***LLMNR*** que realiza ***Responder***.
 
 En la máquina ***Kali*** abrimos una terminal y actualizamos la herramienta.
 ```

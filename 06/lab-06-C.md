@@ -121,7 +121,7 @@ Ejecutamos el script.
 powerShell -ExecutionPolicy Bypass -Command ". .\PowerUp.ps1;Invoke-AllChecks"
 ```
 
-Como resultado, este script visualiza las vulnerabilidades encontradas y nos dice que otro componente de ***PowerShell Mafia*** deberíamos usar para explotarla.
+Como resultado, este script visualiza las vulnerabilidades encontradas y nos dice qué otro componente de ***PowerShell Mafia*** deberíamos usar para explotarla.
 
 ![abuse](../img/lab-06-C/202209171538.png)
 
