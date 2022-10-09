@@ -104,6 +104,7 @@ Hacemos clic en ***Create*** para crear el listener.
 
 https://www.blackmantisecurity.com/covenant-command-and-control-en-kali/
 
+Para evadir al AV: https://www.youtube.com/watch?v=Fi0jXm8VOFU&list=WL&index=8
 
 
 
