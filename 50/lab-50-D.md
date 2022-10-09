@@ -88,7 +88,7 @@ Pa55w.rd
 
 Los ***Listeners*** son similares a los handlers que utiliza ***Metasploit***. En en panel lateral seleccionamos ***Listeners*** y luego hacemos clic en ***Create***.
 
-![Listeners](../img/lab-50-D/202210091830.png)
+![Listeners](../img/lab-50-D/202210091831.png)
 
 Configuramos el ***Listener*** de la siguiente forma.
 
