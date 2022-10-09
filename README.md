@@ -208,6 +208,12 @@ TODO. Por hacer.
    - Instalación de ***Shelter*** en ***Kali Linux***.
    - Inyectar malware evadiendo al antivirus.
 
+4. Laboratorio 50-D: ***Covenant C2***. Los ejercicios a realizar son:
+   - Instalación de ***Covenant*** en ***Kali Linux***.
+   - Crear un ***Listener*** e inicializar un ***Grunt***.
+
+
+
    
    
 
