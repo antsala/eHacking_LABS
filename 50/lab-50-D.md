@@ -150,11 +150,11 @@ Hay otras opciones que aparecen o no en función de la configuración elegida.
 * *UseCertPinning*:  Determina i el Grunt usara ***pinning*** de certificado para evitar ataques MitM (https://sectigo.com/resource-library/what-is-certificate-pinning)
 * *SMBPipeName*: Si se usa ***SMB*** como plantilla para el implante, este campo determina el nombre de la conexión a la que se enlazará en Grunt.
 
-Dejamos los valores como se muestra en la siguiente imagen.
+Dejamos los valores como se muestra en la siguiente imagen y hacemos clic en ***Generate***.
 
 ![Creación del Launcher](../img/lab-50-D/202210101734.png)
 
-Al hacer clic en el botón ***Generate***, se muestran la versión ***normal*** del launcher y la ***ofuscada***, que tiene la finalidad de intentar evadir al Antivirus.
+Se muestran la versión ***normal*** del launcher y la ***ofuscada***, que tiene la finalidad de intentar evadir al Antivirus.
 
 Nota: Disponemos de sendos botones para copiar en el portapapeles el ***Launcher*** que nos interese. También tenemos el botón ***Download*** que descargará el script de PowerShell.
 
