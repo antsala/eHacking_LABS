@@ -179,8 +179,11 @@ Vamos a intentar realizar algo muy interesante, que no es otra cosa, que hacer q
 
 ## Ejercicio 3: Evadir al antivirus alterando AMSI.
 
+Explicar qué es AMSI en este video. Nota, he hecho pruebas y el AV lo detecta.
 
 Para evadir al AV: https://www.youtube.com/watch?v=Fi0jXm8VOFU&list=WL&index=8
+
+
 
 
 
