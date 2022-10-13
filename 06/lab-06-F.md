@@ -292,7 +292,7 @@ nslookup intranet.xyz.com
 
 ![intranet](../img/lab-06-F/202209182040.png)
 
-Supongamos que el actor de la amenaza levanta un sitio web falso en una máquina hackeada de la organización, que tiene bajo su control. La dirección de esta es ***192.160.20.155***.
+Supongamos que el actor de la amenaza levanta un sitio web falso en una máquina hackeada de la organización, que tiene bajo su control. La dirección de ésta es ***192.160.20.155***.
 
 El objetivo que pretendemos conseguir es que cuando la víctima desee resolver ***intranet.xyz.com***, la IP devuelta sea ***192.168.20.155*** en lugar de ***192.168.20.101***.
 
