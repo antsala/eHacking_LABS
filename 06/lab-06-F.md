@@ -141,7 +141,7 @@ sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -p
 ```
 
-Vamos a envenerar a ***Win 11***. En la máquina ***Kali***, en la terminal, escribimos.
+Vamos a envenenar a ***Win 11***. En la máquina ***Kali***, en la terminal, escribimos.
 ```
 sudo arpspoof -i eth0 -t 192.168.20.11 192.168.20.1
 ```
