@@ -168,8 +168,12 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Instalación de ***OWASP ZAP***.
 
 2. Laboratorio 25-B: Aprender a usar ***Juice Shop***.
-   
-3. Laboratorio 25-C: Ataques de Inyección (***Injection***).
+
+3. Laboratorio 25-C: Descubrir el ***ScoreBoard*** y la sección ***Admin***.
+   - Descubrir el "Scoreboard"
+   - Descubrir la sección "Admin"
+
+4. Laboratorio 25-D: Ataques de Inyección (***Injection***).
 
 
    
@@ -208,10 +212,11 @@ TODO. Por hacer.
    - Instalación de ***Shelter*** en ***Kali Linux***.
    - Inyectar malware evadiendo al antivirus.
 
+NOTA: Ejercicio 3: Evadir al antivirus alterando AMSI no funciona en W10.
 4. Laboratorio 50-D: ***Covenant C2***. Los ejercicios a realizar son:
    - Instalación de ***Covenant*** en ***Kali Linux***.
    - Crear un ***Listener*** e inicializar un ***Grunt***.
-   - Evadir al antivirus alterando ***AMSI***.
+   - Evadir al antivirus alterando ***AMSI***. 
 
 
 

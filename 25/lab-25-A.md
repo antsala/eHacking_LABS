@@ -8,15 +8,15 @@ Requisitos:
 3. Máquina ***Ubu_srv_01***
 
 
-Las aplicaciones web son un objetivo primordial para el actor de la amenaza. El desarrollo, cuando no tiene en consideración la seguridad, es una fuente importante de vulnerabilidades. Por ello, la fundación OWASP tiene como misión mejorar la seguridad en el desarrollo de Software. Recomendamos encarecidamente estudiar su web:https://owasp.org/. En ella podrás ver el famoso ***OWASP Top 10***, que describe las 10 preocupaciones más importantes que se deben tener en cuenta a la hora del desarrollo: https://owasp.org/www-project-top-ten/
+Las aplicaciones web son un objetivo primordial para el actor de la amenaza. El desarrollo, cuando no tiene en consideración la seguridad, es una fuente importante de vulnerabilidades. Por ello, la fundación OWASP tiene como misión mejorar la seguridad en el desarrollo de Software. Recomendamos encarecidamente estudiar su web: https://owasp.org/. En ella podrás ver el famoso ***OWASP Top 10***, que describe las 10 preocupaciones más importantes que se deben tener en cuenta a la hora del desarrollo: https://owasp.org/www-project-top-ten/
 
 La finalidad de esta serie de laboratorios es recorrer las causas más comunes que hacen el desarrollo de software inseguro. Para ello se ha desarrollado una aplicación web, llamada ***Juice Shop*** que presenta la mayoría de estos problemas. Entendiendo la causa de ellos desarrollarás software de forma más segura.
 
 ## Ejercicio 1: ¿Qué es Juice Shop?
 
-***Juice Shop*** es una aplicación perfectamente funcional, pero presenta muchas vulnerabilidades debida a malas prácticas se seguridad en el desarrollo de la misma. El proyecto nos anima a encontrar las vulnerabilidades y se basa en gamificación. Está basada en un proyecto de Open Source que puedes consultar aquí: https://owasp.org/www-project-juice-shop/
+***Juice Shop*** es una aplicación perfectamente funcional, pero presenta muchas vulnerabilidades debida a malas prácticas de seguridad en el desarrollo de la misma. El proyecto nos anima a encontrar las vulnerabilidades y se basa en gamificación. Está basada en un proyecto de Open Source que puedes consultar aquí: https://owasp.org/www-project-juice-shop/
 
-***Juice Shop*** está escrita en ***JavaScript***. Para el ***Frontend*** se ha usado en framework ***Angular***  con la idea de crear una aplicación de "Single Page". En el ***Backend*** también se usa ***Javascript*** mediante un servidor de ***Node.js*** que se comunica con una base de datos ***SQL-Lite*** para la cual no es necesario desplegar otro servidor. Para abstraer las operaciones con la base de datos se utiliza ***Sequilize*** y ***finale-rest***. La aplicación permite el registro de sus usuario por medio de ***OAuth***, de esta forma, se pueden usar cuentas de ***Google***.
+***Juice Shop*** está escrita en ***JavaScript***. Para el ***Frontend*** se ha usado el framework ***Angular***  con la idea de crear una aplicación de "Single Page". En el ***Backend*** también se usa ***Javascript*** mediante un servidor de ***Node.js*** que se comunica con una base de datos ***SQL-Lite*** para la cual no es necesario desplegar otro servidor. Para abstraer las operaciones con la base de datos se utiliza ***Sequilize*** y ***finale-rest***. La aplicación permite el registro de sus usuarios por medio de ***OAuth***, de esta forma, se pueden usar cuentas de ***Google***.
 
 La arquitectura de la aplicación se puede observar en la siguiente imagen.
 
@@ -26,7 +26,7 @@ Las vulnerabilidades presentes en ***Juice Shop*** se organizan por diversas cat
 
 ![Categorías Vulnerabilides](../img/lab-25-A/202210031935.png)
 
-El objetivo de estos laboratorios no es demostrarlas todas, porque son ***101***, sino hace una selección de las más importantes y peligrosas.
+El objetivo de estos laboratorios no es demostrarlas todas, porque son ***101***, sino hacer una selección de las más importantes y peligrosas.
 
 Para poder entender y descubrir las vulnerabilidades, necesitaremos usar las herramientas de desarrollo. Tengamos en cuenta que no todos los navegadores soportan todas las funcionalidades. En la siguiente tabla podemos ver un resumen. En ***Kali*** usaremos ***Firefox*** que las soporta todas.
 
@@ -73,7 +73,7 @@ sudo apt-get update
 
 Instalamos ***Docker***.
 ```
-sudo apt-get install docker-ce
+sudo apt-get -y install docker-ce
 ```
 
 Comprobamos que se haya instalado correctamente.
