@@ -173,7 +173,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Descubrir el "Scoreboard"
    - Descubrir la sección "Admin"
 
-4. Laboratorio 25-D: Ataques de Inyección (***Injection***).
+4. Laboratorio 25-D: Ataques de Inyección SQL (***SQL Injection***).
+   - Hacer un pedido de la oferta especial de navidad de 2014.
 
 
    
