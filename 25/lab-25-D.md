@@ -35,12 +35,70 @@ Cuando realizamos el ataque, la aplicación web puede mostrar errores  indicando
 
 ***RESOLUCIÓN***. Los pasos para resolver el reto son.
 
-Usaremos las herramientas del desarrollador. Así que abrimos el navegador y nos conectamos a la siguiente URL.
+Usaremos ***ZAP***, así que lo abrimos y conectamos a la siguiente URL.
+Nota: Si no lo tienes claro o no lo conoces, te recomiendo hacer el laboratorio ***lab-25-A***.
+
 ```
-http://192.168.20.60:3000/#/search
+http://192.168.20.60:3000/search
 ```
 
-En las herramientas del desarrollador seleccionamos la pestaña ***Network***, y pulsamos repetidamente ***F5***. 
+Vamos a estudiar una URL muy concreta. Para facilitar su localización, en el HUD, hacemos clic en ***History***, y filtramos por.
+```
+search
+```
 
-![King of the Hill](../img/lab-25-B/202210032024.png)
+![Filtro](../img/lab-25-D/202211222021.png)
+
+Esta request servirá para localizar productos. Como podemos ver, hace uso del parámetro ***p***. Ahora hacemos clic en la request que tenemos filtrada en el historial. Aparecerá un cuadro de diálogo que nos permite ver la ***Request*** original, así como la ***Response*** que se recibió. Si hacemos clic en la Response podeos observar cómo aparece la lista completa de productos devuelta desde la base de datos, tal y como se puede observar en la siguiente imagen.
+
+![Datos](../img/lab-25-D/202211222041.png)
+
+Si prefieres, puedes hacer que ZAP use el propio navegador para mostrar los datos devueltos. Para ello hacemos clic en el botón ***Replay in Browser***.
+
+![Replay in Browser](../img/lab-25-D/202211222043.png)
+
+Vamos a jugar con el parámetro ***p***, solicitando información sobre el zumo de limón. Para ello, en la barra de navegación, escribimos lo siguiente.
+```
+https://192.168.20.60:3000/rest/products/search?q=lemon
+```
+
+Podemos observar cómo se devuelven los datos para el producto con ***id=5***, que es el ***zumo de limón***.
+
+![lemon](../img/lab-25-D/202211222046.png)
+
+Aunque ZAP tiene herramientas automatizadas para probar si la inyección de SQL es posible, por ahora lo haremos manualmente. Si el interprete no filtra correctamente la entrada de usuario, es posible provocar errores. Vamos a usar caracteres que tienen significado en SQL, por ejemplo, ***'*** y ***;***. Escribimos en la URL del navegador lo siguiente.
+```
+https://192.168.20.60:3000/rest/products/search?q=';
+```
+
+Y obtendremos un bonito error del intérprete de SQL, demostrando que la inyección es posible.
+
+![error SQL](../img/lab-25-D/202211222050.png)
+
+Estamos a ciegas (blind). Sabemos que la aplicación es vulnerable, pero debemos construir consultas SQL cada vez más precisas, que lleven al objetivo buscado (Pedir un producto que no está en el stock). Realizamos otra prueba, escribiendo en en navegador la siguiente URL.
+```
+https://192.168.20.60:3000/rest/products/search?q='--
+```
+
+En este caso obtenemos un error ligeramente diferente: ***incomplete input***, que ocurre porque falta algún paréntesis en la consulta.
+
+![Incomplete Input](../img/lab-25-D/202211222054.png)
+
+Para arreglar el error, añadimos ***'))--***, así que en la barra de direcciones escribimos.
+```
+https://192.168.20.60:3000/rest/products/search?q='))--
+```
+
+Si observas, la aplicación devuelve otra vez la lista de productos, pero en este caso también muestra el producto descatalogado ***Christmas Super-Surprise-Box (2014 Edition)*** con ***id=10***.
+
+![Christmas](../img/lab-25-D/202211222100.png)
+
+TODO.
+https://pwning.owasp-juice.shop/appendix/solutions.html
+
+https://pwning.owasp-juice.shop/part2/injection.html
+
+
+
+
 
