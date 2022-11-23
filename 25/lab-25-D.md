@@ -110,6 +110,29 @@ Ahora debemos localizar la request que agrega el zumo de limón al carrito. Para
 Podrás comprobar que el ***ProductId*** es ***5***, que ***BasketId*** es ***6*** y ***quantity*** es ***1***.
 Nota: ***BasketId*** puede mostrar un valor diferente al de este tutorial. Anótalo porque lo usarás en breve.
 
+Ahora que ya sabemos el ID de nuestro carrito procedemos a reenviar la request modificando el ***id*** del producto que queremos obtener, y que no es otro que el famoso ***Christmas Super-Surprise-Box (2014 Edition)*** con ***id=10***.
+
+En el cuadro de diálogo ***HTTP Message***, cambiamos el ***ProductId*** de ***5*** a ***10***. Debe quedar tal y como muestra la imagen.
+
+![ProductId:10](../img/lab-25-D/202211231940.png)
+
+Y procedemos a reenviar la request a la api haciendo clic en el botón ***Replay in Browser***. Con esto habremos añadido un producto que no se podía elegir en la aplicación.
+
+![Reenvio request](../img/lab-25-D/202211231949.png)
+
+Para volver a la aplicación, escribimos en la barra de direcciones la siguiente URL.
+```
+http://192.168.20.60:3000
+```
+
+Hacemos clic en el bótón del carrito y veremos como aparecen los dos productos. Ya solo quedaría finalizar el proceso de compra haciendo clic en ***Checkout***.
+
+![Carrito](../img/lab-25-D/202211231952.png)
+
+
+
+
+
 
 
 
