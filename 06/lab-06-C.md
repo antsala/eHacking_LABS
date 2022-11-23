@@ -245,3 +245,5 @@ Los servidores corporativos generalmente usan alguna distribucion de ***Linux***
 
 Inicia la máquina  ***Metasploitable3-ubu1404*** e intenta conseguir una interfaz gráfica contra ella. ¿Es posible administrar la víctima a través de esta interfaz gráfica?
 
+
+***FIN DEL LABORATORIO***

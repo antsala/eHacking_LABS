@@ -102,3 +102,4 @@ sudo nmap -v -sU -p 137 --script nbstat.nse 192.168.20.11
 Como podras observar, el uso de la herramienta ***nmap*** es de más bajo nivel y eso requiere conocimientos más profundos en el protocolo netBIOS.
 
 
+***FIN DEL LABORATORIO***

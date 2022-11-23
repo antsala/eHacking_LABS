@@ -36,8 +36,7 @@ intitle:password site:www.microsoft.com
 El resultado debe ser similar al siguiente. Se muestran todas las páginas que tienen ***password*** en su título y están indexadas por Google.
 
 Con suerte se puede encontrar lo que se busca.
-
-NOTA: Repite la práctica cambiando ***Microsoft*** por el sitio de tu interés (tu organización, un competidor, etc). No hay ninguna repercusión legal en ello por tratarse de OSINT.
+(NOTA: Repite la práctica cambiando ***Microsoft*** por el sitio de tu interés (tu organización, un competidor, etc). No hay ninguna repercusión legal en ello por tratarse de OSINT.)
 
 ![Búsqueda de contenidos de un dominio](../img/lab-02-A/202208261203.png)
 
@@ -52,7 +51,7 @@ En este caso usamos el buscador de la forma habitual pero reducimos los tipos de
 
 ![Búsqueda de archivos pdf](../img/lab-02-A/202208261226.png)
 
-NOTA: Prueba a usar ***filetype*** junto con ***inline***, y busca otros tipos de archivos más comprometedores como ***dbf***, ***csv***, ***xml***, ***docx***, etc.
+(NOTA: Prueba a usar ***filetype*** junto con ***inline***, y busca otros tipos de archivos más comprometedores como ***dbf***, ***csv***, ***xml***, ***docx***, etc.)
 
 Los modificadores de búsqueda son muy variopintos. En este link: https://antoniogonzalezm.es/google-hacking-46-ejemplos-hacker-contrasenas-usando-google-enemigo-peor/ tienes un montón de ejemplos para que conozcas la potencia de la OSINT usando Google.
 
@@ -95,3 +94,5 @@ Shodan es un buscador especializado en encontrar estos tipos de dispositivos. Su
 ¿Tienes algún dispositivo domótico? ¿Termostatos, luces, etc...? Intenta localizar información sobre ellos desde el punto de vista del reconocimiento.
 
 ***FIN ACTIVIDAD***
+
+***FIN DEL LABORATORIO***

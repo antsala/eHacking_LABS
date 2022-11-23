@@ -37,7 +37,4 @@ Si lo deseas y tienes tiempo déjalo trabajar, pero ten en cuenta lo siguiente: 
 
 Recuerda que es una herramienta de auditoría y nosotros formamos parte del ***Equipo Azul***, por lo tanto si la herramienta no es capaz de romper los hashes, será una buena noticia.
 
-
-
-
-
+***FIN DEL LABORATORIO***

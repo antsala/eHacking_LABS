@@ -86,3 +86,5 @@ Podrías intentar abrir otras terminales y realizar el mismo ataque, obteniendo 
 Al igual que el experimento anterior, para garantizar una denegación de servicio efectiva, independientemente del escalado vertical que pudiera llegar a tener la víctima, sería necesario recurrir a un ***DDoS***.
 
 Finaliza los ataques cerrando las terminales.
+
+***FIN DEL LABORATORIO***

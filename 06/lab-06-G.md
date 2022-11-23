@@ -184,8 +184,4 @@ Otro tipo de ataque consiste en la creación de un servidor ***DHCP*** falso (**
 
 ***FIN ACTIVIDAD***
 
-
-
-
-
-
+***FIN DEL LABORATORIO***

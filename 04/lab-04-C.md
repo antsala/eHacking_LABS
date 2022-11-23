@@ -118,3 +118,4 @@ En el siguiente enlace puedes ver un ejemplo de como el IDS detecta este tipo de
 https://docs.paloaltonetworks.com/cortex/cortex-xdr/cortex-xdr-analytics-alert-reference/cortex-xdr-analytics-alert-reference/suspicious-ldap-search-query-executed
 ```
 
+***FIN DEL LABORATORIO***

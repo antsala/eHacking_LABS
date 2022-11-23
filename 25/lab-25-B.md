@@ -9,8 +9,7 @@ Requisitos:
 
 
 En la máquina ***Kali***, si no estamos conectados a la app, abrimos el navegador y conectamos a la siguiente URL.
-
-Nota: Si fallara, revisar que el contenedor esté corriendo.
+(Nota: Si fallara, revisar que el contenedor esté corriendo.)
 ```
 http://192.168.20.60:3000
 ```
@@ -57,3 +56,4 @@ Finaliza el proceso de compra.
 
 Esto es lo que debes saber sobre como funcina la app. Para finalizar estudia el menú ***Account*** y observa las opciones disponibles.
 
+***FIN DEL LABORATORIO***

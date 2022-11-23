@@ -76,10 +76,10 @@ http://www.kloth.net/services/dig.php
 ```
 
 Rellena el formulario y consulta el mismo dominio de antes.
-Nota: Puedes intentar ***transferencias de zona***, que no deberían funcionar.
+(Nota: Puedes intentar ***transferencias de zona***, que no deberían funcionar.)
 
 En otra pestaña del navegador, conéctate a esta URL.
-Nota: Podrás ver un montón de servicios relacionados.
+(Nota: Podrás ver un montón de servicios relacionados.)
 ```
 http://www.kloth.net/services/
 ```
@@ -94,15 +94,15 @@ De las herramientas anteriores, elige ***Reverse IP Domain Check*** e introduce 
 certifiedhacker.com
 ```
 
-Como resultados podrás comprobar los dominios hospedados en la IP ***162.241.216.11***
-Nota: Esta IP Podría ser diferente a la que mostramos.
+Como resultados podrás comprobar los dominios hospedados en la IP ***162.241.216.11***.
+(Nota: Esta IP Podría ser diferente a la que mostramos.)
 
 Ahora vamos a utilizar una herramienta muy conocida en el mundillo, se trata de ***dnsrecon***.
 
 Generalmente las organizaciones piden bloques de direcciones IPs para sus servicios públicos. Una técnica muy habitual consiste en reconocer el conjunto de IPs adyacentes a la que ya hemos descubierto. Su finalidad es la de descubrir servicios en Internet que pudieran no ser de uso público, como servidores VPN.
 
 En una terminal de la máquina ***Kali*** escribimos el siguiente comando.
-Nota: Estamos reconociendo una red de clase C en la que se encuentra la IP del servidor web.
+(Nota: Estamos reconociendo una red de clase C en la que se encuentra la IP del servidor web.)
 ```
 dnsrecon -r 162.241.216.0-162.241.216.255
 ```
@@ -137,7 +137,7 @@ https://www.yougetsignal.com/tools/visual-tracert/
 ```
 
 Herramientas para realizar el trazado existen muchas. Abre tu navegador y copia la siguiente URL en la barra de direcciones. 
-Nota: La aplicación que vamos a instalar requiere Java.
+(Nota: La aplicación que vamos a instalar requiere Java.)
 ```
 https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.exe
 ```
@@ -153,3 +153,4 @@ Espera a que se descargue la app e instálala. Cuando la abras, traza la ruta al
 
 ***FIN ACTIVIDAD***
 
+***FIN DEL LABORATORIO***

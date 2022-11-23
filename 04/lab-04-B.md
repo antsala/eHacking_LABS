@@ -89,3 +89,5 @@ De la salida anterior, localiza la siguiente información:
 * Shares.
 
 ***FIN ACTIVIDAD***
+
+***FIN DEL LABORATORIO***

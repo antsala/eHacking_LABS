@@ -112,12 +112,6 @@ Una vez descargada la demo, la instalamos y la ejecutamos. Seleccionamos la opci
 Es cuestión de aceptar las propuesta y que limpie el sistema.
 
 
-
-
-
-
-
-
 ## Ejercicio 3: Eliminar eventos de los logs de Linux.
 
 De forma similar al ejercicio anterior, en ***Linux*** también se registran todas las actividades acaecidas sobre el sistema. 
@@ -172,13 +166,4 @@ Logs en la carpeta ***/var/log/***.
 Los logs son archivos de texto y si tenemos los permisos apropiados podemos modificarlos (tamper), eliminarlos, etc.
 
 
-
-
-
-
-
-
-
-
-
-
+***FIN DEL LABORATORIO***

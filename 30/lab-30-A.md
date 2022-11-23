@@ -8,7 +8,8 @@ Requisitos:
 Como ya hemos visto, ***nmap*** es la herramienta estrella para descubrir los servicios presente en una víctima que resida en la misma red local que el atacante. 
 
 
-Procedemos a realizar un nmap de todos los puertos en la víctima (***192.168.20.13***). El parámetro ***-sV*** sondea los puertos abiertos para determinar la versión de cada servicio. Conocer la versión es importante para determinar si existen vulnerabilidades que se puedan implementar. (Nota: Tardará bastante tiempo. Tener paciencia)
+Procedemos a realizar un nmap de todos los puertos en la víctima (***192.168.20.13***). El parámetro ***-sV*** sondea los puertos abiertos para determinar la versión de cada servicio. Conocer la versión es importante para determinar si existen vulnerabilidades que se puedan implementar. 
+(Nota: Tardará bastante tiempo. Tener paciencia)
 ```
 nmap -sV 192.168.20.13 -p 0-65535
 ```

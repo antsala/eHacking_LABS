@@ -84,7 +84,10 @@ https://nvd.nist.gov/
 
 Este sitio también recopila información sobre ***CVE*** y ***CWE***, así como información sobre cómo realizar auditorías de seguridad.
 
-*** ACTIVIDAD***
+***ACTIVIDAD***
 
 Estudia el contenido de esta web.
 
+***FIN ACTIVIDAD***
+
+***FIN DEL LABORATORIO***

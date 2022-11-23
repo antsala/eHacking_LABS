@@ -62,7 +62,7 @@ sudo apt install -y tor torbrowser-launcher
 ```
 
 Para lanzar ***Tor*** ejecutamos el siguiente comando.
-Nota: La primera vez se descargará e instalará TOR.
+(Nota: La primera vez se descargará e instalará TOR.)
 ```
 torbrowser-launcher
 ```
@@ -74,7 +74,7 @@ Originalmente Tor se ideo para evitar escuchas gubernamentales en aquellos país
 Esta ***anonimato*** también es usado por los ***actores de la amenaza*** (y otros delincuentes) para relacionarse.
 
 Una vez finalizada la instalación, hacemos clic en ***Configure Connection...***. Deberíamos leer la documentación que muestra en link ***Learn more*** donde se explica cómo funciona TOR y su finalidad. En esta caso simplemente nos conectamos haciendo clic en ***Connect***. La conexión tarda unos segundos en establecerse.
-Nota: Si observas que tarda más de la cuenta, cancela el intento de conexión y realízalo de nuevo.
+(Nota: Si observas que tarda más de la cuenta, cancela el intento de conexión y realízalo de nuevo.)
 
 Como puede observarse en la siguiente imagen, el navegador Tor utiliza ***DuckDuckGo***.
 
@@ -105,7 +105,7 @@ Puedes observar que existe el botón ***New Circuit for this Site***. Si lo puls
 El objetivo en este curso de Ethical Hacking respecto a la red Tor es que seas consciente de la capacidad de ocultación (anonimato) que esta herramienta ofrece. Como miembro del ***Blue Team*** debes saber que cualquier IP registrada por tu perimetral o IDS, puede no servir absolutamente de nada si el actor está oculto detrás de Tor. Así que se precavido y no saques conclusiones apresuradas sobre el origen del ataque.
 
 A continuación explicamos cómo acceder a los dominios ***.onion***.
-Nota: Aviso Legal!!!!. ***Con este mensaje, el alumno queda advertido de que puede encontrar contenidos, que además de ser ilegales, puede herir su sensibilidad. Así que no realices búsquedas que puedan conducirte a ese tipo de contenidos.***
+(Nota: Aviso Legal!!!!. ***Con este mensaje, el alumno queda advertido de que puede encontrar contenidos, que además de ser ilegales, puede herir su sensibilidad. Así que no realices búsquedas que puedan conducirte a ese tipo de contenidos.***)
 
 Los dominios ***.onion*** están formados por un prefijo aleatorio muy grande, que hace imposible intuir su contenido, además de "adivinar" los dominios.
 
@@ -119,7 +119,7 @@ El resultado es el siguiente.
 ![Onion inválido](../img/lab-02-B/202208301115.png)
 
 Un primer punto de entrada es ***TheHiddenWiki.org***. Puedes acceder a ella desde Internet o desde la propia DarkWeb. Escribe la siguiente URL en la barra de dirección del navegador Tor.
-Nota: Sé paciente. El tráfico a través del circuito Tor es muy lento.
+(Nota: Sé paciente. El tráfico a través del circuito Tor es muy lento.)
 ```
 http://s4k4ceiapwwgcm3mkb6e4diqecpo7kvdnfr5gg7sph7jjppqkvwwqtyd.onion/
 ```
@@ -168,11 +168,4 @@ Por otro lado, ¿Sabías que se puede identificar a un servidor mediante una hue
 
 Léete este artículo: https://ciberseguridad.com/herramientas/software/jarm-herramienta-huellas-digitales/. A continuación determina si el host que está evaluando se encuentra en un proveedor cloud (mayor seguridad) o en on-prem (menor seguridad)
 
-
-
-
-
-
-
-
-
+***FIN DEL LABORATORIO***

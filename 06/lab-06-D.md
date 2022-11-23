@@ -131,3 +131,4 @@ net group "Domain Admins" metasploit /add /domain
 
 Aquí termina el lab. Reinicia la máquina ***Win 11*** y cierra todas las terminales de la máquina ***Kali***.
 
+***FIN DEL LABORATORIO***

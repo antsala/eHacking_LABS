@@ -106,7 +106,7 @@ En la imagen podemos ver el resultado.
 Un archivo con el permiso ***SUID*** (bit s), puede ser ejecutado por cualquier usuario, pero siempre se ejecuta con el permiso del propietario, que es ***root***.
 
 En la máquina ***ubu_srv_01***, donde hemos iniciado la sesión con el usuario ***luke***, ejecutamos el comando.
-Nota: ***-p*** ejecuta la shell en modo privilegiado, de no ponerlo, SUID no tendrá efecto.
+(Nota: ***-p*** ejecuta la shell en modo privilegiado, de no ponerlo, SUID no tendrá efecto.)
 ```
 /datos/bash -p
 ```
@@ -127,3 +127,4 @@ cd ~
 sudo umount /tmp/share
 ```
 
+***FIN DEL LABORATORIO***

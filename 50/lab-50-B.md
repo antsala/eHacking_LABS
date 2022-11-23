@@ -29,7 +29,7 @@ En este escenario, el equipo ***Víctima*** (***Win 11***) está bajo el control
 Para conseguirlo vamos a enviar el archivo desde el equipo de la víctima al equipo de ataque (***Kali***) usando el protocolo ***ICMP***.
 
 Lo primero que debemos comprobar es si la víctima puede enviar paquetes ***ICMP***.
-Nota: En la realidad, la víctima debería poder hacer ping hacia Internet, donde en una IP Pública se ubicará un servidor de ICMP con el que se va a comunicar. Por temas legales, nos limitamos al entorno de laboratorio, siendo la máquina ***Kali*** el destino de la exfiltración.
+(Nota: En la realidad, la víctima debería poder hacer ping hacia Internet, donde en una IP Pública se ubicará un servidor de ICMP con el que se va a comunicar. Por temas legales, nos limitamos al entorno de laboratorio, siendo la máquina ***Kali*** el destino de la exfiltración.)
 
 En ***Win 11*** abrimos una terminal de ***PowerShell*** y escribimos.
 ```
@@ -133,13 +133,4 @@ Para finalizar no olvidemos volver a habilitar la respuesta de ***ICMP***.
 sudo sysctl -w net.ipv4.icmp_echo_ignore_all=0
 ```
 
-
-
-
-
-
-
-
-
-
-
+***FIN DEL LABORATORIO***

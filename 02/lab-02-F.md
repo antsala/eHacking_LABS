@@ -10,13 +10,13 @@ Herramientas de reconocimiento tenemos por doquier: Buenas, malas, gratuitas, de
 ## Ejercicio 1: Recon-ng
 
 En una terminal de comandos de la máquina ***Kali*** escribimos.
-Nota: Aparecerá la inferfaz de la herramienta y un prompt que nos invita a interactuar con ella. 
+(Nota: Aparecerá la inferfaz de la herramienta y un prompt que nos invita a interactuar con ella.)
 ```
 recon-ng
 ```
 
 Vamos a proceder a instalar en la herramienta todos los módulo disponibls hasta el momento. En el prompt escribimos.
-Nota: Se presentan errores en algunos módulos indicando que la clave no está disponible.
+(Nota: Se presentan errores en algunos módulos indicando que la clave no está disponible.)
 ```
 marketplace install all
 ```
@@ -29,14 +29,14 @@ marketplace search
 En el listado, nos fijamos en la columna ***K***, que indica los módulos que deben tener instalada una clave. Se corresponde con los errores que hemos obtenido anteriormente. La razon es que ***recon-ng*** es una aplicación de pago y debemos adquirir las claves para poder usar los módulos más avanzados (en este curso eso no es importante)
 
 Recomendamos realizar una lectura detenida sobre todos los módulos de reconocimiento existentes. Si eres un Ethical Hacker profesional te interesará adquirir las claves.
-Nota: El actor de la amenaza seguro que invierte en la compra de estas herramientas.
+(Nota: El actor de la amenaza seguro que invierte en la compra de estas herramientas.)
 
 No obstante, para que aprendas a utilizar ***recon-ng*** realizaremos una pequeña prueba. Vamos a usar el módulo ***reverse_resolve***, que no requiere clave.
 
 ***ACTIVIDAD***
 
 En este link: https://safetag.org/activities/automated_recon tienes un tutorial avanzado sobre la herramienta que te recomendamos hacer. Usa el dominio de tu interés.
-Nota: Algunas claves son necesarias para interactuar con servicios online que requieren autenticación y no es necesario pagar por ellas. En la parte final del tutorial anterior, se explica como obterner (y configurar) las claves para una serie de servicios muy interesantes, así que haz el tutorial hasta el final.
+(Nota: Algunas claves son necesarias para interactuar con servicios online que requieren autenticación y no es necesario pagar por ellas. En la parte final del tutorial anterior, se explica como obterner (y configurar) las claves para una serie de servicios muy interesantes, así que haz el tutorial hasta el final.)
 
 ***FIN ACTIVIDAD***
 
@@ -55,7 +55,7 @@ sudo apt install maltego
 ```
 
 Se iniciará la interfaz gráfica y como verás, solo podemos usar la parte gratuita de la aplicación, que es más que suficiente para evaluar su funcionalidad. Hacemos clic en ***Maltego CE (Free)***, que es la versión de comunidad.
-Nota: Tendrás que registrarte.
+(Nota: Tendrás que registrarte.)
 
 Aquí: https://static.maltego.com/cdn/Handbooks/Maltego-Handbook-for-Cyber-Threat-Intelligence.pdf tienes un documento para que veas como se puede usar Maltego de forma profesional para realizar labores de Ethical Hacking. Te recomendamos su lectura.
 
@@ -80,7 +80,7 @@ usufy.py -n <pon_aquí_el_username> -p twitter
 ```
 
 Para buscar ese nombre de usuario en ***TODAS*** las plataformas, escribimos.
-Nota: Ten paciencia!!!
+(Nota: Ten paciencia!!!)
 ```
 usufy.py -n <pon_aquí_el_username>
 ```
@@ -149,3 +149,5 @@ https://osintframework.com
 Invierte el tiempo que te indique el instructor e investiga las herramientas disponibles.
 
 ***FIN ACTIVIDAD***
+
+***FIN DEL LABORATORIO***

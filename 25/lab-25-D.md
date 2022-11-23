@@ -18,7 +18,7 @@ Los ataques de inyección pueden presentarse cuando la aplicación utiliza algun
 
 Los ataques de inyección SQL pueden ser muy sencillos de explotar, pero también los tenemos muy elaborados y complejos. Las consecuencias de poder interactuar con el servidor de bases de datos son diversas, pueden modificar la información, corromperla o eliminarla.
 
-## Hacer un pedido de la oferta especial de navidad de 2014.
+## Ejercicio 1. Hacer un pedido de la oferta especial de navidad de 2014.
 
 La ***Blind SQL Injection*** es un tipo de ataque donde preguntamos a la base de datos (a ciegas) por consultas que pueden devolver ***true*** o ***false***, y estudiamos la respuesta. Este tipo de ataque se utiliza cuando la aplicación web está configurada para mostrar ***mensajes de error genéricos***, pero es vulnerable a inyección de SQL.
 
@@ -130,7 +130,7 @@ Hacemos clic en el bótón del carrito y veremos como aparecen los dos productos
 ![Carrito](../img/lab-25-D/202211231952.png)
 
 
-## Exfiltrar el esquema de la base de datos.
+## Ejercicio 2. Exfiltrar el esquema de la base de datos.
 
 Los errores que aparecieron el el ejercicio anterior mostraron que la base de datos es ***SQLite***. Es esta base de datos, la tabla del sistema ***sqlite_schema*** contiene el esquema de la base de datos. En esta web, https://www.sqlite.org/faq.html, en el apartado 7, se nos explica los campos que tiene esta tabla. De ellos, el campo ***sql*** contiene la instrucción original que creó la base de datos.
 
@@ -205,7 +205,7 @@ Como resultado tenemos exfiltrado todo el esquema de la base de datos, ya que la
 ![esquema](../img/lab-25-D/202211232044.png)
 
 
-
+***FIN DEL LABORATORIO***
 
 
 https://pwning.owasp-juice.shop/part2/injection.html

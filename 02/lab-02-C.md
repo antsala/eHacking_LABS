@@ -43,7 +43,7 @@ sherlock "<Pon_aquí_el_nombre_y_apellidos_de_alguien_o_su_usuario>"
 ```
 
 Como resultado obtendrás links a las redes donde aparece referenciada la persona que buscas.
-Nota: ***Sherlock*** puede tardar bastante tiempo. Ten paciencia y comprueba los resultados conforme van saliendo.
+(Nota: ***Sherlock*** puede tardar bastante tiempo. Ten paciencia y comprueba los resultados conforme van saliendo.)
 
 
 ## Ejercicio 3: Extraer información desde Twitter.
@@ -62,3 +62,4 @@ https://followerwonk.com/analyze
 En el cuadro de búsqueda escribimos la identidad de la persona que estamos investigando y seleccionamos qué nos interesa saber. Juega con esta web para determinar qué información puede extraerse interactuando con los servicios web de Twitter.
 
 
+***FIN DEL LABORATORIO***

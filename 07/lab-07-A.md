@@ -79,15 +79,4 @@ Editamos el archivo ***xml*** anterior con un editor, como ***nano*** y con paci
 
 ![Credenciales capturadas](../img/lab-07-A/202210021843.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
+***FIN DEL LABORATORIO***

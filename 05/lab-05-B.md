@@ -364,3 +364,5 @@ Cuando termine, el resultado mostrará las vulnerabilidades descubiertas.
 Aquí: https://www.youtube.com/watch?v=K78YOmbuT48 tienes un video tutorial de cómo usar ***nikto***.
 
 ***FIN ACTIVIDAD***
+
+***FIN DEL LABORATORIO***

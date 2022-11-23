@@ -152,6 +152,4 @@ ZAP HUD crea unas frames en los margenes izquierdo, derecho e inferior que permi
 ![HUD Tutorial](../img/lab-25-A/202211222011.png)
 
 
-***FIN DEL LABORATORIO***.
-
-
+***FIN DEL LABORATORIO***

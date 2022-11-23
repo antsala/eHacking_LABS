@@ -88,8 +88,7 @@ y luego haz clic en ***OK***.
 Ahora solo necesitas hacer clic en el botón ***Start*** para empezar a extraer información.
 
 Cuando termine, solo tienes que ir visualizando las pestañas ***Meta tags***, ***Emails***, ***Phones***, ***Faxes***, ***Merged list*** y ***Urls***.
-
-Nota: Es posible que no obtengas resultados. En esos casos se debe a que existe una contramedida que detecta la enumeración del sitio y bloquea las respuestas de http.
+(Nota: Es posible que no obtengas resultados. En esos casos se debe a que existe una contramedida que detecta la enumeración del sitio y bloquea las respuestas de http.)
 
 En la web tenemos herramientas online que hacen prácticamente lo mismo, pero además, ofrecen información de marketing. Estas web son de pago y se suelen utilizar para obtener información comercial de un competidor.
 
@@ -169,5 +168,6 @@ Visualizamos el diccionario.
 cat ~/cewl/target01/diccionario.txt
 ```
 
-Nota: Puede parecer una obviedad que el uso de esta técnica no proporcionaría información de calidad, pero en la experiencia de un Ethical Hacker, la fuga de información es una realidad, por mucho que se intente evitar. El verdadero potencial de estas herramientas reside en el ***insider***, es decir, cuando el actor de la amenaza consigue estar dentro de la red local de la víctima y, por ejemplo, tiene acceso a los repositorios del código fuente.
+(Nota: Puede parecer una obviedad que el uso de esta técnica no proporcionaría información de calidad, pero en la experiencia de un Ethical Hacker, la fuga de información es una realidad, por mucho que se intente evitar. El verdadero potencial de estas herramientas reside en el ***insider***, es decir, cuando el actor de la amenaza consigue estar dentro de la red local de la víctima y, por ejemplo, tiene acceso a los repositorios del código fuente.)
 
+***FIN DEL LABORATORIO***

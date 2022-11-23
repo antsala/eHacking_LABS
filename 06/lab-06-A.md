@@ -253,3 +253,5 @@ Investiga en un escenario de ***Active Directory*** cómo se puede configurar lo
 Pista: Son configuraciones de GPO.
 
 ***FIN ACTIVIDAD***
+
+***FIN DEL LABORATORIO***

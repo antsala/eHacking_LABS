@@ -13,7 +13,7 @@ La ejecución de scripts maliciosos de PowerShell viene siendo bien detectada po
 Asegúrate que en la máquina ***Win 11*** tienes clonado el repo de Github con los archivos del curso. Si no es así o no lo tienes claro, mira el ***Ejercicio 11: Clonado del repositorio de GitHub.*** del ***lab-00.md***.
 
 Abre una terminal de ***PowerShell*** como ***ADMINISTRADOR*** y habilita la ejecución de scripts en la máquina.
-Nota: Responde con ***Yes to All*** a la pregunta.
+(Nota: Responde con ***Yes to All*** a la pregunta.)
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
@@ -29,7 +29,7 @@ En este laboratorio hacemos un simple sondeo de puertos, pero la realidad es que
 ## Ejercicio 2: Ofuscar el malware.
 
 Vamos a proceder a la ofuscación. Para ello aprovecharemos un proyecto publicado en https://github.com/danielbohannon/Invoke-Obfuscation
-Nota: Detén el sondeo de puertos con ***CTRL+C***.
+(Nota: Detén el sondeo de puertos con ***CTRL+C***.)
 
 ![Invoke-Obfuscation](../img/lab-50-A/202209111409.png)
 
@@ -81,10 +81,10 @@ Solo hay una opción disponible ***COMPRESS\1***. La seleccionamos poniendo ***1
 ```
 
 Podrás observar cómo aparece ofuscado el script. Necesitamos llevarlo a la víctima y para ello hacemos uso del portapapeles.
-Nota: En realidad, el actor de amenaza utilizará los vectores más habituales para hacer llegar el ***PowerShell*** a la víctima.
+(Nota: En realidad, el actor de amenaza utilizará los vectores más habituales para hacer llegar el ***PowerShell*** a la víctima.)
 
 Con mucho cuidado, seleccionamos con el ratón el payload y lo copiamos al portapapeles.
-Nota: El payload de de color violeta y aparece después del texto ***Result:***.
+(Nota: El payload de de color violeta y aparece después del texto ***Result:***.)
 
 
 En la máquina ***Win 11***, abrimos una terminal de ***PowerShell***. En ella ***Pegamos*** la selección que tenemos en el portapapeles y pulsamos ***ENTER***.
@@ -110,7 +110,7 @@ Aparecen las siguientes opciones.
 ![Menú ENCODING](../img/lab-50-A/202209111806.png)
 
 Elegimos la codificación ***BXOR***, así que elegimos la opción ***6***.
-Nota: La herramienta va añadiendo ofuscaciones. En este momento tenemos una ***Compresión*** y una ***Codificación BXOR***. 
+(Nota: La herramienta va añadiendo ofuscaciones. En este momento tenemos una ***Compresión*** y una ***Codificación BXOR***.)
 ```
 6
 ```
@@ -165,3 +165,5 @@ Explora el resto de la herramienta ***Invoke-Obfuscation*** y determina el grado
 Como administrador puedes tener la tentación de prohibir la ejecución de scripts de PowerShell en los equipos de los usuarios. Si bien es una medida muy drástica que cumple con la finalidad que buscamos, se pierde una gran parte de la administración moderna de los sistamas, que está basada en PowerShell. ¿Qué solución debería implementarse en la organización para minimizar el riesgo de la ejecución de scripts de PowerShell?
 
 ***FIN ACTIVIDAD***
+
+***FIN DEL LABORATORIO***

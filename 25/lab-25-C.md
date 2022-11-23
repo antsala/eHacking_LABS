@@ -7,7 +7,7 @@ Requisitos:
 2. Máquina ***Kali Linux***.
 3. Máquina ***Ubu_srv_01***
 
-## Descubrir el "Scoreboard".
+## Ejercicio 1: Descubrir el "Scoreboard".
 
 Muchas aplicaciones tienen páginas "ocultas" que no están vinculadas desde ninguna otra parte de la aplicación. Quizás la intención del programador pasa por aportar una funcionalidad que solo es conocida por ciertas personas, como los administradores de la aplicación. Este reto propone encontrar la página ***ScoreBoard*** que está oculta. Cuando la encontremos, podremos ver nuestro avance a lo largo del reto de ***Juice Shop***.
 
@@ -49,7 +49,7 @@ Como resultado hemos encontrado la página oculta que mostrará nuestros avances
 
 
 
-## Descubrir la sección "Admin"
+## Ejercicio 2: Descubrir la sección "Admin"
 
 En este reto se nos propone localizar la página oculta de administración. 
 
@@ -91,4 +91,3 @@ Como resultado hemos encontrado la página oculta, a la que aún no tenemos acce
 ![Administration](../img/lab-25-C/202211212046.png)
 
 ***FIN DEL LABORATORIO***
-

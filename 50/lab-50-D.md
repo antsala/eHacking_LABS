@@ -57,7 +57,7 @@ git clone --recurse-submodules https://github.com/cobbr/Covenant
 
 y lo ejecutamos.
 
-Nota: Tened paciencia, tarda unos minutos en iniciarse.
+(Nota: Tened paciencia, tarda unos minutos en iniciarse.)
 ```
 cd Covenant/Covenant
 
@@ -70,7 +70,7 @@ Debemos esperar hasta ver el siguiente mensaje, donde se indica la forma de cone
 
 Abrimos el navegador y conectamos a la siguiente URL.
 
-Nota: Ignorar la advertencia de certificado. Es debido a que se usa un certificado autofirmado.
+(Nota: Ignorar la advertencia de certificado. Es debido a que se usa un certificado autofirmado.)
 ```
 https://127.0.0.1:7443
 ```
@@ -156,7 +156,7 @@ Dejamos los valores como se muestra en la siguiente imagen y hacemos clic en ***
 
 Se muestran la versión ***normal*** del launcher y la ***ofuscada***, que tiene la finalidad de intentar evadir al Antivirus.
 
-Nota: Disponemos de sendos botones para copiar en el portapapeles el ***Launcher*** que nos interese. También tenemos el botón ***Download*** que descargará el script de PowerShell.
+(Nota: Disponemos de sendos botones para copiar en el portapapeles el ***Launcher*** que nos interese. También tenemos el botón ***Download*** que descargará el script de PowerShell.)
 
 ![Launchers](../img/lab-50-D/202210101736.png)
 
@@ -179,14 +179,9 @@ Vamos a intentar realizar algo muy interesante, que no es otra cosa, que hacer q
 
 ## Ejercicio 3: Evadir al antivirus alterando AMSI.
 
-Explicar qué es AMSI en este video. Nota, he hecho pruebas y el AV lo detecta.
+Explicar qué es AMSI en este video. 
+(Nota, he hecho pruebas y el AV lo detecta.)
 
 Para evadir al AV: https://www.youtube.com/watch?v=Fi0jXm8VOFU&list=WL&index=8
 
-
-
-
-
-
-
-
+***FIN DEL LABORATORIO***

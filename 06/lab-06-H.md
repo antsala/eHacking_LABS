@@ -80,11 +80,4 @@ Para terminar, en la máquina de ***Win 11***, desinstalamos ***Xarp***.
 
 En la máquina de ***Kali***, detenemos el ataque.
 
-
-
-
-
-
-
-
-
+***FIN DEL LABORATORIO***
