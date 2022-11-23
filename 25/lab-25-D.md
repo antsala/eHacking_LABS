@@ -93,7 +93,28 @@ Si observas, la aplicación devuelve otra vez la lista de productos, pero en est
 
 ![Christmas](../img/lab-25-D/202211222100.png)
 
-TODO.
+
+Ahora procedemos a realizar el hackeo, consistente en hacer el pedido de este producto que está descatalogado. Para ello procedemos a realizar el login en la aplicación, de la forma que aprendimos a hacer. Si has cerrado en navegador, vuelve a la interfaz de ZAP y en ***Quick Start***, inicia una exploración manual en la URL siguiente.
+```
+http://192.168.20.60:3000/#/login
+```
+
+Inicia sesión con el usuario que has creado. Vamos a añadir un producto normal en el carrito, para evitar problemas cuando agregemos es que está descatalogado. Por ejemplo, agrega ***Lemon Juice (500ml)***.
+
+![Lemon Juice](../img/lab-25-D/202211231924.png)
+
+Ahora debemos localizar la request que agrega el zumo de limón al carrito. Para ello hacemos clic en ***History*** del ***HUD***, y localizamos la request a la URL ***http://192.168.20.60:3000/api/BasketItems/***. Hacemos clic en ella y podrás ver la información que la aplicación manda a la api del servidor, tal y como se muestra en la siguiente imagen.
+
+![BasketId](../img/lab-25-D/202211231929.png)
+
+Podrás comprobar que el ***ProductId*** es ***5***, que ***BasketId*** es ***6*** y ***quantity*** es ***1***.
+Nota: ***BasketId*** puede mostrar un valor diferente al de este tutorial. Anótalo porque lo usarás en breve.
+
+
+
+
+
+
 https://pwning.owasp-juice.shop/appendix/solutions.html
 
 https://pwning.owasp-juice.shop/part2/injection.html
