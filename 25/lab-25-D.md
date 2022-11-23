@@ -36,7 +36,7 @@ Cuando realizamos el ataque, la aplicación web puede mostrar errores  indicando
 ***RESOLUCIÓN***. Los pasos para resolver el reto son.
 
 Usaremos ***ZAP***, así que lo abrimos y conectamos a la siguiente URL.
-Nota: Si no lo tienes claro o no lo conoces, te recomiendo hacer el laboratorio ***lab-25-A***.
+(Nota: Si no lo tienes claro o no lo conoces, te recomiendo hacer el laboratorio ***lab-25-A***.)
 
 ```
 http://192.168.20.60:3000/search
@@ -108,7 +108,7 @@ Ahora debemos localizar la request que agrega el zumo de limón al carrito. Para
 ![BasketId](../img/lab-25-D/202211231929.png)
 
 Podrás comprobar que el ***ProductId*** es ***5***, que ***BasketId*** es ***6*** y ***quantity*** es ***1***.
-Nota: ***BasketId*** puede mostrar un valor diferente al de este tutorial. Anótalo porque lo usarás en breve.
+(Nota: ***BasketId*** puede mostrar un valor diferente al de este tutorial. Anótalo porque lo usarás en breve.)
 
 Ahora que ya sabemos el ID de nuestro carrito procedemos a reenviar la request modificando el ***id*** del producto que queremos obtener, y que no es otro que el famoso ***Christmas Super-Surprise-Box (2014 Edition)*** con ***id=10***.
 
@@ -195,8 +195,7 @@ Como resultado obtenemos lo siguiente.
 ![columnas](../img/lab-25-D/202211232037.png)
 
 Por último solo hay que reemplazar uno de los valores fijos ('1', '2', ...) con el nombre de la columna correcta, que es ***sql***. En la barra de direcciones escribimos.
-
-Nota: hemos sustituido ***'1'*** por ***sql***
+(Nota: hemos sustituido ***'1'*** por ***sql***.)
 ```
 https://192.168.20.60:3000/rest/products/search?q=hfhdskfhskdjfhsjkfh')) UNION SELECT sql, '2', '3', '4', '5', '6', '7', '8', '9' FROM sqlite_schema--
 ```
