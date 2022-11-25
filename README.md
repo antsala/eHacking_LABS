@@ -178,6 +178,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Exfiltrar el esquema de la base de datos.
    - Obtener las credenciales de todos los usuarios.
    - Iniciar sesión con el usuario administrador.
+   - Iniciar sesión con un usuario que ni siquiera existe.
 
 
    
