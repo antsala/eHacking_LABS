@@ -302,9 +302,60 @@ y password.
 admin123
 ```
 
+## Ejercicio 5: Iniciar sesión con un usuario que ni siquiera existe.
+
+
+***OBJETIVO***: Obtener un token JWT (JSON Web Token) que permita iniciar sesión sin registrar al usuario.
+
+***PISTAS***: 
+
+* En ejercicios anteriores hemos determinado que la aplicación es susceptible a ataque de inyección de SQL. Hay otra vulnerabilidad en la página de login.
+* También hemos exfiltrado el esquema de la base de datos que usa la aplicación, donde hay una tabla llamada ***Users***.
+
+***RESOLUCIÓN***. Los pasos para resolver el reto son.
+
+Usa ZAP para interceptar el tráfico HTTP y conéctate a la URL de login.
+```
+http://192.168.20.60:3000/#/login
+```
+
+Pon una comilla simple ***'*** en el campo ***email***. Para el campo ***Password*** puedes poner cualquier cosa. Observaras que el cuadro de login no se comporta correctamente, mostrando un mensaje que dice ***Object Object***.
+
+![Object Object](../img/lab-25-D/202211251947.png)
+
+Necesitamos estudiar la response de http para ver que está ocurriendo. De esta forma, en ***ZAP*** elegimos ***History*** para localizar la request que hace el login. La URL debe ser ***http://192.168.20.60:3000/rest/user/login***. Al hacer clic en ella obtenemos la siguiente pantalla en la que podemos observar los parámetros que se mandan (email y password)
+
+![Request](../img/lab-25-D/202211251952.png)
+
+Hacemos clic en el botón ***Response***, para estudiar la respuesta de la aplicación. Hacemos un scroll en la response hasta localizar el mensaje de error SQL, que está marcado con un rectángulo rojo en la siguiente imagen.
+
+![Response](../img/lab-25-D/202211251955.png)
+
+El ataque consiste en preparar una ***UNION SELECT*** de forma que la consulta original no devuelva registros y que la UNION entregue un recordset de un usuario inexistente. De esta forma, volvemos a intentar el login y, en el campo ***email*** escribimos.
+(Nota: para el password puedes poner lo que quieras)
+```
+' UNION SELECT * FROM (SELECT 15 as 'id', '' as 'username', 'este_usuario_no_existe@este_dominio_tampoco.null' as 'email', '12345' as 'password', 'accounting' as 'role', '123' as 'deluxeToken', '1.2.3.4' as 'lastLoginIp' , '/assets/public/images/uploads/default.svg' as 'profileImage', '' as 'totpSecret', 1 as 'isActive', '1999-08-16 14:14:41.644 +00:00' as 'createdAt', '1999-08-16 14:33:41.930 +00:00' as 'updatedAt', null as 'deletedAt')--
+```
+
+Haciendo clic en el icono del carrito, podrás comprobar que la aplicación te ha logado con un usuario que no existe.
+
+![este_usuario_no_existe](../img/lab-25-D/202211252003.png)
+
 
 ***FIN DEL LABORATORIO***
 
+HECHO Christmas Special	Order the Christmas special offer of 2014.	⭐⭐⭐
+HECHO Database Schema	Exfiltrate the entire DB schema definition via SQL Injection.	⭐⭐⭐
+HECHO Ephemeral Accountant	Log in with the (non-existing) accountant acc0unt4nt@juice-sh.op without ever registering that user.	⭐⭐⭐⭐
+HECHO Login Admin	Log in with the administrator's user account.	⭐⭐
+
+Login Bender	Log in with Bender's user account.	⭐⭐⭐
+Login Jim	Log in with Jim's user account.	⭐⭐⭐
+NoSQL DoS	Let the server sleep for some time. (It has done more than enough hard work for you)	⭐⭐⭐⭐
+NoSQL Exfiltration	All your orders are belong to us! Even the ones which don't!	⭐⭐⭐⭐⭐
+NoSQL Manipulation	Update multiple product reviews at the same time.	⭐⭐⭐⭐
+SSTi	Infect the server with juicy malware by abusing arbitrary command execution.	⭐⭐⭐⭐⭐⭐
+User Credentials	Retrieve a list of all user credentials via SQL Injection.	⭐⭐⭐⭐
 
 https://pwning.owasp-juice.shop/part2/injection.html
 https://pwning.owasp-juice.shop/appendix/solutions.html
