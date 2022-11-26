@@ -1,7 +1,6 @@
 # Romper la autenticación (***Broken Authentication***).
 
-      
-      
+     
 
 Requisitos:
 1. Máquina ***Router-Ubu***.
@@ -9,6 +8,8 @@ Requisitos:
 3. Máquina ***Ubu_srv_01***
 
 Las debilidades en la autenticación permiten al actor de la amenaza ganar suplantar la identidad de un usuario de la aplicación. Para conseguir este objetivo se pueden recorrer diversos caminos. En los siguientes ejercicios exponemos algunos de ellos a modo de ejemplo.
+
+## Ejercicio 1:  Cambiar el password del usuario ***Bender*** sin usar ni inyección de SQL ni la opción Contraseña olvidada.
 
 ***OBJETIVO***: Cambiar el password de un usuario llamado ***Bender***.
 
@@ -144,19 +145,90 @@ Password.
 NUEVO_PASSWORD
 ```
 
+## Ejercicio 2: Romper la autenticación 2FA.
 
+Es preciso indicar que el hackeo que se va a hacer a la aplicación se debe exclusivamente a que existe una vulnerabilidad previa de inyección de SQL que permite logar al usuario sin conocer el password de éste. En ningún caso la debilidad mostrada se debe a la aplicación ***Google Authenticator***.
+
+***OBJETIVO***: Iniciar sesión con un usuario que tiene activado un factor adicional de autenticación.
+
+***PISTAS***: 
+
+* Activar la 2FA para tu usuario actual. Descubre qué tipo de factor se está usando.
+* Estudia la estructura de la tabla ***Users*** para determinar en el campo se almacena el factor de autenticación y cuántos usuarios la tienen habilitada.
+
+***RESOLUCIÓN***. Los pasos para resolver el reto son.
+
+Como siempre iniciamos ***ZAP***.
+
+En primer lugar iniciamos sesión con nuestro usuario de la aplicación. A continuación vamos a la opción ***Account/Privacy & Security/2FA Configuration***. 
+
+![2FA menu](../img/lab-25-E/202211262012.png)
+
+Al seleccionar esta opción veremos la siguiente pantalla.
+
+![TOTP](../img/lab-25-E/202211262014.png)
+
+Es fácil determinar que el factor de autenticación adicional es un password de un solo uso que caduca en un corto periodo de tiempo. ***TOTP***, o Time-Based One-Time Password, es una variante de la autenticación MFA que funciona gracias a un código que se genera de forma aleatoria y actúa como token de autenticación. Estos códigos se generan con aplicaciones muy conocidas, como ***Google Authenticator***. Para que el actor de la amenaza se pudiera logar en la aplicación, además de tener que saber el password, necesitaría tener el móvil al que se va a mandar el TOTP, considerándose éste método como muy fiable.
+
+Vamos a ver como podemos romper esta autenticación.
+
+En primer lugar necesitamos conocer cómo almacena la aplicación el token ***TOTP***. En el ***Ejercicio 2*** del laboratorio ***lab-25-D*** pudimos exfiltrar el esquema de la base de datos. En él vimos una tabla llamada ***Users*** que almacena la información de autenticación de los usuarios. Si observas la siguiente imagen, hay un campo que tiene toda la pinta de guardar la información de la 2FA para TOTP. Se llama ***totpsecret*** y por defecto se inicia a un string vacio. Además, es la ***novena (9)*** columna de la tabla.
+
+![totpsecret](../img/lab-25-E/202211262035.png)
+
+En segundo lugar, será necesario saber qué usuarios de la aplicación tienen habilitada la 2FA. En nuestro caso es sencillo, porque en el ***Ejercicio 3*** del laboratorio ***lab-25-D*** fuimos capaces de exfiltrar toda la tabla ***Users***. Recreamos ese ataque para obtener todos los registros de la tabla de usuario. En la barra de direcciones del navegador escribimos.
+```
+https://192.168.20.60:3000/rest/products/search?q=ewrwerwewerwerwer')) UNION SELECT id, username, email, password, '5', '6', '7', '8', totpsecret FROM users--
+```
+
+El noveno campo de la tabla ***Users*** se corresponde con el campo ***deletedAt*** en la ***UNION SELECT***. Podemos comprobar que el registro número 9 se corresponde con un usuario de nombre ***wursbrot*** y tiene un valor configurado en el campo correspondiente al ***totpsecret***, tal y como se puede ver en la siguiente captura. 
+
+![IFTXE3SPOEYVURT2MRYGI52TKJ4HC3KH](../img/lab-25-E/202211262048.png)
+
+Este es el valor del campo ***totpsecret***.
+```
+IFTXE3SPOEYVURT2MRYGI52TKJ4HC3KH
+```
+
+Necesitamos la aplicación ***Google Authenticator***. Para mayor comodidad, en lugar de usar un móvil, usamos ***Bluestacks*** (o cualquier emulador de Android). Instalamos la aplicación y al abrirla nos pide que demos el alta una cuenta. Generalmente usaríamos la cámara del móvil para obtener la clave de configuración a través del código QR, pero eso es precisamente lo que hemos capturado en el campo ***totpsecret***, así que elegimos la opción ***Ingresar clave de config.***.
+
+![clave de config](../img/lab-25-E/202211262053.png)
+
+Ponemos la siguiente información.
+
+En ***Nombre de la cuenta*** ponemos cualquier cosa, por ejemplo.
+```
+juiceshop
+```
+
+En ***Tu llave*** pegamos el valor capturado en el campo ***totpsecret***.
+```
+IFTXE3SPOEYVURT2MRYGI52TKJ4HC3KH
+```
+
+Y en ***Tipo de clave*** dejamos el valor por defecto ***Basado en tiempo***.
+
+Hacemos clic en ***Agregar*** y dejamos abierta la aplicación ***Google authenticator***.
+
+Ahora procedemos a realizar el hackeo. Hacemos logout de nuestro usuario actual. A continuación escribimos esta URL en la barra de direcciones.
+```
+https://192.168.20.60:3000/#/login
+```
+
+Aprovechamos la inyección SQL que nos permitía logarnos sin conocer el password. En el campo ***email*** escribimos.
+```
+wurstbrot@juice-sh.op'--
+```
+
+En el campo ***Password*** puedes poner cualquier cosa. Luego haz clic en ***Log in***.
+
+
+La aplicación pedirá el segundo factor. Es el momento de volver a la aplicación ***Google Authenticator*** para ver el código generado.
+
+![totp](../img/lab-25-E/202211262110.png)
+
+Por último, escribimos dicho código en el formulario de la aplicación y ya estaremos logados en la aplicación.
+
+![login](../img/lab-25-E/202211262112.png)
 
 ***FIN DEL LABORATORIO***
-
-Login Bjoern	Log in with Bjoern's Gmail account without previously changing his password, applying SQL Injection, or hacking his Google account.	⭐⭐⭐⭐
-Two Factor Authentication	Solve the 2FA challenge for user "wurstbrot". (Disabling, bypassing or overwriting his 2FA settings does not count as a solution)	⭐⭐⭐⭐⭐
-
-https://pwning.owasp-juice.shop/part2/injection.html
-https://pwning.owasp-juice.shop/appendix/solutions.html
-
-
-
-
-
-
-
