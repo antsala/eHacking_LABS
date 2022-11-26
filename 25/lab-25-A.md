@@ -122,7 +122,7 @@ En la máquina ***Kali***, abrimos una nueva terminal (la anterior está ocupada
 sudo apt-get -y install zaproxy
 ```
 
-Para iniciar ***ZA***, escribimos en la terminal.
+Para iniciar ***ZAP***, escribimos en la terminal.
 ```
 owasp-zap
 ```

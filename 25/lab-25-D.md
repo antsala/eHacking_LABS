@@ -344,19 +344,6 @@ Haciendo clic en el icono del carrito, podrás comprobar que la aplicación te h
 
 ***FIN DEL LABORATORIO***
 
-HECHO Christmas Special	Order the Christmas special offer of 2014.	⭐⭐⭐
-HECHO Database Schema	Exfiltrate the entire DB schema definition via SQL Injection.	⭐⭐⭐
-HECHO Ephemeral Accountant	Log in with the (non-existing) accountant acc0unt4nt@juice-sh.op without ever registering that user.	⭐⭐⭐⭐
-HECHO Login Admin	Log in with the administrator's user account.	⭐⭐
-
-Login Bender	Log in with Bender's user account.	⭐⭐⭐
-Login Jim	Log in with Jim's user account.	⭐⭐⭐
-NoSQL DoS	Let the server sleep for some time. (It has done more than enough hard work for you)	⭐⭐⭐⭐
-NoSQL Exfiltration	All your orders are belong to us! Even the ones which don't!	⭐⭐⭐⭐⭐
-NoSQL Manipulation	Update multiple product reviews at the same time.	⭐⭐⭐⭐
-SSTi	Infect the server with juicy malware by abusing arbitrary command execution.	⭐⭐⭐⭐⭐⭐
-User Credentials	Retrieve a list of all user credentials via SQL Injection.	⭐⭐⭐⭐
-
 https://pwning.owasp-juice.shop/part2/injection.html
 https://pwning.owasp-juice.shop/appendix/solutions.html
 

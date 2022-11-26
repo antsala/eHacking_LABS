@@ -180,6 +180,9 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Iniciar sesión con el usuario administrador.
    - Iniciar sesión con un usuario que ni siquiera existe.
 
+5. Laboratorio 25-E: Romper la autenticación (***Broken Authentication***).
+   - Cambiar el password del usuario ***Bender*** sin usar ni inyección de SQL ni la opción ***Contraseá olvidada***.
+
 
    
 
