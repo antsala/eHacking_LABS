@@ -100,7 +100,7 @@ Hemos visto que el HUD de ZAP es una herramienta muy cómoda de usar, pero es el
 
 ![ZAP](../img/lab-25-F/202211271203.png)
 
-Las arañas solo son efectivas si la URL aparece en un link, ya sea de HTML o generado por javascript. Por lo tanto, pueden existir directorios en el sitio que estamos estudiando que permanezcan ocultos porque estos no aparecen en ningún link. La única forma de descubrirlos es por medio de un ataque de fuerza bruta, consistente en usar un archivo que contiene nombre de directorios habituales (login, logout, ...) y tener suerte en el sentido de que el programador haya usado nombres habituales para los directorios de la aplicación.
+Las arañas solo son efectivas si la URL aparece en un link, ya sea de HTML o generado por javascript. Por lo tanto, pueden existir directorios en el sitio que estamos estudiando que permanezcan ocultos porque estos no aparecen en ningún link. La única forma de descubrirlos es por medio de un ataque de fuerza bruta, consistente en usar un archivo o diccionario que contiene nombres de directorios habituales (login, logout, ...) y tener suerte en el sentido de que el programador haya usado nombres habituales para los directorios de la aplicación.
 
 Para activar esta herramienta, hacemos clic con boton derecho en la aplicación que deseamos estudiar, en nuestro caso es ***http://192.168.20.60:3000*** y elegimos la opción ***Attack/Forced Browse Directory (and Children)***.
 
@@ -111,7 +111,7 @@ En la parte inferior, elegimos como lista ***directory-list-1.0.txt*** y hacemos
 
 ![Run](../img/lab-25-F/202211271217.png)
 
-(Nota: En el entorno de laboratorio ocurre que debido al gran número de request/s que envía ZAP, el contenedor de Docker se queda sin memoria y se detiene. En un escenario real, ***Forced Browser*** finalizaría mostrando la lista de directorio descubiertos)
+(Nota: En el entorno de laboratorio ocurre que, debido al gran número de request/s que envía ZAP, el contenedor de Docker se queda sin memoria y se detiene. En un escenario real, ***Forced Browse*** finalizaría mostrando la lista de directorio descubiertos)
 
 De todos los directorios descubiertos, hay uno que llama especialmente la atención, así que nos conectamos a la siguiente URL.
 ```
@@ -122,7 +122,7 @@ En el que podemos ver archivos muy interesantes.
 
 ![logs](../img/lab-25-F/202211271241.png)
 
-Y si abrimos cualquiera de ellos, podremos localizar información que permite hacer otro tipo de ataque.
+Y si abrimos cualquiera de ellos, podremos localizar información que permitiría hacer otro tipo de ataque.
 
 ![log abierto](../img/lab-25-F/202211271242.png)
 
