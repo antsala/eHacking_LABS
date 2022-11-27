@@ -51,7 +51,7 @@ Puesto que ***Juice Shop*** es una aplicación moderna, vamos a probar con el **
 
 ![Ajax Spider](../img/lab-25-F/202211271053.png)
 
-Aparece un cuadro de diálogo para iniciar la araña. Seleccionamos ***Firefox*** en el despegable ***Browser****. y hacemos clic en el botón ***Start***.
+Aparece un cuadro de diálogo para iniciar la araña. Seleccionamos ***Firefox*** en el despegable ***Browser*** y hacemos clic en el botón ***Start***.
 
 ![Start](../img/lab-25-F/202211271056.png)
 
@@ -79,7 +79,7 @@ http://192.168.20.60:3000/ftp/acquisitions.md
 ![documento](../img/lab-25-F/202211271119.png)
 
 
-## Ejercicio 2: Gain access to any access log file of the server.
+## Ejercicio 2: Ganar acceso a los logs del servidor.
 
 ***OBJETIVO***: Obtén acceso a archivos log.
 
