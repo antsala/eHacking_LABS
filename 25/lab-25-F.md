@@ -33,11 +33,11 @@ Según aprendiste en el tutorial de HUD, ZAP tiene dos tipos de herramientas par
 
 * *Ajax Spider*: El Spider de Ajax realiza la misma función que el Spider anterior pero además es capaz de seguir los links que se generan por medio de javascript. Es bastante más lento de el Spider normal, pero es capaz de encontrar muchas más URLs, sobre todo en aplicaciones modernas.
 
-Está claro entonces, que la mejor forma de buscar documentos que estén expuestos es usar una araña. Vamos a empezar con el Spider convencional, así que hacemos clic en el panel de opciones derecho, en el icono de la araña negra, tal y como señala la imagen.S
+Está claro entonces, que la mejor forma de buscar documentos que estén expuestos es usar una araña. Vamos a empezar con el Spider convencional, así que hacemos clic en el panel de opciones derecho, en el icono de la araña negra, tal y como señala la imagen.
 
 ![Spider](../img/lab-25-F/202211271043.png)
 
-Se muestra un mensaje indicando que la aplicación (192.168.20:3000) no está en ***scope*** y nos pregunta si queremos ponerla en ámbito. Esto debe ser así para que el spider no agregue los links que puedan aparecer en la aplicación y que tengan como destino URLs externas a la misma, como pudieran ser enlaces a Google u otro servicio de Internet. Hacemos clic en el botón ***Start***, que agregará la aplicación al ***scope*** e iniciará el descubrimiento.
+Se muestra un mensaje indicando que la aplicación (192.168.20.60:3000) no está en ***scope*** y nos pregunta si queremos ponerla en ámbito. Esto debe ser así para que el spider no agregue los links que puedan aparecer en la aplicación y que tengan como destino URLs externas a la misma, como pudieran ser enlaces a Google u otros servicios de Internet. Hacemos clic en el botón ***Start***, que agregará la aplicación al ***scope*** e iniciará el descubrimiento.
 
 ![Scope](../img/lab-25-F/202211271048.png)
 
@@ -49,7 +49,7 @@ Como podemos ver en la imagen, el spider no ha encontrado mucho. Concretamente, 
 
 Puesto que ***Juice Shop*** es una aplicación moderna, vamos a probar con el ***Ajax Spider***, que es la opción recomendada para estos casos. Hacemos clic en el botón apropiado.
 
-![Ajax Spider](../img/lab-25-F/202211271052.png)
+![Ajax Spider](../img/lab-25-F/202211271053.png)
 
 Aparece un cuadro de diálogo para iniciar la araña. Seleccionamos ***Firefox*** en el despegable ***Browser****. y hacemos clic en el botón ***Start***.
 
