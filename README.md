@@ -185,7 +185,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Romper la autenticación 2FA.
 
 6. Laboratorio 25-F: Exposición de datos sensibles (***Sensitive Data Exposure***).
-   - Ejercicio 1.
+   - Acceder a un documento confidencial.
+   - Gain access to any access log file of the server.
 
 
    
