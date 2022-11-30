@@ -127,7 +127,7 @@ Y si abrimos cualquiera de ellos, podremos localizar información que permitirí
 ![log abierto](../img/lab-25-F/202211271242.png)
 
 
-## Ejercicio 3: Fuga de información a través del API.
+## Ejercicio 3: Fuga de información a través de la API.
 
 ***OBJETIVO***: Exfiltra información por medio de un Endpoint del API que no está bien protegido.
 
