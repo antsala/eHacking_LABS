@@ -178,7 +178,6 @@ https://pwning.owasp-juice.shop/appendix/solutions.html
 
 
 
-Email Leak	Perform an unwanted information disclosure by accessing data cross-domain.	⭐⭐⭐⭐⭐
 Exposed Metrics	Find the endpoint that serves usage data to be scraped by a popular monitoring system.	⭐
 Forgotten Developer Backup	Access a developer's forgotten backup file.	⭐⭐⭐⭐
 Forgotten Sales Backup	Access a salesman's forgotten backup file.	⭐⭐⭐⭐
