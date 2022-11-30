@@ -129,7 +129,7 @@ Y si abrimos cualquiera de ellos, podremos localizar información que permitirí
 
 ## Ejercicio 3: Fuga de información a través de la API.
 
-***OBJETIVO***: Exfiltra información por medio de un Endpoint del API que no está bien protegido.
+***OBJETIVO***: Exfiltra información por medio de un Endpoint de la API que no está bien protegido.
 
 ***PISTAS***: 
 
