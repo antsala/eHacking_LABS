@@ -159,7 +159,7 @@ Paramos la araña y, elegimos ***History***. En el historial localizamos las req
 ![Open in editor](../img/lab-25-F/202211301921.png)
 
 En la request, observamos que no se mandan parámetros. La vulnerabilidad consiste en enviar un parámetro llamado ***callback***. 
-(Nota: Queda fuera de esta actividad explicar como el parámetro ***callback*** puede encapsular una función que exfiltre información de la aplicación. Si quiere aprender sobre esto lee este artículo: https://www.filecloud.com/blog/using-jsonp-for-cross-domain-requests/)
+(Nota: Queda fuera de esta actividad explicar como el parámetro ***callback*** puede encapsular una función que exfiltre información de la aplicación. Si quieres aprender sobre esto lee este artículo: https://www.filecloud.com/blog/using-jsonp-for-cross-domain-requests/)
 
 Edita la request hasta que la URL tome la forma que muestra la imagen.
 
