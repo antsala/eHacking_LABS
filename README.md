@@ -187,6 +187,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 6. Laboratorio 25-F: Exposición de datos sensibles (***Sensitive Data Exposure***).
    - Acceder a un documento confidencial.
    - Ganar acceso a los logs del servidor.
+   - Fuga de información a través del API.
 
 
    
@@ -230,6 +231,7 @@ NOTA: Ejercicio 3: Evadir al antivirus alterando AMSI no funciona en W10.
    - Instalación de ***Covenant*** en ***Kali Linux***.
    - Crear un ***Listener*** e inicializar un ***Grunt***.
    - Evadir al antivirus alterando ***AMSI***. 
+   
 
 
 

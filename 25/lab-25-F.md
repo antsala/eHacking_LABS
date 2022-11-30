@@ -127,6 +127,48 @@ Y si abrimos cualquiera de ellos, podremos localizar información que permitirí
 ![log abierto](../img/lab-25-F/202211271242.png)
 
 
+## Ejercicio 3: Fuga de información a través del API.
+
+***OBJETIVO***: Exfiltra información por medio de un Endpoint del API que no está bien protegido.
+
+***PISTAS***: 
+
+* Localiza un endpoint que no está bien protegido. 
+* No se utiliza SQL injection en este caso.
+
+***RESOLUCIÓN***. Los pasos para resolver el reto son.
+
+Como siempre iniciamos ***ZAP***.
+
+Realiza con ZAP una exploración manual sobre la siguiente URL.
+```
+http://192.168.20.60:3000
+```
+Si no estuvieras logado, inicia sesión con tu usuario en la aplicación.
+
+La aplicación tiene un endpoint que permite cosultar información sobre el usuario logado, el problema es que podemos capturar esa información y acceder a propiedades ***delicadas*** de ese usuario, como el ***id*** que la aplicación le asigna internamente.
+
+Lo primero que debemos hacer es localizar el endpoint vulnerable y, para ello, debemos localizarlo. Aunque hay muchas técnicas para ello, la más simple y no por ello poco efectiva, es activar la araña (Ajax Spider) y dejar que vaya descubriendo. 
+
+Tras un rato, nos fijamos en un endpoint curioso, concretamente ***/rest/user/whoami***, cuya request ha sido capturada por la araña.
+
+![AJAX Spider](../img/lab-25-F/202211301814.png)
+
+Paramos la araña y, elegimos ***History***. En el historial localizamos las request a ***/rest/user/whoami***. Para cada una de ellas, hacemos clic derecho y, en el menú contextual, elegimos la opción ***Open/Resend with Request Editor...***. Debemos localizar una request que contenga el token de autorización.
+
+![Open in editor](../img/lab-25-F/202211301921.png)
+
+En la request, observamos que no se mandan parámetros. La vulnerabilidad consiste en enviar un parámetro llamado ***callback***. 
+(Nota: Queda fuera de esta actividad explicar como el parámetro ***callback*** puede encapsular una función que exfiltre información de la aplicación. Si quiere aprender sobre esto lee este artículo: https://www.filecloud.com/blog/using-jsonp-for-cross-domain-requests/)
+
+Edita la request hasta que la URL tome la forma que muestra la imagen.
+
+![callback](../img/lab-25-F/202211301924.png)
+
+Hacemos clic en el botón ***Send*** y esperamos la respuesta. Como puede observarse, la aplicación está exfiltrando información, por ejemplo el ***id*** del usuario con el que estamos logado. 
+
+![id exfiltrado](../img/lab-25-F/202211301926.png)
+
 
 ***FIN DEL LABORATORIO***
 
