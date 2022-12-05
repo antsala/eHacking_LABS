@@ -97,11 +97,9 @@ Realiza con ZAP una exploración manual sobre la siguiente URL.
 http://192.168.20.60:3000
 ```
 
-Inicia sesión con tu usuario de la aplicación y haz un pedido de una unidad de zumo de limón.
+Inicia sesión con tu usuario de la aplicación y haz un pedido de una unidad de zumo de limón. Podrás comprobar que es posible cambiar la cantidad, pero que esta no puede ser negativa. 
 
 ![Zumo de limón](../img/lab-25-G/202212052029.png)
-
-Podrás comprobar que es posible cambiar la cantidad, pero que esta no puede ser negativa. 
 
 Localiza la request que actualiza la cantidad de producto a ***5 unidades***. 
 
