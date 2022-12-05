@@ -113,7 +113,7 @@ Haz clic en ella con botón derecho y ejecuta ***Open/Resend with Request Editor
 
 Reenvía la Request por medio del botón ***Send***.
 
-A continuación, en la aplicación reliza el ***Checkout*** y comprobarás que tendrás más dinero que antes.
+A continuación, en la aplicación realiza el proceso de ***Checkout*** y comprobarás que tendrás más dinero que antes.
 
 ![Rico](../img/lab-25-G/202212052021.png)
 
