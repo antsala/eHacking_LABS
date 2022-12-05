@@ -190,11 +190,11 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Fuga de información a través de la API.
    - Acceder a un archivo de backup olvidado por un programador.
 
-7. Laboratorio 25-G: Improper Input Validation.
+7. Laboratorio 25-G: Validación de datos de entrada inapropiada (***Improper Input Validation***).
    - Registrar a un usuario con privilegios de administrador. 
    - Hacer un pedido que te hará rico.
    
-8. Laboratorio 25-H: Broken Access Control.
+8. Laboratorio 25-H: Romper la autorización (***Broken Access Control***).
    - 
 
 
