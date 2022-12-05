@@ -1,4 +1,4 @@
-# Exposición de datos sensibles (***Sensitive Data Exposure***).
+# Improper Input Validation
 
      
 
@@ -7,7 +7,7 @@ Requisitos:
 2. Máquina ***Kali Linux***.
 3. Máquina ***Ubu_srv_01***
 
-Los documentos que son accesibles debido a vulnerabilidades o malas configuraciones son de incalculable valor para el actor de la amenaza. Además de la información que podría tener el propio documento, puede ofrecer pistas para conseguir mayores objetivos.
+La pricipal amenaza a la que se ve sometida una aplicación web es la ausencia o un control incorrecto del texto que puede introducir un atacante en un campo de formulario o parámetro en general. Es conocido por todos que si usas un buen framework de desarrollo, éste debería proteger tu aplicación de este tipo de debilidades.
 
 ## Ejercicio 1: Registrar a un usuario con privilegios de administrador. 
 
