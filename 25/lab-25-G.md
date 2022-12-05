@@ -69,10 +69,19 @@ En la respuesta podrás ver que la API ha aceptado la creación del usuario de e
 
 Observa como la response es aceptada ***success***. Mira también los valores para los campos ***email*** (otraprueba@gmail.com) y ***role*** (admin). El password es el que pusiste.
 
+Cierra la sesión con el usuario actual einicia sesión con el nuevo usuario. A continuación escribe en la barra de direcciones la siguiente URL.
+```
+http://192.168.20.60:3000/#/administration
+```
+
+Podrás comprobar que puedes acceder a la sección de administración de la aplicación.
+
+![Administración](../img/lab-25-G/202212051124.png)
+
 
 ***FIN DEL LABORATORIO***
 
-Admin Registration	Register as a user with administrator privileges.	⭐⭐⭐
+
 Deluxe Fraud	Obtain a Deluxe Membership without paying for it.	⭐⭐⭐
 Expired Coupon	Successfully redeem an expired campaign coupon code.	⭐⭐⭐⭐
 Missing Encoding	Retrieve the photo of Bjoern's cat in "melee combat-mode".	⭐
