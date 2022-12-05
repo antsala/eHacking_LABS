@@ -7,7 +7,7 @@ Requisitos:
 2. Máquina ***Kali Linux***.
 3. Máquina ***Ubu_srv_01***
 
-La pricipal amenaza a la que se ve sometida una aplicación web es la ausencia o un control incorrecto del texto que puede introducir un atacante en un campo de formulario o parámetro en general. Es conocido por todos que si usas un buen framework de desarrollo, éste debería proteger tu aplicación de este tipo de debilidades.
+La pricipal amenaza a la que se ve sometida una aplicación web es la ausencia o un control incorrecto del texto que puede introducir un atacante en un campo de formulario o parámetro en general. Es conocido por todos que si usas un buen framework de desarrollo, éste debería proteger tu aplicación frente a este tipo de debilidades.
 
 ## Ejercicio 1: Registrar a un usuario con privilegios de administrador. 
 
