@@ -101,6 +101,8 @@ Inicia sesión con tu usuario de la aplicación y haz un pedido de una unidad de
 
 ![Zumo de limón](../img/lab-25-G/202212052029.png)
 
+Cambia la cantidad de producto a ***5 unidades***.
+
 Localiza la request que actualiza la cantidad de producto a ***5 unidades***. 
 
 ![Request 5 unidades](../img/lab-25-G/202212052012.png)
