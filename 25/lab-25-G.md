@@ -79,20 +79,43 @@ Podrás comprobar que puedes acceder a la sección de administración de la apli
 ![Administración](../img/lab-25-G/202212051124.png)
 
 
+## Ejercicio 2: Hacer un pedido que te hará rico.
+
+***OBJETIVO***: Conseguir que el total a pagar de un pedido sea una cantidad negativa.
+
+***PISTAS***: 
+
+* Haz un pedido. Modifica la cantidad del elemento que has pedido y estudia la request correspondiente.
+* Reenvía la request cambiando algún parámetro.
+
+***RESOLUCIÓN***. Los pasos para resolver el reto son.
+
+Como siempre iniciamos ***ZAP***.
+
+Realiza con ZAP una exploración manual sobre la siguiente URL.
+```
+http://192.168.20.60:3000
+```
+
+Inicia sesión con tu usuario de la aplicación y haz un pedido de una unidad de zumo de limón.
+
+![Zumo de limón](../img/lab-25-G/202212052029.png)
+
+Podrás comprobar que es posible cambiar la cantidad, pero que esta no puede ser negativa. Déjala en 5 unidades.
+
+Localiza la request que actualiza la cantidad de producto a 5 unidades. 
+
+![Request 5 unidades](../img/lab-25-G/202212052029.png)
+
+Haz clic en ella con botón derecho y ejecuta ***Open/Resend with Request Editor***. Edita el parámetro ***quantity*** y pon una cantidad negativa, por ejemplo ***-100***.
+
+![Request -100 unidades](../img/lab-25-G/202212052029.png)
+
+Reenvía la Request por medio del botón ***Send***.
+
+A continuación, en la aplicación reliza el ***Checkout*** y comprobarás que tendrás más dinero que antes.
+
+![Rico](../img/lab-25-G/202212052029.png)
+
+
 ***FIN DEL LABORATORIO***
-
-
-Deluxe Fraud	Obtain a Deluxe Membership without paying for it.	⭐⭐⭐
-Expired Coupon	Successfully redeem an expired campaign coupon code.	⭐⭐⭐⭐
-Missing Encoding	Retrieve the photo of Bjoern's cat in "melee combat-mode".	⭐
-Payback Time	Place an order that makes you rich.	⭐⭐⭐
-Poison Null Byte	Bypass a security control with a Poison Null Byte to access a file not meant for your eyes.	⭐⭐⭐⭐
-Repetitive Registration	Follow the DRY principle while registering a user.	⭐
-Upload Size	Upload a file larger than 100 kB.	⭐⭐⭐
-Upload Type	Upload a file that has no .pdf or .zip extension.	⭐⭐⭐ (Probar a subir un PHP y si se ejecuta, hacer demo de libreta)
-Zero Stars	Give a devastating zero-star feedback to the store.	⭐
-
-https://pwning.owasp-juice.shop/part2/sensitive-data-exposure.html
-
-https://pwning.owasp-juice.shop/appendix/solutions.html
-
