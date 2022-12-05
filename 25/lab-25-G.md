@@ -15,7 +15,7 @@ La pricipal amenaza a la que se ve sometida una aplicación web es la ausencia o
 
 ***PISTAS***: 
 
-* Estudia la Request/Response que se genera cuando se registra un nuevo usuario. 
+* Estudia la ***Request/Response*** que se genera cuando se registra un nuevo usuario. 
 * Reenvía la request cambiando algún parámetro.
 
 ***RESOLUCIÓN***. Los pasos para resolver el reto son.
@@ -101,21 +101,21 @@ Inicia sesión con tu usuario de la aplicación y haz un pedido de una unidad de
 
 ![Zumo de limón](../img/lab-25-G/202212052029.png)
 
-Podrás comprobar que es posible cambiar la cantidad, pero que esta no puede ser negativa. Déjala en 5 unidades.
+Podrás comprobar que es posible cambiar la cantidad, pero que esta no puede ser negativa. 
 
-Localiza la request que actualiza la cantidad de producto a 5 unidades. 
+Localiza la request que actualiza la cantidad de producto a ***5 unidades***. 
 
-![Request 5 unidades](../img/lab-25-G/202212052029.png)
+![Request 5 unidades](../img/lab-25-G/202212052012.png)
 
 Haz clic en ella con botón derecho y ejecuta ***Open/Resend with Request Editor***. Edita el parámetro ***quantity*** y pon una cantidad negativa, por ejemplo ***-100***.
 
-![Request -100 unidades](../img/lab-25-G/202212052029.png)
+![Request -100 unidades](../img/lab-25-G/202212052015.png)
 
 Reenvía la Request por medio del botón ***Send***.
 
 A continuación, en la aplicación reliza el ***Checkout*** y comprobarás que tendrás más dinero que antes.
 
-![Rico](../img/lab-25-G/202212052029.png)
+![Rico](../img/lab-25-G/202212052021.png)
 
 
 ***FIN DEL LABORATORIO***
