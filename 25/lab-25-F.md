@@ -170,24 +170,49 @@ Hacemos clic en el botón ***Send*** y esperamos la respuesta. Como puede observ
 ![id exfiltrado](../img/lab-25-F/202211301926.png)
 
 
+## Ejercicio 4: Acceder a un archivo de backup olvidado por un programador.
+
+
+***OBJETIVO***: Acceder a un archivo de backup que un programador ha dejado accidentalmente en el servidor.
+
+***PISTAS***: 
+
+* Localiza un repositorio de archivos (ftp)
+* Comprueba que el archivo de backup no se puede descargar directamente.
+* Usa la técnica ***Poison Null Byte*** para saltar la restricción de descarga.
+
+***RESOLUCIÓN***. Los pasos para resolver el reto son.
+
+Como siempre iniciamos ***ZAP***.
+
+Realiza con ZAP una exploración manual sobre la siguiente URL.
+```
+http://192.168.20.60:3000
+```
+
+Si no estuvieras logado, inicia sesión con tu usuario en la aplicación.
+
+En el ***Ejercicio 1*** del laboratorio ***lab-25-F***, vimos que en la ruta ***http://192.168.20.60:3000/ftp*** había una serie de documentos interesantes. Para este ejercicio nos fijamos en uno llamado ***package.json.bak***. Este archivo parece ser un backup del archivo ***package.json***, que se usa para almacenar información importante sobre la aplicación. Por esta razón, si el actor de la amenaza es capaz de conseguirlo, podrá estudiar cómo está construida la aplicación y, en consecuencia, determinar otros vectores de ataque más efectivos.
+
+En consecuencia, intentemos descargar directamente el archivo. En la barra de dirección escribimos.
+```
+http://192.168.20.60:3000/ftp/package.json.bak
+```
+
+La aplicación responde con un mensaje en que se puede ver claramente que solo los documentos ***pdf*** se pueden descargar.
+
+![solo pdf](../img/lab-25-F/202212051004.png)
+
+Este mensaje se produce porque la aplicación determina la extensión del archivo que se pretende descargar, a menudo por medio de una expresión regular. En el ataque del byte nulo (Null Byte) se inserta el byte ***\0*** justo antes de la extensión, con la idea de alterar el resultado de la comprobación de la extensión del archivo. En este link puedes ver cómo funciona este ataque: ***https://defendtheweb.net/article/common-php-attacks-poison-null-byte***.
+
+La codificación URL del byte nulo es ***%2500***, así que intentamos descargar el archivo escribiendo la siguiente URL en la barra de direcciones.
+```
+http://192.168.20.60:3000/ftp/package.json.bak%2500.md
+```
+
+Se puede comprobar que por medio de está técnica podemos saltar la comprobación de extensión para los archivos que permite descargar el servidor.
+
+![open](../img/lab-25-F/202212051011.png)
+
+
 ***FIN DEL LABORATORIO***
-
-https://pwning.owasp-juice.shop/part2/sensitive-data-exposure.html
-
-https://pwning.owasp-juice.shop/appendix/solutions.html
-
-
-
-Exposed Metrics	Find the endpoint that serves usage data to be scraped by a popular monitoring system.	⭐
-Forgotten Developer Backup	Access a developer's forgotten backup file.	⭐⭐⭐⭐
-Forgotten Sales Backup	Access a salesman's forgotten backup file.	⭐⭐⭐⭐
-GDPR Data Theft	Steal someone else's personal data without using Injection.	⭐⭐⭐⭐
-Leaked Access Logs	Dumpster dive the Internet for a leaked password and log in to the original user account it belongs to. (Creating a new account with the same password does not qualify as a solution.)	⭐⭐⭐⭐⭐
-Leaked Unsafe Product	Identify an unsafe product that was removed from the shop and inform the shop which ingredients are dangerous.	⭐⭐⭐⭐
-Login Amy	Log in with Amy's original user credentials. (This could take 93.83 billion trillion trillion centuries to brute force, but luckily she did not read the "One Important Final Note")	⭐⭐⭐
-Login MC SafeSearch	Log in with MC SafeSearch's original user credentials without applying SQL Injection or any other bypass.	⭐⭐
-Meta Geo Stalking	Determine the answer to John's security question by looking at an upload of him to the Photo Wall and use it to reset his password via the Forgot Password mechanism.	⭐⭐
-Misplaced Signature File	Access a misplaced SIEM signature file.	⭐⭐⭐⭐
-Reset Uvogin's Password	Reset Uvogin's password via the Forgot Password mechanism with his original answer to his security question.	⭐⭐⭐⭐
-Retrieve Blueprint	Deprive the shop of earnings by downloading the blueprint for one of its products.	⭐⭐⭐⭐⭐
-Visual Geo Stalking	Determine the answer to Emma's security question by looking at an upload of her to the Photo Wall and use it to reset her password via the Forgot Password mechanism.	⭐⭐⭐⭐
