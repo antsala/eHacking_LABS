@@ -162,7 +162,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 ## Carpeta 25. Ataque a aplicaciones Web.
 
-1. Laboratorio 25-A: ***OWASP y la "Tienda de Zumos". Los ejercicios a realizar son:
+1. Laboratorio 25-A: ***OWASP*** y la "Tienda de Zumos". Los ejercicios a realizar son:
    - ¿Qué es ***Juice Shop***?
    - Instalación de ***Juice Shop***.
    - Instalación de ***OWASP ZAP***.
