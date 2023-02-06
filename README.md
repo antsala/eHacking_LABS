@@ -195,7 +195,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Hacer un pedido que te hará rico.
    
 8. Laboratorio 25-H: Romper la autorización (***Broken Access Control***).
-   - 
+   
 
 
 ## Carpeta 30. Ataques a máquinas Metasploitable
