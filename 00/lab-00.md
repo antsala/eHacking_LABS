@@ -20,10 +20,7 @@ Hacemos clic en ***Aceptar***
 
 ## Ejercicio 2: Descarga de las OVAs de las VMs.
 
-TOTE, por hacer. 
-En esta URL puedes descargar las OVAs de las VMS. Estas son:
-
-* *router-ubu*: Su misión es la de servir de gateway entre la red de laboratorios y el entorno físico real.
+En la plataforma Moodle se publicará la URL de descarga de las VMs
 
 
 ## Ejercicio 3: Importación y configuracion de la VM ***Router-ubu***
