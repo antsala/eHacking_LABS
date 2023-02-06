@@ -1,4 +1,4 @@
-# Realizar Footprinting usando motores de búsqueda.
+# Realizar Footprinting usando servicios web
 
 Requisitos:
 1. Máquina ***Router-Ubu***.
