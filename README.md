@@ -237,6 +237,9 @@ NOTA: Ejercicio 3: Evadir al antivirus alterando AMSI no funciona en W10.
    - Instalación de ***Covenant*** en ***Kali Linux***.
    - Crear un ***Listener*** e inicializar un ***Grunt***.
    - Evadir al antivirus alterando ***AMSI***. 
+
+5. Laboratorio 50-E: Descifrar SSL con WireShark. (por hacer)
+   https://www.youtube.com/watch?v=5qecyZHL-GU
    
 
 
