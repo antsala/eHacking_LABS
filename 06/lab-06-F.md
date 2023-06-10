@@ -7,7 +7,7 @@ Requisitos:
 3. Máquina ***Windows 11***
 4. Máquina ***WS2022_DC_Server_Core***
 
-Cuando un Hacker se ha infiltrado en la organización y desea espiar el tráfico podemos pensar que no es posible por que los Switches de la red local no permiten que a un tercero le llegue tráfico dos dos entidades que se están comunicando a través de sendos puertos en sus respectivos switches.
+Cuando un Hacker se ha infiltrado en la organización y desea espiar el tráfico podemos pensar que no es posible porque los switches de la red local no permiten que a un tercero le llegue tráfico dos entidades que se están comunicando a través de sendos puertos en sus respectivos switches.
 
 Nada más lejos de la realidad, porque la técnica ***MitM*** basada en envenenamiento ***ARP*** va a permitirlo.
 
@@ -20,7 +20,7 @@ Veámos cómo funciona.
 Para interceptar el tráfico entre dos entidades, necesitamos tres actores, que serán lo siguientes.
 
 * *Víctima*. Es la máquina a la que queremos espiar o afectar. En este laboratorio será ***Windows 11***.
-* *Destino original. Es la máquina a la que tendría que ir el tráfico, por ejemplo la puerta de enlace, que en nuestro escenario es ***Router-Ubu***.
+* *Destino original*. Es la máquina a la que tendría que ir el tráfico, por ejemplo la puerta de enlace, que en nuestro escenario es ***Router-Ubu***.
 * *Atacante*. La máquina que va a ponerse en medio de las dos anteriores. Será ***Kali***.
 
 Antes de empezar vamos a aclarar una serie de cuestiones que nos facilitarán enormemente la comprensión de este tipo de ataque.
