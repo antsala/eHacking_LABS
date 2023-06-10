@@ -17,11 +17,11 @@ Veámos cómo funciona.
 
 ## Ejercicio 1: MitM con arpspoof.
 
-Para interceptar el tráfico entre dos entidades, necesitamos tres actores, que serán lo siguientes.
+Para interceptar el tráfico entre dos entidades, necesitamos tres actores, que serán los siguientes.
 
-* *Víctima*. Es la máquina a la que queremos espiar o afectar. En este laboratorio será ***Windows 11***.
-* *Destino original*. Es la máquina a la que tendría que ir el tráfico, por ejemplo la puerta de enlace, que en nuestro escenario es ***Router-Ubu***.
-* *Atacante*. La máquina que va a ponerse en medio de las dos anteriores. Será ***Kali***.
+* *Víctima*. Es el dispositivo que queremos espiar o afectar. En este laboratorio será ***Windows 11***.
+* *Destino original*. Es el dispositivo al que tendría que ir el tráfico, por ejemplo la puerta de enlace, que en nuestro escenario es ***Router-Ubu***.
+* *Atacante*. Dispositivo que va a ponerse en medio de las dos anteriores. Será ***Kali***.
 
 Antes de empezar vamos a aclarar una serie de cuestiones que nos facilitarán enormemente la comprensión de este tipo de ataque.
 
