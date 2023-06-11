@@ -31,7 +31,7 @@ sudo apt install -y snort
 
 En la pantalla de configuración, asegúrate de poner ***192.168.20.0/24*** como intervalo de direcciones de la red local a proteger. Continua.
   
-![Configuración](../img/lab-06-j/202306111127.png)
+![Configuración](../img/lab-06-j/202306111128.png)
 
 Configuramos el archivo ***snort.conf*** para indicarle cual es nuestra red local y asegurar que todo está bien configurado.
 ```
@@ -47,7 +47,7 @@ Asegurar que el archivos de configuración queda de la siguiente manera:
 
 Para más claridad, debe quedar como muestra la imagen.
 
-![snort.conf](../img/lab-06-j/202306111935.png)
+![snort.conf](../img/lab-06-j/202306111936.png)
 
 ***HOME_NET*** es la red local del laboratorio y ***EXTERNAL_NET*** es todo lo que no sea eso.
 
