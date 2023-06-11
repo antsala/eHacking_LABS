@@ -87,4 +87,6 @@ Al igual que el experimento anterior, para garantizar una denegación de servici
 
 Finaliza los ataques cerrando las terminales.
 
+En este enlace: https://www.redeszone.net/tutoriales/seguridad/hping3-manipular-paquetes-tcp-ip-ataques/ tienes un tutorial sobre la herramienta que te interesa aprender.
+
 ***FIN DEL LABORATORIO***
