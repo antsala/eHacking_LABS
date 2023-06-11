@@ -66,7 +66,7 @@ sudo nano /etc/snort/rules/icmp.rules
 
 Observa en la salida la regla que está marcada en rojo.
 
-![snort.conf](../img/lab-06-j/202306111935.png)
+![snort.conf](../img/lab-06-J/202306111935.png)
 
 Debes interpretarla así:
 
@@ -92,7 +92,7 @@ alert icmp any any -> $HOME_NET any (msg:"Se ha detectado un ping"; sid:1000001;
 
 Debe quedar así:
 
-![Regla personalizada](../img/lab-06-j/202306111951.png)
+![Regla personalizada](../img/lab-06-J/202306111951.png)
 
 Salimos guardando: Ctrl+X, Y, Enter.
 
@@ -109,11 +109,11 @@ ping 192.168.20.1
 
 Debe quedar así:
 
-![Ping](../img/lab-06-j/202306111957.png)
+![Ping](../img/lab-06-J/202306111957.png)
 
 Como puedes comprobar, se han emitido 4 pings, y snort ha capturado 8 paquetes, correspondiente al ping y a la respuesta de este.
 
-![Ping snort](../img/lab-06-j/202306111958.png)
+![Ping snort](../img/lab-06-J/202306111958.png)
 
 Vamos a crear una regla que detecte los ataques de inundación de la herramienta hping3 (u otras). Para ello editamos de nuevo el fichero de reglas. Primero para ***Snort*** con ***Ctrl+C***.
 
@@ -142,7 +142,7 @@ sudo hping3 -S 192.168.20.14 -a 192.168.20.100 -p 80 --flood
 
 De inmediato, en la terminal de Snort verás las alertas.
 
-![Alertas](../img/lab-06-j/202306112026.png)
+![Alertas](../img/lab-06-J/202306112026.png)
 
 Observa como la IP de origen del ataque ***192.168.20.100***, está falseada.
 
