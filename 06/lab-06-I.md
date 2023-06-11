@@ -79,7 +79,7 @@ En la máquina ***Kali*** ejecutamos en la terminal el ataque equivalente, pero 
 sudo hping3 -S 192.168.20.14 -a 192.168.20.100 -p 21 --flood
 ```
 
-Como podrás observar, el ataque consigue sigir la ***CPU*** de la víctima en torno al 40%.
+Como podrás observar, el ataque consigue subir la ***CPU*** de la víctima en torno al 40%.
 
 Podrías intentar abrir otras terminales y realizar el mismo ataque, obteniendo un incremento de uso de CPU de un 5% por cada terminal.
 

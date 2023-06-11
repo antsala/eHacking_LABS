@@ -7,13 +7,13 @@ Requisitos:
 3. Máquina ***Windows 11***
 4. Máquina ***WS2022_DC_Server_Core***
 
-La Capa de ***Enlace de Datos*** o ***capa 2*** del modelo OSI, actúa como intermediaria entre la capa de red y la capa física, codificando las tramas recibidas desde la capa de red para su transmisión desde la capa física, controlando el acceso al medio y los posibles errores en la transmisión.
+La capa de ***Enlace de Datos*** o ***capa 2*** del modelo OSI, actúa como intermediaria entre la capa de red y la capa física, codificando las tramas recibidas desde la capa de red para su transmisión desde la capa física, controlando el acceso al medio y los posibles errores en la transmisión.
 
 El ***control de acceso al medio*** (MAC) proporciona a la capa de enlace de datos el direccionamiento y la delimitación de datos de acuerdo con los requisitos de señalización física del medio y al tipo de protocolo de capa de enlace de datos en uso.
 
 ***ARP*** (Address Resolution Protocol) es un protocolo de la capa de enlace de datos responsable de encontrar la dirección hardware (Ethernet MAC) que corresponde a una determinada dirección IP.
 
-Este protocolo permite se usado de formas que no se concibieron inicialmente, haciendo posible ataques ***MitM*** y ***DoS***.
+Este protocolo permite ser usado de formas que no se concibieron inicialmente, haciendo posible ataques ***MitM*** y ***DoS***.
 
 ***Yersinia*** es un framework para realizar ataques a la capa 2, que consigue modificar o alterar el correcto funcionamiento de los siguientes protocolos:
 
