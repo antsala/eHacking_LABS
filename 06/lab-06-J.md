@@ -31,7 +31,7 @@ sudo apt install -y snort
 
 En la pantalla de configuración, asegúrate de poner ***192.168.20.0/24*** como intervalo de direcciones de la red local a proteger. Continua.
   
-![Configuración](../img/lab-06-j/202306111128.png)
+![Configuración](../img/lab-06-j/202306111129.png)
 
 Configuramos el archivo ***snort.conf*** para indicarle cual es nuestra red local y asegurar que todo está bien configurado.
 ```
@@ -65,7 +65,7 @@ sudo nano /etc/snort/rules/icmp.rules
 
 Observa en la salida la regla que está marcada en rojo.
 
-![snort.conf](../img/lab-06-J/202306111935.png)
+![snort.conf](../img/lab-06-J/202306111944.png)
 
 Debes interpretarla así:
 
