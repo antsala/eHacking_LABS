@@ -33,7 +33,6 @@ En la pantalla de configuración, asegúrate de poner ***192.168.20.0/24*** como
   
 ![Configuración](../img/lab-06-j/202306111127.png)
 
-
 Configuramos el archivo ***snort.conf*** para indicarle cual es nuestra red local y asegurar que todo está bien configurado.
 ```
 sudo nano /etc/snort/snort.conf
