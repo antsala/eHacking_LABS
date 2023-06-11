@@ -148,6 +148,6 @@ Observa como la IP de origen del ataque ***192.168.20.100***, está falseada.
 Detén el ataque y a snort con ***Ctrl+C***
 
 
-En este enlace: https://www.redeszone.net/tutoriales/seguridad/hping3-manipular-paquetes-tcp-ip-ataques/ tienes un tutorial sobre la herramienta que te interesa aprender.
+En este enlace: https://www.snort.org/#documents tienes la documentación oficial para que investigues sobre las reglas.
 
 ***FIN DEL LABORATORIO***
