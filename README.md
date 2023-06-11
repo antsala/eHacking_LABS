@@ -151,6 +151,9 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Lanzar un ataque de DoS con ***Metasploit***.
    - Lanzar un ataque de DoS con ***Hping3***.
 
+10. Laboratorio 06-J: ***Detección con Snort***. Los ejercicios a realizar son:
+   - Instalar Snort.
+   - Detectar con Snort.
 
 ## Carpeta 07. Ingeniería Social
 
