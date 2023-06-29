@@ -141,6 +141,20 @@ sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -p
 ```
 
+Ten en cuenta también que el firewall de Kali debe permitir el reenvío. Fíjate en la siguiente imagen.
+
+![iptables 1](../img/lab-06-F/202306291303.png)
+
+La cadena ***FORWARD*** está en drop, así que no funcionará el reenvío hasta que el firewall lo permita. 
+
+En una terminal, escribe el siguiente comando para permitir el reenvío en el firewall.
+```
+sudo iptables -A FORWARD -i eth0 -j ACCEPT
+```
+
+Ya está todo preparado.
+
+
 Vamos a envenenar a ***Win 11***. En la máquina ***Kali***, en la terminal, escribimos.
 ```
 sudo arpspoof -i eth0 -t 192.168.20.11 192.168.20.1
