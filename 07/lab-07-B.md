@@ -25,6 +25,9 @@ Instalamos ***Python3*** y ***Python3-pip***
 sudo apt-get install python3 python3-pip python3-dev -y
 ```
 
+Creamos un entorno virtual para Python con ***venv***.
+
+
 Configuramos los requerimientos de ***Python3***
 ```
 cd SocialFish
@@ -33,12 +36,6 @@ cd SocialFish
 ```
 python3 -m pip install -r requirements.txt
 ```
-
-Editamos el archivo ***config.py*** y cambiamos el valor de ***APP_SECRET_KEY*** por el que desees.
-
-![APP_SECRET_KEY](../img/lab-07-B/202210021902.png)
-
-Salimos guardando con ***CTRL+X***, ***Y*** y ***Enter***.
 
 A continuación iniciamos la herramienta con el siguiente comando.
 
