@@ -28,7 +28,9 @@ sudo apt-get install python3 python3-pip python3-dev -y
 Configuramos los requerimientos de ***Python3***
 ```
 cd SocialFish
+```
 
+```
 python3 -m pip install -r requirements.txt
 ```
 
