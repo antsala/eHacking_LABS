@@ -20,9 +20,14 @@ En la máquina ***Kali*** abrimos una terminal y escribimos.
 git clone https://github.com/UndeadSec/SocialFish.git
 ```
 
+Actualizamos repositorio paquetes.
+```
+sudo apt update -y
+```
+
 Instalamos ***Python3*** y ***Python3-pip***
 ```
-sudo apt-get install python3 python3-pip python3-dev -y
+sudo apt -y install python3 python3-pip python3-dev 
 ```
 
 Creamos un entorno virtual para Python con ***venv***.
