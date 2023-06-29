@@ -26,15 +26,42 @@ sudo apt-get install python3 python3-pip python3-dev -y
 ```
 
 Creamos un entorno virtual para Python con ***venv***.
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 
+SocialPhish tiene un requerimiento obsoleto que no se puede cumplir. En consecuencia no funcionaría. Para solventarlo vamos a descargarnos una nueva versión de los archivos afectados.
+En la terminal, ejecuta.
+```
+git clone https://github.com/antsala/eHacking_LABS.git
+```
 
-Configuramos los requerimientos de ***Python3***
+Cambiamos al directorio apropiado.
+
 ```
 cd SocialFish
 ```
 
+Copiamos el archivo de requerimientos arreglado.
 ```
-python3 -m pip install -r requirements.txt
+cp ../eHacking_LABS/07/requirements.txt .
+```
+
+Copiamos el script arreglado.
+```
+cp ../eHacking_LABS/07/SocialFish.py .
+```
+
+Lo hacemos ejecutable.
+```
+chmod 755 SocialFish.py
+```
+
+Instalamos SocialFish.
+
+```
+pip install -r requirements.txt
 ```
 
 A continuación iniciamos la herramienta con el siguiente comando.
@@ -75,9 +102,9 @@ https://github.com/login
 
 * En el campo ***Redirection*** ponemos la URL a la que deseamos redirigir al usuario, ya que obviamente el inicio de sesión no funcionará. Podemos llevar a una página que muestre un mensaje indicando que el servicio no está operativo, por ejemplo.
 
-En este caso ponemos una cualquiera.
+En este caso ponemos la misma página de login, de forma que el usuario piense que se ha equivocado al escribir las credenciales.
 ```
-https://support.github.com/
+https://github.com/login
 ```
 
 * Solo queda por hacer clic en el icono del ***rayo***
