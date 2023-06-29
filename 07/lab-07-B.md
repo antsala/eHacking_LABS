@@ -137,7 +137,7 @@ Un ataque real necesitaría exponer una ***DNS*** o ***IP Pública*** como endpo
 
 Para finalizar el servidor hacemos CTRL+C en la terminal.
 
-Por último, para salir en entorno virtual de Python, escribimos en siguiente comando.
+Por último, para salir en entorno virtual de Python, escribimos el siguiente comando.
 ```
 deactivate
 ```
