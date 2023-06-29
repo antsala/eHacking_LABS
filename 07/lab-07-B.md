@@ -135,4 +135,11 @@ Al igual que ***SET***, debemos hacer que la víctima haga clic en el enlace que
 
 Un ataque real necesitaría exponer una ***DNS*** o ***IP Pública*** como endpoint. Podemos usar ***ngrok*** para ello.
 
+Para finalizar el servidor hacemos CTRL+C en la terminal.
+
+Por último, para salir en entorno virtual de Python, escribimos en siguiente comando.
+```
+deactivate
+```
+
 ***FIN DEL LABORATORIO***
