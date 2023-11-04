@@ -19,6 +19,8 @@ Su funcionamiento es simple. Cuando está activo captura paquetes, los reensambl
 
 ## Ejercicio 1: Instalar Snort.
 
+Aunque en la VM de Snort proporcionada para el laboratorio, Snort ya está instalado y configurado, es conveniente que conozcas el proceso. Para ello haz lo siguiente.
+
 Desde la máquina de Kali, conectamos por ssh a la de Snort.
 ```
 ssh antonio@192.168.20.90
