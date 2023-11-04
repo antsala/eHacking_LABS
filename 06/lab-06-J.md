@@ -19,15 +19,56 @@ Su funcionamiento es simple. Cuando está activo captura paquetes, los reensambl
 
 ## Ejercicio 1: Instalar Snort.
 
-En la máquina ***Ubuntu 20.04 Snort***, iniciamos sesión y ejecutamos el siguiente comando.
+Desde la máquina de Kali, conectamos por ssh a la de Snort.
 ```
-sudo apt update -y
+ssh antonio@192.168.20.90
 ```
 
-Instalamos ***Snort***.
+La contraseña es
+```
+Pa55w.rd
+```
+
+Snort ya no está en el repositorio de Kali 2022, así que tenemos que modificar el archivo del repositorio de Kali. Primero hacemos un backup del actual.
+```
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+```
+
+Editamos 'sources.list' con nano
+```
+sudo nano /etc/apt/sources.list
+```
+
+y pegamos el siguiente contenido, guardamos y salimos de nano.
+```
+deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports focal main restricted universe multiverse
+deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports focal-updates main restricted universe multiverse
+deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports focal-security main restricted universe multiverse
+
+deb [arch=i386,amd64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
+deb [arch=i386,amd64] http://us.archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse
+deb [arch=i386,amd64] http://security.ubuntu.com/ubuntu focal-security main restricted universe multiverse
+```
+
+Ahora configuramos las claves públicas para acceder al repositorio.
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+```
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
+```
+
+Actualizamos los paquetes.
+```
+sudo apt update
+```
+
+Instalamos Snort.
 ```
 sudo apt install -y snort
 ```
+
 
 En la pantalla de configuración, asegúrate de poner ***192.168.20.0/24*** como intervalo de direcciones de la red local a proteger. Continua.
   
