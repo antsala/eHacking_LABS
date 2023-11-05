@@ -165,6 +165,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 
 3. Laboratorio 07-C: ***Saltar 2FA en cuentas de M365 con Evilginx***
    - Crear tenant de M365.
+   - Habilitar la MFA para el usuario de M365.
    - Configurar Microsoft authenticator en emulador Android.
 
 ## Carpeta 25. Ataque a aplicaciones Web.

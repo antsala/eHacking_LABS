@@ -39,7 +39,14 @@ Iniciar sesión con la credencial del administrador global del tenant.
 ![Portal office](../img/lab-07-C/202311051106.png)
 
 
-## Ejercicio 2: Configurar Microsoft authenticator en emulador Android.
+## Ejercicio 2: Habilitar la MFA para el usuario de M365.
+
+Accede al portal de administración y activa la MFA para el usuario, tal y como muestra la siguiente pantalla.
+
+![MFA para MOD](../img/lab-07-C/202311051152.png)
+
+
+## Ejercicio 3: Configurar Microsoft authenticator en emulador Android.
 
 Si lo prefieres puedes usar tu móvil. Nosotros usaremos el emulador de Android BlueStacks.
 
@@ -59,12 +66,22 @@ Ahora, selecciona la opción ***Agregar una cuenta profesional o educativa***.
 
 ![Cuenta profesional](../img/lab-07-C/202311051137.png)
 
+Iniciamos sesión con la credencial del usuario de 365 del tenant (Nota: El usuario será diferente al que muestra la captura de pantalla)
+
+![usuario](../img/lab-07-C/202311051140.png)
+
+Escribimos la contraseña.
+
+![Contraseña](../img/lab-07-C/202311051142.png)
+
+Avanzamos hasta llegar a la siguiente pantalla.
+
+![Authenticator](../img/lab-07-C/202311051143.png)
+
+Como la aplicación ***Microsoft Authenticator*** está instalada, hacemos clic en ***Siguiente***.
 
 
 
-
-
-Instala la aplicación ***Microsoft Authenticator***.
 
 
 
