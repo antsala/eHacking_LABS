@@ -167,6 +167,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Crear tenant de M365.
    - Habilitar la MFA para el usuario de M365.
    - Configurar Microsoft authenticator en emulador Android.
+   - Crear una VM en Azure e instalar Evilginx.
 
 ## Carpeta 25. Ataque a aplicaciones Web.
 
