@@ -163,6 +163,10 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
 2. Laboratorio 07-B: ***Usar SocialFishish para realizar ataque de phishing***. Los ejercicios a realizar son:
    - Usar ***SocialFish*** para ataque de ***Phishing***.
 
+3. Laboratorio 07-C: ***Saltar 2FA en cuentas de M365 con Evilginx***
+   - Crear tenant de M365.
+   - Configurar Microsoft authenticator en emulador Android.
+
 ## Carpeta 25. Ataque a aplicaciones Web.
 
 1. Laboratorio 25-A: ***OWASP*** y la "Tienda de Zumos". Los ejercicios a realizar son:
