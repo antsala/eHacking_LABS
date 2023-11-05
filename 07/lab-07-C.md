@@ -92,134 +92,72 @@ Si haces clic en ella, verás es OTP (One Time Password) que será usado como 2F
 
 ![OTP](../img/lab-07-C/202311051201.png)
 
+## Ejercicio 4. Crear una VM en Azure e instalar Evilginx
 
+En Azure (o cualquier otro proveedor que permitar crear una VM con IP pública), creamos una instancia de un Ubuntu Server. Abrir los puertos 22, 80 y 443. Como usuario poner ***antonio*** y contraseña ***Pa55w.rd12345***.
 
-
-
-
-
-
-
-Actualizamos repositorio paquetes.
+Tomar la IP pública de la VM
 ```
-sudo apt update -y
+PUBLIC_IP=<Poner aquí la IP Pública de la VM>
 ```
 
-Instalamos ***Python3*** y ***Python3-pip***
+En una terminal de la máquina de Kali, escribimos.
 ```
-sudo apt -y install python3 python3-pip python3-dev python3.11-venv
-```
-
-Creamos un entorno virtual para Python con ***venv***.
-```
-python3 -m venv venv
-source venv/bin/activate
+ssh antonio@$PUBLIC_IP
 ```
 
-SocialPhish tiene un requerimiento obsoleto que no se puede cumplir. En consecuencia no funcionaría. Para solventarlo vamos a descargarnos una nueva versión de los archivos afectados.
-En la terminal, ejecuta.
+Escribimos la contraseña
 ```
-git clone https://github.com/antsala/eHacking_LABS.git
-```
-
-Cambiamos al directorio apropiado.
-
-```
-cd SocialFish
+Pa55w.rd12345
 ```
 
-Copiamos el archivo de requerimientos arreglado.
+Actualizamos los repositorios.
 ```
-cp ../eHacking_LABS/07/requirements.txt .
-```
-
-Copiamos el script arreglado.
-```
-cp ../eHacking_LABS/07/SocialFish.py .
+sudo apt update
 ```
 
-Lo hacemos ejecutable.
+Instalamos ***Git*** y el compilador de lenguaje ***Go***.
 ```
-chmod 755 SocialFish.py
-```
-
-Instalamos SocialFish.
-
-```
-pip install -r requirements.txt
+sudo apt install -y git golang-go
 ```
 
-A continuación iniciamos la herramienta con el siguiente comando.
-
-Nota: Requiere poner un usuario y una contraseña.
+La documentación del proyecto la puedes encontrar en este sitio.
 ```
-python3 SocialFish.py antonio Pa55w.rd
+https://github.com/kgretzky/evilginx2
 ```
 
-El servidor se inicia, y como podemos ver en la imagen adjunta, nos indica que nos conectemos a ***http://0.0.0.0:5000/neptune*** para configurar el ataque.
-
-Nota: ***0.0.0.0*** quiere decir cualquier IP que tenga la máquina. Por lo tanto es equivalente a ***http://192.168.20.9:5000/neptune***.
-
-![Servidor iniciado](../img/lab-07-B/202210021936.png)
-
-Abrimos un navegador y nos conectamos a la URL siguiente.
+Procedemos a clonar ***evilginx*** en la máquina virtual. En la terminal escribimos.
 ```
-http://0.0.0.0:5000/neptune
+git clone https://github.com/kgretzky/evilginx2.git
 ```
 
-Nos pide autenticación. Ponemos el usuario y el password que usamos al iniciar el servidor.
+Entramos en la carpeta ***evilginx2***
 ```
-antonio
-```
-
-```
-Pa55w.rd
+cd evilginx2
 ```
 
-La interfaz es muy simple. La imagen muestra tres rectángulos.
-
-![configuración](../img/lab-07-B/202210021941.png)
-
-Debemos configurarlo así.
-
-* En el campo ***Clone*** debemos poner la ***URL*** del sitio que queramos suplantar. Por ejemplo ***GitHub***. Escribimos.
-https://github.com/login
-
-* En el campo ***Redirection*** ponemos la URL a la que deseamos redirigir al usuario, ya que obviamente el inicio de sesión no funcionará. Podemos llevar a una página que muestre un mensaje indicando que el servicio no está operativo, por ejemplo.
-
-En este caso ponemos la misma página de login, de forma que el usuario piense que se ha equivocado al escribir las credenciales.
+Listamos el directorio
 ```
-https://github.com/login
+ls -l
 ```
 
-* Solo queda por hacer clic en el icono del ***rayo***
+El resultado es el siguiente. Observa como hay un archivo ***makefile***.
 
-El ataque está preparado. Ahora solo hay que llevar a la víctima a la URL ***http://192.168.20.9:5000***.
+![ls](../img/lab-07-C/202311051749.png)
 
-En la máquina ***Win 11***, abrimos el navegador y escribimos la siguiente URL.
+Esto significa que tenemos que preparar (compilar) la aplicación para que esta funcione. Neccesitamos instalar el comando ***make***. En la terminal, escribimos.
 ```
-http://192.168.20.9:5000
+sudo apt install make 
 ```
 
-Aparecerá la página de login de ***GitHub***. Escribe cualquier credencial e intenta iniciar sesión. En unos segundos serás redireccionado a la página de ayuda.
-
-En la máquina ***Kali***, en la página web de ***SocialFish***, actualiza el navegador. En la parte inferior verás los ataques que han sido exitosos. En la imagen puedes ver el resultado, y un botón, llamado ***View*** en la parte derecha.
-
-![Resultado](../img/lab-07-B/202210022052.png)
-
-Si haces clic en ***View*** podrás observar lo capturado.
-
-![Credenciales capturadas](../img/lab-07-B/202210022055.png)
-
-Al igual que ***SET***, debemos hacer que la víctima haga clic en el enlace que lleve a la URL ***http://192.168.20.9:5000***. Engañar a la víctima no suele ser un problema usando técnicas de spoofing, al menos si no está suficientemente entrenada.
-
-Un ataque real necesitaría exponer una ***DNS*** o ***IP Pública*** como endpoint. Podemos usar ***ngrok*** para ello.
-
-Para finalizar el servidor hacemos CTRL+C en la terminal.
-
-Por último, para salir en entorno virtual de Python, escribimos el siguiente comando.
+y después.
 ```
-deactivate
+make
 ```
+
+FALLA AQUÍ.
+https://www.youtube.com/watch?v%253DkmB-YBuxPbU
+
+
 
 ***FIN DEL LABORATORIO***
