@@ -80,6 +80,17 @@ Avanzamos hasta llegar a la siguiente pantalla.
 
 Como la aplicación ***Microsoft Authenticator*** está instalada, hacemos clic en ***Siguiente***.
 
+Solo queda asociar la cuenta del usuario de 365 con la aplicación de autenticación, haz clic en el vínculo que señala la imagen.
+
+![Vincular](../img/lab-07-C/202311051157.png)
+
+La cuenta ha quedado configurada.
+
+![Cuenta configurada](../img/lab-07-C/202311051158.png)
+
+Si haces clic en ella, verás es OTP (One Time Password) que será usado como 2FA.
+
+![OTP](../img/lab-07-C/202311051201.png)
 
 
 
