@@ -4,8 +4,8 @@
 Requisitos:
 1. Máquina ***Router-Ubu***.
 2. Máquina ***Win 11***.
-3. Teléfono móvil o emulador BlueStacks con la aplicación Microsoft Authenticator.
-3. Cuenta de M365 con MFA configurada. (Nota: El profesor deberá aportar el tenant de 365)
+3. Teléfono móvil o emulador ***BlueStacks*** con la aplicación ***Microsoft Authenticator***.
+3. Cuenta de ***M365 con MFA configurada***. (Nota: El profesor deberá aportar el tenant de 365)
 4. Máquina virtual en Internet con ***dirección IP pública*** y ***Evilnginx instalado***. (Nota: El profesor aportará la VM)
 5. Dominio de Internet.
 
@@ -15,11 +15,18 @@ Para poder saltar la MFA necesitamos capturar las credenciales que la víctima i
 
 El ataque MitM se realizará mediante ***Evilnginx***, que actuará como proxy inverso. Cuando la víctima reciba el enlace de phishing, conectará con la VM de Internet que tiene instalado Evilgninx que le mostrará el cuadro de diálogo de autenticación de Office 365. La víctima escribirá sus credenciales y evilginx, realizará una redirección hacia el servidor de autenticación de Microsoft.
 
-En este momento, Microsoft solicitará a la víctima la introducción del ***segundo factor de autenticación***, que generalmente será a través de la aplicación Microsoft Authenticator. Cuando la víctima escriba la información requerida, Microsoft enviará una ***cookie de autorización*** a la víctima, que será utilizada como token para los servicios de M365.
+En este momento, Microsoft solicitará a la víctima la introducción del ***segundo factor de autenticación***, que generalmente será a través de la aplicación ***Microsoft Authenticator***. Cuando la víctima escriba la información requerida, Microsoft enviará una ***cookie de autorización*** a la víctima, que será utilizada como token para los servicios de M365.
 
 Puesto que el MitM sigue funcionando, Evilxginx también obtendrá dicha cookie de autorización.
 
 En consecuencia, solo queda usar un navegador, importar la cookie que se ha capturado y ya se podrá acceder a los servicios de M365 de la víctima.
+
+La siguiente imagen resume los eventos y actores que tienen lugar en una conexión normal con el servicio.
+![Conexión a Teams](../img/lab-07-C/202311231147.png)
+
+
+
+
 
 
 ## Ejercicio 1: Crear tenant de M365.
@@ -123,12 +130,12 @@ sudo apt install -y git golang-go
 
 La documentación del proyecto la puedes encontrar en este sitio.
 ```
-https://github.com/kgretzky/evilginx2
+https://github.com/BakkerJan/evilginx2.git
 ```
 
 Procedemos a clonar ***evilginx*** en la máquina virtual. En la terminal escribimos.
 ```
-git clone https://github.com/kgretzky/evilginx2.git
+git clone https://github.com/BakkerJan/evilginx2.git
 ```
 
 Entramos en la carpeta ***evilginx2***
@@ -155,8 +162,96 @@ y después.
 make
 ```
 
-FALLA AQUÍ.
-https://www.youtube.com/watch?v%253DkmB-YBuxPbU
+Instalamos.
+```
+sudo make install
+```
+
+Iniciamos evilginx.
+```
+sudo evilginx
+```
+
+Ya hemos comprobado que la aplicación funciona, así que salimos de ella pulsando la tecla ***q***.
+
+Como has visto, ***evilginx*** se lanza desde una terminal. Eso es un problema en Linux, ya que cuando cerremos la conexión ***ssh*** el proceso de evilginx también finalizará. Necesitamos pues algo que mantenga la terminal abierta aunque cerremos la conexión de ssh y, de esta forma, consiga que evilginx se mantenga funcionando todo el tiempo. Para ello usaremos ***screen***.
+
+Instalamos ***screen***.
+```
+sudo apt install screen
+```
+
+Creamos una screen.
+```
+screen
+```
+
+Para listar las screens que tenemos, escribimos.
+```
+screen -list
+```
+
+En la imagen puedes ver cómo existe una screen  que es en la que nos encontramos, porque pone ***Attached***. En esta screen es en la que ejecutaremos evilginx.
+![screen](../img/lab-07-C/202311231052.png)
+
+Para volver a la terminal original, pulsamos la siguiente combinación de teclas ***CTRL + a*** y ***CTRL + d***.
+
+Volvamos a listar las screens.
+```
+screen -list
+```
+
+Ahora ya no estamos dentro de esa screen, sino en la terminal original. Como puedes ver, la imagen nos dice que existe una screen pero no estamos conectados a ella.
+
+![screen](../img/lab-07-C/202311231058.png)
+
+Para entrar en la screen, ejecutamos el comando siguiente. Nota, el identificador de la screen será diferente. Usa el que te aparezca.
+```
+screen -r 7045.pts-0.evilginx
+```
+
+En esta screen lanzaremos evilginx, así que escribe el siguiente comando.
+```
+sudo evilginx
+```
+
+Como puedes ver, evilginx se ha iniciado.
+![screen 2](../img/lab-07-C/202311231103.png)
+
+Vamos a dejarlo corriendo en esta screen, así que salimos de ella con ***CTRL + a*** y ***CTRL + d***.
+
+# Ejercicio 5: Crear un dominio de ataque y hacer que los servidores de zona apunten a evilginx.
+
+Como hemos explicado al principio, el ataque se basa en conseguir que la víctima haga clic en un enlace que la lleve al servidor de evilginx. Por lo tanto, lo primero que debemos hacer es "contratar un dominio".
+
+Para la autenticación con una cuenta de M365, el navegador del usuario conectará con ***login.microsoftonline.com***. Con la idea de engañar a la víctima y que no sospeche, intentaremos contratar un dominio que sea muy similar a este, observa la siguiente imagen.
+
+![dominio disponible](../img/lab-07-C/202311231114.png)
+
+Para la inmensa mayoría de los usuarios resultará imposible interpretar la diferencia entre.
+```
+login.microsoftonline.com
+```
+
+y
+```
+login.microsoft-on-line.com
+```
+
+El actor de la amenaza procederá a contratar dicho dominio. Para el resto del laboratorio, el dominio contratado no tiene como finalidad engañar al usuario y, además será fácilmente reconocible en esta práctica como dominio de ataque.
+
+El dominio elegido es el siguiente
+```
+evilginx.antsala.xyz
+```
+
+Por lo que la DNS de ataque final tendría la forma de.
+```
+login.evilginx.antsala.xyz
+```
+
+
+
 
 
 
