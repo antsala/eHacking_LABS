@@ -2,7 +2,7 @@
    
   
 Requisitos:
-1. Máquina ***Router-Ubu***.
+1. Máquina `Router-Ubu`.
 2. Máquina ***Win 11***.
 3. Teléfono móvil o emulador ***BlueStacks*** con la aplicación ***Microsoft Authenticator***.
 3. Cuenta de ***M365 con MFA configurada***. (Nota: El profesor deberá aportar el tenant de 365)
