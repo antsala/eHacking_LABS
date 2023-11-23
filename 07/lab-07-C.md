@@ -22,10 +22,22 @@ Puesto que el MitM sigue funcionando, Evilxginx también obtendrá dicha cookie 
 En consecuencia, solo queda usar un navegador, importar la cookie que se ha capturado y ya se podrá acceder a los servicios de M365 de la víctima.
 
 La siguiente imagen resume los eventos y actores que tienen lugar en una conexión normal con el servicio.
+
 ![Conexión a Teams](../img/lab-07-C/202311231147.png)
 
 Ahora, podrás descubrir la configuración del ataque. Observa la imagen.
+
 ![Hackeo](../img/lab-07-C/202311231406.png)
+
+En este escenario el actor realiza un ataque de phishing a la víctima, por ejemplo mediante un correo electrónico en el que se indica que ha compartido con esta un enlace a un documento de Excel. Cuando la víctima hace clic en el vínculo malicioso, se conecta al servidor evilginx ***(1)***, donde éste muestra un cuadro de diálogo de inicio de sesión que es idéntico al original. Normalmente, la víctima no va a sospechar por dos razones.
+
+1) Aunque en la barra de direcciones de su navegador aparece la URL y ésta no es la "oficial" de Microsoft, el dominio elegido por el actor de la amenaza suele ser muy parecido. También es muy normal, que los usuarios se limiten a hacer clic en el enlace y no miren la URL a la que se conectan.
+
+2) Office 365 muestra con cierta frecuencia el diálogo de autenticación, por lo que la mayoría de los usuarios no advertirá que en este caso es un falso servidor (evilginx) quien se lo está mostrando.
+
+En consecuencia la víctima escribe sus credenciales, que son capturadas por ***evilginx*** y, puestas a disposición del actor de la amenaza.
+
+
 
 
 
