@@ -168,7 +168,8 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Habilitar la MFA para el usuario de M365.
    - Configurar Microsoft authenticator en emulador Android.
    - Crear una VM en Azure e instalar Evilginx.
-   - Crear un dominio de ataque y hacer que los servidores de zona apunten a evilginx.
+   - Crear un dominio de ataque y hacer que los servidores de zona apunten a la VM de evilginx.
+   - Configuración de evilginx para realizar el ataque a una cuenta de M365.
 
 ## Carpeta 25. Ataque a aplicaciones Web.
 

@@ -174,7 +174,7 @@ El resultado es el siguiente. Observa como hay un archivo ***makefile***.
 
 ![ls](../img/lab-07-C/202311051749.png)
 
-Esto significa que tenemos que preparar (compilar) la aplicación para que esta funcione. Neccesitamos instalar el comando ***make***. En la terminal, escribimos.
+Esto significa que tenemos que preparar (compilar) la aplicación para que esta funcione. Necesitamos instalar el comando ***make***. En la terminal, escribimos.
 ```
 sudo apt install make 
 ```
@@ -286,6 +286,89 @@ Estudia la imagen.
 ![evilginx.antsala.xyz](../img/lab-07-C/202311231455.png)
 
 Los endpoints de autenticación de Microsoft van a ser suplantados por el servidor ***evilginx***. Por esa razón, es necesario dar de alta ciertos registros de tipo A, que deberán apuntar a la IP pública en la que está el servidor ***evilginx***. En este caso ***login*** y ***www***. Más adelante, en el laboratorio, aprenderás a determinar los endpoints necesarios para hacer el hackeo.
+
+# Ejercicio 4: Configuración de evilginx para realizar el ataque a una cuenta de M365.
+
+De vuelta a la terminal de ssh, conectamos con la screen donde está corriendo ***evilginx***.
+
+Lo primero que debemos hacer es configurar el dominio de ataque, que en nuestro ejemplo es
+```
+evilginx.antsala.xyz
+```
+
+Ejecutamos el siguiente comando.
+```
+config domain evilginx.antsala.xyz
+```
+
+El prompt indica que el dominio ha sido configurado correctamente.
+
+![config domain](../img/lab-07-C/202311231919.png)
+
+Es el momento de indicar cuál es la IP pública del servidor ***evilginx***. Escribimos el siguiente comando.
+```
+config ip 20.107.49.100
+```
+![config ip](../img/lab-07-C/202311231922.png)
+
+Una vez que el servidor ***evilginx*** esté funcionando, observarás que empieza a tener conexiones. Esto se debe al tráfico de Internet, arañas incluidas. Nosotros no queremos que este tráfico se mezcle con la conexión que en breve realizará la víctima. Por ello, vamos a bloquear todo el tráfico excepto el de nuestra víctima. 
+
+Aún queda un poco para crear los señuelos (***lures***) que se expresan como una un directorio dentro del servidor web, en la forma ***/DSSDFDGRTEDW*** u otra cadena aleatoria. Para ello ejecutamos el siguiente comando.
+
+```
+blacklist unauth
+```
+
+Las IPs provenientes de las conexiones al servidor que no tengan como destino el señuelo serán metidas en una lista negra y rechazadas a partir de ahora.
+
+![blacklist](../img/lab-07-C/202311231928.png)
+
+Es el momento de configurar el ***phishlet***, que es una forma de generalizar los ataques. De esta manera ***evilginx*** no solo puede atacar a M365, sino al resto de servicios importantes en Internet. 
+
+Abandonamos momentáneamente la screen donde está corriendo ***evilginx***. Para ello pulsamos la combinación de t eclas ***CTRL+a, CTRL+d***. Volveremos a la terminal de ssh original. 
+
+Lista el directorio. 
+
+```
+ls -l
+```
+
+Verás una carpeta llamada ***phishlets***.
+
+![phishlets](../img/lab-07-C/202311231934.png)
+
+Entramos en esa carpeta y listamos el contenido.
+
+```
+cd phishlets
+ls -l
+```
+
+Los ***phishlets*** son archivos YAML que indican a ***evilginx*** como debe configurarse. Observa el de O365.
+
+![phishlets](../img/lab-07-C/202311231936.png)
+
+Edítalo con ***nano***.
+```
+nano o365.yaml
+```
+
+Por descontado que deberías leerte la documentación del proyecto ***evilginx*** relativa a los ***phishlets***, pero para entender esta demo solo necesitas localizar los nombres de los endpoints del servicio original.
+
+![phishlets endpoints](../img/lab-07-C/202311231939.png)
+
+Como puedes ver, hay tres.
+
+1) login.microsoftonline.com
+2) www.office.com
+3) login.microsoftonline.com  (Que a diferencia del primero tiene el atributo ***session*** a ***true***)
+
+En consecuencia son dos DNS, ***login.microsoftonline.com*** y ***www.office.com*** que es donde se conectaría el el navegador de la víctima. Esos dominios van a ser sustituidos respectivamente por ***login.evilginx.antsala.xyz*** y ***www.evilginx.antsala.xyz***. Por esa razón, se dieron de altas sendos registros de recursos de tipo A en la zona de DNS.
+
+![A](../img/lab-07-C/202311231455.png)
+
+
+
 
 
 
