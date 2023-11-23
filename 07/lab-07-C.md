@@ -359,11 +359,11 @@ Por descontado que deberías leerte la documentación del proyecto ***evilginx**
 
 Como puedes ver, hay tres.
 
-1) login.microsoftonline.com
-2) www.office.com
-3) login.microsoftonline.com  (Que a diferencia del primero tiene el atributo ***session*** a ***true***)
+1) `login.microsoftonline.com`
+2) `www.office.com`
+3) `login.microsoftonline.com`  (Que a diferencia del primero tiene el atributo ***session*** a ***true***)
 
-En consecuencia son dos DNS, ***login.microsoftonline.com*** y ***www.office.com*** que es donde se conectaría el el navegador de la víctima. Esos dominios van a ser sustituidos respectivamente por ***login.evilginx.antsala.xyz*** y ***www.evilginx.antsala.xyz***. Por esa razón, se dieron de altas sendos registros de recursos de tipo A en la zona de DNS.
+En consecuencia son dos DNS, ***`login.microsoftonline.com`*** y ***`www.office.com`*** que es donde se conectaría el el navegador de la víctima. Esos dominios van a ser sustituidos respectivamente por ***`login.evilginx.antsala.xyz`*** y ***`www.evilginx.antsala.xyz`***. Por esa razón, se dieron de altas sendos registros de recursos de tipo A en la zona de DNS.
 
 ![A](../img/lab-07-C/202311231455.png)
 
