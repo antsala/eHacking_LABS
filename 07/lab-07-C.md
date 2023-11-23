@@ -7,7 +7,7 @@ Requisitos:
 3. Teléfono móvil o emulador `BlueStacks` con la aplicación `Microsoft Authenticator`.
 3. Cuenta de `M365 con MFA configurada`. (Nota: El profesor deberá aportar el tenant de 365)
 4. Máquina virtual en Internet con `dirección IP pública` y `Evilnginx instalado`. (Nota: El profesor aportará la VM)
-5. Dominio de Internet con capacidad de redirigir la resolución de la zona a una IP concreta.
+5. `Dominio de Internet` con capacidad de redirigir la resolución de la zona a una IP concreta.
 
 
 
@@ -44,9 +44,6 @@ Ahora, ***evilginx*** envía el token de autorización al navegador de la vícti
 El actor  de la amenaza usa el token capturado para acceder a los recursos de Office 365 de la víctima ***(9)***. Además, también ha capturado la contraseña de la víctima.
 
 
-
-
-
 ## Ejercicio 1: Crear tenant de M365.
 
 El profesor creará el tenant de M365.
@@ -54,7 +51,7 @@ El profesor creará el tenant de M365.
 Una vez creado, accedemos a él por medio de la página web de administración de M365.
 
 
-En la máquina ***Win 11*** abrimos el navegador y nos conectamos a.
+En la máquina `Win 11` abrimos el navegador y nos conectamos a.
 ```
 https://portal.office.com
 ```
@@ -121,7 +118,7 @@ Si haces clic en ella, verás es OTP (One Time Password) que será usado como 2F
 
 En Azure (o cualquier otro proveedor que permitar crear una VM con IP pública), creamos una instancia de un Ubuntu Server. Abrir los puertos 22, 80 y 443. Como usuario poner ***antonio*** y contraseña ***Pa55w.rd12345***.
 
-En la configuración de los Grupos de Seguridad de Red (NSG) debemos abrir el puerto 53 por UDP de entrada. De forma que queden de la siguiente manera.
+En la configuración de los Grupos de Seguridad de Red (NSG) debemos abrir el puerto ***53*** por ***UDP*** de entrada. De forma que queden de la siguiente manera.
 
 ![NSG](../img/lab-07-C/202311231908.png)
 
@@ -250,27 +247,13 @@ Para la autenticación con una cuenta de M365, el navegador del usuario conectar
 
 ![dominio disponible](../img/lab-07-C/202311231114.png)
 
-Para la inmensa mayoría de los usuarios resultará imposible interpretar la diferencia entre.
-```
-login.microsoftonline.com
-```
+Para la inmensa mayoría de los usuarios resultará imposible interpretar la diferencia entre `login.microsoftonline.com` y `login.microsoft-on-line.com`.
 
-y
-```
-login.microsoft-on-line.com
-```
 
 El actor de la amenaza procederá a contratar dicho dominio. Para el resto del laboratorio, el dominio contratado no tiene como finalidad engañar al usuario y, además será fácilmente reconocible en esta práctica como dominio de ataque.
 
-El dominio elegido es el siguiente
-```
-evilginx.antsala.xyz
-```
+El dominio elegido es `evilginx.antsala.xyz` , por lo que la DNS de ataque final tendría la forma de `login.evilginx.antsala.xyz`
 
-Por lo que la DNS de ataque final tendría la forma de.
-```
-login.evilginx.antsala.xyz
-```
 Ahora es necesario que, cuando la víctima caiga en la trampa y haga clic en el link de phishing que se le enviará, su navegador conecte con los endpoint apropiados del servidor ***evilginx*** que simularán ser los auténticos. Para ello debemos hacer que el servidor de DNS que resuelva los registros del dominio elegido sea el propio ***evilginx***.
 
 En la página del registrador debemos hacer que los registros ***NS*** apunten a la IP pública del servidor ***evilginx***.
@@ -366,15 +349,6 @@ Como puedes ver, hay tres.
 En consecuencia son dos DNS, ***`login.microsoftonline.com`*** y ***`www.office.com`*** que es donde se conectaría el navegador de la víctima. Esos dominios van a ser sustituidos respectivamente por ***`login.evilginx.antsala.xyz`*** y ***`www.evilginx.antsala.xyz`***. Por esa razón, se dieron de altas sendos registros de recursos de tipo A en la zona de DNS.
 
 ![A](../img/lab-07-C/202311231455.png)
-
-
-
-
-
-
-
-
-
 
 
 
