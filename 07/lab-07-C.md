@@ -24,8 +24,8 @@ En consecuencia, solo queda usar un navegador, importar la cookie que se ha capt
 La siguiente imagen resume los eventos y actores que tienen lugar en una conexión normal con el servicio.
 ![Conexión a Teams](../img/lab-07-C/202311231147.png)
 
-
-
+Ahora, podrás descubrir la configuración del ataque. Observa la imagen.
+![Hackeo](../img/lab-07-C/202311231406.png)
 
 
 
