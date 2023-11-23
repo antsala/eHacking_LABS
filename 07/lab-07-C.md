@@ -236,7 +236,7 @@ sudo evilginx
 Como puedes ver, evilginx se ha iniciado.
 ![screen 2](../img/lab-07-C/202311231103.png)
 
-Vamos a dejarlo corriendo en esta screen, así que salimos de ella con ***CTRL + a*** y ***CTRL + d***.
+Vamos a dejarlo corriendo en esta screen, así que salimos de ella con ***CTRL + a*** y ***CTRL + d***. Volveremos posteriormente para configurar el ataque.
 
 # Ejercicio 5: Crear un dominio de ataque y hacer que los servidores de zona apunten a evilginx.
 
@@ -267,6 +267,24 @@ Por lo que la DNS de ataque final tendría la forma de.
 ```
 login.evilginx.antsala.xyz
 ```
+Ahora es necesario que, cuando la víctima caiga en la trampa y haga clic en el link de phishing que se le enviará, su navegador conecte con los endpoint apropiados del servidor ***evilginx*** que simularán ser los auténticos. Para ello debemos hacer que el servidor de DNS que resuelva los registros del dominio elegido sea el propio ***evilginx***.
+
+En la página del registrador debemos hacer que los registros ***NS*** apunten a la IP pública del servidor ***evilginx***.
+
+Como en esta demostración, el servidor a usar es una máquina virtual en Azure, puedes ver el la siguiente imagen cómo se ha indicado que la zona ***antsala.xyz*** la lleva Azure.
+
+![namecheap](../img/lab-07-C/202311231451.png)
+
+Es el momento de ir a Azure y configurar una Zona de DNS, y para hacerla coincidir con el ejemplo, será una subzona, concretamente ***evilginx.antsala.xyz***.
+
+Estudia la imagen.
+
+![evilginx.antsala.xyz](../img/lab-07-C/202311231455.png)
+
+Los endpoints de autenticación de Microsoft van a ser suplantados por el servidor ***evilginx***. Por esa razón, es necesario dar de alta ciertos registros de tipo A, que deberán apuntar a la IP pública en la que está el servidor ***evilginx***. En este caso ***login*** y ***www***. Más adelante, en el laboratorio, aprenderas a determinar los endpoints (y sus nombre) necesarios para hacer el hackeo.
+
+
+
 
 
 
