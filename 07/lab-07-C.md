@@ -3,11 +3,11 @@
   
 Requisitos:
 1. Máquina `Router-Ubu`.
-2. Máquina ***Win 11***.
-3. Teléfono móvil o emulador ***BlueStacks*** con la aplicación ***Microsoft Authenticator***.
-3. Cuenta de ***M365 con MFA configurada***. (Nota: El profesor deberá aportar el tenant de 365)
-4. Máquina virtual en Internet con ***dirección IP pública*** y ***Evilnginx instalado***. (Nota: El profesor aportará la VM)
-5. Dominio de Internet.
+2. Máquina `Win 11`.
+3. Teléfono móvil o emulador `BlueStacks` con la aplicación `Microsoft Authenticator`.
+3. Cuenta de `M365 con MFA configurada`. (Nota: El profesor deberá aportar el tenant de 365)
+4. Máquina virtual en Internet con `dirección IP pública` y `Evilnginx instalado`. (Nota: El profesor aportará la VM)
+5. Dominio de Internet con capacidad de redirigir la resolución de la zona a una IP concreta.
 
 
 
