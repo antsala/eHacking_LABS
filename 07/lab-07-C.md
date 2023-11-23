@@ -121,7 +121,11 @@ Si haces clic en ella, verás es OTP (One Time Password) que será usado como 2F
 
 En Azure (o cualquier otro proveedor que permitar crear una VM con IP pública), creamos una instancia de un Ubuntu Server. Abrir los puertos 22, 80 y 443. Como usuario poner ***antonio*** y contraseña ***Pa55w.rd12345***.
 
-Tomar la IP pública de la VM
+En la configuración de los Grupos de Seguridad de Red (NSG) debemos abrir el puerto 53 por UDP de entrada. De forma que queden de la siguiente manera.
+
+![NSG](../img/lab-07-C/202311231908.png)
+
+Tomamos la IP pública de la VM
 ```
 PUBLIC_IP=<Poner aquí la IP Pública de la VM>
 ```
@@ -281,7 +285,7 @@ Estudia la imagen.
 
 ![evilginx.antsala.xyz](../img/lab-07-C/202311231455.png)
 
-Los endpoints de autenticación de Microsoft van a ser suplantados por el servidor ***evilginx***. Por esa razón, es necesario dar de alta ciertos registros de tipo A, que deberán apuntar a la IP pública en la que está el servidor ***evilginx***. En este caso ***login*** y ***www***. Más adelante, en el laboratorio, aprenderas a determinar los endpoints (y sus nombre) necesarios para hacer el hackeo.
+Los endpoints de autenticación de Microsoft van a ser suplantados por el servidor ***evilginx***. Por esa razón, es necesario dar de alta ciertos registros de tipo A, que deberán apuntar a la IP pública en la que está el servidor ***evilginx***. En este caso ***login*** y ***www***. Más adelante, en el laboratorio, aprenderás a determinar los endpoints necesarios para hacer el hackeo.
 
 
 
