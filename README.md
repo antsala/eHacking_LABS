@@ -171,6 +171,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Crear un dominio de ataque y hacer que los servidores de zona apunten a la VM de evilginx.
    - Configuración de evilginx para realizar el ataque a una cuenta de M365.
    - Realizar al ataque.
+   - Contramedidas.
 
 ## Carpeta 25. Ataque a aplicaciones Web.
 

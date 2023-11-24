@@ -4,11 +4,10 @@
 Requisitos:
 1. Máquina `Router-Ubu`.
 2. Máquina `Win 11`.
-3. Máquina `Kali Linux`.
-4. Teléfono móvil o emulador `BlueStacks` con la aplicación `Microsoft Authenticator`.
-5. Cuenta de `M365 con MFA configurada`. (Nota: El profesor deberá aportar el tenant de 365)
-6. Máquina virtual en Internet con `dirección IP pública` y `Evilnginx instalado`. (Nota: El profesor aportará la VM)
-7. `Dominio de Internet` con capacidad de redirigir la resolución de la zona a una IP concreta.
+3. Teléfono móvil o emulador `BlueStacks` con la aplicación `Microsoft Authenticator`.
+4. Cuenta de `M365 con MFA configurada`. (Nota: El profesor deberá aportar el tenant de 365)
+5. Máquina virtual en Internet con `dirección IP pública` y `Evilnginx instalado`. (Nota: El profesor aportará la VM)
+6. `Dominio de Internet` con capacidad de redirigir la resolución de la zona a una IP concreta.
 
 
 
@@ -454,6 +453,75 @@ La víctima, recibirá el correo malicioso. Observa como aparece el enlace de ph
 Cuando se hace clic en el enlace, la víctima debe autenticarse en Office para acceder al archivo. Observa la URL de phishing en la barra de direcciones.
 
 ![clic](../img/lab-07-C/202311241435.png)
+
+La víctima escribe sus credenciales. Como puedes observar ***evilginx*** las ha capturado.
+
+![credenciales](../img/lab-07-C/202311241442.png)
+
+La víctima prosigue con su inicio de sesión, escribiendo el código de la MFA en la aplicación de autenticación.
+
+Como puedes ver en la terminal, se han capturado los tokens OAuth que Microsoft ha enviado a la víctima. El señuelo configurado redirige a la víctima al portal de Office.
+
+![Token OAuth](../img/lab-07-C/202311241445.png)
+
+Para ver los tokens de sesión capturados escribimos.
+```
+sessions
+```
+
+En el ejemplo, la sesión ***8*** tiene capturados los tokens.
+
+![Sessions](../img/lab-07-C/202311241451.png)
+
+Para ver el token, escribimos.
+
+```
+sessions 8
+```
+
+Y aquí aparece el token de sesión, a cuyo portador se le autoriza el acceso a los recursos de Office de la víctima.
+
+![Token](../img/lab-07-C/202311241454.png)
+
+El actor de la amenaza solo necesita conectar con M365 y presentar dicho token. Para ello, en la máquina `Windows 11` instala chrome como navegador.
+
+Es necesario usar algún plugin que nos permita crear una cookie a partir del token de autorización capturado. Por ejemplo este: 
+```
+https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm?pli=1
+```
+
+Una vez que tengas la extensión de Chrome instalada copia en el portapapeles el token oauth que capturó evilginx.
+
+![Copy](../img/lab-07-C/202311241516.png)
+
+Con Chrome conéctate a y quédate en el diálogo en el que te pide el nombre de usuario.
+```
+login.microsoftonline.com
+```
+
+Abre la extensión que acabas de instalar y dale permisos. A continuación borra todas las cookies que pudieran existir en Chrome haciendo clic en `Delete All`
+
+![Borrar cookies](../img/lab-07-C/202311241518.png)
+
+Ahora haz clic en el botón `Import` y pega desde el protapapeles el token capturado. Haz clic el importar de nuevo.
+
+Actualiza el navegador. Se enviará el token de autenticación y entrarás en los recursos de la víctima.
+
+![Hacked](../img/lab-07-C/202311241523.png)
+
+
+# Ejercicio 8. Contramedidas.
+
+https://janbakker.tech/10-tips-to-secure-your-identities-in-microsoft-365/
+
+
+
+
+
+
+
+
+
 
 
 
