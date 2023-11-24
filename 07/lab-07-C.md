@@ -448,9 +448,12 @@ Ahora, el actor de la amenaza envía un correo con spear phishing al administrad
 
 La víctima, recibirá el correo malicioso. Observa como aparece el enlace de phishing en el texto.
 
+![email](../img/lab-07-C/202311241433.png)
+
+
 Cuando se hace clic en el enlace, la víctima debe autenticarse en Office para acceder al archivo. Observa la URL de phishing en la barra de direcciones.
 
-![código](../img/lab-07-C/202311241435.png)
+![clic](../img/lab-07-C/202311241435.png)
 
 
 
