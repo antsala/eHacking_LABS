@@ -4,10 +4,11 @@
 Requisitos:
 1. Máquina `Router-Ubu`.
 2. Máquina `Win 11`.
-3. Teléfono móvil o emulador `BlueStacks` con la aplicación `Microsoft Authenticator`.
-3. Cuenta de `M365 con MFA configurada`. (Nota: El profesor deberá aportar el tenant de 365)
-4. Máquina virtual en Internet con `dirección IP pública` y `Evilnginx instalado`. (Nota: El profesor aportará la VM)
-5. `Dominio de Internet` con capacidad de redirigir la resolución de la zona a una IP concreta.
+3. Máquina `Kali Linux`.
+4. Teléfono móvil o emulador `BlueStacks` con la aplicación `Microsoft Authenticator`.
+5. Cuenta de `M365 con MFA configurada`. (Nota: El profesor deberá aportar el tenant de 365)
+6. Máquina virtual en Internet con `dirección IP pública` y `Evilnginx instalado`. (Nota: El profesor aportará la VM)
+7. `Dominio de Internet` con capacidad de redirigir la resolución de la zona a una IP concreta.
 
 
 
@@ -270,7 +271,7 @@ Estudia la imagen.
 
 Los endpoints de autenticación de Microsoft van a ser suplantados por el servidor ***evilginx***. Por esa razón, es necesario dar de alta ciertos registros de tipo A, que deberán apuntar a la IP pública en la que está el servidor ***evilginx***. En este caso ***login*** y ***www***. Más adelante, en el laboratorio, aprenderás a determinar los endpoints necesarios para hacer el hackeo.
 
-# Ejercicio 4: Configuración de evilginx para realizar el ataque a una cuenta de M365.
+# Ejercicio 6: Configuración de evilginx para realizar el ataque a una cuenta de M365.
 
 De vuelta a la terminal de ssh, conectamos con la screen donde está corriendo ***evilginx***.
 
@@ -346,9 +347,121 @@ Como puedes ver, hay tres.
 2) `www.office.com`
 3) `login.microsoftonline.com`  (Que a diferencia del primero tiene el atributo ***session*** a ***true***)
 
-En consecuencia son dos DNS, ***`login.microsoftonline.com`*** y ***`www.office.com`*** que es donde se conectaría el navegador de la víctima. Esos dominios van a ser sustituidos respectivamente por ***`login.evilginx.antsala.xyz`*** y ***`www.evilginx.antsala.xyz`***. Por esa razón, se dieron de altas sendos registros de recursos de tipo A en la zona de DNS.
+En consecuencia son dos DNS, `login.microsoftonline.com` y `www.office.com` que es donde se conectaría el navegador de la víctima. Esos dominios van a ser sustituidos respectivamente por `login.evilginx.antsala.xyz` y `www.evilginx.antsala.xyz`. Por esa razón, se dieron de altas sendos registros de recursos de tipo A en la zona de DNS.
 
 ![A](../img/lab-07-C/202311231455.png)
+
+Regresamos a la screen de ***evilginx*** para seguir configurándolo. Nota, el identificador de la screen será diferente. Usa el que te aparezca.
+```
+screen -r 7045.pts-0.evilginx
+```
+Vamos a configurar el ***phishlet*** con el dominio de ataque.
+```
+phishlets hostname o365 evilginx.antsala.xyz
+```
+
+En la imagen puedes apreciar cómo se asocia el dominio de ataque al phishlet de Office 365. 
+
+![hostname](../img/lab-07-C/202311241255.png)
+
+El phishlet aparece desactivado. Lo habilitaremos con el siguiente comando.
+```
+phishlets enable o365
+```
+
+Ahora tenemos un momento crucial. Evilginx va a montar endpoints hacia las DNS de autenticación falseadas de Microsoft, concretamente `login.evilginx.antsala.xyz` y `www.evilginx.antsala.xyz`. Estos endpoints necesitan HTTPS, por ello se van a pedir a ***Let's Encrypt*** los certificados apropiados. Una vez que finalice el proceso, se mostrará un mensaje indicando que se han configurado los certificados para los dominios de ataque.
+
+![certificados](../img/lab-07-C/202311241312.png)
+
+Ahora toca crear los `señuelos` (lures), que permitirán obtener la URL de phishing que se le pasará a la víctima.
+
+Eecribe el siguiente comando para crear el señuelo.
+```
+lures create o365
+```
+
+![lure create](../img/lab-07-C/202311241351.png)
+
+Se ha creado un señuelo con id 0. Para ver la URL de phishing ejecutamos.
+```
+lures get-url 0
+```
+
+![URL phish](../img/lab-07-C/202311241355.png)
+
+Cuando el usuario haga clic en el vínculo malicioso y se hayan capturado sus credenciales, habrá que redireccionarlo a la URL correcta de Microsoft, por ejemplo `https:/portal.office.com`. Ejecuta el siguiente comando.
+
+```
+lures edit 0 redirect_url https://portal.office.com
+```
+
+![URL redirect](../img/lab-07-C/202311241359.png)
+
+El ataque está preparado. Para ver los `phishlets` que tenemos activos, escribimos.
+```
+phishlets
+```
+
+![Phishlets](../img/lab-07-C/202311241401.png)
+
+Para verificar los señuelos, escribimos.
+
+```
+lures
+```
+
+![lures](../img/lab-07-C/202311241403.png)
+
+
+# Ejercicio 7: Realizar el ataque.
+
+En una máquina de Windows 11, simularemos el clic de la victima al link de phishing. En este caso, la víctima será un `Global administrator` de un tenant de 365. Iniciamos sesión en con las credenciales de la víctima en dicho tenant. Estas son:
+
+Usuario.
+```
+admin@M365x17716089.onmicrosoft.com
+```
+
+![usuario](../img/lab-07-C/202311241414.png)
+
+Contraseña.
+```
+Jm#5#UaJxr#59N#3
+```
+
+![contraseña](../img/lab-07-C/202311241417.png)
+
+Como el usuario tiene habilitada la MFA, nos pide que escribamos el código en la aplicación de autenticación.
+
+![MFA](../img/lab-07-C/202311241420.png)
+
+Escribimos el código en la aplicación de autenticación.
+
+![código](../img/lab-07-C/202311241420.png)
+
+Como podrás comprobar, se inicia la sesión en M365.
+
+![código](../img/lab-07-C/202311241422.png)
+
+
+Ahora, el actor de la amenaza envía un correo con spear phishing al administrador del tenant.
+
+La víctima, recibirá el correo malicioso. Observa como aparece el enlace de phishing en el texto.
+
+Cuando se hace clic en el enlace, la víctima debe autenticarse en Office para acceder al archivo. Observa la URL de phishing en la barra de direcciones.
+
+![código](../img/lab-07-C/202311241435.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
