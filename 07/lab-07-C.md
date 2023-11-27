@@ -512,19 +512,57 @@ Actualiza el navegador. Se enviará el token de autenticación y entrarás en lo
 
 # Ejercicio 8. Contramedidas.
 
-https://janbakker.tech/10-tips-to-secure-your-identities-in-microsoft-365/
+A continuación presentamos una serie de consejos para mejorar la seguridad de la autenticación en M365.
 
 
+1) ***Bloquear la autenticación heredada***. El paso más importante que hay que dar es avanzar hacia una autenticación moderna. Esto te permitirá añadir más capas y realmente te ayudará a implementar los principios de Zero Trust. Ahora, con la puerta principal cerrada, también debemos ocuparnos de la puerta trasera: la autenticación heredada. Con la autenticación heredada, estamos hablando de protocolos antiguos que se pueden usar para autenticarse en aplicaciones y datos de Microsoft 365, como IMAP, POP3 y SMTP. Estos protocolos no son capaces de aplicar la autenticación moderna, como la autenticación multifactor. Por lo tanto, deben bloquearse.
+
+2) ***Password que no caducan***. Todavía muchas organizaciones  obligan a sus usuarios a restablecer sus contraseñas cada 90 días, o a veces antes. Inicialmente, esto parece algo bueno, pero según la investigación, cada vez que se restablece la contraseña, se vuelven un poco más débiles. Los seres humanos no somos muy buenos para inventar y recordar contraseñas complejas, y por lo tanto usamos "trucos" como agregar números o caracteres al final de la contraseña. Por lo tanto, un usuario que usó `MySecurePassword` durante 90 días y se ve obligado a elegir una nueva, es más probable que elija `MySecurePassword1`, en lugar de crear una contraseña completamente nueva. Desde el punto de vista de seguridad es más efectivo configurar una contraseña perpetua y un factor adicional que obligar a un usuario a cambiar su contraseña cada 15 días.
+
+3) ***Habilitar las políticas de riesgo de usuario e inicio de sesión de Microsoft Entra***. Se trata de una característica de `Azure AD Premium P2`, que aporta una gran cantidad de información sobre los eventos de autenticación. Con el motor de inteligencia de Microsoft, todos los inicios de sesión se compararán con una línea base y, si ocurre algo inusual, se produce una respuesta automatizada. Por lo tanto, cuando un usuario inicia sesión desde una ubicación o un dispositivo desconocidos, se desencadenará un evento de riesgo que puede desencadenar un mensaje de MFA, un bloqueo o incluso un restablecimiento de contraseña, en función de las directivas. Esto a veces se denomina "MFA basada en el riesgo" y solo solicita el segundo factor a los usuarios cuando es necesario, evitando que se deban escribir demasiados mensajes de MFA (fatiga de MFA).
+
+4) ***Habilitar la sincronización del hash del password (AD Connect)***. La sincronización de hash de contraseña es uno de los métodos de inicio de sesión que se usan para lograr una identidad híbrida. Azure AD Connect sincroniza un hash, del hash, de la contraseña del usuario desde una instancia local de Active Directory a una instancia de Azure AD basada en la nube. La sincronización de hash de contraseñas ayuda a reducir el número de contraseñas que los usuarios deben mantener a una sola. La habilitación de la sincronización de hash de contraseña también permite la generación de informes de credenciales filtradas.
 
 
+Una de esas detecciones de riesgo son las "credenciales filtradas". Este tipo de detección de riesgos indica que se han filtrado las credenciales válidas del usuario. Cuando los ciberdelincuentes comprometen contraseñas válidas de usuarios legítimos, a menudo comparten esas credenciales. Por lo general, este intercambio se realiza publicando en la web oscura, pegando sitios o intercambiando y vendiendo las credenciales en el mercado negro. Cuando el servicio de credenciales filtradas de Microsoft adquiere credenciales de usuario de la web oscura, sitios de pegado u otros orígenes, se comprueban con las credenciales válidas actuales de los usuarios de Azure AD para encontrar coincidencias válidas.
 
 
+5) ***Defender for Cloud Apps***. Para aprovechar al máximo Azure AD Identity Protection, debes habilitar la integración con Defender for Cloud Apps (anteriormente conocido como Microsoft Cloud App Security). Una gran cantidad de señales de riesgo que solo pueden ser detectadas por Defender for Cloud Apps:
+
+* Reglas sospechosas de manipulación de la bandeja de entrada
+* Viaje imposible
+* Nuevo país
+* Actividad desde una dirección IP anónima
+* Reenvío sospechoso de la bandeja de entrada
+* Acceso masivo a archivos confidenciales
+
+Defender for Cloud Apps tiene un módulo de respuesta automatizada integrado, donde puede desencadenar flujos de Power Automate para realizar acciones automatizadas, enviar correos electrónicos o incluso mensajes de texto.
+
+6) ***Controlar la frecuencia con la que se solicita el inicio de sesión***. En la MFA de M365 los usuarios simplemente aprueban las solicitudes de inicio de sesión que están protegidas con Azure MFA. Sin embargo, se esconde un peligro detrás de esta característica. Muchas empresas están "sobre-prompting" a sus usuarios, por lo que no siempre está claro de dónde provienen estas indicaciones. Un ejemplo claro de esto es precisamente este laboratorios.
+
+En general, solo se le debe preguntar una vez por usuario, por dispositivo y por restablecimiento de contraseña, pero esto realmente depende de la configuración de la configuración de Azure MFA y el usuario no tendrá una regla clara para determinarlo.
+
+7) ***Defender for M365***. Como hemos comentado en este laboratorio, la mayoría de los ataques usan phishing como vector. Hay muchas cosas que puede hacer en el lado de la prevención aquí, y todo está integrado en Defender para Office 365.
+
+* Simulador de ataque.
+* Vínculos seguros.
+* Políticas antiphishing.
+
+8) ***Privileged Identity Management***. Zero Trust se basa en los principios de "mínimo privilegio" y "verificación siempre". A menudo, el personal de TI o, a veces, incluso los trabajadores de oficina, pueden acceder a los recursos y roles de Azure AD con acceso permanente. En la mayoría de las situaciones, este acceso nunca se revisa, incluso cuando los usuarios cambian de trabajo o abandonan la empresa. PIM es una función realmente poderosa para mantener el control de su rol y acceso a los recursos.
 
 
+Con Azure AD Privileged Identity Management (PIM), los administradores pueden acceder a roles y recursos, Just in Time (JIT) y con los privilegios suficientes. El acceso se puede proteger con MFA o con la aprobación de un administrador y se puede revisar de forma periódica. Junto con el acceso condicional, los roles con privilegios elevados se pueden proteger de tal manera que solo se puedan usar desde dispositivos administrados (estaciones de trabajo de acceso con privilegios) o ubicaciones.
 
 
+9) ***No usar contraseñas***. El mejor consejo contra el phishing está relacionado con la fuente de todos los males: las contraseñas. Tenemos que deshacernos de ellas. En pocas palabras: no puedes robar una contraseña si no hay ninguna.
 
+Microsoft está realmente decidido a desempeñar un papel importante en esa misión y ofrece las siguientes tres opciones de autenticación sin contraseña que se integran con Azure Active Directory (Azure AD):
 
+* Windows Hello para empresas.
+* Aplicación Microsoft Authenticator.
+* Llaves de seguridad FIDO2.
+
+10) ***Formar al usuario final***. Es la única forma de evitar los ataques de Ingeniería Social, sobre todo aquellos basados en Spear Phishing. Conseguir que un empleado detecte un intento de ataque es la mejor contramediad que se puede implementar en nuestras empresas.
 
 
 
