@@ -229,6 +229,11 @@ Para entrar en la screen, ejecutamos el comando siguiente. Nota, el identificado
 screen -r 7045.pts-0.evilginx
 ```
 
+Si has ejecutado esta demo anteriormente va a ocurrir que Evilginx seguirá usando los certificados que solicitó anteriormente e Let's Encrypt. Estos certificados es probable que estén caducados. Por consiguiente vamos a proceder a eliminarlos para que Evilginx solicite otros nuevos. Ejecuta el siguiente comando.
+```
+sudo rm -r -f  /root/.evilginx/crt/evilginx.antsala.xyz
+```
+
 En esta screen lanzaremos evilginx, así que escribe el siguiente comando.
 ```
 sudo evilginx
