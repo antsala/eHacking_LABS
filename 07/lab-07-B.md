@@ -27,7 +27,7 @@ sudo apt update -y
 
 Instalamos ***Python3*** y ***Python3-pip***
 ```
-sudo apt -y install python3 python3-pip python3-dev python3.11-venv
+sudo apt -y install python3 python3-pip python3-dev python3-venv
 ```
 
 Creamos un entorno virtual para Python con ***venv***.
