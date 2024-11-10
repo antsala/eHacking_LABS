@@ -113,6 +113,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Envenenamiento LLMNR/NBT por protocolo ***SMB***.
    - Envenenamiento por medio de ***WAPD***.
    - Forzar el modo de ***autenticación básica***.
+   - (OPCIONAL)  [Windows Hello for Business como contramedida](https://github.com/antsala/WindowsHelloForBusiness_Deployment)
 
 2. Laboratorio 06-B: ***Usar L0phtCrack para auditar la seguridad de credenciales.***. Los ejercicios a realizar son:
    - Instalar y evaluar ***L0phtCrack***.
