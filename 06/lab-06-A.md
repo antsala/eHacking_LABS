@@ -254,4 +254,6 @@ Pista: Son configuraciones de GPO.
 
 ***FIN ACTIVIDAD***
 
+Si quieres ver como `Windows Hello for Business` (WHFB) ayuda a evitar ataques basados en autenticación por contraseña te animo a [visitar este enlace ](https://github.com/antsala/WindowsHelloForBusiness_Deployment)
+
 ***FIN DEL LABORATORIO***
