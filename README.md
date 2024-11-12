@@ -174,6 +174,7 @@ Laboratorios para las formaciones de Ethical Hacking está en la URL https://git
    - Configuración de evilginx para realizar el ataque a una cuenta de M365.
    - Realizar al ataque.
    - Contramedidas.
+   - (OPCIONAL) [MFA Resistente a phishing](https://github.com/antsala/Phishing_Resistant_MFA_M365)
 
 ## Carpeta 25. Ataque a aplicaciones Web.
 
