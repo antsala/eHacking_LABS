@@ -555,7 +555,6 @@ En general, solo se le debe preguntar una vez por usuario, por dispositivo y por
 
 8) ***Privileged Identity Management***. Zero Trust se basa en los principios de "mínimo privilegio" y "verificación siempre". A menudo, el personal de TI o, a veces, incluso los trabajadores de oficina, pueden acceder a los recursos y roles de Azure AD con acceso permanente. En la mayoría de las situaciones, este acceso nunca se revisa, incluso cuando los usuarios cambian de trabajo o abandonan la empresa. PIM es una función realmente poderosa para mantener el control de su rol y acceso a los recursos.
 
-
 Con Azure AD Privileged Identity Management (PIM), los administradores pueden acceder a roles y recursos, Just in Time (JIT) y con los privilegios suficientes. El acceso se puede proteger con MFA o con la aprobación de un administrador y se puede revisar de forma periódica. Junto con el acceso condicional, los roles con privilegios elevados se pueden proteger de tal manera que solo se puedan usar desde dispositivos administrados (estaciones de trabajo de acceso con privilegios) o ubicaciones.
 
 
@@ -568,6 +567,11 @@ Microsoft está realmente decidido a desempeñar un papel importante en esa misi
 * Llaves de seguridad FIDO2.
 
 10) ***Formar al usuario final***. Es la única forma de evitar los ataques de Ingeniería Social, sobre todo aquellos basados en Spear Phishing. Conseguir que un empleado detecte un intento de ataque es la mejor contramediad que se puede implementar en nuestras empresas.
+
+Si quieres ver las contramedidas más efectivas (y tienes tiempo) lee esto.
+
+* [Despliegue de Windows Hello para la Empresa](https://github.com/antsala/WindowsHelloForBusiness_Deployment)
+* [MFA Resistente a phishing](https://github.com/antsala/Phishing_Resistant_MFA_M365)
 
 
 
