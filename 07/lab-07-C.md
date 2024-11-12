@@ -574,13 +574,4 @@ Si quieres ver las contramedidas más efectivas (y tienes tiempo) lee esto.
 * [MFA Resistente a phishing](https://github.com/antsala/Phishing_Resistant_MFA_M365)
 
 
-
-
-
-
-
-
-
-
-
 ***FIN DEL LABORATORIO***
